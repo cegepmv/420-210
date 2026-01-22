@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programmation orientée objet</title>
+    <link>http://localhost:1313/420-210/index.html</link>
+    <description>Plans de cours 📋 Samuel Fostiné : Plan de cours&#xA;Horaire et disponibilités des enseignants ✔️ Samuel Fostiné : Lien vers mon horaire et mes disponibilités&#xA;Samuel Fostiné Nom de l’évaluation Pondération Semaine de l’évaluation 10 quiz (Wooclap) (Les 8 meilleures quiz) 10 % Semaine 2 à 14 Examen 1 15% Semaine 5 Examen 2 20 % Semaine 11 Laboratoire 10 % Semaine 8 Projet remise final 15 % Semaine 14 Examen final 30 % Semaine 15</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="http://localhost:1313/420-210/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
