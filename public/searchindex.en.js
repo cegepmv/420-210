@@ -5,7 +5,7 @@ var relearn_searchindex = [
     "description": "1. Qu’est-ce que Java ? Java est à la fois un langage de programmation orienté objet et une plateforme informatique. Sa philosophie principale est le WORA (Write Once, Run Anywhere) : écrivez votre code une fois, et exécutez-le n’importe où sans modification.\nLes trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctionne, il faut distinguer ces trois composants essentiels :",
     "tags": [],
     "title": "Introduction",
-    "uri": "/420-210/1-intro/index.html"
+    "uri": "/420-210/intro/index.html"
   },
   {
     "breadcrumb": "Programmation orientée objet",

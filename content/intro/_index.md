@@ -1,8 +1,7 @@
 +++
 title = "Introduction"
-type = "chapter"
 weight = 1
-url = "/1-intro/"
+url = "/intro/"
 
 +++
 

@@ -22,30 +22,30 @@ Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctio
     <meta itemprop="name" content="Introduction :: Programmation orientée objet">
     <meta itemprop="description" content="1. Qu’est-ce que Java ? Java est à la fois un langage de programmation orienté objet et une plateforme informatique. Sa philosophie principale est le WORA (Write Once, Run Anywhere) : écrivez votre code une fois, et exécutez-le n’importe où sans modification.
 Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctionne, il faut distinguer ces trois composants essentiels :">
-    <meta itemprop="wordCount" content="934">
+    <meta itemprop="wordCount" content="777">
     <title>Introduction :: Programmation orientée objet</title>
     <link href="/420-210/intro/index.xml" rel="alternate" type="application/rss+xml" title="Introduction :: Programmation orientée objet">
-    <link href="/420-210/images/favicon.png?1769061830" rel="icon" type="image/png">
-    <link href="/420-210/css/auto-complete/auto-complete.min.css?1769061830" rel="stylesheet">
-    <script src="/420-210/js/auto-complete/auto-complete.min.js?1769061830" defer></script>
-    <script src="/420-210/js/search-lunr.js?1769061830" defer></script>
-    <script src="/420-210/js/search.js?1769061830" defer></script>
+    <link href="/420-210/images/favicon.png?1769150029" rel="icon" type="image/png">
+    <link href="/420-210/css/auto-complete/auto-complete.min.css?1769150029" rel="stylesheet">
+    <script src="/420-210/js/auto-complete/auto-complete.min.js?1769150029" defer></script>
+    <script src="/420-210/js/search-lunr.js?1769150029" defer></script>
+    <script src="/420-210/js/search.js?1769150029" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/420-210/searchindex.en.js?1769061830";
+      window.relearn.index_js_url="/420-210/searchindex.en.js?1769150029";
     </script>
-    <script src="/420-210/js/lunr/lunr.min.js?1769061830" defer></script>
-    <script src="/420-210/js/lunr/lunr.stemmer.support.min.js?1769061830" defer></script>
-    <script src="/420-210/js/lunr/lunr.multi.min.js?1769061830" defer></script>
-    <script src="/420-210/js/lunr/lunr.fr.min.js?1769061830" defer></script>
+    <script src="/420-210/js/lunr/lunr.min.js?1769150029" defer></script>
+    <script src="/420-210/js/lunr/lunr.stemmer.support.min.js?1769150029" defer></script>
+    <script src="/420-210/js/lunr/lunr.multi.min.js?1769150029" defer></script>
+    <script src="/420-210/js/lunr/lunr.fr.min.js?1769150029" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['fr'];
     </script>
-    <link href="/420-210/fonts/fontawesome/css/all.min.css?1769061830" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-210/fonts/fontawesome/css/all.min.css?1769061830" rel="stylesheet"></noscript>
-    <link href="/420-210/css/perfect-scrollbar/perfect-scrollbar.min.css?1769061830" rel="stylesheet">
-    <link href="/420-210/css/theme.css?1769061830" rel="stylesheet">
-    <link href="/420-210/css/format-html.css?1769061830" rel="stylesheet" id="R-format-style">
+    <link href="/420-210/fonts/fontawesome/css/all.min.css?1769150029" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-210/fonts/fontawesome/css/all.min.css?1769150029" rel="stylesheet"></noscript>
+    <link href="/420-210/css/perfect-scrollbar/perfect-scrollbar.min.css?1769150029" rel="stylesheet">
+    <link href="/420-210/css/theme.css?1769150029" rel="stylesheet">
+    <link href="/420-210/css/format-html.css?1769150029" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -66,7 +66,7 @@ Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctio
       window.T_N_results_found = `{1} results found for "{0}"`;
       window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
       // variant stuff
-      window.relearn.themevariants = [ 'relearn-auto', 'zen-light', 'zen-dark', 'neon', 'learn' ];
+      window.relearn.themevariants = [ 'learn', 'relearn-auto', 'zen-light', 'zen-dark', 'neon' ];
       window.relearn.customvariantprefix = "my-custom-";
       window.relearn.changeVariant = function(variant) {
         var oldVariant = document.documentElement.dataset.rThemeVariant;
@@ -123,25 +123,16 @@ Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctio
       </ul>
     </li>
     <li><a href="#2-caractéristiques-principales-du-langage">2. Caractéristiques principales du langage</a></li>
-    <li><a href="#3-installation-et-premier-programme">3. Installation et premier programme</a>
+    <li><a href="#3-installation-compilation-et-exécution">3. Installation, compilation et exécution</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#votre-premier-code--helloworldjava">Votre premier code : <code>HelloWorld.java</code></a></li>
+        <li><a href="#compilation-et-exécution-dun-programme-java">Compilation et exécution d’un programme Java</a></li>
+        <li><a href="#exécution-du-code-dans-le-fichier-mainjava">Exécution du code dans le fichier Main.java</a></li>
+        <li><a href="#compilation-et-exécution-sans-le-path-configuré">Compilation et exécution sans le PATH configuré</a></li>
+        <li><a href="#résoudre-lerreur-de-classpath--cp">Résoudre l&rsquo;erreur de Classpath (<code>-cp</code>)</a></li>
       </ul>
     </li>
-    <li><a href="#4-le-processus-de-compilation-et-dexécution">4. Le processus de compilation et d&rsquo;exécution</a></li>
-    <li><a href="#5-guide-profond--compilation-et-exécution">5. Guide Profond : Compilation et Exécution</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#5-les-outils-de-développement-ide">5. Les outils de développement (IDE)</a></li>
-    <li><a href="#6-problème--commande-non-reconnue-path">6. Problème : Commande non reconnue (PATH)</a>
-      <ul>
-        <li><a href="#solution-a--utiliser-le-chemin-complet">Solution A : Utiliser le chemin complet</a></li>
-        <li><a href="#solution-b--configurer-le-path-recommandé">Solution B : Configurer le PATH (Recommandé)</a></li>
-      </ul>
-    </li>
+    <li><a href="#4-les-outils-de-développement-ide">4. Les outils de développement (IDE)</a></li>
   </ul>
 </nav>
                 </div>
@@ -170,12 +161,11 @@ Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctio
         </div>
       </nav>
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable chapter" tabindex="-1">
+      <main id="R-body-inner" class="highlightable intro" tabindex="-1">
         <div class="flex-block-wrapper">
-<article class="chapter narrow">
+<article class="default">
   <header class="headline">
   </header>
-<div class="article-subheading">Chapter 1</div>
 
 <h1 id="introduction">Introduction</h1>
 
@@ -199,97 +189,92 @@ Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctio
 <li><strong>Multi-thread</strong> : Java permet d&rsquo;exécuter plusieurs parties d&rsquo;un programme simultanément.</li>
 </ul>
 <hr>
-<h2 id="3-installation-et-premier-programme">3. Installation et premier programme<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="3-installation-compilation-et-exécution">3. Installation, compilation et exécution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <h3 id="installation">Installation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Vous devez installer un <strong>JDK</strong> (comme OpenJDK ou Oracle JDK). Vérifiez l&rsquo;installation avec la commande :
 <code>java -version</code></p>
-<h3 id="votre-premier-code--helloworldjava">Votre premier code : <code>HelloWorld.java</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorld</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Bonjour le monde !&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
-<h2 id="4-le-processus-de-compilation-et-dexécution">4. Le processus de compilation et d&rsquo;exécution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>Contrairement aux langages comme le C++ qui compilent directement en code machine, Java utilise une étape intermédiaire :</p>
-<ol>
-<li><strong>Étape 1</strong> : Vous écrivez votre code dans un fichier <code>.java</code>.</li>
-<li><strong>Étape 2</strong> : Le compilateur (<code>javac</code>) transforme ce code en <strong>Bytecode</strong> (fichier <code>.class</code>). Ce code n&rsquo;est pas lisible par l&rsquo;ordinateur, mais par la JVM.
+<h3 id="compilation-et-exécution-dun-programme-java">Compilation et exécution d’un programme Java<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>D&rsquo;abord, tu dois t&rsquo;assurer que Java est bien installé sur ton ordinateur</p>
 <ul>
-<li><em>Note : Depuis Java 11, pour un fichier unique, on peut utiliser directement la commande <code>java</code> qui gère la compilation en mémoire.</em></li>
+<li>Ouvre une invite de commandes (cmd) sous Windows (Terminal sous Mac/Linux).</li>
+<li>Tape la commande <code>java -version</code>. Cette commande devrait vous dire la version de Java qui est installé sur votre ordinateur.</li>
+<li>Tape aussi la commande <code>javac -version</code>. Cette commande devrait te dire la version du compilateur de Java installé sur ton ordinateur
+<em>Note: Ces commandes fonctionnent seulement si Java et le compilateur de Java sont installés et que le chemin où le répertoire de Java se trouve est mis dans le <code>PATH</code> des variables d&rsquo;environnement (À expliquer en classe pour que ce soit plus clair)</em></li>
 </ul>
-</li>
-<li><strong>Étape 3</strong> : La <strong>JVM</strong> traduit le Bytecode en instructions spécifiques à votre système d&rsquo;exploitation (Windows, Mac, Linux) au moment de l&rsquo;exécution.</li>
-</ol>
-<hr>
-<h2 id="5-guide-profond--compilation-et-exécution">5. Guide Profond : Compilation et Exécution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>   La transformation d&rsquo;un code source Java en un programme en cours d&rsquo;exécution est un processus en deux étapes. Contrairement aux langages natifs (comme le C), Java produit un code intermédiaire universel.</p>
-<hr>
-<p>    A. Le Flux de Travail Technique</p>
+<h3 id="exécution-du-code-dans-le-fichier-mainjava">Exécution du code dans le fichier Main.java<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Ouvre une invite de commandes (cmd) sous Windows (Terminal sous Mac/Linux).</li>
+<li>Navigue vers le dossier où se trouve votre fichier .java</li>
+<li>Exécute la commande <code>java Main.java</code>.</li>
+</ul>
+<p>Traditionnellement, Java fonctionne en deux étapes :</p>
 <ol>
-<li><strong>Le Code Source (<code>.java</code>)</strong> : C&rsquo;est le fichier texte que vous écrivez. Il doit être strictement nommé comme la classe <code>public</code> qu&rsquo;il contient.</li>
-<li><strong>La Compilation (<code>javac</code>)</strong> : Le compilateur vérifie la syntaxe. S&rsquo;il n&rsquo;y a pas d&rsquo;erreur, il traduit le code en <strong>Bytecode</strong>.</li>
-<li><strong>Le Bytecode (<code>.class</code>)</strong> : Un jeu d&rsquo;instructions compact que seule la <strong>JVM</strong> peut lire. Ce fichier est portable sur n&rsquo;importe quel système (Windows, Mac, Linux).</li>
-<li><strong>L&rsquo;Exécution (<code>java</code>)</strong> : La JVM charge le bytecode, le vérifie et le traduit &ldquo;à la volée&rdquo; en instructions machines spécifiques à votre processeur.</li>
-</ol>
-<hr>
-<p>    B. Compilation et Exécution AVEC le PATH configuré</p>
-<p>Une fois le dossier <code>bin</code> ajouté aux variables d&rsquo;environnement de votre système, les commandes deviennent courtes et accessibles depuis n&rsquo;importe quel dossier.</p>
-<ol>
-<li><strong>Compiler</strong> :
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">javac HelloWorld.java</span></span></code></pre></div>
+<li>
+<p><strong>Compilation</strong> : Le code source (<code>.java</code>) est transformé en bytecode (<code>.class</code>) grâce à la commande :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">javac Main.java</span></span></code></pre></div>
 </li>
-<li><strong>Lancer</strong> :
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java HelloWorld</span></span></code></pre></div>
+<li>
+<p><strong>Exécution</strong> : Le bytecode est ensuite exécuté avec la commande :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java Main</span></span></code></pre></div>
 </li>
 </ol>
+<blockquote>
+<p>💡 <em>Astuce : Depuis une version relativement récente de Java, il est aussi possible d’exécuter directement un fichier <code>.java</code> sans passer explicitement par l’étape de compilation (<code>javac</code>).</em></p></blockquote>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java Main.java</span></span></code></pre></div>
+<p>Cela permet d’exécuter rapidement un programme, mais à noter :</p>
+<ul>
+<li>Le fichier <code>.class</code> est <strong>généré temporairement</strong>.</li>
+<li>Il est ensuite <strong>supprimé automatiquement</strong> après l’exécution.</li>
+</ul>
+<blockquote>
+<p>📝 Cette méthode est pratique pour tester du code rapidement, mais dans un projet structuré, on utilise généralement <code>javac</code> suivi de <code>java</code>.</p></blockquote>
 <hr>
-<p>    C. Compilation et Exécution SANS le PATH configuré</p>
+<h3 id="compilation-et-exécution-sans-le-path-configuré">Compilation et exécution sans le PATH configuré<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Si vous recevez l&rsquo;erreur : <code>'javac' n'est pas reconnu en tant que commande interne...</code>, cela signifie que votre système ne sait pas où se trouve le dossier <code>bin</code> du JDK. Vous devez alors utiliser le <strong>chemin absolu</strong>.</p>
-<h6 id="1-compiler-le-fichier">1. Compiler le fichier<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h6>
-<p>Il faut appeler l&rsquo;exécutable <code>javac</code> directement.</p>
+<ol>
+<li><strong>Compiler le fichier</strong>:  Il faut appeler l&rsquo;exécutable <code>javac</code> directement.</li>
+</ol>
 <ul>
-<li><strong>Sur Windows</strong> :
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="s2">&#34;C:\Program Files\Java\jdk-21\bin\javac&#34;</span> HelloWorld.java</span></span></code></pre></div>
+<li><em><strong>Sur Windows</strong></em> :
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="s2">&#34;C:\Program Files\Java\jdk-21\bin\javac&#34;</span> Main.java</span></span></code></pre></div>
 </li>
-<li><strong>Sur macOS / Linux</strong> :
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/lib/jvm/jdk-21/bin/javac HelloWorld.java</span></span></code></pre></div>
+<li><em><strong>Sur macOS / Linux</strong></em> :
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/lib/jvm/jdk-21/bin/javac Main.java</span></span></code></pre></div>
 </li>
 </ul>
-<p><em>Résultat : Un fichier <code>HelloWorld.class</code> apparaît dans votre dossier.</em></p>
-<h6 id="2-exécuter-le-programme">2. Exécuter le programme<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h6>
-<p>Il faut appeler l&rsquo;exécutable <code>java</code> (la JVM).</p>
+<p><em>Résultat : Un fichier <code>Main.class</code> apparaît dans votre dossier.</em></p>
+<ol start="2">
+<li><strong>Exécuter le programme</strong> : Il faut appeler l&rsquo;exécutable <code>java</code> (la JVM).</li>
+</ol>
 <ul>
 <li><strong>Sur Windows</strong> :
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="s2">&#34;C:\Program Files\Java\jdk-21\bin\java&#34;</span> HelloWorld</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="s2">&#34;C:\Program Files\Java\jdk-21\bin\java&#34;</span> Main</span></span></code></pre></div>
 </li>
 <li><strong>Sur macOS / Linux</strong> :
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/lib/jvm/jdk-21/bin/java HelloWorld</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/lib/jvm/jdk-21/bin/java Main</span></span></code></pre></div>
 </li>
 </ul>
 <hr>
-<p>    D. Résoudre l&rsquo;erreur de Classpath (<code>-cp</code>)</p>
+<h3 id="résoudre-lerreur-de-classpath--cp">Résoudre l&rsquo;erreur de Classpath (<code>-cp</code>)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>C&rsquo;est l&rsquo;erreur la plus frustrante pour les débutants : <code>Could not find or load main class</code>. Cela arrive quand la JVM ne sait pas <strong>où chercher</strong> vos fichiers <code>.class</code>.</p>
 <h6 id="loption--cp-ou--classpath">L&rsquo;option <code>-cp</code> (ou <code>-classpath</code>)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h6>
 <p>Cette option force Java à regarder dans des répertoires précis.</p>
 <ul>
 <li><strong>Chercher dans le dossier actuel (<code>.</code>)</strong> :
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java -cp . HelloWorld</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java -cp . Main</span></span></code></pre></div>
 </li>
 <li><strong>Chercher dans un dossier spécifique (ex: <code>bin</code>)</strong> :
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java -cp bin HelloWorld</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java -cp bin Main</span></span></code></pre></div>
 </li>
 <li><strong>Chercher dans plusieurs dossiers ou JARs</strong> :
 <ul>
-<li><em>Windows</em> : <code>java -cp &quot;.;lib/mysql.jar&quot; HelloWorld</code> (séparateur <code>;</code>)</li>
-<li><em>Linux/Mac</em> : <code>java -cp .:lib/mysql.jar HelloWorld</code> (séparateur <code>:</code>)</li>
+<li><em>Windows</em> : <code>java -cp &quot;.;lib/mysql.jar&quot; Main</code> (séparateur <code>;</code>)</li>
+<li><em>Linux/Mac</em> : <code>java -cp .:lib/mysql.jar Main</code> (séparateur <code>:</code>)</li>
 </ul>
 </li>
 </ul>
 <hr>
-<p>    E. Le cas particulier de Java &ldquo;Moderne&rdquo; (Java 11+)</p>
-<p>Pour faciliter l&rsquo;apprentissage et le scripting, Java permet désormais de sauter l&rsquo;étape de création de fichier <code>.class</code> pour les programmes simples :</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java HelloWorld.java</span></span></code></pre></div>
-<h2 id="5-les-outils-de-développement-ide">5. Les outils de développement (IDE)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="4-les-outils-de-développement-ide">4. Les outils de développement (IDE)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Bien que vous puissiez écrire du Java dans un simple bloc-notes, les développeurs utilisent des <strong>IDE</strong> (Environnements de Développement Intégrés) pour être plus efficaces. Ces logiciels regroupent l&rsquo;édition de code, la compilation automatique et le débogage.</p>
 <table>
   <thead>
@@ -313,18 +298,6 @@ Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctio
       </tr>
   </tbody>
 </table>
-<h2 id="6-problème--commande-non-reconnue-path">6. Problème : Commande non reconnue (PATH)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>Si le terminal affiche <code>command not found</code> ou <code>'javac' n'est pas reconnu</code>, c&rsquo;est que le JDK n&rsquo;est pas dans le <strong>PATH</strong>.</p>
-<h3 id="solution-a--utiliser-le-chemin-complet">Solution A : Utiliser le chemin complet<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p>Si le JDK est installé dans <code>C:\Java\bin</code>, utilisez :
-<code>C:\Java\bin\javac MonProgramme.java</code></p>
-<h3 id="solution-b--configurer-le-path-recommandé">Solution B : Configurer le PATH (Recommandé)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<ol>
-<li>Cherchez <strong>&ldquo;Variables d&rsquo;environnement&rdquo;</strong> dans Windows.</li>
-<li>Modifiez la variable <code>Path</code> dans &ldquo;Variables système&rdquo;.</li>
-<li>Ajoutez le chemin vers le dossier <code>bin</code> de votre JDK (ex: <code>C:\Program Files\Java\jdk-21\bin</code>).</li>
-<li>Redémarrez votre terminal.</li>
-</ol>
 
   <footer class="footline">
   </footer>
@@ -397,11 +370,11 @@ Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctio
                 <div class="control-style">
                   <label class="a11y-only" for="R-select-variant">Theme</label>
                   <select id="R-select-variant">
-                    <option id="R-select-variant-relearn-auto" value="relearn-auto" selected>Relearn Light/Dark</option>
+                    <option id="R-select-variant-learn" value="learn" selected>Learn</option>
+                    <option id="R-select-variant-relearn-auto" value="relearn-auto">Relearn Light/Dark</option>
                     <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
                     <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
                     <option id="R-select-variant-neon" value="neon">Neon</option>
-                    <option id="R-select-variant-learn" value="learn">Learn</option>
                   </select>
                 </div>
                 <div class="clear"></div>
@@ -413,8 +386,8 @@ Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctio
 <div id="R-footer" class="default-animation"></div>
       </div>
     </aside>
-    <script src="/420-210/js/perfect-scrollbar/perfect-scrollbar.min.js?1769061830" defer></script>
-    <script src="/420-210/js/theme.js?1769061830" defer></script>
+    <script src="/420-210/js/perfect-scrollbar/perfect-scrollbar.min.js?1769150029" defer></script>
+    <script src="/420-210/js/theme.js?1769150029" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
