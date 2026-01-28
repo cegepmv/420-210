@@ -14,5 +14,33 @@
       <guid>http://localhost:1313/420-210/intro/index.html</guid>
       <description>1. Qu’est-ce que Java ? Java est à la fois un langage de programmation orienté objet et une plateforme informatique. Sa philosophie principale est le WORA (Write Once, Run Anywhere) : écrivez votre code une fois, et exécutez-le n’importe où sans modification.&#xA;Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctionne, il faut distinguer ces trois composants essentiels :</description>
     </item>
+    <item>
+      <title>Variables</title>
+      <link>http://localhost:1313/420-210/variables/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-210/variables/index.html</guid>
+      <description>🎯 Qu’est-ce qu’une variable? Une variable, c’est comme un casier dans votre vestiaire du cégep. Vous pouvez y mettre vos affaires, les changer, les oublier (oups), et même y mettre n’importe quoi (tant que ça rentre et que c’est du bon type).&#xA;L’identificateur (Le nom) : C’est l’étiquette sur le casier (ex: 304). C’est ce qui permet au programme de retrouver l’endroit exact en mémoire.</description>
+    </item>
+    <item>
+      <title>Opérateurs</title>
+      <link>http://localhost:1313/420-210/operateurs/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-210/operateurs/index.html</guid>
+      <description>Opérateurs Arithmétiques en Java Opérateur Nom Description Exemple Résultat + Addition Somme de deux valeurs int x = 10 + 5; 15 - Soustraction Différence entre deux valeurs int x = 20 - 8; 12 * Multiplication Produit de deux valeurs double x = 5.5 * 2; 11.0 / Division Quotient de la division int x = 10 / 3; 3 (Entier) % Modulo Reste de la division entière int x = 10 % 3; 1 Opérateurs d’incrémentation et de décrémentation Opérateur Nom Position Description Exemple Résultat (x) ++x Pré-incrémentation Avant Incrémente, puis retourne la valeur int y = ++x; Augmenté de 1 x++ Post-incrémentation Après Retourne la valeur, puis incrémente int y = x++; Augmenté de 1 --x Pré-décrémentation Avant Décrémente, puis retourne la valeur int y = --x; Diminué de 1 x-- Post-décrémentation Après Retourne la valeur, puis décrémente int y = x--; Diminué de 1 Pourquoi la position est-elle importante ? La différence réside dans la valeur retournée par l’expression au moment de l’exécution :</description>
+    </item>
+    <item>
+      <title>Structures de contrôle</title>
+      <link>http://localhost:1313/420-210/structures/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-210/structures/index.html</guid>
+      <description>Les structures de contrôle en Java Introduction Jusqu’à présent, vos programmes s’exécutaient ligne par ligne, de haut en bas, comme une recette suivie à la lettre.&#xA;Les structures de contrôle permettent de prendre des décisions et de répéter des actions.&#xA;👉 Grâce à elles, un programme devient intelligent, dynamique et utile dans la vraie vie.</description>
+    </item>
+    <item>
+      <title>Méthodes</title>
+      <link>http://localhost:1313/420-210/methodes/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-210/methodes/index.html</guid>
+      <description>🛠️ Les Méthodes en Java : Segmenter pour mieux régner En programmation, une méthode est un bloc de code nommé qui contient une séquence d’instructions. Au lieu d’écrire tout votre code dans le bloc principal (main), vous créez des unités de travail spécialisées que vous pouvez appeler au besoin.&#xA;L’analogie de la boîte : Imaginez une méthode comme une boîte fermée. Vous ne voyez pas forcément l’engrenage à l’intérieur, mais vous savez comment l’utiliser en appuyant sur un bouton ou en y insérant des données.</description>
+    </item>
   </channel>
 </rss>
