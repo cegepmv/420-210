@@ -42,5 +42,19 @@
       <guid>http://localhost:1313/420-210/methodes/index.html</guid>
       <description>🛠️ Les Méthodes en Java : Segmenter pour mieux régner En programmation, une méthode est un bloc de code nommé qui contient une séquence d’instructions. Au lieu d’écrire tout votre code dans le bloc principal (main), vous créez des unités de travail spécialisées que vous pouvez appeler au besoin.&#xA;L’analogie de la boîte : Imaginez une méthode comme une boîte fermée. Vous ne voyez pas forcément l’engrenage à l’intérieur, mais vous savez comment l’utiliser en appuyant sur un bouton ou en y insérant des données.</description>
     </item>
+    <item>
+      <title>Tableaux</title>
+      <link>http://localhost:1313/420-210/tableaux/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-210/tableaux/index.html</guid>
+      <description>📦 Les tableaux 1D en Java Un tableau (array) permet de stocker plusieurs valeurs dans une même variable, toutes du même type (int, double, etc.).&#xA;Les tableaux à une dimension (1D) sont comme une liste ordonnée de valeurs, accessibles grâce à leur indice.&#xA;🏗️ Déclaration et création ✏️ Déclarer un tableau int[] notes; // déclaration 🛠️ Créer un tableau notes = new int[5]; // tableau de 5 entiers (tous à 0) Ou, préférablement, tout en une ligne :</description>
+    </item>
+    <item>
+      <title>Exercices de révision</title>
+      <link>http://localhost:1313/420-210/exo_revisions/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-210/exo_revisions/index.html</guid>
+      <description>Exercices de révision 🎮 Projet 1 : Système de Gestion de Notes Scolaires 📋 Contexte Vous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.</description>
+    </item>
   </channel>
 </rss>

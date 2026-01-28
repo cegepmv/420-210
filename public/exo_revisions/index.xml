@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercices de révision :: Programmation orientée objet</title>
+    <link>http://localhost:1313/420-210/exo_revisions/index.html</link>
+    <description>Exercices de révision 🎮 Projet 1 : Système de Gestion de Notes Scolaires 📋 Contexte Vous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="http://localhost:1313/420-210/exo_revisions/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

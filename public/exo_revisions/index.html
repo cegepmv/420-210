@@ -1,0 +1,2451 @@
+<!DOCTYPE html>
+<html id="R-html" lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-210/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-210/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="Exercices de révision 🎮 Projet 1 : Système de Gestion de Notes Scolaires 📋 Contexte Vous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Exercices de révision :: Programmation orientée objet">
+    <meta name="twitter:description" content="Exercices de révision 🎮 Projet 1 : Système de Gestion de Notes Scolaires 📋 Contexte Vous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.">
+    <meta property="og:url" content="http://localhost:1313/420-210/exo_revisions/index.html">
+    <meta property="og:site_name" content="Programmation orientée objet">
+    <meta property="og:title" content="Exercices de révision :: Programmation orientée objet">
+    <meta property="og:description" content="Exercices de révision 🎮 Projet 1 : Système de Gestion de Notes Scolaires 📋 Contexte Vous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Exercices de révision :: Programmation orientée objet">
+    <meta itemprop="description" content="Exercices de révision 🎮 Projet 1 : Système de Gestion de Notes Scolaires 📋 Contexte Vous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.">
+    <meta itemprop="wordCount" content="8823">
+    <title>Exercices de révision :: Programmation orientée objet</title>
+    <link href="/420-210/exo_revisions/index.xml" rel="alternate" type="application/rss+xml" title="Exercices de révision :: Programmation orientée objet">
+    <link href="/420-210/images/favicon.png?1769627119" rel="icon" type="image/png">
+    <link href="/420-210/css/auto-complete/auto-complete.min.css?1769627119" rel="stylesheet">
+    <script src="/420-210/js/auto-complete/auto-complete.min.js?1769627119" defer></script>
+    <script src="/420-210/js/search-lunr.js?1769627119" defer></script>
+    <script src="/420-210/js/search.js?1769627119" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/420-210/searchindex.en.js?1769627119";
+    </script>
+    <script src="/420-210/js/lunr/lunr.min.js?1769627119" defer></script>
+    <script src="/420-210/js/lunr/lunr.stemmer.support.min.js?1769627119" defer></script>
+    <script src="/420-210/js/lunr/lunr.multi.min.js?1769627119" defer></script>
+    <script src="/420-210/js/lunr/lunr.fr.min.js?1769627119" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['fr'];
+    </script>
+    <link href="/420-210/fonts/fontawesome/css/all.min.css?1769627119" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-210/fonts/fontawesome/css/all.min.css?1769627119" rel="stylesheet"></noscript>
+    <link href="/420-210/css/perfect-scrollbar/perfect-scrollbar.min.css?1769627119" rel="stylesheet">
+    <link href="/420-210/css/theme.css?1769627119" rel="stylesheet">
+    <link href="/420-210/css/format-html.css?1769627119" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/exo_revisions\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-210';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'learn', 'relearn-auto', 'zen-light', 'zen-dark', 'neon' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script><style>
+:root {
+    --MENU-WIDTH-S: 14.375rem;
+    --MENU-WIDTH-M: 14.375rem;
+    --MENU-WIDTH-L: 16rem;
+}
+</style>
+  </head>
+  <body class="mobile-support html" data-origin="/420-210/exo_revisions/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#-projet-1--système-de-gestion-de-notes-scolaires">🎮 Projet 1 : Système de Gestion de Notes Scolaires</a>
+      <ul>
+        <li><a href="#-contexte">📋 Contexte</a></li>
+        <li><a href="#-objectifs-pédagogiques">🎯 Objectifs pédagogiques</a></li>
+        <li><a href="#-instructions-détaillées">📝 Instructions détaillées</a></li>
+        <li><a href="#-critères-de-validation">✅ Critères de validation</a></li>
+        <li><a href="#-conseils">💡 Conseils</a></li>
+      </ul>
+    </li>
+    <li><a href="#-projet-2--calculateur-de-salaire-et-impôts">💰 Projet 2 : Calculateur de Salaire et Impôts</a>
+      <ul>
+        <li><a href="#-contexte-1">📋 Contexte</a></li>
+        <li><a href="#-objectifs-pédagogiques-1">🎯 Objectifs pédagogiques</a></li>
+        <li><a href="#-instructions-détaillées-1">📝 Instructions détaillées</a></li>
+        <li><a href="#-critères-de-validation-1">✅ Critères de validation</a></li>
+        <li><a href="#-conseils-1">💡 Conseils</a></li>
+      </ul>
+    </li>
+    <li><a href="#-projet-3--jeu-de-devinette-avancé">🎲 Projet 3 : Jeu de Devinette Avancé</a>
+      <ul>
+        <li><a href="#-contexte-2">📋 Contexte</a></li>
+        <li><a href="#-objectifs-pédagogiques-2">🎯 Objectifs pédagogiques</a></li>
+        <li><a href="#-instructions-détaillées-2">📝 Instructions détaillées</a></li>
+        <li><a href="#-critères-de-validation-2">✅ Critères de validation</a></li>
+        <li><a href="#-conseils-2">💡 Conseils</a></li>
+        <li><a href="#-extensions-possibles">🎁 Extensions possibles</a></li>
+      </ul>
+    </li>
+    <li><a href="#-projet-4--calculateur-de-dates">📅 Projet 4 : Calculateur de Dates</a>
+      <ul>
+        <li><a href="#-contexte-3">📋 Contexte</a></li>
+        <li><a href="#-objectifs-pédagogiques-3">🎯 Objectifs pédagogiques</a></li>
+        <li><a href="#-instructions-détaillées-3">📝 Instructions détaillées</a></li>
+        <li><a href="#-critères-de-validation-3">✅ Critères de validation</a></li>
+        <li><a href="#-conseils-3">💡 Conseils</a></li>
+        <li><a href="#-extensions-possibles-1">🎁 Extensions possibles</a></li>
+      </ul>
+    </li>
+    <li><a href="#-projet-5--simulateur-de-compte-bancaire">🏦 Projet 5 : Simulateur de Compte Bancaire</a>
+      <ul>
+        <li><a href="#-contexte-4">📋 Contexte</a></li>
+        <li><a href="#-objectifs-pédagogiques-4">🎯 Objectifs pédagogiques</a></li>
+        <li><a href="#-instructions-détaillées-4">📝 Instructions détaillées</a></li>
+        <li><a href="#-critères-de-validation-4">✅ Critères de validation</a></li>
+        <li><a href="#-conseils-4">💡 Conseils</a></li>
+        <li><a href="#-extensions-possibles-2">🎁 Extensions possibles</a></li>
+      </ul>
+    </li>
+    <li><a href="#-projet-6--analyseur-de-texte">🎯 Projet 6 : Analyseur de Texte</a>
+      <ul>
+        <li><a href="#-contexte-5">📋 Contexte</a></li>
+        <li><a href="#-objectifs-pédagogiques-5">🎯 Objectifs pédagogiques</a></li>
+        <li><a href="#-instructions-détaillées-5">📝 Instructions détaillées</a></li>
+        <li><a href="#-critères-de-validation-5">✅ Critères de validation</a></li>
+        <li><a href="#-conseils-5">💡 Conseils</a></li>
+        <li><a href="#-extensions-possibles-3">🎁 Extensions possibles</a></li>
+      </ul>
+    </li>
+    <li><a href="#-projet-7--machine-à-sous-slot-machine">🎰 Projet 7 : Machine à Sous (Slot Machine)</a>
+      <ul>
+        <li><a href="#-contexte-6">📋 Contexte</a></li>
+        <li><a href="#-objectifs-pédagogiques-6">🎯 Objectifs pédagogiques</a></li>
+        <li><a href="#-instructions-détaillées-6">📝 Instructions détaillées</a></li>
+        <li><a href="#-critères-de-validation-6">✅ Critères de validation</a></li>
+        <li><a href="#-conseils-6">💡 Conseils</a></li>
+        <li><a href="#-extensions-possibles-4">🎁 Extensions possibles</a></li>
+      </ul>
+    </li>
+    <li><a href="#-grille-dévaluation-générale">📊 Grille d&rsquo;évaluation générale</a>
+      <ul>
+        <li><a href="#fonctionnalité-50-points">Fonctionnalité (50 points)</a></li>
+        <li><a href="#qualité-du-code-30-points">Qualité du code (30 points)</a></li>
+        <li><a href="#robustesse-20-points">Robustesse (20 points)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-conseils-généraux-pour-tous-les-projets">💡 Conseils généraux pour tous les projets</a>
+      <ul>
+        <li><a href="#1-méthodologie-de-développement">1. Méthodologie de développement</a></li>
+        <li><a href="#2-techniques-de-débogage">2. Techniques de débogage</a></li>
+        <li><a href="#3-bonnes-pratiques-java">3. Bonnes pratiques Java</a></li>
+        <li><a href="#4-checklist-avant-de-soumettre">4. Checklist avant de soumettre</a></li>
+      </ul>
+    </li>
+    <li><a href="#-ordre-recommandé-des-projets">🚀 Ordre recommandé des projets</a></li>
+    <li><a href="#-ressources-java-utiles">📚 Ressources Java utiles</a>
+      <ul>
+        <li><a href="#méthodes-string-importantes">Méthodes String importantes</a></li>
+        <li><a href="#méthodes-de-tableaux">Méthodes de tableaux</a></li>
+        <li><a href="#classe-math">Classe Math</a></li>
+        <li><a href="#classe-random">Classe Random</a></li>
+        <li><a href="#scanner">Scanner</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-210/index.html"><span itemprop="name">Programmation orientée objet</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Exercices de révision</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/420-210/tableaux/index.html" title="Tableaux (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle"><span><i class="fa-fw fas fa-chevron-right"></i></span></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable exercices" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="exercices-de-révision">Exercices de révision</h1>
+
+<h1 id="exercices-de-révision">Exercices de révision<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<hr>
+<h2 id="-projet-1--système-de-gestion-de-notes-scolaires">🎮 Projet 1 : Système de Gestion de Notes Scolaires<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="-contexte">📋 Contexte<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Vous devez créer un système pour gérer et analyser les notes d&rsquo;une classe d&rsquo;étudiants. Le système permettra de calculer des statistiques, d&rsquo;attribuer des mentions et de générer des rapports.</p>
+<h3 id="-objectifs-pédagogiques">🎯 Objectifs pédagogiques<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Manipulation de tableaux</li>
+<li>Calculs statistiques (moyenne, min, max)</li>
+<li>Structures conditionnelles pour la classification</li>
+<li>Boucles pour parcourir des données</li>
+<li>Méthodes avec paramètres et valeurs de retour</li>
+</ul>
+<h3 id="-instructions-détaillées">📝 Instructions détaillées<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Créez une classe <code>GestionNotes</code> avec les méthodes suivantes :</p>
+<h4 id="1-méthode-calculermoyenne">1. Méthode <code>calculerMoyenne</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer la moyenne arithmétique d&rsquo;un tableau de notes.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>notes</code> : un tableau de <code>double</code> contenant les notes</li>
+</ul>
+<p><strong>Retour :</strong> La moyenne sous forme de <code>double</code></p>
+<p><strong>Algorithme :</strong></p>
+<ul>
+<li>Parcourir toutes les notes du tableau</li>
+<li>Additionner toutes les notes</li>
+<li>Diviser la somme par le nombre de notes</li>
+<li>Retourner le résultat</li>
+</ul>
+<p><strong>Exemple :</strong> Pour les notes [15.5, 12.0, 18.0], la moyenne est (15.5 + 12.0 + 18.0) / 3 = 15.17</p>
+<hr>
+<h4 id="2-méthode-trouvermaximum">2. Méthode <code>trouverMaximum</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Trouver la note la plus élevée dans le tableau.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>notes</code> : un tableau de <code>double</code></li>
+</ul>
+<p><strong>Retour :</strong> La note maximale (<code>double</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<ul>
+<li>Initialiser une variable avec la première note</li>
+<li>Parcourir toutes les autres notes</li>
+<li>Si une note est supérieure au maximum actuel, la remplacer</li>
+<li>Retourner le maximum trouvé</li>
+</ul>
+<hr>
+<h4 id="3-méthode-trouverminimum">3. Méthode <code>trouverMinimum</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Trouver la note la plus basse dans le tableau.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>notes</code> : un tableau de <code>double</code></li>
+</ul>
+<p><strong>Retour :</strong> La note minimale (<code>double</code>)</p>
+<p><strong>Algorithme :</strong> Similaire à <code>trouverMaximum</code>, mais en cherchant la plus petite valeur.</p>
+<hr>
+<h4 id="4-méthode-compterreussites">4. Méthode <code>compterReussites</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Compter combien d&rsquo;étudiants ont une note supérieure ou égale à 10 (seuil de réussite).</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>notes</code> : un tableau de <code>double</code></li>
+</ul>
+<p><strong>Retour :</strong> Le nombre d&rsquo;étudiants ayant réussi (<code>int</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<ul>
+<li>Initialiser un compteur à 0</li>
+<li>Parcourir toutes les notes</li>
+<li>Pour chaque note &gt;= 10, incrémenter le compteur</li>
+<li>Retourner le compteur</li>
+</ul>
+<hr>
+<h4 id="5-méthode-obtenirmention">5. Méthode <code>obtenirMention</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Déterminer la mention obtenue selon la moyenne d&rsquo;un étudiant.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>moyenne</code> : la moyenne de l&rsquo;étudiant (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Une chaîne de caractères (<code>String</code>) représentant la mention</p>
+<p><strong>Règles de mentions :</strong></p>
+<ul>
+<li>moyenne &gt;= 16 : &ldquo;Très Bien&rdquo;</li>
+<li>moyenne &gt;= 14 : &ldquo;Bien&rdquo;</li>
+<li>moyenne &gt;= 12 : &ldquo;Assez Bien&rdquo;</li>
+<li>moyenne &gt;= 10 : &ldquo;Passable&rdquo;</li>
+<li>moyenne &lt; 10 : &ldquo;Échec&rdquo;</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<ul>
+<li>Utiliser une série de conditions if/else if/else</li>
+<li>Comparer la moyenne aux seuils (du plus élevé au plus bas)</li>
+<li>Retourner la mention correspondante</li>
+</ul>
+<hr>
+<h4 id="6-méthode-afficherrapport">6. Méthode <code>afficherRapport</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Générer et afficher un rapport complet des statistiques de la classe.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>notes</code> : un tableau de <code>double</code></li>
+</ul>
+<p><strong>Retour :</strong> <code>void</code> (la méthode affiche directement à l&rsquo;écran)</p>
+<p><strong>Informations à afficher :</strong></p>
+<ol>
+<li>Nombre total d&rsquo;étudiants (taille du tableau)</li>
+<li>Moyenne générale de la classe (utiliser <code>calculerMoyenne</code>)</li>
+<li>Note maximale et minimale (utiliser les méthodes correspondantes)</li>
+<li>Taux de réussite en pourcentage : (nombre de réussites / total) × 100</li>
+<li>Distribution des mentions :
+<ul>
+<li>Compter combien d&rsquo;étudiants ont chaque mention</li>
+<li>Pour cela, parcourir toutes les notes, calculer la mention de chaque note, et compter</li>
+</ul>
+</li>
+</ol>
+<p><strong>Format d&rsquo;affichage attendu :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>===== RAPPORT DE NOTES =====
+Nombre d&#39;étudiants : 10
+Moyenne générale : 12.60
+Note maximale : 18.00
+Note minimale : 7.50
+Taux de réussite : 70.00%
+Distribution des mentions :
+  - Très Bien : 2
+  - Bien : 2
+  - Assez Bien : 2
+  - Passable : 1
+  - Échec : 3</code></pre></div>
+<hr>
+<h4 id="7-méthode-main">7. Méthode <code>main</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Tester toutes les fonctionnalités du système.</p>
+<p><strong>Instructions :</strong></p>
+<ul>
+<li>Créer un tableau de notes de test : <code>{15.5, 8.0, 12.5, 18.0, 9.5, 14.0, 16.5, 11.0, 7.5, 13.5}</code></li>
+<li>Appeler la méthode <code>afficherRapport</code> avec ce tableau</li>
+<li>Tester également les méthodes individuellement pour vérifier leur bon fonctionnement</li>
+</ul>
+<hr>
+<h3 id="-critères-de-validation">✅ Critères de validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Toutes les méthodes sont créées avec les bons paramètres et types de retour</li>
+<li><input disabled="" type="checkbox"> La moyenne est calculée correctement</li>
+<li><input disabled="" type="checkbox"> Le maximum et minimum sont trouvés correctement</li>
+<li><input disabled="" type="checkbox"> Le comptage des réussites fonctionne</li>
+<li><input disabled="" type="checkbox"> Les mentions sont attribuées selon les bons seuils</li>
+<li><input disabled="" type="checkbox"> Le rapport affiche toutes les informations demandées</li>
+<li><input disabled="" type="checkbox"> Le code est lisible avec des noms de variables significatifs</li>
+</ul>
+<h3 id="-conseils">💡 Conseils<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Testez chaque méthode individuellement avant de créer le rapport complet</li>
+<li>Utilisez <code>System.out.printf(&quot;%.2f&quot;, nombre)</code> pour formater les nombres avec 2 décimales</li>
+<li>Pour calculer un pourcentage : <code>(partieDouble / totalDouble) * 100.0</code></li>
+</ul>
+<hr>
+<h2 id="-projet-2--calculateur-de-salaire-et-impôts">💰 Projet 2 : Calculateur de Salaire et Impôts<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="-contexte-1">📋 Contexte<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Développez un système de calcul de salaire net avec différentes déductions, heures supplémentaires, bonus et impôts. Ce système doit générer une fiche de paie complète.</p>
+<h3 id="-objectifs-pédagogiques-1">🎯 Objectifs pédagogiques<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Calculs arithmétiques complexes</li>
+<li>Conditions imbriquées pour les tranches d&rsquo;imposition</li>
+<li>Formules mathématiques appliquées</li>
+<li>Organisation de code en méthodes réutilisables</li>
+</ul>
+<h3 id="-instructions-détaillées-1">📝 Instructions détaillées<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Créez une classe <code>CalculateurSalaire</code> avec les méthodes suivantes :</p>
+<h4 id="1-méthode-calculersalairebrut">1. Méthode <code>calculerSalaireBrut</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer le salaire brut mensuel en prenant en compte les heures supplémentaires.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>tauxHoraire</code> : taux horaire en euros (<code>double</code>)</li>
+<li><code>heuresTravaillees</code> : nombre d&rsquo;heures travaillées dans le mois (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Le salaire brut (<code>double</code>)</p>
+<p><strong>Règles :</strong></p>
+<ul>
+<li>Le nombre d&rsquo;heures normales par mois est 151.67 heures</li>
+<li>Les heures au-delà sont des heures supplémentaires</li>
+<li>Les heures supplémentaires sont payées avec un bonus de 25%</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<ul>
+<li>Si heuresTravaillees &lt;= 151.67 : salaire = tauxHoraire × heuresTravaillees</li>
+<li>Sinon :
+<ul>
+<li>Calculer le salaire des heures normales : 151.67 × tauxHoraire</li>
+<li>Calculer les heures supplémentaires : heuresTravaillees - 151.67</li>
+<li>Calculer le salaire des heures sup : heuresSup × tauxHoraire × 1.25</li>
+<li>Additionner les deux montants</li>
+</ul>
+</li>
+</ul>
+<p><strong>Exemple :</strong> Si tauxHoraire = 15€ et heures = 170</p>
+<ul>
+<li>Heures normales : 151.67 × 15 = 2275.05€</li>
+<li>Heures supplémentaires : 18.33 × 15 × 1.25 = 343.69€</li>
+<li>Total brut : 2618.74€</li>
+</ul>
+<hr>
+<h4 id="2-méthode-calculercotisations">2. Méthode <code>calculerCotisations</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer le montant des cotisations sociales.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>salaireBrut</code> : salaire brut mensuel (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Montant des cotisations (<code>double</code>)</p>
+<p><strong>Règle :</strong> Les cotisations représentent 22% du salaire brut</p>
+<p><strong>Formule :</strong> <code>salaireBrut * 0.22</code></p>
+<hr>
+<h4 id="3-méthode-calculerimpot">3. Méthode <code>calculerImpot</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer l&rsquo;impôt sur le revenu annuel selon le système de tranches progressives.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>salaireAnnuelNet</code> : salaire net annuel après cotisations (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Montant total de l&rsquo;impôt annuel (<code>double</code>)</p>
+<p><strong>Tranches d&rsquo;imposition :</strong></p>
+<ul>
+<li>0 à 10 000€ : 0%</li>
+<li>10 001€ à 25 000€ : 11%</li>
+<li>25 001€ à 50 000€ : 30%</li>
+<li>Au-delà de 50 000€ : 41%</li>
+</ul>
+<p><strong>Algorithme (système de tranches) :</strong></p>
+<ul>
+<li>L&rsquo;impôt se calcule tranche par tranche</li>
+<li>Exemple pour un salaire de 30 000€ :
+<ul>
+<li>Tranche 1 (0-10000) : 10000 × 0% = 0€</li>
+<li>Tranche 2 (10001-25000) : 15000 × 11% = 1650€</li>
+<li>Tranche 3 (25001-30000) : 5000 × 30% = 1500€</li>
+<li>Total impôt : 3150€</li>
+</ul>
+</li>
+</ul>
+<p><strong>Pseudo-code :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>impot = 0
+reste = salaireAnnuelNet
+
+Si reste &gt; 10000:
+    impot += (min(reste, 25000) - 10000) × 0.11
+Si reste &gt; 25000:
+    impot += (min(reste, 50000) - 25000) × 0.30
+Si reste &gt; 50000:
+    impot += (reste - 50000) × 0.41</code></pre></div>
+<hr>
+<h4 id="4-méthode-calculerbonus">4. Méthode <code>calculerBonus</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer le bonus annuel selon l&rsquo;ancienneté et la performance.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>salaireBrut</code> : salaire brut mensuel (<code>double</code>)</li>
+<li><code>anciennete</code> : années d&rsquo;ancienneté (<code>int</code>)</li>
+<li><code>performance</code> : note de performance de 0 à 10 (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Montant du bonus mensuel (<code>double</code>)</p>
+<p><strong>Règles :</strong></p>
+<ul>
+<li>Si performance &lt; 7 : aucun bonus (retourner 0)</li>
+<li>Si performance &gt;= 7 :
+<ul>
+<li>Bonus de base : 5% du salaire brut</li>
+<li>Bonus d&rsquo;ancienneté : +1% par année d&rsquo;ancienneté (maximum +10%)</li>
+<li>Le bonus total ne peut pas dépasser 15% du salaire brut</li>
+</ul>
+</li>
+</ul>
+<p><strong>Exemple :</strong></p>
+<ul>
+<li>Salaire brut = 2000€, ancienneté = 8 ans, performance = 8</li>
+<li>Bonus de base : 2000 × 5% = 100€</li>
+<li>Bonus ancienneté : 2000 × 8% = 160€ (limité à 10% = 200€)</li>
+<li>Total bonus : 100 + 160 = 260€</li>
+</ul>
+<hr>
+<h4 id="5-méthode-genererfichepaie">5. Méthode <code>genererFichePaie</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Générer et afficher une fiche de paie complète.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>nom</code> : nom de l&rsquo;employé (<code>String</code>)</li>
+<li><code>tauxHoraire</code> : taux horaire (<code>double</code>)</li>
+<li><code>heuresTravaillees</code> : heures travaillées (<code>int</code>)</li>
+<li><code>anciennete</code> : années d&rsquo;ancienneté (<code>int</code>)</li>
+<li><code>performance</code> : note de performance (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>void</code></p>
+<p><strong>Calculs à effectuer et afficher :</strong></p>
+<ol>
+<li>Calculer le salaire brut (utiliser <code>calculerSalaireBrut</code>)</li>
+<li>Calculer le nombre d&rsquo;heures supplémentaires : max(0, heuresTravaillees - 151.67)</li>
+<li>Calculer les cotisations (utiliser <code>calculerCotisations</code>)</li>
+<li>Calculer le salaire net avant impôt : salaireBrut - cotisations</li>
+<li>Calculer le bonus mensuel (utiliser <code>calculerBonus</code>)</li>
+<li>Calculer le salaire annuel net : (salaire net + bonus) × 12</li>
+<li>Calculer l&rsquo;impôt annuel estimé (utiliser <code>calculerImpot</code>)</li>
+<li>Calculer l&rsquo;impôt mensuel : impôt annuel / 12</li>
+<li>Calculer le salaire net mensuel final : salaire net + bonus - impôt mensuel</li>
+</ol>
+<p><strong>Format d&rsquo;affichage :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>╔════════════════════════════════════╗
+║         FICHE DE PAIE              ║
+╚════════════════════════════════════╝
+Employé : Jean Dupont
+Période : Janvier 2026
+
+--- DÉTAILS DES HEURES ---
+Heures travaillées : 170h
+Heures supplémentaires : 18.33h
+Taux horaire : 15.50€
+
+--- CALCUL DU SALAIRE ---
+Salaire brut : 2618.74€
+Cotisations sociales (22%) : 576.12€
+Salaire net avant impôt : 2042.62€
+Bonus de performance : 131.00€
+Salaire net avant impôt : 2173.62€
+
+--- IMPÔTS (estimation annuelle) ---
+Salaire annuel net : 26083.44€
+Impôt annuel estimé : 1765.17€
+Impôt mensuel : 147.10€
+
+--- NET À PAYER ---
+Salaire net mensuel : 2026.52€</code></pre></div>
+<hr>
+<h4 id="6-méthode-main">6. Méthode <code>main</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Tester le système avec plusieurs cas.</p>
+<p><strong>Tests à effectuer :</strong></p>
+<ul>
+<li>Cas 1 : Employé standard sans heures sup</li>
+<li>Cas 2 : Employé avec heures supplémentaires</li>
+<li>Cas 3 : Employé avec haute performance et ancienneté</li>
+<li>Cas 4 : Employé avec basse performance (pas de bonus)</li>
+</ul>
+<hr>
+<h3 id="-critères-de-validation-1">✅ Critères de validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Les heures supplémentaires sont calculées avec le bon taux (25%)</li>
+<li><input disabled="" type="checkbox"> Les cotisations sont correctement appliquées (22%)</li>
+<li><input disabled="" type="checkbox"> Le système de tranches d&rsquo;imposition fonctionne correctement</li>
+<li><input disabled="" type="checkbox"> Le bonus est calculé selon les règles (performance et ancienneté)</li>
+<li><input disabled="" type="checkbox"> La fiche de paie affiche tous les éléments demandés</li>
+<li><input disabled="" type="checkbox"> Les montants sont arrondis à 2 décimales</li>
+</ul>
+<h3 id="-conseils-1">💡 Conseils<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Testez chaque méthode séparément avec des valeurs simples</li>
+<li>Utilisez <code>System.out.printf(&quot;%.2f€%n&quot;, montant)</code> pour l&rsquo;affichage</li>
+<li>Faites attention aux conversions int/double dans les calculs</li>
+<li>Vérifiez les cas limites (0 heures sup, performance minimale, etc.)</li>
+</ul>
+<hr>
+<h2 id="-projet-3--jeu-de-devinette-avancé">🎲 Projet 3 : Jeu de Devinette Avancé<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="-contexte-2">📋 Contexte<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Créez un jeu où l&rsquo;ordinateur génère un nombre aléatoire et le joueur doit le deviner. Le jeu donne des indices de proximité et calcule un score selon la performance.</p>
+<h3 id="-objectifs-pédagogiques-2">🎯 Objectifs pédagogiques<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Utilisation de la classe Random</li>
+<li>Boucles while pour le jeu</li>
+<li>Conditions multiples pour les indices</li>
+<li>Interaction avec l&rsquo;utilisateur (Scanner)</li>
+<li>Calcul de scores</li>
+</ul>
+<h3 id="-instructions-détaillées-2">📝 Instructions détaillées<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Créez une classe <code>JeuDevinette</code> avec les méthodes suivantes :</p>
+<h4 id="1-méthode-generernombre">1. Méthode <code>genererNombre</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Générer un nombre aléatoire dans un intervalle.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>min</code> : valeur minimale (<code>int</code>)</li>
+<li><code>max</code> : valeur maximale (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nombre aléatoire entre min et max inclus (<code>int</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Random</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Générer un nombre entre 0 et (max-min)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">Ajouter</span><span class="w"> </span><span class="n">min</span><span class="w"> </span><span class="n">pour</span><span class="w"> </span><span class="n">obtenir</span><span class="w"> </span><span class="n">un</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="n">entre</span><span class="w"> </span><span class="n">min</span><span class="w"> </span><span class="n">et</span><span class="w"> </span><span class="n">max</span></span></span></code></pre></div>
+<p><strong>Formule :</strong> <code>random.nextInt(max - min + 1) + min</code></p>
+<hr>
+<h4 id="2-méthode-calculerdifference">2. Méthode <code>calculerDifference</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer la différence absolue entre deux nombres.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>nombre1</code> : premier nombre (<code>int</code>)</li>
+<li><code>nombre2</code> : deuxième nombre (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Différence absolue (<code>int</code>)</p>
+<p><strong>Formule :</strong> <code>Math.abs(nombre1 - nombre2)</code></p>
+<hr>
+<h4 id="3-méthode-donnerindice">3. Méthode <code>donnerIndice</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Fournir un indice textuel selon la proximité de la proposition.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>proposition</code> : nombre proposé par le joueur (<code>int</code>)</li>
+<li><code>secret</code> : nombre à deviner (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Message d&rsquo;indice (<code>String</code>)</p>
+<p><strong>Règles :</strong></p>
+<ul>
+<li>Calculer la différence avec <code>calculerDifference</code></li>
+<li>Selon la différence :
+<ul>
+<li>&lt;= 5 : &ldquo;🔥 Brûlant ! Vous êtes très proche !&rdquo;</li>
+<li>&lt;= 10 : &ldquo;♨️ Chaud ! Vous approchez !&rdquo;</li>
+<li>&lt;= 20 : &ldquo;🌡️ Tiède&hellip; continuez dans cette direction&rdquo;</li>
+<li>
+<blockquote>
+<p>20 : &ldquo;❄️ Froid ! Vous êtes loin&rdquo;</p></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Bonus :</strong> Ajouter aussi si le nombre est trop grand ou trop petit :</p>
+<ul>
+<li>&ldquo;Le nombre secret est plus petit&rdquo;</li>
+<li>&ldquo;Le nombre secret est plus grand&rdquo;</li>
+</ul>
+<hr>
+<h4 id="4-méthode-calculerscore">4. Méthode <code>calculerScore</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer le score final selon le nombre d&rsquo;essais et la difficulté.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>nombreEssais</code> : nombre de tentatives utilisées (<code>int</code>)</li>
+<li><code>difficulte</code> : niveau choisi : &ldquo;Facile&rdquo;, &ldquo;Moyen&rdquo; ou &ldquo;Difficile&rdquo; (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Score (entre 0 et 1000+) (<code>int</code>)</p>
+<p><strong>Formule de base :</strong> <code>1000 - (nombreEssais × 50)</code></p>
+<p><strong>Multiplicateurs de difficulté :</strong></p>
+<ul>
+<li>&ldquo;Facile&rdquo; : ×1 (pas de bonus)</li>
+<li>&ldquo;Moyen&rdquo; : ×1.5</li>
+<li>&ldquo;Difficile&rdquo; : ×2</li>
+</ul>
+<p><strong>Score minimum :</strong> 0 (ne peut pas être négatif)</p>
+<p><strong>Exemple :</strong></p>
+<ul>
+<li>8 essais en mode Difficile</li>
+<li>Score de base : 1000 - (8 × 50) = 600</li>
+<li>Avec multiplicateur ×2 : 600 × 2 = 1200</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>scoreBase = 1000 - (nombreEssais × 50)
+Si scoreBase &lt; 0 alors scoreBase = 0
+
+Selon difficulte:
+  &#34;Facile&#34; : multiplicateur = 1.0
+  &#34;Moyen&#34; : multiplicateur = 1.5
+  &#34;Difficile&#34; : multiplicateur = 2.0
+
+scoreFinal = scoreBase × multiplicateur</code></pre></div>
+<hr>
+<h4 id="5-méthode-jouerpartie">5. Méthode <code>jouerPartie</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Gérer une partie complète du jeu.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>difficulte</code> : niveau choisi (&ldquo;Facile&rdquo;, &ldquo;Moyen&rdquo;, &ldquo;Difficile&rdquo;) (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Score obtenu (<code>int</code>)</p>
+<p><strong>Règles selon la difficulté :</strong></p>
+<ul>
+<li>Facile : nombre entre 1 et 50</li>
+<li>Moyen : nombre entre 1 et 100</li>
+<li>Difficile : nombre entre 1 et 200</li>
+</ul>
+<p><strong>Algorithme détaillé :</strong></p>
+<ol>
+<li>
+<p>Déterminer min et max selon la difficulté</p>
+</li>
+<li>
+<p>Générer le nombre secret avec <code>genererNombre</code></p>
+</li>
+<li>
+<p>Initialiser le compteur d&rsquo;essais à 0</p>
+</li>
+<li>
+<p>Créer un Scanner pour lire les entrées</p>
+</li>
+<li>
+<p>Boucle de jeu (tant que pas trouvé) :</p>
+<ul>
+<li>
+<p>Incrémenter le compteur d&rsquo;essais</p>
+</li>
+<li>
+<p>Afficher &ldquo;Essai #X - Entrez un nombre :&rdquo;</p>
+</li>
+<li>
+<p>Lire la proposition du joueur</p>
+</li>
+<li>
+<p>Si proposition == secret :</p>
+<ul>
+<li>Afficher &ldquo;🎉 Bravo ! Vous avez trouvé en X essais !&rdquo;</li>
+<li>Sortir de la boucle</li>
+</ul>
+</li>
+<li>
+<p>Sinon :</p>
+<ul>
+<li>Appeler <code>donnerIndice</code> et afficher le message</li>
+<li>Continuer la boucle</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Calculer le score avec <code>calculerScore</code></p>
+</li>
+<li>
+<p>Afficher &ldquo;Score obtenu : X points&rdquo;</p>
+</li>
+<li>
+<p>Retourner le score</p>
+</li>
+</ol>
+<hr>
+<h4 id="6-méthode-affichermenu">6. Méthode <code>afficherMenu</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Afficher le menu de sélection de difficulté.</p>
+<p><strong>Retour :</strong> <code>void</code></p>
+<p><strong>Affichage :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>╔═══════════════════════════════╗
+║     JEU DE DEVINETTE 🎲      ║
+╚═══════════════════════════════╝
+
+Choisissez votre difficulté :
+1. 😊 Facile (1-50)
+2. 🤔 Moyen (1-100)
+3. 😈 Difficile (1-200)
+4. 🚪 Quitter
+
+Votre choix :</code></pre></div>
+<hr>
+<h4 id="7-méthode-main-1">7. Méthode <code>main</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Gérer le programme principal avec menu et statistiques.</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Initialiser :
+  - scoreTotal = 0
+  - nombreParties = 0
+  - Scanner scanner
+
+Boucle principale (continuer = true) :
+  1. Afficher le menu
+  2. Lire le choix du joueur
+  
+  3. Selon le choix :
+     - 1 : jouer en mode Facile
+     - 2 : jouer en mode Moyen
+     - 3 : jouer en mode Difficile
+     - 4 : sortir de la boucle
+     - Autre : afficher &#34;Choix invalide&#34;
+  
+  4. Si une partie a été jouée :
+     - Ajouter le score à scoreTotal
+     - Incrémenter nombreParties
+     - Demander &#34;Voulez-vous rejouer ? (o/n)&#34;
+     - Lire la réponse
+     - Si &#34;n&#34; : continuer = false
+
+Après la boucle :
+  Afficher les statistiques finales :
+    - Nombre de parties jouées
+    - Score total
+    - Score moyen (si parties &gt; 0)
+    - Meilleur type de partie jouée</code></pre></div>
+<hr>
+<h3 id="-critères-de-validation-2">✅ Critères de validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Le nombre secret est bien généré aléatoirement</li>
+<li><input disabled="" type="checkbox"> Les indices de proximité sont corrects</li>
+<li><input disabled="" type="checkbox"> Le score est calculé selon la formule avec multiplicateur</li>
+<li><input disabled="" type="checkbox"> Le jeu se termine quand le joueur trouve</li>
+<li><input disabled="" type="checkbox"> Les statistiques finales sont correctes</li>
+<li><input disabled="" type="checkbox"> Le menu fonctionne avec tous les choix</li>
+<li><input disabled="" type="checkbox"> Le joueur peut rejouer ou quitter</li>
+</ul>
+<h3 id="-conseils-2">💡 Conseils<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Testez d&rsquo;abord avec un nombre fixe au lieu d&rsquo;aléatoire pour déboguer</li>
+<li>Ajoutez des <code>System.out.println</code> pour suivre la progression</li>
+<li>Gérez les cas où l&rsquo;utilisateur entre des lettres au lieu de nombres (try-catch)</li>
+<li>Améliorez l&rsquo;expérience avec des emojis et des couleurs ANSI</li>
+</ul>
+<h3 id="-extensions-possibles">🎁 Extensions possibles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Ajouter un nombre maximum de tentatives</li>
+<li>Créer un mode &ldquo;duel&rdquo; (2 joueurs)</li>
+<li>Sauvegarder les meilleurs scores dans un fichier</li>
+<li>Ajouter un mode &ldquo;Expert&rdquo; avec intervalle très large</li>
+</ul>
+<hr>
+<h2 id="-projet-4--calculateur-de-dates">📅 Projet 4 : Calculateur de Dates<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="-contexte-3">📋 Contexte<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Créez un système complet de manipulation de dates sans utiliser les classes Java de dates (LocalDate, etc.). Tout doit être calculé manuellement avec des algorithmes.</p>
+<h3 id="-objectifs-pédagogiques-3">🎯 Objectifs pédagogiques<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Algorithmes mathématiques</li>
+<li>Conditions complexes imbriquées</li>
+<li>Manipulation de nombres</li>
+<li>Validation de données</li>
+</ul>
+<h3 id="-instructions-détaillées-3">📝 Instructions détaillées<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Créez une classe <code>CalculateurDates</code> avec les méthodes suivantes :</p>
+<h4 id="1-méthode-estbissextile">1. Méthode <code>estBissextile</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Déterminer si une année est bissextile.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>annee</code> : année à tester (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>true</code> si bissextile, <code>false</code> sinon (<code>boolean</code>)</p>
+<p><strong>Règle officielle :</strong>
+Une année est bissextile si :</p>
+<ul>
+<li>Elle est divisible par 4 ET (non divisible par 100 OU divisible par 400)</li>
+</ul>
+<p><strong>Exemples :</strong></p>
+<ul>
+<li>2024 : divisible par 4 et pas par 100 → bissextile</li>
+<li>2000 : divisible par 400 → bissextile</li>
+<li>1900 : divisible par 100 mais pas par 400 → non bissextile</li>
+<li>2023 : pas divisible par 4 → non bissextile</li>
+</ul>
+<p><strong>Formule logique :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>(annee % 4 == 0) &amp;&amp; ((annee % 100 != 0) || (annee % 400 == 0))</code></pre></div>
+<hr>
+<h4 id="2-méthode-nombrejoursdansmois">2. Méthode <code>nombreJoursDansMois</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Retourner le nombre de jours dans un mois donné.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>mois</code> : numéro du mois (1-12) (<code>int</code>)</li>
+<li><code>annee</code> : année (pour gérer février) (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nombre de jours (<code>int</code>)</p>
+<p><strong>Règles :</strong></p>
+<ul>
+<li>Janvier (1), Mars (3), Mai (5), Juillet (7), Août (8), Octobre (10), Décembre (12) : 31 jours</li>
+<li>Avril (4), Juin (6), Septembre (9), Novembre (11) : 30 jours</li>
+<li>Février (2) : 28 jours (29 si année bissextile)</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Si mois == 2:
+    Si estBissextile(annee):
+        retourner 29
+    Sinon:
+        retourner 28
+
+Si mois == 4 ou 6 ou 9 ou 11:
+    retourner 30
+
+Sinon:
+    retourner 31</code></pre></div>
+<hr>
+<h4 id="3-méthode-datevalide">3. Méthode <code>dateValide</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Vérifier si une date est valide.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>jour</code> : jour (1-31) (<code>int</code>)</li>
+<li><code>mois</code> : mois (1-12) (<code>int</code>)</li>
+<li><code>annee</code> : année (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>true</code> si valide, <code>false</code> sinon (<code>boolean</code>)</p>
+<p><strong>Vérifications :</strong></p>
+<ol>
+<li>Le mois doit être entre 1 et 12</li>
+<li>L&rsquo;année doit être positive (&gt; 0)</li>
+<li>Le jour doit être entre 1 et le nombre de jours du mois
+(utiliser <code>nombreJoursDansMois</code>)</li>
+</ol>
+<p><strong>Exemples :</strong></p>
+<ul>
+<li>29/02/2024 : valide (année bissextile)</li>
+<li>29/02/2023 : invalide (pas bissextile)</li>
+<li>31/04/2024 : invalide (avril a 30 jours)</li>
+<li>15/13/2024 : invalide (mois 13 n&rsquo;existe pas)</li>
+</ul>
+<hr>
+<h4 id="4-méthode-jourdelannee">4. Méthode <code>jourDeLannee</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer le numéro du jour dans l&rsquo;année (1-366).</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>jour</code>, <code>mois</code>, <code>annee</code> : la date (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Numéro du jour (1er janvier = 1) (<code>int</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<ol>
+<li>Vérifier que la date est valide</li>
+<li>Initialiser total = 0</li>
+<li>Pour chaque mois avant le mois actuel :
+<ul>
+<li>Ajouter le nombre de jours de ce mois au total</li>
+</ul>
+</li>
+<li>Ajouter le jour du mois actuel</li>
+<li>Retourner le total</li>
+</ol>
+<p><strong>Exemple :</strong> 15 mars 2024</p>
+<ul>
+<li>Janvier : 31 jours</li>
+<li>Février : 29 jours (bissextile)</li>
+<li>Mars : 15 jours</li>
+<li>Total : 31 + 29 + 15 = 75ème jour de l&rsquo;année</li>
+</ul>
+<hr>
+<h4 id="5-méthode-jourdelasemaine">5. Méthode <code>jourDeLaSemaine</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Déterminer quel jour de la semaine correspond à une date.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>jour</code>, <code>mois</code>, <code>annee</code> : la date (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nom du jour (&ldquo;Lundi&rdquo;, &ldquo;Mardi&rdquo;, etc.) (<code>String</code>)</p>
+<p><strong>Algorithme simplifié (formule de Zeller modifiée) :</strong></p>
+<p>Pour simplifier, utilisez cette formule :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Si mois &lt; 3:
+    mois = mois + 12
+    annee = annee - 1
+
+q = jour
+m = mois
+k = annee % 100
+j = annee / 100
+
+h = (q + (13*(m+1))/5 + k + k/4 + j/4 - 2*j) % 7</code></pre></div>
+<p>Convertir h en jour :</p>
+<ul>
+<li>h = 0 : Samedi</li>
+<li>h = 1 : Dimanche</li>
+<li>h = 2 : Lundi</li>
+<li>h = 3 : Mardi</li>
+<li>h = 4 : Mercredi</li>
+<li>h = 5 : Jeudi</li>
+<li>h = 6 : Vendredi</li>
+</ul>
+<p><strong>Alternative plus simple :</strong>
+Vous pouvez aussi créer un tableau de référence avec des dates connues et calculer la différence en jours.</p>
+<hr>
+<h4 id="6-méthode-calculerage">6. Méthode <code>calculerAge</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer l&rsquo;âge exact d&rsquo;une personne.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>jourNaissance</code>, <code>moisNaissance</code>, <code>anneeNaissance</code> : date de naissance</li>
+<li><code>jourActuel</code>, <code>moisActuel</code>, <code>anneeActuel</code> : date actuelle</li>
+</ul>
+<p><strong>Retour :</strong> Âge en années (<code>int</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>age = anneeActuel - anneeNaissance
+
+Si moisActuel &lt; moisNaissance:
+    age = age - 1
+Sinon si moisActuel == moisNaissance et jourActuel &lt; jourNaissance:
+    age = age - 1
+
+retourner age</code></pre></div>
+<p><strong>Exemple :</strong></p>
+<ul>
+<li>Né le 15/03/2000</li>
+<li>Date actuelle : 28/01/2026</li>
+<li>Différence d&rsquo;années : 2026 - 2000 = 26</li>
+<li>Mais le mois (01) est avant mars (03) → encore 25 ans</li>
+<li>Âge : 25 ans</li>
+</ul>
+<hr>
+<h4 id="7-méthode-determinersaison">7. Méthode <code>determinerSaison</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Déterminer la saison selon la date.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>jour</code>, <code>mois</code> : la date (sans l&rsquo;année) (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nom de la saison (<code>String</code>)</p>
+<p><strong>Règles (hémisphère nord) :</strong></p>
+<ul>
+<li>Printemps : du 21 mars au 20 juin</li>
+<li>Été : du 21 juin au 20 septembre</li>
+<li>Automne : du 21 septembre au 20 décembre</li>
+<li>Hiver : du 21 décembre au 20 mars</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Si (mois == 3 et jour &gt;= 21) ou (mois == 4 ou 5) ou (mois == 6 et jour &lt; 21):
+    retourner &#34;Printemps&#34;
+
+Si (mois == 6 et jour &gt;= 21) ou (mois == 7 ou 8) ou (mois == 9 et jour &lt; 21):
+    retourner &#34;Été&#34;
+
+Si (mois == 9 et jour &gt;= 21) ou (mois == 10 ou 11) ou (mois == 12 et jour &lt; 21):
+    retourner &#34;Automne&#34;
+
+Sinon:
+    retourner &#34;Hiver&#34;</code></pre></div>
+<hr>
+<h4 id="8-méthode-differenceenjours">8. Méthode <code>differenceEnJours</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer le nombre de jours entre deux dates.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li>Date 1 : <code>jour1</code>, <code>mois1</code>, <code>annee1</code></li>
+<li>Date 2 : <code>jour2</code>, <code>mois2</code>, <code>annee2</code></li>
+</ul>
+<p><strong>Retour :</strong> Nombre de jours de différence (<code>int</code>)</p>
+<p><strong>Algorithme (méthode simplifiée) :</strong></p>
+<ol>
+<li>Vérifier que les deux dates sont valides</li>
+<li>Convertir chaque date en &ldquo;nombre de jours depuis une référence&rdquo;
+Par exemple, depuis l&rsquo;an 1 ou depuis l&rsquo;an 2000</li>
+<li>Calculer la différence absolue</li>
+</ol>
+<p><strong>Pour convertir une date en jours depuis l&rsquo;an 2000 :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>joursDepuis2000 = 0
+
+Pour chaque année de 2000 à (annee - 1):
+    Si bissextile: joursDepuis2000 += 366
+    Sinon: joursDepuis2000 += 365
+
+joursDepuis2000 += jourDeLannee(jour, mois, annee)</code></pre></div>
+<ol start="4">
+<li>Faire ce calcul pour les deux dates</li>
+<li>Retourner la différence absolue</li>
+</ol>
+<hr>
+<h4 id="9-méthode-afficherrapportdate">9. Méthode <code>afficherRapportDate</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Afficher un rapport complet d&rsquo;analyse d&rsquo;une date.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>jour</code>, <code>mois</code>, <code>annee</code> : la date à analyser (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>void</code></p>
+<p><strong>Informations à afficher :</strong></p>
+<ol>
+<li>La date au format &ldquo;DD/MM/YYYY&rdquo;</li>
+<li>Si la date est valide ou non</li>
+<li>Le jour de la semaine</li>
+<li>Le numéro du jour dans l&rsquo;année</li>
+<li>La saison</li>
+<li>Si l&rsquo;année est bissextile</li>
+<li>Nombre de jours restants dans l&rsquo;année</li>
+<li>Nombre de jours dans le mois</li>
+<li>Combien de jours jusqu&rsquo;à la fin du mois</li>
+</ol>
+<p><strong>Format attendu :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>╔════════════════════════════════════╗
+║     ANALYSE DE DATE COMPLÈTE      ║
+╚════════════════════════════════════╝
+
+Date : 15/08/2024
+Jour de la semaine : Jeudi
+Jour de l&#39;année : 228/366
+Saison : Été
+
+Informations sur l&#39;année :
+  - Année bissextile : Oui
+  - Jours restants : 138
+
+Informations sur le mois :
+  - Août a 31 jours
+  - Jours restants ce mois : 16</code></pre></div>
+<hr>
+<h4 id="10-méthode-main">10. Méthode <code>main</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Tester toutes les fonctionnalités.</p>
+<p><strong>Tests à effectuer :</strong></p>
+<ol>
+<li>Afficher le rapport pour plusieurs dates</li>
+<li>Tester <code>calculerAge</code> avec différentes dates de naissance</li>
+<li>Tester <code>differenceEnJours</code> entre deux dates</li>
+<li>Tester des dates invalides</li>
+<li>Tester des années bissextiles et non-bissextiles</li>
+</ol>
+<hr>
+<h3 id="-critères-de-validation-3">✅ Critères de validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> La détection d&rsquo;année bissextile fonctionne correctement</li>
+<li><input disabled="" type="checkbox"> Le nombre de jours par mois est correct (y compris février)</li>
+<li><input disabled="" type="checkbox"> La validation de date détecte toutes les erreurs</li>
+<li><input disabled="" type="checkbox"> Le calcul du jour de l&rsquo;année est précis</li>
+<li><input disabled="" type="checkbox"> Le jour de la semaine est correct</li>
+<li><input disabled="" type="checkbox"> Le calcul d&rsquo;âge fonctionne même pour les dates limites</li>
+<li><input disabled="" type="checkbox"> La différence entre dates est exacte</li>
+<li><input disabled="" type="checkbox"> Les saisons sont correctement déterminées</li>
+</ul>
+<h3 id="-conseils-3">💡 Conseils<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Testez d&rsquo;abord les années bissextiles : 2000, 2024, 1900, 2100</li>
+<li>Testez février : 28/02 et 29/02 pour années bissextiles et non-bissextiles</li>
+<li>Testez des dates limites : 31/12, 1/1, 29/02</li>
+<li>Vérifiez les calculs avec un calendrier réel</li>
+</ul>
+<h3 id="-extensions-possibles-1">🎁 Extensions possibles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Ajouter la conversion entre calendriers (grégorien, julien)</li>
+<li>Calculer le nombre de jours ouvrables entre deux dates</li>
+<li>Trouver les dates de Pâques (algorithme de Gauss)</li>
+<li>Calculer les jours fériés</li>
+</ul>
+<hr>
+<h2 id="-projet-5--simulateur-de-compte-bancaire">🏦 Projet 5 : Simulateur de Compte Bancaire<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="-contexte-4">📋 Contexte<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Développez un système complet de simulation de compte bancaire avec transactions, découvert, intérêts, frais et projections d&rsquo;épargne.</p>
+<h3 id="-objectifs-pédagogiques-4">🎯 Objectifs pédagogiques<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Gestion d&rsquo;état (solde)</li>
+<li>Validation de transactions</li>
+<li>Calculs financiers</li>
+<li>Simulation temporelle</li>
+</ul>
+<h3 id="-instructions-détaillées-4">📝 Instructions détaillées<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Créez une classe <code>CompteBancaire</code> avec les méthodes suivantes :</p>
+<h4 id="1-méthode-effectuerdepot">1. Méthode <code>effectuerDepot</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Effectuer un dépôt sur le compte.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>soldeActuel</code> : solde avant l&rsquo;opération (<code>double</code>)</li>
+<li><code>montant</code> : montant à déposer (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nouveau solde après dépôt, ou -1 si invalide (<code>double</code>)</p>
+<p><strong>Règles de validation :</strong></p>
+<ul>
+<li>Le montant doit être strictement positif (&gt; 0)</li>
+<li>Si invalide, retourner -1 et ne pas modifier le solde</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Si montant &lt;= 0:
+    Afficher &#34;Erreur : montant invalide&#34;
+    Retourner -1
+
+nouveauSolde = soldeActuel + montant
+Afficher &#34;Dépôt de X€ effectué. Nouveau solde : Y€&#34;
+Retourner nouveauSolde</code></pre></div>
+<hr>
+<h4 id="2-méthode-effectuerretrait">2. Méthode <code>effectuerRetrait</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Effectuer un retrait avec gestion du découvert.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>soldeActuel</code> : solde actuel (<code>double</code>)</li>
+<li><code>montant</code> : montant à retirer (<code>double</code>)</li>
+<li><code>decouvertAutorise</code> : montant de découvert maximum (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nouveau solde, ou -1 si impossible (<code>double</code>)</p>
+<p><strong>Règles :</strong></p>
+<ul>
+<li>Le montant doit être positif</li>
+<li>Le solde après retrait doit rester &gt;= -decouvertAutorise</li>
+<li>Si impossible, retourner -1</li>
+</ul>
+<p><strong>Exemple :</strong></p>
+<ul>
+<li>Solde actuel : 100€</li>
+<li>Découvert autorisé : 200€</li>
+<li>Retrait possible jusqu&rsquo;à : 100 + 200 = 300€</li>
+<li>Si retrait de 250€ : possible (nouveau solde = -150€)</li>
+<li>Si retrait de 350€ : impossible</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Si montant &lt;= 0:
+    Retourner -1
+
+nouveauSolde = soldeActuel - montant
+
+Si nouveauSolde &lt; -decouvertAutorise:
+    Afficher &#34;Erreur : découvert dépassé&#34;
+    Retourner -1
+
+Si nouveauSolde &lt; 0:
+    Afficher &#34;Attention : vous êtes à découvert&#34;
+
+Afficher &#34;Retrait de X€ effectué&#34;
+Retourner nouveauSolde</code></pre></div>
+<hr>
+<h4 id="3-méthode-calculerinterets">3. Méthode <code>calculerInterets</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer les intérêts mensuels pour un solde créditeur.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>solde</code> : solde du compte (<code>double</code>)</li>
+<li><code>tauxAnnuel</code> : taux d&rsquo;intérêt annuel en pourcentage (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Montant des intérêts (<code>double</code>)</p>
+<p><strong>Règles :</strong></p>
+<ul>
+<li>Les intérêts ne sont calculés que si le solde est positif</li>
+<li>Si solde &lt;= 0 : retourner 0</li>
+<li>Formule mensuelle : solde × (tauxAnnuel / 100) / 12</li>
+</ul>
+<p><strong>Exemple :</strong></p>
+<ul>
+<li>Solde : 1000€</li>
+<li>Taux annuel : 2%</li>
+<li>Intérêts mensuels : 1000 × (2 / 100) / 12 = 1.67€</li>
+</ul>
+<hr>
+<h4 id="4-méthode-calculerfraisdecouvert">4. Méthode <code>calculerFraisDecouvert</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer les frais appliqués en cas de découvert.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>solde</code> : solde actuel (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Montant des frais (<code>double</code>)</p>
+<p><strong>Règle :</strong></p>
+<ul>
+<li>Si solde &lt; 0 : frais de 8€</li>
+<li>Sinon : 0€</li>
+</ul>
+<p><strong>Note :</strong> Dans une vraie banque, ce serait des frais par jour de découvert, mais on simplifie ici.</p>
+<hr>
+<h4 id="5-méthode-determinertypecompte">5. Méthode <code>determinerTypeCompte</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Déterminer le type de compte selon le solde moyen.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>soldeMoyen</code> : solde moyen sur la période (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Type de compte (<code>String</code>)</p>
+<p><strong>Classification :</strong></p>
+<ul>
+<li>
+<blockquote>
+<p>= 5000€ : &ldquo;Premium&rdquo;</p></blockquote>
+</li>
+<li>
+<blockquote>
+<p>= 2000€ : &ldquo;Gold&rdquo;</p></blockquote>
+</li>
+<li>&lt; 2000€ : &ldquo;Standard&rdquo;</li>
+</ul>
+<hr>
+<h4 id="6-méthode-calculerfraisgestion">6. Méthode <code>calculerFraisGestion</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer les frais de gestion mensuels.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>typeCompte</code> : type du compte (<code>String</code>)</li>
+<li><code>nombreTransactions</code> : nombre de transactions du mois (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Montant des frais (<code>double</code>)</p>
+<p><strong>Grille tarifaire :</strong></p>
+<p><strong>Premium :</strong></p>
+<ul>
+<li>Gratuit (toutes transactions)</li>
+</ul>
+<p><strong>Gold :</strong></p>
+<ul>
+<li>Gratuit si &lt;= 20 transactions</li>
+<li>5€ si &gt; 20 transactions</li>
+</ul>
+<p><strong>Standard :</strong></p>
+<ul>
+<li>10€ de frais de base</li>
+<li>
+<ul>
+<li>0,50€ par transaction au-delà de 10 transactions gratuites</li>
+</ul>
+</li>
+</ul>
+<p><strong>Exemples :</strong></p>
+<ul>
+<li>Standard avec 15 transactions : 10 + (5 × 0.50) = 12.50€</li>
+<li>Standard avec 8 transactions : 10€</li>
+<li>Gold avec 25 transactions : 5€</li>
+<li>Premium avec 100 transactions : 0€</li>
+</ul>
+<hr>
+<h4 id="7-méthode-virementpossible">7. Méthode <code>virementPossible</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Vérifier si un virement est réalisable.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>soldeActuel</code> : solde actuel (<code>double</code>)</li>
+<li><code>montant</code> : montant du virement (<code>double</code>)</li>
+<li><code>decouvertAutorise</code> : découvert maximum (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>true</code> si possible, <code>false</code> sinon (<code>boolean</code>)</p>
+<p><strong>Condition :</strong> <code>soldeActuel - montant &gt;= -decouvertAutorise</code></p>
+<hr>
+<h4 id="8-méthode-simulermois">8. Méthode <code>simulerMois</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Simuler un mois complet d&rsquo;opérations bancaires.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>soldeInitial</code> : solde au début du mois (<code>double</code>)</li>
+<li><code>depots</code> : tableau des dépôts du mois (<code>double[]</code>)</li>
+<li><code>retraits</code> : tableau des retraits du mois (<code>double[]</code>)</li>
+<li><code>tauxInteret</code> : taux annuel (<code>double</code>)</li>
+<li><code>decouvertAutorise</code> : découvert maximum (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>void</code> (affiche les résultats)</p>
+<p><strong>Algorithme détaillé :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Initialiser :
+   - solde = soldeInitial
+   - nombreTransactions = 0
+   - sommePositions = 0 (pour calculer le solde moyen)
+   - compteurJours = 30
+
+2. Afficher l&#39;en-tête
+   &#34;=== SIMULATION MENSUELLE ===&#34;
+   &#34;Solde initial : X€&#34;
+
+3. Traiter tous les dépôts :
+   Pour chaque dépôt dans le tableau :
+     - nouveauSolde = effectuerDepot(solde, dépôt)
+     - Si valide : solde = nouveauSolde
+     - nombreTransactions++
+     - sommePositions += solde
+
+4. Traiter tous les retraits :
+   Pour chaque retrait dans le tableau :
+     - nouveauSolde = effectuerRetrait(solde, retrait, découvert)
+     - Si valide : solde = nouveauSolde
+     - nombreTransactions++
+     - sommePositions += solde
+
+5. Calculer le solde moyen :
+   soldeMoyen = sommePositions / (nombreTransactions + 1)
+
+6. Déterminer le type de compte :
+   typeCompte = determinerTypeCompte(soldeMoyen)
+
+7. Appliquer intérêts ou frais de découvert :
+   Si solde &gt; 0 :
+     - interets = calculerInterets(solde, tauxInteret)
+     - solde += interets
+     - Afficher &#34;Intérêts créditeurs : +X€&#34;
+   Sinon :
+     - frais = calculerFraisDecouvert(solde)
+     - solde -= frais
+     - Afficher &#34;Frais de découvert : -X€&#34;
+
+8. Appliquer les frais de gestion :
+   fraisGestion = calculerFraisGestion(typeCompte, nombreTransactions)
+   solde -= fraisGestion
+   Afficher &#34;Frais de gestion : -X€&#34;
+
+9. Afficher le récapitulatif :
+   - Type de compte
+   - Nombre de transactions
+   - Solde moyen
+   - Solde final
+
+Format d&#39;affichage :
+&#34;&#34;&#34;
+=== SIMULATION MENSUELLE ===
+Solde initial : 1000.00€
+
+--- OPÉRATIONS DU MOIS ---
+Dépôt de 500.00€ effectué. Nouveau solde : 1500.00€
+Dépôt de 300.00€ effectué. Nouveau solde : 1800.00€
+...
+Retrait de 150.00€ effectué. Nouveau solde : 1650.00€
+...
+
+--- FIN DE MOIS ---
+Intérêts créditeurs : +1.67€
+Frais de gestion (Standard) : -10.00€
+
+=== RÉCAPITULATIF ===
+Type de compte : Standard
+Solde moyen du mois : 1450.00€
+Nombre de transactions : 7
+Solde final : 1641.67€
+&#34;&#34;&#34;</code></pre></div>
+<hr>
+<h4 id="9-méthode-projeterepargne">9. Méthode <code>projeterEpargne</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer le solde futur avec épargne régulière et intérêts composés.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>soldeInitial</code> : solde de départ (<code>double</code>)</li>
+<li><code>depotMensuel</code> : montant épargné chaque mois (<code>double</code>)</li>
+<li><code>tauxInteret</code> : taux annuel (<code>double</code>)</li>
+<li><code>nombreMois</code> : durée de la projection (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Solde projeté (<code>double</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>solde = soldeInitial
+
+Pour i de 1 à nombreMois :
+  1. Ajouter le dépôt mensuel :
+     solde += depotMensuel
+  
+  2. Calculer les intérêts du mois :
+     interets = calculerInterets(solde, tauxInteret)
+     solde += interets
+  
+  3. (Optionnel) Afficher l&#39;état après chaque mois :
+     &#34;Mois X : +depotMensuel€ +interets€ → solde€&#34;
+
+Retourner solde</code></pre></div>
+<p><strong>Exemple de calcul manuel :</strong></p>
+<ul>
+<li>Solde initial : 1000€</li>
+<li>Dépôt mensuel : 200€</li>
+<li>Taux annuel : 2%</li>
+<li>Durée : 3 mois</li>
+</ul>
+<p>Mois 1 :</p>
+<ul>
+<li>Solde après dépôt : 1000 + 200 = 1200€</li>
+<li>Intérêts : 1200 × 0.02 / 12 = 2€</li>
+<li>Nouveau solde : 1202€</li>
+</ul>
+<p>Mois 2 :</p>
+<ul>
+<li>Solde après dépôt : 1202 + 200 = 1402€</li>
+<li>Intérêts : 1402 × 0.02 / 12 = 2.34€</li>
+<li>Nouveau solde : 1404.34€</li>
+</ul>
+<p>Et ainsi de suite&hellip;</p>
+<hr>
+<h4 id="10-méthode-main-1">10. Méthode <code>main</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Tester toutes les fonctionnalités avec des scénarios réalistes.</p>
+<p><strong>Scénarios à tester :</strong></p>
+<p><strong>Test 1 : Simulation mensuelle normale</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">double</span><span class="w"> </span><span class="n">soldeInitial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1000</span><span class="p">.</span><span class="na">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">depots</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">500</span><span class="p">.</span><span class="na">0</span><span class="p">,</span><span class="w"> </span><span class="n">300</span><span class="p">.</span><span class="na">0</span><span class="p">,</span><span class="w"> </span><span class="n">200</span><span class="p">.</span><span class="na">0</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">retraits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">150</span><span class="p">.</span><span class="na">0</span><span class="p">,</span><span class="w"> </span><span class="n">80</span><span class="p">.</span><span class="na">0</span><span class="p">,</span><span class="w"> </span><span class="n">200</span><span class="p">.</span><span class="na">0</span><span class="p">,</span><span class="w"> </span><span class="n">50</span><span class="p">.</span><span class="na">0</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">double</span><span class="w"> </span><span class="n">tauxInteret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">2</span><span class="p">.</span><span class="na">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">double</span><span class="w"> </span><span class="n">decouvertAutorise</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">200</span><span class="p">.</span><span class="na">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">simulerMois</span><span class="p">(</span><span class="n">soldeInitial</span><span class="p">,</span><span class="w"> </span><span class="n">depots</span><span class="p">,</span><span class="w"> </span><span class="n">retraits</span><span class="p">,</span><span class="w"> </span><span class="n">tauxInteret</span><span class="p">,</span><span class="w"> </span><span class="n">decouvertAutorise</span><span class="p">);</span></span></span></code></pre></div>
+<p><strong>Test 2 : Situation de découvert</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">double</span><span class="w"> </span><span class="n">soldeInitial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">100</span><span class="p">.</span><span class="na">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">depots</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">retraits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">50</span><span class="p">.</span><span class="na">0</span><span class="p">,</span><span class="w"> </span><span class="n">80</span><span class="p">.</span><span class="na">0</span><span class="p">,</span><span class="w"> </span><span class="n">100</span><span class="p">.</span><span class="na">0</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">Solde</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">devrait</span><span class="w"> </span><span class="n">être</span><span class="w"> </span><span class="n">négatif</span><span class="w"> </span><span class="n">avec</span><span class="w"> </span><span class="n">frais</span></span></span></code></pre></div>
+<p><strong>Test 3 : Projection d&rsquo;épargne</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">double</span><span class="w"> </span><span class="n">soldeFutur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">projeterEpargne</span><span class="p">(</span><span class="n">1000</span><span class="p">,</span><span class="w"> </span><span class="n">200</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">.</span><span class="na">0</span><span class="p">,</span><span class="w"> </span><span class="n">12</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Après 12 mois : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">soldeFutur</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;€&#34;</span><span class="p">);</span></span></span></code></pre></div>
+<p><strong>Test 4 : Tests des types de compte</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Solde 1500€ → &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">determinerTypeCompte</span><span class="p">(</span><span class="n">1500</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Solde 3000€ → &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">determinerTypeCompte</span><span class="p">(</span><span class="n">3000</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Solde 6000€ → &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">determinerTypeCompte</span><span class="p">(</span><span class="n">6000</span><span class="p">));</span></span></span></code></pre></div>
+<hr>
+<h3 id="-critères-de-validation-4">✅ Critères de validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Les dépôts et retraits valident correctement les montants</li>
+<li><input disabled="" type="checkbox"> Le découvert est bien géré (pas de dépassement)</li>
+<li><input disabled="" type="checkbox"> Les intérêts sont calculés uniquement sur solde positif</li>
+<li><input disabled="" type="checkbox"> Les frais de découvert s&rsquo;appliquent correctement</li>
+<li><input disabled="" type="checkbox"> La classification des comptes fonctionne</li>
+<li><input disabled="" type="checkbox"> Les frais de gestion sont calculés selon les bonnes règles</li>
+<li><input disabled="" type="checkbox"> La projection d&rsquo;épargne inclut les intérêts composés</li>
+<li><input disabled="" type="checkbox"> Tous les montants sont affichés avec 2 décimales</li>
+</ul>
+<h3 id="-conseils-4">💡 Conseils<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Utilisez <code>System.out.printf(&quot;%.2f€%n&quot;, montant)</code> pour formater</li>
+<li>Testez d&rsquo;abord chaque méthode individuellement</li>
+<li>Vérifiez les cas limites (solde à 0, découvert au maximum, etc.)</li>
+<li>Ajoutez des messages clairs pour suivre les opérations</li>
+</ul>
+<h3 id="-extensions-possibles-2">🎁 Extensions possibles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Ajouter un historique des transactions (tableau ou ArrayList)</li>
+<li>Créer une méthode pour générer un relevé PDF</li>
+<li>Implémenter des virements entre comptes</li>
+<li>Ajouter des notifications de seuil de solde</li>
+<li>Créer un système de budget mensuel avec alertes</li>
+</ul>
+<hr>
+<h2 id="-projet-6--analyseur-de-texte">🎯 Projet 6 : Analyseur de Texte<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="-contexte-5">📋 Contexte<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Créez un outil d&rsquo;analyse textuelle complet qui peut compter les mots, analyser la structure, calculer des statistiques et transformer le texte.</p>
+<h3 id="-objectifs-pédagogiques-5">🎯 Objectifs pédagogiques<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Manipulation de chaînes de caractères (String)</li>
+<li>Méthodes de String (split, substring, charAt, length, etc.)</li>
+<li>Boucles sur les caractères</li>
+<li>Conditions pour classification</li>
+</ul>
+<h3 id="-instructions-détaillées-5">📝 Instructions détaillées<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Créez une classe <code>AnalyseurTexte</code> avec les méthodes suivantes :</p>
+<h4 id="1-méthode-comptermots">1. Méthode <code>compterMots</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Compter le nombre de mots dans un texte.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>texte</code> : texte à analyser (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nombre de mots (<code>int</code>)</p>
+<p><strong>Définition d&rsquo;un mot :</strong> Séquence de caractères séparée par des espaces</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Supprimer les espaces au début et à la fin : texte.trim()
+2. Si le texte est vide : retourner 0
+3. Découper le texte en mots : String[] mots = texte.split(&#34;\\s+&#34;)
+   (\\s+ signifie : un ou plusieurs espaces)
+4. Retourner la longueur du tableau de mots</code></pre></div>
+<p><strong>Exemples :</strong></p>
+<ul>
+<li>&ldquo;Bonjour le monde&rdquo; → 3 mots</li>
+<li>&ldquo;Java    est    génial&rdquo; → 3 mots (espaces multiples)</li>
+<li>&quot;&quot; → 0 mots</li>
+<li>&quot;   &quot; → 0 mots</li>
+</ul>
+<hr>
+<h4 id="2-méthode-compterphrases">2. Méthode <code>compterPhrases</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Compter le nombre de phrases dans un texte.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>texte</code> : texte à analyser (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nombre de phrases (<code>int</code>)</p>
+<p><strong>Définition :</strong> Une phrase se termine par <code>.</code> ou <code>!</code> ou <code>?</code></p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>compteur = 0
+Pour chaque caractère c du texte :
+    Si c == &#39;.&#39; ou c == &#39;!&#39; ou c == &#39;?&#39; :
+        compteur++
+Retourner compteur</code></pre></div>
+<p><strong>Alternative avec méthode String :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="w"> </span><span class="n">compteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">texte</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">texte</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;.&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;!&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;?&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">compteur</span><span class="o">++</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">return</span><span class="w"> </span><span class="n">compteur</span><span class="p">;</span></span></span></code></pre></div>
+<hr>
+<h4 id="3-méthode-comptervoyelles">3. Méthode <code>compterVoyelles</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Compter le nombre de voyelles dans un texte.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>texte</code> : texte à analyser (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nombre de voyelles (<code>int</code>)</p>
+<p><strong>Voyelles :</strong> a, e, i, o, u, y (et leurs majuscules)</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Convertir le texte en minuscules : texte.toLowerCase()
+2. Initialiser compteur = 0
+3. Pour chaque caractère c :
+     Si c est dans &#34;aeiouy&#34; :
+         compteur++
+4. Retourner compteur</code></pre></div>
+<p><strong>Méthode pour vérifier si c&rsquo;est une voyelle :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">boolean</span><span class="w"> </span><span class="nf">estVoyelle</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;i&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;o&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;u&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;y&#39;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h4 id="4-méthode-compterconsonnes">4. Méthode <code>compterConsonnes</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Compter le nombre de consonnes (lettres qui ne sont pas des voyelles).</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>texte</code> : texte à analyser (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nombre de consonnes (<code>int</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>compteur = 0
+Pour chaque caractère c :
+    Si c est une lettre ET ce n&#39;est pas une voyelle :
+        compteur++
+
+Retourner compteur</code></pre></div>
+<p><strong>Vérifier si c&rsquo;est une lettre :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Character</span><span class="p">.</span><span class="na">isLetter</span><span class="p">(</span><span class="n">c</span><span class="p">)</span></span></span></code></pre></div>
+<hr>
+<h4 id="5-méthode-longueurmoyennemots">5. Méthode <code>longueurMoyenneMots</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer la longueur moyenne des mots.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>texte</code> : texte à analyser (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Longueur moyenne (<code>double</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Découper le texte en mots
+2. Si aucun mot : retourner 0.0
+3. Initialiser somme = 0
+4. Pour chaque mot :
+     somme += longueur du mot (mot.length())
+5. Retourner somme / nombre de mots</code></pre></div>
+<p><strong>Exemple :</strong></p>
+<ul>
+<li>&ldquo;Bonjour le monde&rdquo; → (7 + 2 + 5) / 3 = 4.67</li>
+</ul>
+<hr>
+<h4 id="6-méthode-motlepluslong">6. Méthode <code>motLePlusLong</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Trouver le mot le plus long dans le texte.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>texte</code> : texte à analyser (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Le mot le plus long (<code>String</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Découper le texte en mots
+2. Si aucun mot : retourner &#34;&#34;
+3. Initialiser :
+     motMax = premier mot
+     longueurMax = longueur du premier mot
+4. Pour chaque mot suivant :
+     Si longueur du mot &gt; longueurMax :
+         motMax = ce mot
+         longueurMax = longueur de ce mot
+5. Retourner motMax</code></pre></div>
+<p><strong>En cas d&rsquo;égalité :</strong> Retourner le premier trouvé</p>
+<hr>
+<h4 id="7-méthode-compteroccurrences">7. Méthode <code>compterOccurrences</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Compter combien de fois un mot spécifique apparaît (insensible à la casse).</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>texte</code> : texte à analyser (<code>String</code>)</li>
+<li><code>motCherche</code> : mot à chercher (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nombre d&rsquo;occurrences (<code>int</code>)</p>
+<p><strong>Règles :</strong></p>
+<ul>
+<li>Insensible à la casse (&ldquo;Java&rdquo; = &ldquo;java&rdquo; = &ldquo;JAVA&rdquo;)</li>
+<li>Mot entier seulement (&ldquo;le&rdquo; ne doit pas compter dans &ldquo;Manuel&rdquo;)</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Convertir texte et motCherche en minuscules
+2. Découper le texte en mots
+3. Initialiser compteur = 0
+4. Pour chaque mot :
+     Si mot (en minuscules) == motCherche (en minuscules) :
+         compteur++
+5. Retourner compteur</code></pre></div>
+<hr>
+<h4 id="8-méthode-calculerlisibilite">8. Méthode <code>calculerLisibilite</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer un indice de lisibilité du texte.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>texte</code> : texte à analyser (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Score de lisibilité (0-100, plus élevé = plus facile) (<code>double</code>)</p>
+<p><strong>Formule simplifiée (inspirée de Flesch) :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>206.835 - (1.015 × mots par phrase) - (84.6 × syllabes par mot)</code></pre></div>
+<p><strong>Pour simplifier :</strong> Estimez le nombre de syllabes en comptant les voyelles</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Compter le nombre de mots (W)
+2. Compter le nombre de phrases (S)
+3. Compter le nombre de voyelles (V) comme approximation des syllabes
+
+4. Si S == 0, retourner 0 (éviter division par zéro)
+
+5. motsParPhrase = W / S
+6. syllabesParMot = V / W
+
+7. score = 206.835 - (1.015 × motsParPhrase) - (84.6 × syllabesParMot)
+
+8. Limiter le score entre 0 et 100 :
+   Si score &gt; 100 : score = 100
+   Si score &lt; 0 : score = 0
+
+9. Retourner score</code></pre></div>
+<hr>
+<h4 id="9-méthode-determinerniveaucomplexite">9. Méthode <code>determinerNiveauComplexite</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Déterminer le niveau de complexité selon l&rsquo;indice de lisibilité.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>indiceLisibilite</code> : score calculé (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Niveau de complexité (<code>String</code>)</p>
+<p><strong>Classification :</strong></p>
+<ul>
+<li>
+<blockquote>
+<p>= 90 : &ldquo;Très facile&rdquo;</p></blockquote>
+</li>
+<li>
+<blockquote>
+<p>= 70 : &ldquo;Facile&rdquo;</p></blockquote>
+</li>
+<li>
+<blockquote>
+<p>= 50 : &ldquo;Moyen&rdquo;</p></blockquote>
+</li>
+<li>
+<blockquote>
+<p>= 30 : &ldquo;Difficile&rdquo;</p></blockquote>
+</li>
+<li>&lt; 30 : &ldquo;Très difficile&rdquo;</li>
+</ul>
+<hr>
+<h4 id="10-méthode-inversertexte">10. Méthode <code>inverserTexte</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Inverser l&rsquo;ordre des mots dans le texte.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>texte</code> : texte à inverser (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Texte avec mots dans l&rsquo;ordre inverse (<code>String</code>)</p>
+<p><strong>Exemple :</strong></p>
+<ul>
+<li>&ldquo;Bonjour le monde&rdquo; → &ldquo;monde le Bonjour&rdquo;</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Découper le texte en mots
+2. Créer un nouveau String vide (résultat)
+3. Parcourir le tableau de mots de la fin au début :
+     Pour i de (longueur-1) à 0 (décroissant) :
+         Ajouter mots[i] au résultat
+         Ajouter un espace (sauf pour le dernier)
+4. Retourner résultat</code></pre></div>
+<hr>
+<h4 id="11-méthode-filtrermotscourts">11. Méthode <code>filtrerMotsCourts</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Supprimer tous les mots plus courts qu&rsquo;une longueur donnée.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>texte</code> : texte à filtrer (<code>String</code>)</li>
+<li><code>longueurMin</code> : longueur minimale (<code>int</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Texte filtré (<code>String</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Découper le texte en mots
+2. Créer un String vide pour le résultat
+3. Pour chaque mot :
+     Si longueur du mot &gt;= longueurMin :
+         Ajouter le mot au résultat
+         Ajouter un espace
+4. Retirer l&#39;espace final (trim)
+5. Retourner résultat</code></pre></div>
+<p><strong>Exemple :</strong></p>
+<ul>
+<li>Texte : &ldquo;Je suis un développeur Java&rdquo;</li>
+<li>Longueur min : 4</li>
+<li>Résultat : &ldquo;suis développeur Java&rdquo;</li>
+</ul>
+<hr>
+<h4 id="12-méthode-genererrapport">12. Méthode <code>genererRapport</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Générer et afficher un rapport complet d&rsquo;analyse.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>texte</code> : texte à analyser (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>void</code></p>
+<p><strong>Informations à afficher :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>╔════════════════════════════════════╗
+║      ANALYSE DE TEXTE COMPLÈTE    ║
+╚════════════════════════════════════╝
+
+TEXTE ANALYSÉ :
+[Afficher le texte]
+
+--- STATISTIQUES GÉNÉRALES ---
+Nombre de caractères (avec espaces) : X
+Nombre de caractères (sans espaces) : Y
+Nombre de mots : Z
+Nombre de phrases : N
+Nombre de voyelles : V
+Nombre de consonnes : C
+
+--- ANALYSE DES MOTS ---
+Longueur moyenne des mots : X.XX caractères
+Mot le plus long : &#34;XXXXXXXXX&#34; (X lettres)
+Mots par phrase (moyenne) : X.XX
+
+--- LISIBILITÉ ---
+Indice de lisibilité : XX.XX
+Niveau de complexité : XXXXXX
+
+--- COMPOSITION ---
+Voyelles : XX% du texte
+Consonnes : XX% du texte</code></pre></div>
+<p><strong>Algorithme détaillé :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Afficher l&#39;en-tête
+2. Afficher le texte
+3. Calculer et afficher :
+   - Longueur avec espaces : texte.length()
+   - Longueur sans espaces : texte.replace(&#34; &#34;, &#34;&#34;).length()
+   - Appeler compterMots(texte)
+   - Appeler compterPhrases(texte)
+   - Appeler compterVoyelles(texte)
+   - Appeler compterConsonnes(texte)
+4. Calculer et afficher :
+   - Appeler longueurMoyenneMots(texte)
+   - Appeler motLePlusLong(texte)
+   - Mots par phrase : compterMots / compterPhrases
+5. Calculer et afficher :
+   - Appeler calculerLisibilite(texte)
+   - Appeler determinerNiveauComplexite(indice)
+6. Calculer les pourcentages :
+   - % voyelles : (voyelles / longueurSansEspaces) × 100
+   - % consonnes : (consonnes / longueurSansEspaces) × 100</code></pre></div>
+<hr>
+<h4 id="13-méthode-main">13. Méthode <code>main</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Tester toutes les fonctionnalités.</p>
+<p><strong>Tests à effectuer :</strong></p>
+<p><strong>Test 1 : Texte exemple</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">texte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Java est un langage de programmation orienté objet. &#34;</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">               </span><span class="s">&#34;Il est largement utilisé pour développer des applications. &#34;</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">               </span><span class="s">&#34;Ce langage offre une grande portabilité et robustesse.&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">genererRapport</span><span class="p">(</span><span class="n">texte</span><span class="p">);</span></span></span></code></pre></div>
+<p><strong>Test 2 : Transformations</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">--- TRANSFORMATIONS ---&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Texte inversé : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">inverserTexte</span><span class="p">(</span><span class="n">texte</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Sans mots courts (&lt;4) : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">filtrerMotsCourts</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span><span class="w"> </span><span class="n">4</span><span class="p">));</span></span></span></code></pre></div>
+<p><strong>Test 3 : Occurrences</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">--- RECHERCHE ---&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Occurrences de &#39;Java&#39; : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">compterOccurrences</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Java&#34;</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Occurrences de &#39;est&#39; : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">compterOccurrences</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;est&#34;</span><span class="p">));</span></span></span></code></pre></div>
+<p><strong>Test 4 : Cas limites</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">texteVide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">texteUnMot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Bonjour&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">texteEspaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;   Multiple    espaces   &#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">Tester</span><span class="w"> </span><span class="n">avec</span><span class="w"> </span><span class="n">ces</span><span class="w"> </span><span class="n">cas</span></span></span></code></pre></div>
+<hr>
+<h3 id="-critères-de-validation-5">✅ Critères de validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Le comptage de mots gère les espaces multiples</li>
+<li><input disabled="" type="checkbox"> Les voyelles incluent y et sont insensibles à la casse</li>
+<li><input disabled="" type="checkbox"> Les consonnes n&rsquo;incluent que les lettres</li>
+<li><input disabled="" type="checkbox"> La recherche d&rsquo;occurrences est insensible à la casse</li>
+<li><input disabled="" type="checkbox"> L&rsquo;inversion de texte préserve l&rsquo;ordre dans chaque mot</li>
+<li><input disabled="" type="checkbox"> Le filtrage conserve les espaces correctement</li>
+<li><input disabled="" type="checkbox"> Le rapport affiche toutes les informations demandées</li>
+<li><input disabled="" type="checkbox"> Les pourcentages sont calculés correctement</li>
+</ul>
+<h3 id="-conseils-5">💡 Conseils<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Utilisez String.split(&quot;\s+&quot;) pour gérer les espaces multiples</li>
+<li>Character.isLetter(c) est utile pour identifier les lettres</li>
+<li>Testez avec des textes en majuscules, minuscules et mixtes</li>
+<li>Gérez les cas où le texte est vide ou null</li>
+</ul>
+<h3 id="-extensions-possibles-3">🎁 Extensions possibles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Ajouter la détection de mots-clés (programmation, Java, etc.)</li>
+<li>Créer un correcteur orthographique basique</li>
+<li>Analyser la ponctuation utilisée</li>
+<li>Détecter les mots répétés consécutifs</li>
+<li>Générer un nuage de mots (afficher les mots les plus fréquents)</li>
+</ul>
+<hr>
+<h2 id="-projet-7--machine-à-sous-slot-machine">🎰 Projet 7 : Machine à Sous (Slot Machine)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="-contexte-6">📋 Contexte<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Créez un jeu de machine à sous complet avec rouleaux, symboles, calcul de gains, système de crédits et statistiques de session.</p>
+<h3 id="-objectifs-pédagogiques-6">🎯 Objectifs pédagogiques<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Génération de nombres aléatoires</li>
+<li>Logique de jeu et conditions complexes</li>
+<li>Gestion d&rsquo;état (crédits, tours)</li>
+<li>Interaction utilisateur avec Scanner</li>
+<li>Calculs de probabilités et gains</li>
+</ul>
+<h3 id="-instructions-détaillées-6">📝 Instructions détaillées<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Créez une classe <code>MachineASous</code> avec les méthodes suivantes :</p>
+<h4 id="1-méthode-generersymbole">1. Méthode <code>genererSymbole</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Générer aléatoirement un symbole de rouleau.</p>
+<p><strong>Paramètres :</strong> Aucun</p>
+<p><strong>Retour :</strong> Un symbole (<code>String</code>)</p>
+<p><strong>Symboles disponibles :</strong></p>
+<ul>
+<li>🍒 Cerise</li>
+<li>🍋 Citron</li>
+<li>🍊 Orange</li>
+<li>🔔 Cloche</li>
+<li>⭐ Étoile</li>
+<li>💎 Diamant</li>
+<li>7 Sept</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Créer un tableau : String[] symboles = {&#34;🍒&#34;, &#34;🍋&#34;, &#34;🍊&#34;, &#34;🔔&#34;, &#34;⭐&#34;, &#34;💎&#34;, &#34;7&#34;}
+2. Générer un index aléatoire entre 0 et 6 :
+   Random random = new Random();
+   int index = random.nextInt(7);
+3. Retourner symboles[index]</code></pre></div>
+<p><strong>Note :</strong> Tous les symboles ont la même probabilité (1/7).</p>
+<hr>
+<h4 id="2-méthode-lancerrouleaux">2. Méthode <code>lancerRouleaux</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Lancer les trois rouleaux et retourner les symboles.</p>
+<p><strong>Paramètres :</strong> Aucun</p>
+<p><strong>Retour :</strong> Tableau de 3 symboles (<code>String[]</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Créer un tableau de taille 3 : String[] rouleaux = new String[3]
+2. Pour i de 0 à 2 :
+     rouleaux[i] = genererSymbole()
+3. Retourner rouleaux</code></pre></div>
+<hr>
+<h4 id="3-méthode-afficherrouleaux">3. Méthode <code>afficherRouleaux</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Afficher les rouleaux de manière visuelle et attractive.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>rouleaux</code> : tableau de 3 symboles (<code>String[]</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>void</code></p>
+<p><strong>Format d&rsquo;affichage :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>╔════════════════════╗
+║   🍒 │ 🍋 │ 🍊   ║
+╚════════════════════╝</code></pre></div>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;╔════════════════════╗&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;║   &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rouleaux</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; │ &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rouleaux</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; │ &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rouleaux</span><span class="o">[</span><span class="n">2</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;   ║&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;╚════════════════════╝&#34;</span><span class="p">);</span></span></span></code></pre></div>
+<hr>
+<h4 id="4-méthode-troissymbolesidentiques">4. Méthode <code>troisSymbolesIdentiques</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Vérifier si les trois symboles sont identiques.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>rouleaux</code> : tableau de 3 symboles (<code>String[]</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>true</code> si les 3 sont identiques, <code>false</code> sinon (<code>boolean</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Retourner rouleaux[0].equals(rouleaux[1]) &amp;&amp; rouleaux[1].equals(rouleaux[2])</code></pre></div>
+<p><strong>Note :</strong> Utiliser <code>.equals()</code> et non <code>==</code> pour comparer des String</p>
+<hr>
+<h4 id="5-méthode-deuxsymbolesidentiques">5. Méthode <code>deuxSymbolesIdentiques</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Vérifier si exactement 2 symboles sur 3 sont identiques.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>rouleaux</code> : tableau de 3 symboles (<code>String[]</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>true</code> si 2 sont identiques, <code>false</code> sinon (<code>boolean</code>)</p>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Si les 3 sont identiques : retourner false
+Si rouleaux[0] == rouleaux[1] : retourner true
+Si rouleaux[0] == rouleaux[2] : retourner true
+Si rouleaux[1] == rouleaux[2] : retourner true
+Sinon : retourner false</code></pre></div>
+<hr>
+<h4 id="6-méthode-obtenirmultiplicateur">6. Méthode <code>obtenirMultiplicateur</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Retourner le multiplicateur de gain selon le symbole.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>symbole</code> : le symbole (<code>String</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Multiplicateur (<code>int</code>)</p>
+<p><strong>Table des multiplicateurs :</strong></p>
+<ul>
+<li>🍒 (Cerise) : ×2</li>
+<li>🍋 (Citron) : ×3</li>
+<li>🍊 (Orange) : ×4</li>
+<li>🔔 (Cloche) : ×5</li>
+<li>⭐ (Étoile) : ×10</li>
+<li>💎 (Diamant) : ×20</li>
+<li>7 (Sept) : ×50 (JACKPOT!)</li>
+</ul>
+<p><strong>Algorithme avec switch :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">symbole</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&#34;🍒&#34;</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&#34;🍋&#34;</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">3</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&#34;🍊&#34;</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">4</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&#34;🔔&#34;</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">5</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&#34;⭐&#34;</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&#34;💎&#34;</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">20</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">&#34;7&#34;</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">50</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h4 id="7-méthode-calculergains">7. Méthode <code>calculerGains</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Calculer les gains d&rsquo;un tour selon les rouleaux et la mise.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>rouleaux</code> : tableau de 3 symboles (<code>String[]</code>)</li>
+<li><code>mise</code> : montant misé (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Montant gagné (<code>double</code>)</p>
+<p><strong>Règles de gains :</strong></p>
+<ul>
+<li><strong>3 symboles identiques :</strong> mise × multiplicateur du symbole</li>
+<li><strong>2 symboles identiques :</strong> mise × 1.5</li>
+<li><strong>Aucune correspondance :</strong> 0</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Si troisSymbolesIdentiques(rouleaux) :
+    symbole = rouleaux[0]
+    multiplicateur = obtenirMultiplicateur(symbole)
+    gains = mise × multiplicateur
+    retourner gains
+
+Sinon si deuxSymbolesIdentiques(rouleaux) :
+    gains = mise × 1.5
+    retourner gains
+
+Sinon :
+    retourner 0.0</code></pre></div>
+<p><strong>Exemples :</strong></p>
+<ul>
+<li>🍒 🍒 🍒 avec mise de 5€ → 5 × 2 = 10€</li>
+<li>💎 💎 💎 avec mise de 10€ → 10 × 20 = 200€</li>
+<li>🍋 🍋 🍊 avec mise de 5€ → 5 × 1.5 = 7.50€</li>
+<li>🍒 🍋 🍊 avec mise de 5€ → 0€</li>
+</ul>
+<hr>
+<h4 id="8-méthode-afficherresultat">8. Méthode <code>afficherResultat</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Afficher un message selon les gains.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>gains</code> : montant gagné (<code>double</code>)</li>
+<li><code>mise</code> : montant misé (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>void</code></p>
+<p><strong>Messages selon les gains :</strong></p>
+<ul>
+<li>gains == 0 : &ldquo;❌ Perdu ! Vous perdez X€&rdquo;</li>
+<li>gains == mise : &ldquo;🤝 Remboursé ! Vous récupérez votre mise&rdquo;</li>
+<li>gains &lt; mise × 5 : &ldquo;💰 Petit gain ! Vous gagnez X€&rdquo;</li>
+<li>gains &lt; mise × 20 : &ldquo;🎉 Beau gain ! Vous gagnez X€&rdquo;</li>
+<li>gains &gt;= mise × 20 : &ldquo;🎊 JACKPOT ! Vous gagnez X€ !!!&rdquo;</li>
+</ul>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gains</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&#34;❌ Perdu ! Vous perdez %.2f€%n&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">mise</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gains</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mise</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🤝 Remboursé ! Vous récupérez votre mise&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gains</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mise</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&#34;💰 Petit gain ! Vous gagnez %.2f€%n&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">gains</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gains</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mise</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&#34;🎉 Beau gain ! Vous gagnez %.2f€%n&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">gains</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&#34;🎊 JACKPOT ! Vous gagnez %.2f€ !!!%n&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">gains</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h4 id="9-méthode-afficherstatistiques">9. Méthode <code>afficherStatistiques</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Afficher les statistiques de la session de jeu.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>toursJoues</code> : nombre de tours joués (<code>int</code>)</li>
+<li><code>toursGagnes</code> : nombre de tours avec gains (<code>int</code>)</li>
+<li><code>creditsInitiaux</code> : crédits au début (<code>double</code>)</li>
+<li><code>creditsFinaux</code> : crédits à la fin (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> <code>void</code></p>
+<p><strong>Format d&rsquo;affichage :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>╔══════════════════════════════╗
+║   STATISTIQUES DE SESSION    ║
+╚══════════════════════════════╝
+Tours joués : X
+Tours gagnés : Y
+Taux de réussite : Z.Z%
+
+Crédits de départ : XX.XX€
+Crédits finaux : YY.YY€
+[Bénéfice/Perte] : ±ZZ.ZZ€</code></pre></div>
+<p><strong>Algorithme :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Afficher l&#39;en-tête
+2. Afficher tours joués et tours gagnés
+3. Si toursJoues &gt; 0 :
+     tauxReussite = (toursGagnes / toursJoues) × 100
+     Afficher le taux
+4. Afficher crédits initiaux et finaux
+5. Calculer la différence :
+     difference = creditsFinaux - creditsInitiaux
+6. Si différence &gt; 0 :
+     Afficher &#34;✅ Bénéfice : +X€&#34;
+   Si différence &lt; 0 :
+     Afficher &#34;❌ Perte : X€&#34; (valeur absolue)
+   Sinon :
+     Afficher &#34;🤝 À l&#39;équilibre&#34;</code></pre></div>
+<hr>
+<h4 id="10-méthode-jouertour">10. Méthode <code>jouerTour</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Jouer un tour complet de machine à sous.</p>
+<p><strong>Paramètres :</strong></p>
+<ul>
+<li><code>credits</code> : crédits disponibles (<code>double</code>)</li>
+<li><code>mise</code> : montant de la mise (<code>double</code>)</li>
+</ul>
+<p><strong>Retour :</strong> Nouveaux crédits après le tour (<code>double</code>)</p>
+<p><strong>Algorithme détaillé :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Vérifier si la mise est possible :
+   Si mise &gt; credits :
+       Afficher &#34;❌ Crédits insuffisants !&#34;
+       Retourner credits (inchangés)
+
+2. Déduire la mise :
+   credits = credits - mise
+
+3. Afficher l&#39;animation :
+   System.out.println(&#34;
+🎰 Les rouleaux tournent...&#34;)
+   (Optionnel : ajouter une pause)
+
+4. Lancer les rouleaux :
+   rouleaux = lancerRouleaux()
+
+5. Afficher les rouleaux :
+   afficherRouleaux(rouleaux)
+
+6. Calculer les gains :
+   gains = calculerGains(rouleaux, mise)
+
+7. Afficher le résultat :
+   afficherResultat(gains, mise)
+
+8. Ajouter les gains aux crédits :
+   credits = credits + gains
+
+9. Afficher le nouveau solde :
+   System.out.printf(&#34;Nouveau solde : %.2f€%n&#34;, credits)
+
+10. Retourner credits</code></pre></div>
+<hr>
+<h4 id="11-méthode-jouer-jeu-principal">11. Méthode <code>jouer</code> (jeu principal)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Gérer le jeu complet avec boucle de jeu et menu.</p>
+<p><strong>Paramètres :</strong> Aucun</p>
+<p><strong>Retour :</strong> <code>void</code></p>
+<p><strong>Algorithme complet :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1. Initialiser :
+   Scanner scanner = new Scanner(System.in);
+   double credits = 100.0;  // Crédits de départ
+   double creditsInitiaux = credits;
+   int toursJoues = 0;
+   int toursGagnes = 0;
+
+2. Afficher l&#39;écran de bienvenue :
+   ╔══════════════════════════════╗
+   ║    MACHINE À SOUS 🎰         ║
+   ╚══════════════════════════════╝
+   Crédits de départ : 100.00€
+
+   TABLE DES GAINS :
+   🍒 🍒 🍒 : ×2
+   🍋 🍋 🍋 : ×3
+   🍊 🍊 🍊 : ×4
+   🔔 🔔 🔔 : ×5
+   ⭐ ⭐ ⭐ : ×10
+   💎 💎 💎 : ×20
+   7  7  7  : ×50 JACKPOT!
+   2 symboles identiques : ×1.5
+
+3. Boucle de jeu (tant que credits &gt;= 1) :
+   a. Afficher le menu :
+      &#34;\n💰 Crédits : X.XX€&#34;
+      &#34;Choisissez votre mise :&#34;
+      &#34;1. 1€&#34;
+      &#34;2. 2€&#34;
+      &#34;3. 5€&#34;
+      &#34;4. 10€ (max)&#34;
+      &#34;0. Quitter&#34;
+      &#34;Votre choix : &#34;
+
+   b. Lire le choix du joueur
+
+   c. Selon le choix :
+      - 0 : sortir de la boucle
+      - 1 : mise = 1
+      - 2 : mise = 2
+      - 3 : mise = 5
+      - 4 : mise = 10
+      - Autre : afficher &#34;Choix invalide&#34;, continuer
+
+   d. Vérifier que la mise &lt;= credits
+      Sinon : afficher erreur, continuer
+
+   e. Jouer le tour :
+      creditsAvant = credits
+      credits = jouerTour(credits, mise)
+      toursJoues++
+
+   f. Si credits &gt; creditsAvant :
+      toursGagnes++
+
+   g. Attendre avant le prochain tour (optionnel) :
+      System.out.println(&#34;
+Appuyez sur Entrée pour continuer...&#34;);
+      scanner.nextLine();
+
+4. Fin du jeu :
+   Si credits &lt; 1 :
+       Afficher &#34;
+💔 Vous n&#39;avez plus de crédits !&#34;
+   Sinon :
+       Afficher &#34;
+👋 Merci d&#39;avoir joué !&#34;
+
+5. Afficher les statistiques finales :
+   afficherStatistiques(toursJoues, toursGagnes, creditsInitiaux, credits);
+
+6. Fermer le scanner :
+   scanner.close();</code></pre></div>
+<hr>
+<h4 id="12-méthode-main">12. Méthode <code>main</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>But :</strong> Lancer le jeu.</p>
+<p><strong>Code :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">jouer</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h3 id="-critères-de-validation-6">✅ Critères de validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Les symboles sont générés aléatoirement</li>
+<li><input disabled="" type="checkbox"> Les trois rouleaux sont indépendants</li>
+<li><input disabled="" type="checkbox"> Le calcul des gains suit les règles exactes</li>
+<li><input disabled="" type="checkbox"> Les crédits sont correctement mis à jour</li>
+<li><input disabled="" type="checkbox"> Le jeu s&rsquo;arrête quand crédits &lt; 1</li>
+<li><input disabled="" type="checkbox"> Les statistiques sont calculées correctement</li>
+<li><input disabled="" type="checkbox"> Le taux de réussite est un pourcentage entre 0 et 100</li>
+<li><input disabled="" type="checkbox"> L&rsquo;affichage est clair et attractif</li>
+</ul>
+<h3 id="-conseils-6">💡 Conseils<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Testez d&rsquo;abord avec des symboles fixes pour vérifier la logique</li>
+<li>Utilisez <code>System.out.printf(&quot;%.2f€&quot;, montant)</code> pour formater l&rsquo;argent</li>
+<li>Ajoutez des <code>Thread.sleep(1000)</code> pour des pauses dramatiques (importer java.lang.Thread)</li>
+<li>Vérifiez tous les cas : 3 identiques, 2 identiques, aucun</li>
+<li>Testez les cas limites : crédits à 0, mise maximale, etc.</li>
+</ul>
+<h3 id="-extensions-possibles-4">🎁 Extensions possibles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Ajouter des symboles spéciaux (Wild, Scatter)</li>
+<li>Implémenter des tours gratuits (free spins)</li>
+<li>Créer des niveaux de difficulté (probabilités différentes)</li>
+<li>Ajouter un système de jackpot progressif</li>
+<li>Sauvegarder les meilleurs scores</li>
+<li>Créer un système de multiplicateurs en cascade</li>
+<li>Ajouter des sons (avec des caractères BEEP)</li>
+</ul>
+<hr>
+<h2 id="-grille-dévaluation-générale">📊 Grille d&rsquo;évaluation générale<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Pour chaque projet, voici comment vous serez évalué :</p>
+<h3 id="fonctionnalité-50-points">Fonctionnalité (50 points)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Toutes les méthodes demandées sont implémentées (20 pts)</li>
+<li><input disabled="" type="checkbox"> Les méthodes fonctionnent correctement (20 pts)</li>
+<li><input disabled="" type="checkbox"> Les calculs sont exacts (10 pts)</li>
+</ul>
+<h3 id="qualité-du-code-30-points">Qualité du code (30 points)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Noms de variables et méthodes clairs (10 pts)</li>
+<li><input disabled="" type="checkbox"> Code bien indenté et lisible (10 pts)</li>
+<li><input disabled="" type="checkbox"> Commentaires pertinents (10 pts)</li>
+</ul>
+<h3 id="robustesse-20-points">Robustesse (20 points)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Validation des entrées utilisateur (10 pts)</li>
+<li><input disabled="" type="checkbox"> Gestion des cas limites (5 pts)</li>
+<li><input disabled="" type="checkbox"> Pas d&rsquo;erreurs à l&rsquo;exécution (5 pts)</li>
+</ul>
+<p><strong>Total : 100 points par projet</strong></p>
+<hr>
+<h2 id="-conseils-généraux-pour-tous-les-projets">💡 Conseils généraux pour tous les projets<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="1-méthodologie-de-développement">1. Méthodologie de développement<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ol>
+<li><strong>Lire</strong> entièrement les instructions</li>
+<li><strong>Planifier</strong> : liste des méthodes à créer</li>
+<li><strong>Développer</strong> méthode par méthode (commencer par les plus simples)</li>
+<li><strong>Tester</strong> chaque méthode individuellement</li>
+<li><strong>Intégrer</strong> progressivement</li>
+<li><strong>Déboguer</strong> en cas de problème</li>
+<li><strong>Améliorer</strong> le code (refactoring)</li>
+</ol>
+<h3 id="2-techniques-de-débogage">2. Techniques de débogage<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Utiliser <code>System.out.println()</code> pour afficher les valeurs</li>
+<li>Tester avec des valeurs simples et connues</li>
+<li>Isoler le problème (quelle méthode ne fonctionne pas ?)</li>
+<li>Vérifier les types de données (int vs double)</li>
+<li>Attention aux divisions par zéro</li>
+</ul>
+<h3 id="3-bonnes-pratiques-java">3. Bonnes pratiques Java<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// ✅ Bon</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculerMoyenne</span><span class="p">(</span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">notes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">notes</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">notes</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">0</span><span class="p">.</span><span class="na">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">somme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">.</span><span class="na">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">notes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">somme</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">note</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">somme</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">notes</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// ❌ Mauvais</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcul</span><span class="p">(</span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w">  </span><span class="c1">// Erreur possible si n.length == 0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="4-checklist-avant-de-soumettre">4. Checklist avant de soumettre<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Le code compile sans erreur</li>
+<li><input disabled="" type="checkbox"> Toutes les méthodes demandées sont présentes</li>
+<li><input disabled="" type="checkbox"> Les tests dans <code>main</code> fonctionnent</li>
+<li><input disabled="" type="checkbox"> Le code est indenté correctement</li>
+<li><input disabled="" type="checkbox"> Les noms de variables sont explicites</li>
+<li><input disabled="" type="checkbox"> Les cas limites sont gérés</li>
+<li><input disabled="" type="checkbox"> Des commentaires expliquent la logique complexe</li>
+</ul>
+<hr>
+<h2 id="-ordre-recommandé-des-projets">🚀 Ordre recommandé des projets<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Pour débutants :</strong></p>
+<ol>
+<li>Projet 1 (Gestion de Notes) - Le plus simple</li>
+<li>Projet 4 (Calculateur de Dates) - Logique pure</li>
+<li>Projet 6 (Analyseur de Texte) - Manipulation de String</li>
+</ol>
+<p><strong>Pour intermédiaires :</strong>
+4. Projet 5 (Compte Bancaire) - Plus de logique
+5. Projet 2 (Calculateur de Salaire) - Calculs complexes</p>
+<p><strong>Pour avancés :</strong>
+6. Projet 3 (Jeu de Devinette) - Interaction utilisateur
+7. Projet 7 (Machine à Sous) - Le plus complet</p>
+<hr>
+<h2 id="-ressources-java-utiles">📚 Ressources Java utiles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="méthodes-string-importantes">Méthodes String importantes<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>length()</code> : longueur de la chaîne</li>
+<li><code>charAt(index)</code> : caractère à la position</li>
+<li><code>substring(debut, fin)</code> : sous-chaîne</li>
+<li><code>split(regex)</code> : découper en tableau</li>
+<li><code>trim()</code> : supprimer espaces début/fin</li>
+<li><code>toLowerCase()</code> / <code>toUpperCase()</code></li>
+<li><code>equals(autre)</code> : comparer deux String</li>
+<li><code>replace(ancien, nouveau)</code> : remplacer</li>
+</ul>
+<h3 id="méthodes-de-tableaux">Méthodes de tableaux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>array.length</code> : taille du tableau</li>
+<li><code>Arrays.toString(array)</code> : afficher un tableau</li>
+</ul>
+<h3 id="classe-math">Classe Math<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>Math.abs(x)</code> : valeur absolue</li>
+<li><code>Math.max(a, b)</code> : maximum</li>
+<li><code>Math.min(a, b)</code> : minimum</li>
+<li><code>Math.pow(x, y)</code> : puissance</li>
+<li><code>Math.round(x)</code> : arrondir</li>
+</ul>
+<h3 id="classe-random">Classe Random<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Random</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">100</span><span class="p">);</span><span class="w">  </span><span class="c1">// 0-99</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">nombreDe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">6</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">1</span><span class="o">-</span><span class="n">6</span></span></span></code></pre></div>
+<h3 id="scanner">Scanner<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">double</span><span class="w"> </span><span class="n">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">texte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">Important</span><span class="w"> </span><span class="o">!</span></span></span></code></pre></div>
+<hr>
+<p><strong>Bon courage pour vos projets ! 💪</strong></p>
+<p>Si vous avez des questions sur les algorithmes ou la logique, n&rsquo;hésitez pas à demander de l&rsquo;aide à votre professeur.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><a id="R-logo" 
+   style="display: flex; justify-content: center; align-items: center; text-decoration: none;" 
+   href="/420-210/index.html">
+
+    <img src="/420-210/images/logo.png" width="40" height="40" alt="logo" style="margin-right: 8px;">
+
+    <div style="display: flex; flex-direction: column; font-size: 130%; text-align: center;">
+        <span>Programmation orientée objet</span>
+    </div>
+</a>
+
+        <search><form action="/420-210/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/420-210/index.html"><a class="padding" href="/420-210/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/420-210/intro/index.html"><a class="padding" href="/420-210/intro/index.html">Introduction</a></li>
+            <li class="" data-nav-id="/420-210/variables/index.html"><a class="padding" href="/420-210/variables/index.html">Variables</a></li>
+            <li class="" data-nav-id="/420-210/operateurs/index.html"><a class="padding" href="/420-210/operateurs/index.html">Opérateurs</a></li>
+            <li class="" data-nav-id="/420-210/structures/index.html"><a class="padding" href="/420-210/structures/index.html">Structures de contrôle</a></li>
+            <li class="" data-nav-id="/420-210/methodes/index.html"><a class="padding" href="/420-210/methodes/index.html">Méthodes</a></li>
+            <li class="" data-nav-id="/420-210/tableaux/index.html"><a class="padding" href="/420-210/tableaux/index.html">Tableaux</a></li>
+            <li class="active " data-nav-id="/420-210/exo_revisions/index.html"><a class="padding" href="/420-210/exo_revisions/index.html">Exercices de révision</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-learn" value="learn" selected>Learn</option>
+                    <option id="R-select-variant-relearn-auto" value="relearn-auto">Relearn Light/Dark</option>
+                    <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                    <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                    <option id="R-select-variant-neon" value="neon">Neon</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"></div>
+      </div>
+    </aside>
+    <script src="/420-210/js/perfect-scrollbar/perfect-scrollbar.min.js?1769627119" defer></script>
+    <script src="/420-210/js/theme.js?1769627119" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

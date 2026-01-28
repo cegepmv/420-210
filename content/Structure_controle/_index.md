@@ -89,6 +89,88 @@ Un seul des deux blocs sera exécuté.
 
 ---
 
+## ❓ L’opérateur ternaire en Java
+
+L’opérateur **ternaire** est une **forme abrégée du `if...else`**, qui permet d’**écrire des conditions simples en une seule ligne**.
+
+Il est souvent utilisé pour **rendre le code plus concis**, surtout lorsqu’on veut **affecter une valeur selon une condition**.
+
+---
+
+## 🧰 Syntaxe de base
+
+```java
+(condition) ? valeurSiVrai : valeurSiFaux;
+```
+
+C’est comme dire :
+**"Si la condition est vraie, retourne ceci ; sinon, retourne cela."**
+
+---
+
+## 📦 Exemple simple
+
+```java
+int âge = 20;
+String statut = (âge >= 18) ? "Majeur" : "Mineur";
+
+System.out.println(statut);  // Affiche : Majeur
+```
+
+✳️ C’est équivalent à :
+
+```java
+String statut;
+if (âge >= 18) {
+    statut = "Majeur";
+} else {
+    statut = "Mineur";
+}
+```
+
+---
+
+## ⚙️ Utilisation typique
+
+L’opérateur ternaire est **très utilisé pour affecter une valeur** selon une condition :
+
+```java
+double note = 85;
+String résultat = (note >= 60) ? "Réussi" : "Échoué";
+```
+
+On peut aussi l’utiliser directement dans un `System.out.println()` :
+
+```java
+System.out.println((note >= 90) ? "Excellent" : "À améliorer");
+```
+
+---
+
+## 🛑 À éviter pour les cas complexes
+
+Même si l'opérateur ternaire est pratique, il **devient illisible si la condition ou les valeurs sont longues** :
+
+```java
+// Trop compliqué !
+String grade = (score >= 90) ? "A" : (score >= 75) ? "B" : "C";
+// 🤯 Difficile à lire et à maintenir
+```
+
+➡️ Dans ces cas-là, préfère une structure `if...else` classique.
+
+---
+
+## 🔥 À retenir
+
+* L’opérateur ternaire est une **forme courte de `if...else`**.
+* Il s’écrit : `(condition) ? valeurSiVrai : valeurSiFaux;`
+* Très utile pour **initialiser une variable** selon une condition.
+* À **éviter** si la logique devient trop complexe ou trop imbriquée.
+* Rends le code **plus compact**, mais pas toujours plus clair.
+
+---
+
 ### 1.3 La structure if / else if / else
 
 Utilisée lorsqu’il y a plusieurs choix possibles.
@@ -135,6 +217,139 @@ if (x > 0)
 ```
 
 Dans ce cas, "Fin" s’affiche toujours.
+
+---
+
+## 🎛️ Les instructions `switch` en Java
+
+L’instruction **`switch`** permet de **tester la valeur d’une variable** et d’exécuter **différents blocs de code** selon son **contenu exact**.
+
+C’est une **alternative plus claire aux chaînes de `if...else if`** quand on compare **une même variable** à **plusieurs valeurs possibles**.
+
+---
+
+## 🧰 Syntaxe de base
+
+```java
+switch (variable) {
+    case valeur1:
+        // Code si variable == valeur1
+        break;
+
+    case valeur2:
+        // Code si variable == valeur2
+        break;
+
+    default:
+        // Code si aucune des valeurs ne correspond
+}
+```
+
+### 🧱 Éléments clés :
+
+| Mot-clé   | Rôle                                    |
+| --------- | --------------------------------------- |
+| `case`    | Spécifie une **valeur à tester**        |
+| `break`   | Termine le `switch`, évite les "chutes" |
+| `default` | (optionnel) Bloc exécuté **par défaut** |
+
+---
+
+## 📦 Exemple simple
+
+```java
+int jour = 3;
+
+switch (jour) {
+    case 1:
+        System.out.println("Lundi");
+        break;
+    case 2:
+        System.out.println("Mardi");
+        break;
+    case 3:
+        System.out.println("Mercredi");
+        break;
+    default:
+        System.out.println("Jour inconnu");
+}
+```
+
+➡️ Affichera : `Mercredi`
+
+---
+
+## ⚠️ Le `break` est important !
+
+Sans le `break`, le programme **continue dans les cases suivantes**, même si elles ne correspondent pas :
+
+```java
+int x = 2;
+
+switch (x) {
+    case 1:
+        System.out.println("Un");
+    case 2:
+        System.out.println("Deux");
+    case 3:
+        System.out.println("Trois");
+}
+```
+
+➡️ Affichera :
+
+```
+Deux  
+Trois
+```
+
+---
+
+## 🧠 Le bloc `default`
+
+Le mot-clé `default` permet de **gérer les cas non prévus** :
+
+```java
+char lettre = 'z';
+
+switch (lettre) {
+    case 'a':
+        System.out.println("Voyelle A");
+        break;
+    case 'e':
+        System.out.println("Voyelle E");
+        break;
+    default:
+        System.out.println("Autre lettre");
+}
+```
+
+---
+
+## 🔁 Compatibilité du `switch`
+
+En Java, tu peux utiliser `switch` avec les types suivants :
+
+| Type autorisé                  | Exemples           |
+| ------------------------------ | ------------------ |
+| `int`, `short`, `byte`, `char` | `switch (entier)`  |
+| `String` (depuis Java 7)       | `switch (nom)`     |
+| `enum`                         | `switch (couleur)` |
+
+❌ Pas compatible avec `float`, `double`, `boolean`, ni avec des expressions complexes.
+
+---
+
+## 🔥 À retenir
+
+* `switch` est pratique pour **tester des cas précis**.
+* Utilise `break` pour **éviter les exécutions non désirées**.
+* Le bloc `default` est **optionnel** mais utile.
+* Compatible avec **`int`, `char`, `String`, `enum`**, etc.
+* Plus lisible que plusieurs `else if` quand on compare **la même variable**.
+
+---
+
 
 ## 2. Les structures répétitives (boucles)
 
