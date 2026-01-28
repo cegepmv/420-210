@@ -1,6 +1,6 @@
 +++
 title = "Exercices de révision"
-weight = 7
+weight = 700
 url = "/exo_revisions/"
 
 +++
@@ -2330,9 +2330,3 @@ double decimal = scanner.nextDouble();
 String texte = scanner.nextLine();
 scanner.close();  // Important !
 ```
-
----
-
-**Bon courage pour vos projets ! 💪**
-
-Si vous avez des questions sur les algorithmes ou la logique, n'hésitez pas à demander de l'aide à votre professeur.
