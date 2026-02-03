@@ -1,6 +1,6 @@
 +++
 title = "Exercices de révision"
-weight = 700
+weight = 7
 url = "/exo_revisions/"
 
 +++
@@ -21,7 +21,7 @@ Vous devez créer un système pour gérer et analyser les notes d'une classe d'�
 - Boucles pour parcourir des données
 - Méthodes avec paramètres et valeurs de retour
 
-### 📝 Instructions détaillées
+### 📝 Instructions 
 
 Créez une classe `GestionNotes` avec les méthodes suivantes :
 
@@ -181,7 +181,7 @@ Développez un système de calcul de salaire net avec différentes déductions, 
 - Formules mathématiques appliquées
 - Organisation de code en méthodes réutilisables
 
-### 📝 Instructions détaillées
+### 📝 Instructions 
 
 Créez une classe `CalculateurSalaire` avec les méthodes suivantes :
 
@@ -207,10 +207,10 @@ Créez une classe `CalculateurSalaire` avec les méthodes suivantes :
   - Calculer le salaire des heures sup : heuresSup × tauxHoraire × 1.25
   - Additionner les deux montants
 
-**Exemple :** Si tauxHoraire = 15€ et heures = 170
-- Heures normales : 151.67 × 15 = 2275.05€
-- Heures supplémentaires : 18.33 × 15 × 1.25 = 343.69€
-- Total brut : 2618.74€
+**Exemple :** Si tauxHoraire = 15$ et heures = 170
+- Heures normales : 151.67 × 15 = 2275.05$
+- Heures supplémentaires : 18.33 × 15 × 1.25 = 343.69$
+- Total brut : 2618.74$
 
 ---
 
@@ -237,18 +237,18 @@ Créez une classe `CalculateurSalaire` avec les méthodes suivantes :
 **Retour :** Montant total de l'impôt annuel (`double`)
 
 **Tranches d'imposition :**
-- 0 à 10 000€ : 0%
-- 10 001€ à 25 000€ : 11%
-- 25 001€ à 50 000€ : 30%
-- Au-delà de 50 000€ : 41%
+- 0 à 10 000$ : 0%
+- 10 001$ à 25 000$ : 11%
+- 25 001$ à 50 000$ : 30%
+- Au-delà de 50 000$ : 41%
 
 **Algorithme (système de tranches) :**
 - L'impôt se calcule tranche par tranche
-- Exemple pour un salaire de 30 000€ :
-  - Tranche 1 (0-10000) : 10000 × 0% = 0€
-  - Tranche 2 (10001-25000) : 15000 × 11% = 1650€
-  - Tranche 3 (25001-30000) : 5000 × 30% = 1500€
-  - Total impôt : 3150€
+- Exemple pour un salaire de 30 000$ :
+  - Tranche 1 (0-10000) : 10000 × 0% = 0$
+  - Tranche 2 (10001-25000) : 15000 × 11% = 1650$
+  - Tranche 3 (25001-30000) : 5000 × 30% = 1500$
+  - Total impôt : 3150$
 
 **Pseudo-code :**
 ```
@@ -283,10 +283,10 @@ Si reste > 50000:
   - Le bonus total ne peut pas dépasser 15% du salaire brut
 
 **Exemple :** 
-- Salaire brut = 2000€, ancienneté = 8 ans, performance = 8
-- Bonus de base : 2000 × 5% = 100€
-- Bonus ancienneté : 2000 × 8% = 160€ (limité à 10% = 200€)
-- Total bonus : 100 + 160 = 260€
+- Salaire brut = 2000$, ancienneté = 8 ans, performance = 8
+- Bonus de base : 2000 × 5% = 100$
+- Bonus ancienneté : 2000 × 8% = 160$ (limité à 10% = 200$)
+- Total bonus : 100 + 160 = 260$
 
 ---
 
@@ -324,22 +324,22 @@ Période : Janvier 2026
 --- DÉTAILS DES HEURES ---
 Heures travaillées : 170h
 Heures supplémentaires : 18.33h
-Taux horaire : 15.50€
+Taux horaire : 15.50$
 
 --- CALCUL DU SALAIRE ---
-Salaire brut : 2618.74€
-Cotisations sociales (22%) : 576.12€
-Salaire net avant impôt : 2042.62€
-Bonus de performance : 131.00€
-Salaire net avant impôt : 2173.62€
+Salaire brut : 2618.74$
+Cotisations sociales (22%) : 576.12$
+Salaire net avant impôt : 2042.62$
+Bonus de performance : 131.00$
+Salaire net avant impôt : 2173.62$
 
 --- IMPÔTS (estimation annuelle) ---
-Salaire annuel net : 26083.44€
-Impôt annuel estimé : 1765.17€
-Impôt mensuel : 147.10€
+Salaire annuel net : 26083.44$
+Impôt annuel estimé : 1765.17$
+Impôt mensuel : 147.10$
 
 --- NET À PAYER ---
-Salaire net mensuel : 2026.52€
+Salaire net mensuel : 2026.52$
 ```
 
 ---
@@ -365,7 +365,7 @@ Salaire net mensuel : 2026.52€
 
 ### 💡 Conseils
 - Testez chaque méthode séparément avec des valeurs simples
-- Utilisez `System.out.printf("%.2f€%n", montant)` pour l'affichage
+- Utilisez `System.out.printf("%.2f$%n", montant)` pour l'affichage
 - Faites attention aux conversions int/double dans les calculs
 - Vérifiez les cas limites (0 heures sup, performance minimale, etc.)
 
@@ -383,7 +383,7 @@ Créez un jeu où l'ordinateur génère un nombre aléatoire et le joueur doit l
 - Interaction avec l'utilisateur (Scanner)
 - Calcul de scores
 
-### 📝 Instructions détaillées
+### 📝 Instructions 
 
 Créez une classe `JeuDevinette` avec les méthodes suivantes :
 
@@ -494,7 +494,7 @@ scoreFinal = scoreBase × multiplicateur
 - Moyen : nombre entre 1 et 100
 - Difficile : nombre entre 1 et 200
 
-**Algorithme détaillé :**
+**Algorithme  :**
 
 1. Déterminer min et max selon la difficulté
 2. Générer le nombre secret avec `genererNombre`
@@ -615,7 +615,7 @@ Créez un système complet de manipulation de dates sans utiliser les classes Ja
 - Manipulation de nombres
 - Validation de données
 
-### 📝 Instructions détaillées
+### 📝 Instructions 
 
 Créez une classe `CalculateurDates` avec les méthodes suivantes :
 
@@ -942,7 +942,7 @@ Développez un système complet de simulation de compte bancaire avec transactio
 - Calculs financiers
 - Simulation temporelle
 
-### 📝 Instructions détaillées
+### 📝 Instructions 
 
 Créez une classe `CompteBancaire` avec les méthodes suivantes :
 
@@ -966,7 +966,7 @@ Si montant <= 0:
     Retourner -1
 
 nouveauSolde = soldeActuel + montant
-Afficher "Dépôt de X€ effectué. Nouveau solde : Y€"
+Afficher "Dépôt de X$ effectué. Nouveau solde : Y$"
 Retourner nouveauSolde
 ```
 
@@ -988,11 +988,11 @@ Retourner nouveauSolde
 - Si impossible, retourner -1
 
 **Exemple :**
-- Solde actuel : 100€
-- Découvert autorisé : 200€
-- Retrait possible jusqu'à : 100 + 200 = 300€
-- Si retrait de 250€ : possible (nouveau solde = -150€)
-- Si retrait de 350€ : impossible
+- Solde actuel : 100$
+- Découvert autorisé : 200$
+- Retrait possible jusqu'à : 100 + 200 = 300$
+- Si retrait de 250$ : possible (nouveau solde = -150$)
+- Si retrait de 350$ : impossible
 
 **Algorithme :**
 ```
@@ -1008,7 +1008,7 @@ Si nouveauSolde < -decouvertAutorise:
 Si nouveauSolde < 0:
     Afficher "Attention : vous êtes à découvert"
 
-Afficher "Retrait de X€ effectué"
+Afficher "Retrait de X$ effectué"
 Retourner nouveauSolde
 ```
 
@@ -1029,9 +1029,9 @@ Retourner nouveauSolde
 - Formule mensuelle : solde × (tauxAnnuel / 100) / 12
 
 **Exemple :**
-- Solde : 1000€
+- Solde : 1000$
 - Taux annuel : 2%
-- Intérêts mensuels : 1000 × (2 / 100) / 12 = 1.67€
+- Intérêts mensuels : 1000 × (2 / 100) / 12 = 1.67$
 
 ---
 
@@ -1044,8 +1044,8 @@ Retourner nouveauSolde
 **Retour :** Montant des frais (`double`)
 
 **Règle :** 
-- Si solde < 0 : frais de 8€
-- Sinon : 0€
+- Si solde < 0 : frais de 8$
+- Sinon : 0$
 
 **Note :** Dans une vraie banque, ce serait des frais par jour de découvert, mais on simplifie ici.
 
@@ -1060,9 +1060,9 @@ Retourner nouveauSolde
 **Retour :** Type de compte (`String`)
 
 **Classification :**
-- >= 5000€ : "Premium"
-- >= 2000€ : "Gold"
-- < 2000€ : "Standard"
+- >= 5000$ : "Premium"
+- >= 2000$ : "Gold"
+- < 2000$ : "Standard"
 
 ---
 
@@ -1082,17 +1082,17 @@ Retourner nouveauSolde
 
 **Gold :**
 - Gratuit si <= 20 transactions
-- 5€ si > 20 transactions
+- 5$ si > 20 transactions
 
 **Standard :**
-- 10€ de frais de base
-- + 0,50€ par transaction au-delà de 10 transactions gratuites
+- 10$ de frais de base
+- + 0,50$ par transaction au-delà de 10 transactions gratuites
 
 **Exemples :**
-- Standard avec 15 transactions : 10 + (5 × 0.50) = 12.50€
-- Standard avec 8 transactions : 10€
-- Gold avec 25 transactions : 5€
-- Premium avec 100 transactions : 0€
+- Standard avec 15 transactions : 10 + (5 × 0.50) = 12.50$
+- Standard avec 8 transactions : 10$
+- Gold avec 25 transactions : 5$
+- Premium avec 100 transactions : 0$
 
 ---
 
@@ -1122,7 +1122,7 @@ Retourner nouveauSolde
 
 **Retour :** `void` (affiche les résultats)
 
-**Algorithme détaillé :**
+**Algorithme  :**
 
 ```
 1. Initialiser :
@@ -1133,7 +1133,7 @@ Retourner nouveauSolde
 
 2. Afficher l'en-tête
    "=== SIMULATION MENSUELLE ==="
-   "Solde initial : X€"
+   "Solde initial : X$"
 
 3. Traiter tous les dépôts :
    Pour chaque dépôt dans le tableau :
@@ -1159,16 +1159,16 @@ Retourner nouveauSolde
    Si solde > 0 :
      - interets = calculerInterets(solde, tauxInteret)
      - solde += interets
-     - Afficher "Intérêts créditeurs : +X€"
+     - Afficher "Intérêts créditeurs : +X$"
    Sinon :
      - frais = calculerFraisDecouvert(solde)
      - solde -= frais
-     - Afficher "Frais de découvert : -X€"
+     - Afficher "Frais de découvert : -X$"
 
 8. Appliquer les frais de gestion :
    fraisGestion = calculerFraisGestion(typeCompte, nombreTransactions)
    solde -= fraisGestion
-   Afficher "Frais de gestion : -X€"
+   Afficher "Frais de gestion : -X$"
 
 9. Afficher le récapitulatif :
    - Type de compte
@@ -1179,24 +1179,24 @@ Retourner nouveauSolde
 Format d'affichage :
 """
 === SIMULATION MENSUELLE ===
-Solde initial : 1000.00€
+Solde initial : 1000.00$
 
 --- OPÉRATIONS DU MOIS ---
-Dépôt de 500.00€ effectué. Nouveau solde : 1500.00€
-Dépôt de 300.00€ effectué. Nouveau solde : 1800.00€
+Dépôt de 500.00$ effectué. Nouveau solde : 1500.00$
+Dépôt de 300.00$ effectué. Nouveau solde : 1800.00$
 ...
-Retrait de 150.00€ effectué. Nouveau solde : 1650.00€
+Retrait de 150.00$ effectué. Nouveau solde : 1650.00$
 ...
 
 --- FIN DE MOIS ---
-Intérêts créditeurs : +1.67€
-Frais de gestion (Standard) : -10.00€
+Intérêts créditeurs : +1.67$
+Frais de gestion (Standard) : -10.00$
 
 === RÉCAPITULATIF ===
 Type de compte : Standard
-Solde moyen du mois : 1450.00€
+Solde moyen du mois : 1450.00$
 Nombre de transactions : 7
-Solde final : 1641.67€
+Solde final : 1641.67$
 """
 ```
 
@@ -1226,26 +1226,26 @@ Pour i de 1 à nombreMois :
      solde += interets
   
   3. (Optionnel) Afficher l'état après chaque mois :
-     "Mois X : +depotMensuel€ +interets€ → solde€"
+     "Mois X : +depotMensuel$ +interets$ → solde$"
 
 Retourner solde
 ```
 
 **Exemple de calcul manuel :**
-- Solde initial : 1000€
-- Dépôt mensuel : 200€
+- Solde initial : 1000$
+- Dépôt mensuel : 200$
 - Taux annuel : 2%
 - Durée : 3 mois
 
 Mois 1 :
-- Solde après dépôt : 1000 + 200 = 1200€
-- Intérêts : 1200 × 0.02 / 12 = 2€
-- Nouveau solde : 1202€
+- Solde après dépôt : 1000 + 200 = 1200$
+- Intérêts : 1200 × 0.02 / 12 = 2$
+- Nouveau solde : 1202$
 
 Mois 2 :
-- Solde après dépôt : 1202 + 200 = 1402€
-- Intérêts : 1402 × 0.02 / 12 = 2.34€
-- Nouveau solde : 1404.34€
+- Solde après dépôt : 1202 + 200 = 1402$
+- Intérêts : 1402 × 0.02 / 12 = 2.34$
+- Nouveau solde : 1404.34$
 
 Et ainsi de suite...
 
@@ -1278,14 +1278,14 @@ double[] retraits = {50.0, 80.0, 100.0};
 **Test 3 : Projection d'épargne**
 ```java
 double soldeFutur = projeterEpargne(1000, 200, 2.0, 12);
-System.out.println("Après 12 mois : " + soldeFutur + "€");
+System.out.println("Après 12 mois : " + soldeFutur + "$");
 ```
 
 **Test 4 : Tests des types de compte**
 ```java
-System.out.println("Solde 1500€ → " + determinerTypeCompte(1500));
-System.out.println("Solde 3000€ → " + determinerTypeCompte(3000));
-System.out.println("Solde 6000€ → " + determinerTypeCompte(6000));
+System.out.println("Solde 1500$ → " + determinerTypeCompte(1500));
+System.out.println("Solde 3000$ → " + determinerTypeCompte(3000));
+System.out.println("Solde 6000$ → " + determinerTypeCompte(6000));
 ```
 
 ---
@@ -1301,7 +1301,7 @@ System.out.println("Solde 6000€ → " + determinerTypeCompte(6000));
 - [ ] Tous les montants sont affichés avec 2 décimales
 
 ### 💡 Conseils
-- Utilisez `System.out.printf("%.2f€%n", montant)` pour formater
+- Utilisez `System.out.printf("%.2f$%n", montant)` pour formater
 - Testez d'abord chaque méthode individuellement
 - Vérifiez les cas limites (solde à 0, découvert au maximum, etc.)
 - Ajoutez des messages clairs pour suivre les opérations
@@ -1326,7 +1326,7 @@ Créez un outil d'analyse textuelle complet qui peut compter les mots, analyser 
 - Boucles sur les caractères
 - Conditions pour classification
 
-### 📝 Instructions détaillées
+### 📝 Instructions 
 
 Créez une classe `AnalyseurTexte` avec les méthodes suivantes :
 
@@ -1665,7 +1665,7 @@ Voyelles : XX% du texte
 Consonnes : XX% du texte
 ```
 
-**Algorithme détaillé :**
+**Algorithme  :**
 ```
 1. Afficher l'en-tête
 2. Afficher le texte
@@ -1767,7 +1767,7 @@ Créez un jeu de machine à sous complet avec rouleaux, symboles, calcul de gain
 - Interaction utilisateur avec Scanner
 - Calculs de probabilités et gains
 
-### 📝 Instructions détaillées
+### 📝 Instructions 
 
 Créez une classe `MachineASous` avec les méthodes suivantes :
 
@@ -1941,10 +1941,10 @@ Sinon :
 ```
 
 **Exemples :**
-- 🍒 🍒 🍒 avec mise de 5€ → 5 × 2 = 10€
-- 💎 💎 💎 avec mise de 10€ → 10 × 20 = 200€
-- 🍋 🍋 🍊 avec mise de 5€ → 5 × 1.5 = 7.50€
-- 🍒 🍋 🍊 avec mise de 5€ → 0€
+- 🍒 🍒 🍒 avec mise de 5$ → 5 × 2 = 10$
+- 💎 💎 💎 avec mise de 10$ → 10 × 20 = 200$
+- 🍋 🍋 🍊 avec mise de 5$ → 5 × 1.5 = 7.50$
+- 🍒 🍋 🍊 avec mise de 5$ → 0$
 
 ---
 
@@ -1958,24 +1958,24 @@ Sinon :
 **Retour :** `void`
 
 **Messages selon les gains :**
-- gains == 0 : "❌ Perdu ! Vous perdez X€"
+- gains == 0 : "❌ Perdu ! Vous perdez X$"
 - gains == mise : "🤝 Remboursé ! Vous récupérez votre mise"
-- gains < mise × 5 : "💰 Petit gain ! Vous gagnez X€"
-- gains < mise × 20 : "🎉 Beau gain ! Vous gagnez X€"
-- gains >= mise × 20 : "🎊 JACKPOT ! Vous gagnez X€ !!!"
+- gains < mise × 5 : "💰 Petit gain ! Vous gagnez X$"
+- gains < mise × 20 : "🎉 Beau gain ! Vous gagnez X$"
+- gains >= mise × 20 : "🎊 JACKPOT ! Vous gagnez X$ !!!"
 
 **Algorithme :**
 ```java
 if (gains == 0) {
-    System.out.printf("❌ Perdu ! Vous perdez %.2f€%n", mise);
+    System.out.printf("❌ Perdu ! Vous perdez %.2f$%n", mise);
 } else if (gains == mise) {
     System.out.println("🤝 Remboursé ! Vous récupérez votre mise");
 } else if (gains < mise * 5) {
-    System.out.printf("💰 Petit gain ! Vous gagnez %.2f€%n", gains);
+    System.out.printf("💰 Petit gain ! Vous gagnez %.2f$%n", gains);
 } else if (gains < mise * 20) {
-    System.out.printf("🎉 Beau gain ! Vous gagnez %.2f€%n", gains);
+    System.out.printf("🎉 Beau gain ! Vous gagnez %.2f$%n", gains);
 } else {
-    System.out.printf("🎊 JACKPOT ! Vous gagnez %.2f€ !!!%n", gains);
+    System.out.printf("🎊 JACKPOT ! Vous gagnez %.2f$ !!!%n", gains);
 }
 ```
 
@@ -2001,9 +2001,9 @@ Tours joués : X
 Tours gagnés : Y
 Taux de réussite : Z.Z%
 
-Crédits de départ : XX.XX€
-Crédits finaux : YY.YY€
-[Bénéfice/Perte] : ±ZZ.ZZ€
+Crédits de départ : XX.XX$
+Crédits finaux : YY.YY$
+[Bénéfice/Perte] : ±ZZ.ZZ$
 ```
 
 **Algorithme :**
@@ -2017,9 +2017,9 @@ Crédits finaux : YY.YY€
 5. Calculer la différence :
      difference = creditsFinaux - creditsInitiaux
 6. Si différence > 0 :
-     Afficher "✅ Bénéfice : +X€"
+     Afficher "✅ Bénéfice : +X$"
    Si différence < 0 :
-     Afficher "❌ Perte : X€" (valeur absolue)
+     Afficher "❌ Perte : X$" (valeur absolue)
    Sinon :
      Afficher "🤝 À l'équilibre"
 ```
@@ -2035,7 +2035,7 @@ Crédits finaux : YY.YY€
 
 **Retour :** Nouveaux crédits après le tour (`double`)
 
-**Algorithme détaillé :**
+**Algorithme  :**
 ```
 1. Vérifier si la mise est possible :
    Si mise > credits :
@@ -2066,7 +2066,7 @@ Crédits finaux : YY.YY€
    credits = credits + gains
 
 9. Afficher le nouveau solde :
-   System.out.printf("Nouveau solde : %.2f€%n", credits)
+   System.out.printf("Nouveau solde : %.2f$%n", credits)
 
 10. Retourner credits
 ```
@@ -2093,7 +2093,7 @@ Crédits finaux : YY.YY€
    ╔══════════════════════════════╗
    ║    MACHINE À SOUS 🎰         ║
    ╚══════════════════════════════╝
-   Crédits de départ : 100.00€
+   Crédits de départ : 100.00$
 
    TABLE DES GAINS :
    🍒 🍒 🍒 : ×2
@@ -2107,12 +2107,12 @@ Crédits finaux : YY.YY€
 
 3. Boucle de jeu (tant que credits >= 1) :
    a. Afficher le menu :
-      "\n💰 Crédits : X.XX€"
+      "\n💰 Crédits : X.XX$"
       "Choisissez votre mise :"
-      "1. 1€"
-      "2. 2€"
-      "3. 5€"
-      "4. 10€ (max)"
+      "1. 1$"
+      "2. 2$"
+      "3. 5$"
+      "4. 10$ (max)"
       "0. Quitter"
       "Votre choix : "
 
@@ -2183,7 +2183,7 @@ public static void main(String[] args) {
 
 ### 💡 Conseils
 - Testez d'abord avec des symboles fixes pour vérifier la logique
-- Utilisez `System.out.printf("%.2f€", montant)` pour formater l'argent
+- Utilisez `System.out.printf("%.2f$", montant)` pour formater l'argent
 - Ajoutez des `Thread.sleep(1000)` pour des pauses dramatiques (importer java.lang.Thread)
 - Vérifiez tous les cas : 3 identiques, 2 identiques, aucun
 - Testez les cas limites : crédits à 0, mise maximale, etc.
