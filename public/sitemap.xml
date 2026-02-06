@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:52153/420-210/intro/index.html</loc>
+    <loc>http://localhost:1313/420-210/intro/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:52153/420-210/variables/index.html</loc>
+    <loc>http://localhost:1313/420-210/variables/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:52153/420-210/operateurs/index.html</loc>
+    <loc>http://localhost:1313/420-210/operateurs/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:52153/420-210/structures/index.html</loc>
+    <loc>http://localhost:1313/420-210/structures/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:52153/420-210/methodes/index.html</loc>
+    <loc>http://localhost:1313/420-210/methodes/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:52153/420-210/tableaux/index.html</loc>
+    <loc>http://localhost:1313/420-210/tableaux/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:52153/420-210/exo_revisions/index.html</loc>
+    <loc>http://localhost:1313/420-210/exo_revisions/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:52153/420-210/exo_revisions/index.html</loc>
+    <loc>http://localhost:1313/420-210/poo/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:52153/420-210/categories/index.html</loc>
+    <loc>http://localhost:1313/420-210/poo_2/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:52153/420-210/index.html</loc>
+    <loc>http://localhost:1313/420-210/categories/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:52153/420-210/tags/index.html</loc>
+    <loc>http://localhost:1313/420-210/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-210/tags/index.html</loc>
   </url>
 </urlset>
