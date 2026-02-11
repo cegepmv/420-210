@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tableaux :: Programmation orientée objet</title>
-    <link>http://localhost:1313/420-210/tableaux/index.html</link>
+    <link>http://localhost:51631/420-210/tableaux/index.html</link>
     <description>📦 Les tableaux 1D en Java Un tableau (array) permet de stocker plusieurs valeurs dans une même variable, toutes du même type (int, double, etc.).&#xA;Les tableaux à une dimension (1D) sont comme une liste ordonnée de valeurs, accessibles grâce à leur indice.&#xA;🏗️ Déclaration et création ✏️ Déclarer un tableau int[] notes; // déclaration 🛠️ Créer un tableau notes = new int[5]; // tableau de 5 entiers (tous à 0) Ou, préférablement, tout en une ligne :</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <atom:link href="http://localhost:1313/420-210/tableaux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:51631/420-210/tableaux/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

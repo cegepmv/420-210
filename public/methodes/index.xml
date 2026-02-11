@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Méthodes :: Programmation orientée objet</title>
-    <link>http://localhost:1313/420-210/methodes/index.html</link>
+    <link>http://localhost:51631/420-210/methodes/index.html</link>
     <description>🛠️ Les Méthodes en Java : Segmenter pour mieux régner En programmation, une méthode est un bloc de code nommé qui contient une séquence d’instructions. Au lieu d’écrire tout votre code dans le bloc principal (main), vous créez des unités de travail spécialisées que vous pouvez appeler au besoin.&#xA;L’analogie de la boîte : Imaginez une méthode comme une boîte fermée. Vous ne voyez pas forcément l’engrenage à l’intérieur, mais vous savez comment l’utiliser en appuyant sur un bouton ou en y insérant des données.</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <atom:link href="http://localhost:1313/420-210/methodes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:51631/420-210/methodes/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

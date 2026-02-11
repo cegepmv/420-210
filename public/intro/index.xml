@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Introduction :: Programmation orientée objet</title>
-    <link>http://localhost:1313/420-210/intro/index.html</link>
+    <link>http://localhost:51631/420-210/intro/index.html</link>
     <description>1. Qu’est-ce que Java ? Java est à la fois un langage de programmation orienté objet et une plateforme informatique. Sa philosophie principale est le WORA (Write Once, Run Anywhere) : écrivez votre code une fois, et exécutez-le n’importe où sans modification.&#xA;Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctionne, il faut distinguer ces trois composants essentiels :</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <atom:link href="http://localhost:1313/420-210/intro/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:51631/420-210/intro/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

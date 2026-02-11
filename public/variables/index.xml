@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Variables :: Programmation orientée objet</title>
-    <link>http://localhost:1313/420-210/variables/index.html</link>
+    <link>http://localhost:51631/420-210/variables/index.html</link>
     <description>🎯 Qu’est-ce qu’une variable? Une variable, c’est comme un casier dans votre vestiaire du cégep. Vous pouvez y mettre vos affaires, les changer, les oublier (oups), et même y mettre n’importe quoi (tant que ça rentre et que c’est du bon type).&#xA;L’identificateur (Le nom) : C’est l’étiquette sur le casier (ex: 304). C’est ce qui permet au programme de retrouver l’endroit exact en mémoire.</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <atom:link href="http://localhost:1313/420-210/variables/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:51631/420-210/variables/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
