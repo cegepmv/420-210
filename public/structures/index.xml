@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Structures de contrôle :: Programmation orientée objet</title>
-    <link>http://localhost:51631/420-210/structures/index.html</link>
+    <link>http://localhost:1313/420-210/structures/index.html</link>
     <description>Les structures de contrôle en Java Introduction Jusqu’à présent, vos programmes s’exécutaient ligne par ligne, de haut en bas, comme une recette suivie à la lettre.&#xA;Les structures de contrôle permettent de prendre des décisions et de répéter des actions.&#xA;👉 Grâce à elles, un programme devient intelligent, dynamique et utile dans la vraie vie.</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <atom:link href="http://localhost:51631/420-210/structures/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/420-210/structures/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html id="R-html" lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-210/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-210/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="🎮 PROJET CODEX ARCANUM - L’AVENTURE COMPLÈTE DE LA POO ! 🌟 Bienvenue dans l’Aventure des Bibliothèques Légendaires ! 🌟 🎵 Musique d’Aventure Épique 🎵 🎵 Thème d&#39;aventure épique🎧 Active le son pour une expérience immersive !">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="BiblioAventura3 :: Programmation orientée objet">
+    <meta name="twitter:description" content="🎮 PROJET CODEX ARCANUM - L’AVENTURE COMPLÈTE DE LA POO ! 🌟 Bienvenue dans l’Aventure des Bibliothèques Légendaires ! 🌟 🎵 Musique d’Aventure Épique 🎵 🎵 Thème d&#39;aventure épique🎧 Active le son pour une expérience immersive !">
+    <meta property="og:url" content="http://localhost:1313/420-210/biblioGame3/index.html">
+    <meta property="og:site_name" content="Programmation orientée objet">
+    <meta property="og:title" content="BiblioAventura3 :: Programmation orientée objet">
+    <meta property="og:description" content="🎮 PROJET CODEX ARCANUM - L’AVENTURE COMPLÈTE DE LA POO ! 🌟 Bienvenue dans l’Aventure des Bibliothèques Légendaires ! 🌟 🎵 Musique d’Aventure Épique 🎵 🎵 Thème d&#39;aventure épique🎧 Active le son pour une expérience immersive !">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Programmation orientée objet">
+    <meta itemprop="name" content="BiblioAventura3 :: Programmation orientée objet">
+    <meta itemprop="description" content="🎮 PROJET CODEX ARCANUM - L’AVENTURE COMPLÈTE DE LA POO ! 🌟 Bienvenue dans l’Aventure des Bibliothèques Légendaires ! 🌟 🎵 Musique d’Aventure Épique 🎵 🎵 Thème d&#39;aventure épique🎧 Active le son pour une expérience immersive !">
+    <meta itemprop="wordCount" content="4106">
+    <title>BiblioAventura3 :: Programmation orientée objet</title>
+    <link href="/420-210/images/favicon.png?1771005998" rel="icon" type="image/png">
+    <link href="/420-210/css/auto-complete/auto-complete.min.css?1771005998" rel="stylesheet">
+    <script src="/420-210/js/auto-complete/auto-complete.min.js?1771005998" defer></script>
+    <script src="/420-210/js/search-lunr.js?1771005998" defer></script>
+    <script src="/420-210/js/search.js?1771005998" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/420-210/searchindex.en.js?1771005998";
+    </script>
+    <script src="/420-210/js/lunr/lunr.min.js?1771005998" defer></script>
+    <script src="/420-210/js/lunr/lunr.stemmer.support.min.js?1771005998" defer></script>
+    <script src="/420-210/js/lunr/lunr.multi.min.js?1771005998" defer></script>
+    <script src="/420-210/js/lunr/lunr.fr.min.js?1771005998" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['fr'];
+    </script>
+    <link href="/420-210/fonts/fontawesome/css/all.min.css?1771005998" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-210/fonts/fontawesome/css/all.min.css?1771005998" rel="stylesheet"></noscript>
+    <link href="/420-210/css/perfect-scrollbar/perfect-scrollbar.min.css?1771005998" rel="stylesheet">
+    <link href="/420-210/css/theme.css?1771005998" rel="stylesheet">
+    <link href="/420-210/css/format-html.css?1771005998" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/biblioGame3\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-210';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'learn', 'relearn-auto', 'zen-light', 'zen-dark', 'neon' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script><style>
+:root {
+    --MENU-WIDTH-S: 14.375rem;
+    --MENU-WIDTH-M: 14.375rem;
+    --MENU-WIDTH-L: 16rem;
+}
+</style>
+  </head>
+  <body class="mobile-support html" data-origin="/420-210/biblioGame3/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#-bienvenue-dans-laventure-des-bibliothèques-légendaires--">🌟 Bienvenue dans l&rsquo;Aventure des Bibliothèques Légendaires ! 🌟</a>
+      <ul>
+        <li><a href="#-musique-daventure-épique-">🎵 Musique d&rsquo;Aventure Épique 🎵</a></li>
+      </ul>
+    </li>
+    <li><a href="#-ton-tableau-de-bord">📊 Ton Tableau de Bord</a></li>
+    <li><a href="#-carte-complète-de-laventure">🗺️ CARTE COMPLÈTE DE L&rsquo;AVENTURE</a>
+      <ul>
+        <li><a href="#-système-de-progression">🎯 Système de progression:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-choisis-ta-bibliothèque-légendaire-">🏛️ Choisis ta bibliothèque légendaire !</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-histoire">📜 Histoire</a></li>
+      </ul>
+    </li>
+    <li><a href="#-points-15-pts---temps-estimé-1-2-heures">💎 Points: 15 pts | ⏱️ Temps estimé: 1-2 heures</a></li>
+    <li><a href="#-mission-11--créer-la-classe-livre">🎯 Mission 1.1 : Créer la classe Livre</a>
+      <ul>
+        <li><a href="#attributs-à-créer-tous-private">Attributs à créer (tous <strong>private</strong>):</a></li>
+        <li><a href="#-concept-poo--lencapsulation">🎓 Concept POO : L&rsquo;ENCAPSULATION</a></li>
+        <li><a href="#constructeur">Constructeur:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-12--méthode-afficher">🎯 Mission 1.2 : Méthode <code>afficher()</code></a></li>
+    <li><a href="#-mission-13--méthode-emprunter">🎯 Mission 1.3 : Méthode <code>emprunter()</code></a></li>
+    <li><a href="#-mission-14--méthode-retourner">🎯 Mission 1.4 : Méthode <code>retourner()</code></a></li>
+    <li><a href="#-test-niveau-1">🧪 Test Niveau 1</a>
+      <ul>
+        <li><a href="#-checklist">✅ Checklist:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-défis-bonus-5-pts-chacun">🏆 Défis Bonus (+5 pts chacun)</a>
+      <ul>
+        <li><a href="#défi-1a--attribut-nombrepages">Défi 1.A : Attribut <code>nombrePages</code></a></li>
+        <li><a href="#défi-1b--5-livres-de-genres-variés">Défi 1.B : 5 livres de genres variés</a></li>
+        <li><a href="#défi-1c--combo-parfait">Défi 1.C : Combo parfait</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-histoire-1">📜 Histoire</a></li>
+        <li><a href="#-rappel-important">🎓 Rappel Important</a></li>
+      </ul>
+    </li>
+    <li><a href="#-points-15-pts---temps-1-2-heures">💎 Points: 15 pts | ⏱️ Temps: 1-2 heures</a></li>
+    <li><a href="#-mission-21--ajouter-les-getters">🎯 Mission 2.1 : Ajouter les Getters</a>
+      <ul>
+        <li><a href="#-concept--les-getters-accesseurs">🎓 Concept : Les Getters (Accesseurs)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-22--setter-setannee-avec-validation">🎯 Mission 2.2 : Setter <code>setAnnee()</code> avec validation</a>
+      <ul>
+        <li><a href="#-concept--les-setters-mutateurs">🎓 Concept : Les Setters (Mutateurs)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-23--setter-setnombrepages-avec-validation">🎯 Mission 2.3 : Setter <code>setNombrePages()</code> avec validation</a></li>
+    <li><a href="#-mission-24--système-de-popularité">🎯 Mission 2.4 : Système de Popularité</a>
+      <ul>
+        <li><a href="#nouvel-attribut">Nouvel attribut:</a></li>
+        <li><a href="#méthode-ajouteretoile">Méthode <code>ajouterEtoile()</code>:</a></li>
+        <li><a href="#méthode-ispopulaire">Méthode <code>isPopulaire()</code>:</a></li>
+        <li><a href="#getter">Getter:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-25--afficher-les-étoiles">🎯 Mission 2.5 : Afficher les étoiles</a></li>
+    <li><a href="#-mission-26--méthode-calculerage">🎯 Mission 2.6 : Méthode <code>calculerAge()</code></a></li>
+    <li><a href="#-test-niveau-2">🧪 Test Niveau 2</a></li>
+    <li><a href="#-défis-bonus">🏆 Défis Bonus</a>
+      <ul>
+        <li><a href="#défi-2a--isclassique">Défi 2.A : <code>isClassique()</code></a></li>
+        <li><a href="#défi-2b--compteur-derreurs">Défi 2.B : Compteur d&rsquo;erreurs</a></li>
+        <li><a href="#défi-2c--livre-5-étoiles">Défi 2.C : Livre 5 étoiles</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-histoire-2">📜 Histoire</a></li>
+      </ul>
+    </li>
+    <li><a href="#-points-20-pts---temps-2-3-heures">💎 Points: 20 pts | ⏱️ Temps: 2-3 heures</a></li>
+    <li><a href="#-mission-31--créer-la-classe-bibliotheque">🎯 Mission 3.1 : Créer la classe Bibliotheque</a>
+      <ul>
+        <li><a href="#attributs-tous-private">Attributs (tous <strong>private</strong>):</a></li>
+        <li><a href="#constructeur-1">Constructeur:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-32--méthode-ajouterlivre">🎯 Mission 3.2 : Méthode <code>ajouterLivre()</code></a></li>
+    <li><a href="#-mission-33--méthode-affichercarte">🎯 Mission 3.3 : Méthode <code>afficherCarte()</code></a></li>
+    <li><a href="#-mission-34--méthode-afficherdisponibles">🎯 Mission 3.4 : Méthode <code>afficherDisponibles()</code></a></li>
+    <li><a href="#-mission-35--méthode-chercherlivre">🎯 Mission 3.5 : Méthode <code>chercherLivre()</code></a></li>
+    <li><a href="#-mission-36--méthode-emprunterlivre">🎯 Mission 3.6 : Méthode <code>emprunterLivre()</code></a></li>
+    <li><a href="#-mission-37--getter">🎯 Mission 3.7 : Getter</a></li>
+    <li><a href="#-test-niveau-3">🧪 Test Niveau 3</a></li>
+    <li><a href="#-défis-bonus-1">🏆 Défis Bonus</a>
+      <ul>
+        <li><a href="#défi-3a--100-points-de-gloire">Défi 3.A : 100 points de gloire</a></li>
+        <li><a href="#défi-3b--royaume-complet">Défi 3.B : Royaume complet</a></li>
+        <li><a href="#défi-3c--combo-5">Défi 3.C : Combo 5</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-histoire-3">📜 Histoire</a></li>
+      </ul>
+    </li>
+    <li><a href="#-points-20-pts---temps-2-heures">💎 Points: 20 pts | ⏱️ Temps: 2 heures</a></li>
+    <li><a href="#-mission-41--convertir-en-arraylist">🎯 Mission 4.1 : Convertir en ArrayList</a>
+      <ul>
+        <li><a href="#modifications-dans-bibliothequejava">Modifications dans <code>Bibliotheque.java</code>:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-42--adapter-ajouterlivre">🎯 Mission 4.2 : Adapter <code>ajouterLivre()</code></a></li>
+    <li><a href="#-mission-43--adapter-affichercarte">🎯 Mission 4.3 : Adapter <code>afficherCarte()</code></a></li>
+    <li><a href="#-mission-44--adapter-afficherdisponibles">🎯 Mission 4.4 : Adapter <code>afficherDisponibles()</code></a></li>
+    <li><a href="#-mission-45--adapter-chercherlivre">🎯 Mission 4.5 : Adapter <code>chercherLivre()</code></a></li>
+    <li><a href="#-mission-46--nouvelle-méthode-supprimerlivre">🎯 Mission 4.6 : NOUVELLE Méthode <code>supprimerLivre()</code></a></li>
+    <li><a href="#-mission-47--nouvelle-méthode-rechercherparauteur">🎯 Mission 4.7 : NOUVELLE Méthode <code>rechercherParAuteur()</code></a></li>
+    <li><a href="#-test-niveau-4">🧪 Test Niveau 4</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-histoire-4">📜 Histoire</a></li>
+      </ul>
+    </li>
+    <li><a href="#-points-25-pts---temps-3-heures">💎 Points: 25 pts | ⏱️ Temps: 3 heures</a></li>
+    <li><a href="#-mission-51--créer-la-classe-parent-document">🎯 Mission 5.1 : Créer la classe parent <code>Document</code></a>
+      <ul>
+        <li><a href="#attributs-tous-private-1">Attributs (tous <strong>private</strong>):</a></li>
+        <li><a href="#constructeur-2">Constructeur:</a></li>
+        <li><a href="#méthodes-à-créer">Méthodes à créer:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-52--créer-livre-qui-hérite-de-document">🎯 Mission 5.2 : Créer <code>Livre</code> qui hérite de <code>Document</code></a>
+      <ul>
+        <li><a href="#nouveaux-attributs-privés-en-plus-de-ceux-hérités">Nouveaux attributs privés (en plus de ceux hérités):</a></li>
+        <li><a href="#nouveau-constructeur">Nouveau constructeur:</a></li>
+        <li><a href="#getters-spécifiques">Getters spécifiques:</a></li>
+        <li><a href="#méthode-spécifique">Méthode spécifique:</a></li>
+        <li><a href="#redéfinir-afficher">Redéfinir <code>afficher()</code>:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-53--créer-la-classe-magazine">🎯 Mission 5.3 : Créer la classe <code>Magazine</code></a>
+      <ul>
+        <li><a href="#attributs-privés">Attributs privés:</a></li>
+        <li><a href="#constructeur-3">Constructeur:</a></li>
+        <li><a href="#getters-1">Getters:</a></li>
+        <li><a href="#redéfinir-afficher-1">Redéfinir <code>afficher()</code>:</a></li>
+        <li><a href="#redéfinir-emprunter">Redéfinir <code>emprunter()</code>:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-54--créer-la-classe-dvd">🎯 Mission 5.4 : Créer la classe <code>DVD</code></a>
+      <ul>
+        <li><a href="#attributs-privés-1">Attributs privés:</a></li>
+        <li><a href="#constructeur-4">Constructeur:</a></li>
+        <li><a href="#getters-2">Getters:</a></li>
+        <li><a href="#méthode-spéciale-getdureeformatee">Méthode spéciale <code>getDureeFormatee()</code>:</a></li>
+        <li><a href="#redéfinir-afficher-2">Redéfinir <code>afficher()</code>:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-test-niveau-5">🧪 Test Niveau 5</a></li>
+    <li><a href="#-défis-bonus-2">🏆 Défis Bonus</a>
+      <ul>
+        <li><a href="#défi-5a--classe-bd">Défi 5.A : Classe <code>BD</code></a></li>
+        <li><a href="#défi-5b--classe-cd">Défi 5.B : Classe <code>CD</code></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-histoire-5">📜 Histoire</a></li>
+      </ul>
+    </li>
+    <li><a href="#-points-25-pts---temps-2-3-heures">💎 Points: 25 pts | ⏱️ Temps: 2-3 heures</a></li>
+    <li><a href="#-mission-61--modifier-bibliotheque">🎯 Mission 6.1 : Modifier Bibliotheque</a></li>
+    <li><a href="#-mission-62--renommer-et-adapter-ajouterdocument">🎯 Mission 6.2 : Renommer et adapter <code>ajouterDocument()</code></a></li>
+    <li><a href="#-mission-63--adapter-affichercatalogue">🎯 Mission 6.3 : Adapter <code>afficherCatalogue()</code></a></li>
+    <li><a href="#-mission-64--méthode-afficherlivres">🎯 Mission 6.4 : Méthode <code>afficherLivres()</code></a></li>
+    <li><a href="#-mission-65--méthode-affichermagazines">🎯 Mission 6.5 : Méthode <code>afficherMagazines()</code></a></li>
+    <li><a href="#-mission-66--méthode-afficherstatistiques">🎯 Mission 6.6 : Méthode <code>afficherStatistiques()</code></a></li>
+    <li><a href="#-mission-67--adapter-emprunterdocument">🎯 Mission 6.7 : Adapter <code>emprunterDocument()</code></a></li>
+    <li><a href="#-test-niveau-6">🧪 Test Niveau 6</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-histoire-6">📜 Histoire</a></li>
+      </ul>
+    </li>
+    <li><a href="#-points-30-pts---temps-3-4-heures">💎 Points: 30 pts | ⏱️ Temps: 3-4 heures</a></li>
+    <li><a href="#-mission-71--créer-documentabstrait">🎯 Mission 7.1 : Créer <code>DocumentAbstrait</code></a>
+      <ul>
+        <li><a href="#attributs-privés-2">Attributs privés:</a></li>
+        <li><a href="#constructeur-normal">Constructeur (normal):</a></li>
+        <li><a href="#méthodes-abstraites-à-déclarer">Méthodes ABSTRAITES à déclarer:</a></li>
+        <li><a href="#méthodes-concrètes">Méthodes CONCRÈTES:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-72--créer-linterface-evaluable">🎯 Mission 7.2 : Créer l&rsquo;interface <code>Evaluable</code></a></li>
+    <li><a href="#-mission-73--créer-livrecomplet">🎯 Mission 7.3 : Créer <code>LivreComplet</code></a>
+      <ul>
+        <li><a href="#attributs-privés-3">Attributs privés:</a></li>
+        <li><a href="#constructeur-5">Constructeur:</a></li>
+        <li><a href="#implémenter-méthodes-abstraites">Implémenter méthodes abstraites:</a></li>
+        <li><a href="#implémenter-interface-evaluable">Implémenter interface Evaluable:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-74--créer-magazinecomplet">🎯 Mission 7.4 : Créer <code>MagazineComplet</code></a>
+      <ul>
+        <li><a href="#attributs">Attributs:</a></li>
+        <li><a href="#implémenter">Implémenter:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mission-75--créer-dvdcomplet">🎯 Mission 7.5 : Créer <code>DVDComplet</code></a>
+      <ul>
+        <li><a href="#attributs-1">Attributs:</a></li>
+        <li><a href="#implémenter-1">Implémenter:</a></li>
+      </ul>
+    </li>
+    <li><a href="#-test-niveau-7">🧪 Test Niveau 7</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-histoire-7">📜 Histoire</a></li>
+      </ul>
+    </li>
+    <li><a href="#-points-50-pts---temps-8-12-heures">💎 Points: 50 pts | ⏱️ Temps: 8-12 heures</a></li>
+    <li><a href="#-fonctionnalités-à-implémenter">🎯 Fonctionnalités à implémenter</a>
+      <ul>
+        <li><a href="#partie-a--classe-membre-10-pts">Partie A : Classe <code>Membre</code> (10 pts)</a></li>
+        <li><a href="#partie-b--menu-interactif-15-pts">Partie B : Menu Interactif (15 pts)</a></li>
+        <li><a href="#partie-c--système-de-recherche-10-pts">Partie C : Système de Recherche (10 pts)</a></li>
+        <li><a href="#partie-d--statistiques-avancées-10-pts">Partie D : Statistiques Avancées (10 pts)</a></li>
+        <li><a href="#partie-e--sauvegardechargement-5-pts---bonus">Partie E : Sauvegarde/Chargement (5 pts - BONUS)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-grille-dévaluation-finale">📝 Grille d&rsquo;Évaluation Finale</a>
+      <ul>
+        <li><a href="#concepts-poo-40-pts">Concepts POO (40 pts):</a></li>
+        <li><a href="#fonctionnalités-35-pts">Fonctionnalités (35 pts):</a></li>
+        <li><a href="#qualité-25-pts">Qualité (25 pts):</a></li>
+      </ul>
+    </li>
+    <li><a href="#-félicitations-">🎊 FÉLICITATIONS !</a></li>
+    <li><a href="#-playlist-complète">🎵 Playlist Complète</a>
+      <ul>
+        <li><a href="#-musiques-daventure">🎧 Musiques d&rsquo;Aventure</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-210/index.html"><span itemprop="name">Programmation orientée objet</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">BiblioAventura3</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/420-210/exos_poo/index.html" title="Exercices - POO (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle"><span><i class="fa-fw fas fa-chevron-right"></i></span></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable page" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="biblioaventura3">BiblioAventura3</h1>
+
+<h1 id="-projet-codex-arcanum---laventure-complète-de-la-poo-">🎮 PROJET CODEX ARCANUM - L&rsquo;AVENTURE COMPLÈTE DE LA POO !<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<div align="center">
+<h2 id="-bienvenue-dans-laventure-des-bibliothèques-légendaires--">🌟 Bienvenue dans l&rsquo;Aventure des Bibliothèques Légendaires ! 🌟<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="-musique-daventure-épique-">🎵 Musique d&rsquo;Aventure Épique 🎵<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<audio controls autoplay loop volume="0.5">
+  <source src="/420-210/sons/son-action-mystery-1.mp3" type="audio/mpeg">
+  🎵 Thème d'aventure épique
+</audio>
+<p style="color: #666; font-style: italic; margin-top: 10px;">
+🎧 Active le son pour une expérience immersive !
+</p>
+</div>
+<hr>
+<h2 id="-ton-tableau-de-bord">📊 Ton Tableau de Bord<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div style="background: #2c3e50; color: white; padding: 20px; border-radius: 10px; margin: 20px 0;">
+  <h3>🎮 Statistiques du Joueur</h3>
+  <p>🏆 Points Totaux : <span id="total-points" style="color: #ffd700; font-size: 1.5em; font-weight: bold;">0</span></p>
+  <p>⭐ Niveau Actuel : <span id="player-level">1</span> - Apprenti Codeur</p>
+  <p>🎯 Prochain niveau : 30 points</p>
+  <div style="background: #34495e; height: 20px; border-radius: 10px; overflow: hidden; margin-top: 10px;">
+    <div id="progress-bar" style="background: linear-gradient(90deg, #00ff00, #00cc00); height: 100%; width: 0%; transition: width 0.5s;"></div>
+  </div>
+</div>
+<hr>
+<h2 id="-carte-complète-de-laventure">🗺️ CARTE COMPLÈTE DE L&rsquo;AVENTURE<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>    🏁 NIVEAU 1          ⚔️ NIVEAU 2         🏰 NIVEAU 3         🔮 NIVEAU 4
+   Premier Livre      Bouclier Magique    Royaume Livres     Grimoire Dynamique
+      [15 pts]            [15 pts]            [20 pts]            [20 pts]
+   
+    🐉 NIVEAU 5          🌈 NIVEAU 6         🏛️ NIVEAU 7         👑 NIVEAU 8
+  Dragon Héritage     Métamorphose      Temple Abstrait       Boss Final
+      [25 pts]            [25 pts]            [30 pts]            [50 pts]
+
+                        TOTAL : 200 POINTS POSSIBLES !</code></pre></div>
+<h3 id="-système-de-progression">🎯 Système de progression:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>⭐ <strong>Bronze</strong> (0-30 pts) : Apprenti Codeur</li>
+<li>⭐⭐ <strong>Argent</strong> (31-60 pts) : Codeur Compétent</li>
+<li>⭐⭐⭐ <strong>Or</strong> (61-100 pts) : Maître POO</li>
+<li>⭐⭐⭐⭐ <strong>Platine</strong> (101-150 pts) : Grand Architecte</li>
+<li>👑 <strong>Légende</strong> (151+ pts) : Légende Vivante !</li>
+</ul>
+<hr>
+<h2 id="-choisis-ta-bibliothèque-légendaire-">🏛️ Choisis ta bibliothèque légendaire !<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 15px; border-radius: 10px; color: white; text-align: center;">
+  <h4>🔮 Codex Arcanum</h4>
+  <p style="font-size: 0.85em;">Sortilèges de code</p>
+</div>
+<div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 15px; border-radius: 10px; color: white; text-align: center;">
+  <h4>⚔️ Grimoire du Guerrier</h4>
+  <p style="font-size: 0.85em;">Combat contre bugs</p>
+</div>
+<div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 15px; border-radius: 10px; color: white; text-align: center;">
+  <h4>🌊 Océan Connaissance</h4>
+  <p style="font-size: 0.85em;">Algorithmes fluides</p>
+</div>
+<div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 15px; border-radius: 10px; color: white; text-align: center;">
+  <h4>🔥 Forge du Phoenix</h4>
+  <p style="font-size: 0.85em;">Créateurs passionnés</p>
+</div>
+</div>
+<hr>
+<h1 id="-niveau-1---le-premier-livre-magique">🎮 NIVEAU 1 - LE PREMIER LIVRE MAGIQUE<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<div style="text-align: center; margin: 20px 0;">
+  <audio controls>
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+    🎵 Musique Niveau 1
+  </audio>
+</div>
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+<h3 id="-histoire">📜 Histoire<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><em>&ldquo;Bienvenue jeune apprenti ! La bibliothèque est vide&hellip; Ta première mission : créer ton premier livre magique qui pourra être emprunté !&rdquo;</em></p>
+</div>
+<h2 id="-points-15-pts---temps-estimé-1-2-heures">💎 Points: 15 pts | ⏱️ Temps estimé: 1-2 heures<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<hr>
+<h2 id="-mission-11--créer-la-classe-livre">🎯 Mission 1.1 : Créer la classe Livre<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="attributs-à-créer-tous-private">Attributs à créer (tous <strong>private</strong>):<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Attribut</th>
+          <th>Type</th>
+          <th>Valeur initiale</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>titre</code></td>
+          <td><code>String</code></td>
+          <td>Via constructeur</td>
+      </tr>
+      <tr>
+          <td><code>auteur</code></td>
+          <td><code>String</code></td>
+          <td>Via constructeur</td>
+      </tr>
+      <tr>
+          <td><code>annee</code></td>
+          <td><code>int</code></td>
+          <td>Via constructeur</td>
+      </tr>
+      <tr>
+          <td><code>estEmprunte</code></td>
+          <td><code>boolean</code></td>
+          <td><code>false</code></td>
+      </tr>
+  </tbody>
+</table>
+<div style="background: #e3f2fd; padding: 15px; border-left: 4px solid #2196f3; margin: 15px 0;">
+<h3 id="-concept-poo--lencapsulation">🎓 Concept POO : L&rsquo;ENCAPSULATION<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Félicitations !</strong> En déclarant tes attributs <code>private</code>, tu viens d&rsquo;appliquer le principe d&rsquo;<strong>ENCAPSULATION</strong> !</p>
+<p><strong>C&rsquo;est quoi l&rsquo;encapsulation ?</strong></p>
+<ul>
+<li>Cacher les détails internes d&rsquo;une classe</li>
+<li>Empêcher l&rsquo;accès direct aux attributs depuis l&rsquo;extérieur</li>
+<li><code>private</code> = les attributs sont protégés ✅</li>
+</ul>
+<p><strong>Pourquoi c&rsquo;est important ?</strong></p>
+<ul>
+<li>Protège les données contre les modifications non contrôlées</li>
+<li>On peut changer l&rsquo;implémentation interne sans casser le code externe</li>
+<li>C&rsquo;est un des <strong>4 piliers de la POO</strong> !</li>
+</ul>
+<p><strong>Note :</strong> Au Niveau 2, tu ajouteras des getters/setters pour permettre un accès <strong>contrôlé</strong> à ces attributs privés.</p>
+</div>
+<h3 id="constructeur">Constructeur:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><strong>Paramètres:</strong> <code>String titre, String auteur, int annee</code></li>
+<li><strong>Actions:</strong>
+<ol>
+<li>Initialiser <code>titre</code>, <code>auteur</code>, <code>annee</code> avec les paramètres</li>
+<li>Mettre <code>estEmprunte</code> à <code>false</code></li>
+<li>Afficher: <code>&quot;✨ NOUVEAU LIVRE CRÉÉ : &quot; + titre</code></li>
+</ol>
+</li>
+</ul>
+<details>
+<summary>💡 Aide syntaxe</summary>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Livre</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="n">attribut</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Livre</span><span class="p">(</span><span class="n">Type</span><span class="w"> </span><span class="n">param</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">attribut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</details>
+<hr>
+<h2 id="-mission-12--méthode-afficher">🎯 Mission 1.2 : Méthode <code>afficher()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void afficher()</code></p>
+<p><strong>Actions à faire:</strong></p>
+<ol>
+<li>Afficher une ligne: <code>╔════════════════════════════════╗</code></li>
+<li>Afficher: <code>&quot;  📚 &quot; + titre</code></li>
+<li>Afficher: <code>&quot;  ✍️  &quot; + auteur</code></li>
+<li>Afficher: <code>&quot;  📅 &quot; + annee</code></li>
+<li><strong>SI</strong> <code>estEmprunte</code> est vrai:
+<ul>
+<li>Afficher: <code>&quot;  🔴 EMPRUNTÉ&quot;</code></li>
+</ul>
+</li>
+<li><strong>SINON:</strong>
+<ul>
+<li>Afficher: <code>&quot;  🟢 DISPONIBLE&quot;</code></li>
+</ul>
+</li>
+<li>Afficher une ligne: <code>╚════════════════════════════════╝</code></li>
+</ol>
+<hr>
+<h2 id="-mission-13--méthode-emprunter">🎯 Mission 1.3 : Méthode <code>emprunter()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void emprunter()</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>SI le livre EST DÉJÀ emprunté:
+    Afficher &#34;❌ Oups ! &#39;[titre]&#39; est déjà emprunté !&#34;
+SINON:
+    Mettre estEmprunte à true
+    Afficher &#34;✅ Super ! Tu as emprunté &#39;[titre]&#39; !&#34;
+    Afficher &#34;🎉 +1 emprunt réussi !&#34;</code></pre></div>
+<hr>
+<h2 id="-mission-14--méthode-retourner">🎯 Mission 1.4 : Méthode <code>retourner()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void retourner()</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>SI le livre EST emprunté:
+    Mettre estEmprunte à false
+    Afficher &#34;✅ Merci ! &#39;[titre]&#39; est de retour !&#34;
+    Afficher &#34;⭐ +1 point de karma !&#34;
+SINON:
+    Afficher &#34;⚠️ Hmm... &#39;[titre]&#39; n&#39;était pas emprunté !&#34;</code></pre></div>
+<hr>
+<h2 id="-test-niveau-1">🧪 Test Niveau 1<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Crée <code>TestNiveau1.java</code> et complète:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestNiveau1</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 🎯 MISSION : Crée 3 livres différents</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Livre</span><span class="w"> </span><span class="n">livre1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1">// TON CODE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Livre</span><span class="w"> </span><span class="n">livre2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1">// TON CODE  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Livre</span><span class="w"> </span><span class="n">livre3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1">// TON CODE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche les 3 livres</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Emprunte livre1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Essaie d&#39;emprunter livre1 à nouveau</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Retourne livre1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Essaie de retourner livre3 (pas emprunté)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;\n🏆 NIVEAU 1 TERMINÉ !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="-checklist">✅ Checklist:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> 3 livres créés</li>
+<li><input disabled="" type="checkbox"> 3 livres affichés</li>
+<li><input disabled="" type="checkbox"> 1 emprunt réussi</li>
+<li><input disabled="" type="checkbox"> 1 tentative sur livre déjà emprunté (erreur attendue)</li>
+<li><input disabled="" type="checkbox"> 1 retour réussi</li>
+<li><input disabled="" type="checkbox"> 1 tentative de retour sur livre non emprunté (erreur attendue)</li>
+</ul>
+<hr>
+<h2 id="-défis-bonus-5-pts-chacun">🏆 Défis Bonus (+5 pts chacun)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="défi-1a--attribut-nombrepages">Défi 1.A : Attribut <code>nombrePages</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ol>
+<li>Ajoute attribut <code>private int nombrePages</code></li>
+<li>Modifie constructeur pour l&rsquo;accepter</li>
+<li>Affiche-le dans <code>afficher()</code></li>
+<li>Crée méthode <code>public boolean isLong()</code> qui retourne <code>true</code> si &gt; 400 pages</li>
+</ol>
+<h3 id="défi-1b--5-livres-de-genres-variés">Défi 1.B : 5 livres de genres variés<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Crée 5 livres : Fantasy, SF, Romance, Horreur, Classique</p>
+<h3 id="défi-1c--combo-parfait">Défi 1.C : Combo parfait<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>3 emprunts réussis d&rsquo;affilée sans erreur</p>
+<hr>
+<h1 id="-niveau-2---les-portes-daccès-getterssetters">🔑 NIVEAU 2 - LES PORTES D&rsquo;ACCÈS (GETTERS/SETTERS)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<div style="text-align: center; margin: 20px 0;">
+  <audio controls>
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+    🎵 Musique Niveau 2
+  </audio>
+</div>
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+<h3 id="-histoire-1">📜 Histoire<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><em>&ldquo;Tes attributs sont déjà protégés (private = ENCAPSULATION ✅), mais maintenant on ne peut plus les lire ! Crée des PORTES D&rsquo;ACCÈS CONTRÔLÉES (getters/setters) avec des GARDIENS (validations) !&rdquo;</em></p>
+<h3 id="-rappel-important">🎓 Rappel Important<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Tu as DÉJÀ l&rsquo;encapsulation depuis le Niveau 1 !</strong></p>
+<ul>
+<li>✅ Attributs <code>private</code> = ENCAPSULATION</li>
+<li>🆕 Maintenant : Ajouter des <strong>accesseurs</strong> (getters/setters)</li>
+<li>🆕 Bonus : Ajouter des <strong>validations</strong> dans les setters</li>
+</ul>
+</div>
+<h2 id="-points-15-pts---temps-1-2-heures">💎 Points: 15 pts | ⏱️ Temps: 1-2 heures<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<hr>
+<h2 id="-mission-21--ajouter-les-getters">🎯 Mission 2.1 : Ajouter les Getters<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="-concept--les-getters-accesseurs">🎓 Concept : Les Getters (Accesseurs)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Problème actuel :</strong></p>
+<ul>
+<li>Tes attributs sont <code>private</code> (encapsulation ✅)</li>
+<li>Impossible de les lire depuis l&rsquo;extérieur !</li>
+<li><code>livre.titre</code> → <strong>ERREUR</strong> ❌</li>
+</ul>
+<p><strong>Solution : Les Getters</strong></p>
+<ul>
+<li>Méthodes <code>public</code> qui <strong>retournent</strong> la valeur des attributs privés</li>
+<li>Permettent un accès <strong>en lecture</strong> contrôlé</li>
+<li>Convention : <code>get</code> + nom de l&rsquo;attribut (ex: <code>getTitre()</code>)</li>
+<li>Exception pour <code>boolean</code> : on utilise <code>is</code> (ex: <code>isEstEmprunte()</code>)</li>
+</ul>
+<hr>
+<p>Crée ces méthodes dans <code>Livre.java</code>:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Méthode</th>
+          <th>Retour</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>getTitre()</code></td>
+          <td><code>String</code></td>
+          <td>Retourne <code>titre</code></td>
+      </tr>
+      <tr>
+          <td><code>getAuteur()</code></td>
+          <td><code>String</code></td>
+          <td>Retourne <code>auteur</code></td>
+      </tr>
+      <tr>
+          <td><code>getAnnee()</code></td>
+          <td><code>int</code></td>
+          <td>Retourne <code>annee</code></td>
+      </tr>
+      <tr>
+          <td><code>getNombrePages()</code></td>
+          <td><code>int</code></td>
+          <td>Retourne <code>nombrePages</code></td>
+      </tr>
+      <tr>
+          <td><code>isEstEmprunte()</code></td>
+          <td><code>boolean</code></td>
+          <td>Retourne <code>estEmprunte</code></td>
+      </tr>
+  </tbody>
+</table>
+<details>
+<summary>💡 Template getter</summary>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="nf">getNom</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">attribut</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Pour boolean:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isNom</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">attributBoolean</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</details>
+<hr>
+<h2 id="-mission-22--setter-setannee-avec-validation">🎯 Mission 2.2 : Setter <code>setAnnee()</code> avec validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="-concept--les-setters-mutateurs">🎓 Concept : Les Setters (Mutateurs)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>À quoi servent les setters ?</strong></p>
+<ul>
+<li>Permettent de <strong>modifier</strong> les attributs privés depuis l&rsquo;extérieur</li>
+<li><strong>MAIS</strong> avec des <strong>validations</strong> ! C&rsquo;est ça le pouvoir !</li>
+</ul>
+<p><strong>Sans setter (problème) :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Impossible de modifier, attribut private</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">livre</span><span class="p">.</span><span class="na">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">2025</span><span class="p">;</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">ERREUR</span><span class="w"> </span><span class="err">❌</span></span></span></code></pre></div>
+<p><strong>Avec setter simple (pas terrible) :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAnnee</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">annee</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">annee</span><span class="p">;</span><span class="w">  </span><span class="c1">// N&#39;importe quelle valeur acceptée</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">Problème</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">pourrait</span><span class="w"> </span><span class="n">mettre</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">500</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="n">9999</span><span class="w"> </span><span class="o">!</span></span></span></code></pre></div>
+<p><strong>Avec setter + VALIDATION (🏆 MEILLEUR) :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAnnee</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">annee</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">annee</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">1000</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">2024</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">annee</span><span class="p">;</span><span class="w">  </span><span class="c1">// Valeur valide ✅</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Refuser la valeur invalide ❌</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<p><strong>Avantages :</strong></p>
+<ul>
+<li>✅ Protège les données (pas de valeurs absurdes)</li>
+<li>✅ Attribut reste <code>private</code></li>
+<li>✅ Contrôle total sur les modifications</li>
+</ul>
+<hr>
+<p><strong>Signature:</strong> <code>public void setAnnee(int annee)</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>SI annee est entre 1000 ET 2024 (inclus):
+    Modifier this.annee
+    Afficher &#34;✅ Année validée : [annee]&#34;
+SINON:
+    Afficher &#34;⚠️ ALERTE ! Année invalide détectée !&#34;
+    Afficher &#34;🛡️ Bouclier activé ! Année réinitialisée à 2000&#34;
+    Mettre this.annee à 2000</code></pre></div>
+<hr>
+<h2 id="-mission-23--setter-setnombrepages-avec-validation">🎯 Mission 2.3 : Setter <code>setNombrePages()</code> avec validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void setNombrePages(int nombrePages)</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>SI nombrePages est entre 1 ET 2000 (inclus):
+    Modifier this.nombrePages
+    Afficher &#34;✅ Pages validées : [nombrePages]&#34;
+SINON:
+    Afficher &#34;⚠️ ALERTE ! Nombre de pages bizarre !&#34;
+    Afficher &#34;🛡️ Bouclier activé ! Pages réinitialisées à 100&#34;
+    Mettre this.nombrePages à 100</code></pre></div>
+<hr>
+<h2 id="-mission-24--système-de-popularité">🎯 Mission 2.4 : Système de Popularité<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="nouvel-attribut">Nouvel attribut:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>private int niveauPopularite</code> (initialiser à 0 dans constructeur)</li>
+</ul>
+<h3 id="méthode-ajouteretoile">Méthode <code>ajouterEtoile()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Signature:</strong> <code>public void ajouterEtoile()</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>SI niveauPopularite &lt; 5:
+    Augmenter niveauPopularite de 1
+    Afficher &#34;⭐ Nouvelle étoile ! [titre] a [niveauPopularite] étoile(s) !&#34;
+SINON:
+    Afficher &#34;🌟 Maximum atteint ! Ce livre est une LÉGENDE !&#34;</code></pre></div>
+<h3 id="méthode-ispopulaire">Méthode <code>isPopulaire()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Signature:</strong> <code>public boolean isPopulaire()</code>
+<strong>Retourne:</strong> <code>true</code> si <code>niveauPopularite &gt;= 4</code>, sinon <code>false</code></p>
+<h3 id="getter">Getter:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Signature:</strong> <code>public int getNiveauPopularite()</code></p>
+<hr>
+<h2 id="-mission-25--afficher-les-étoiles">🎯 Mission 2.5 : Afficher les étoiles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Dans <code>afficher()</code>, après l&rsquo;année, ajoute:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;  ⭐ &#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">niveauPopularite</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;★&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">niveauPopularite</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;☆&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span></span></span></code></pre></div>
+<hr>
+<h2 id="-mission-26--méthode-calculerage">🎯 Mission 2.6 : Méthode <code>calculerAge()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public int calculerAge()</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>age = 2024 - annee
+SI age &gt; 50:
+    Afficher &#34;📜 Livre ANCIEN ! [age] ans !&#34;
+Retourner age</code></pre></div>
+<hr>
+<h2 id="-test-niveau-2">🧪 Test Niveau 2<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestNiveau2</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Livre</span><span class="w"> </span><span class="n">livre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Livre</span><span class="p">(</span><span class="s">&#34;1984&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Orwell&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">1949</span><span class="p">,</span><span class="w"> </span><span class="n">328</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Teste setAnnee avec valeur valide</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Teste setAnnee avec 3000 (invalide)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Teste setNombrePages avec 350</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Teste setNombrePages avec -50 (invalide)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Ajoute 4 étoiles</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche si populaire</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Calcule et affiche l&#39;âge</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche le livre complet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h2 id="-défis-bonus">🏆 Défis Bonus<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="défi-2a--isclassique">Défi 2.A : <code>isClassique()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Méthode qui retourne <code>true</code> si livre a plus de 30 ans</p>
+<h3 id="défi-2b--compteur-derreurs">Défi 2.B : Compteur d&rsquo;erreurs<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Attribut qui compte les validations échouées</p>
+<h3 id="défi-2c--livre-5-étoiles">Défi 2.C : Livre 5 étoiles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Monte un livre à 5 étoiles et vois le message spécial</p>
+<hr>
+<h1 id="-niveau-3---le-royaume-des-livres-tableaux">🏰 NIVEAU 3 - LE ROYAUME DES LIVRES (TABLEAUX)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<div style="text-align: center; margin: 20px 0;">
+  <audio controls>
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+    🎵 Musique Niveau 3
+  </audio>
+</div>
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+<h3 id="-histoire-2">📜 Histoire<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><em>&ldquo;Tes livres sont éparpillés ! Construis un ROYAUME (Bibliotheque) pour les organiser dans un tableau !&rdquo;</em></p>
+</div>
+<h2 id="-points-20-pts---temps-2-3-heures">💎 Points: 20 pts | ⏱️ Temps: 2-3 heures<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<hr>
+<h2 id="-mission-31--créer-la-classe-bibliotheque">🎯 Mission 3.1 : Créer la classe Bibliotheque<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Fichier:</strong> <code>Bibliotheque.java</code></p>
+<h3 id="attributs-tous-private">Attributs (tous <strong>private</strong>):<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Attribut</th>
+          <th>Type</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>nom</code></td>
+          <td><code>String</code></td>
+          <td>Nom de la bibliothèque</td>
+      </tr>
+      <tr>
+          <td><code>livres</code></td>
+          <td><code>Livre[]</code></td>
+          <td>Tableau de livres</td>
+      </tr>
+      <tr>
+          <td><code>nombreLivres</code></td>
+          <td><code>int</code></td>
+          <td>Nombre de livres actuellement ajoutés</td>
+      </tr>
+      <tr>
+          <td><code>pointsGloire</code></td>
+          <td><code>int</code></td>
+          <td>Points du joueur</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="constructeur-1">Constructeur:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Paramètres:</strong> <code>String nom, int capacite</code></p>
+<p><strong>Actions:</strong></p>
+<ol>
+<li>Initialiser <code>this.nom = nom</code></li>
+<li>Créer le tableau: <code>this.livres = new Livre[capacite]</code></li>
+<li>Initialiser <code>nombreLivres = 0</code></li>
+<li>Initialiser <code>pointsGloire = 0</code></li>
+<li>Afficher message de bienvenue:</li>
+</ol>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>🏰════════════════════════════════════🏰
+   LE ROYAUME DE [NOM] EST NÉ !
+   Capacité : [capacite] livres
+🏰════════════════════════════════════🏰</code></pre></div>
+<hr>
+<h2 id="-mission-32--méthode-ajouterlivre">🎯 Mission 3.2 : Méthode <code>ajouterLivre()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void ajouterLivre(Livre livre)</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>SI nombreLivres &lt; livres.length:
+    livres[nombreLivres] = livre
+    nombreLivres++
+    pointsGloire += 10
+    
+    Afficher &#34;✨ [titre du livre] a rejoint le royaume !&#34;
+    Afficher &#34;🏆 +10 points de gloire ! Total : [pointsGloire]&#34;
+    
+    SI nombreLivres == 5:
+        Afficher &#34;🎉 ACHIEVEMENT : &#39;Collectionneur&#39; !&#34;
+    SI nombreLivres == 10:
+        Afficher &#34;🎊 ACHIEVEMENT : &#39;Grande Bibliothèque&#39; !&#34;
+SINON:
+    Afficher &#34;💥 OH NON ! Le royaume est PLEIN !&#34;
+    Afficher &#34;🏗️ Conseil : Agrandis ton royaume !&#34;</code></pre></div>
+<details>
+<summary>💡 Aide: Accéder au titre du livre</summary>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">livre</span><span class="p">.</span><span class="na">getTitre</span><span class="p">();</span></span></span></code></pre></div>
+</details>
+<hr>
+<h2 id="-mission-33--méthode-affichercarte">🎯 Mission 3.3 : Méthode <code>afficherCarte()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void afficherCarte()</code></p>
+<p><strong>Actions:</strong></p>
+<ol>
+<li>Afficher le titre:</li>
+</ol>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>╔════════════════════════════════════════╗
+║   🗺️  CARTE DU ROYAUME : [NOM]
+╚════════════════════════════════════════╝</code></pre></div>
+<ol start="2">
+<li>
+<p>Afficher: <code>&quot;📊 Livres : &quot; + nombreLivres + &quot;/&quot; + livres.length</code></p>
+</li>
+<li>
+<p>Afficher: <code>&quot;🏆 Gloire : &quot; + pointsGloire + &quot; points&quot;</code></p>
+</li>
+<li>
+<p>Ligne vide</p>
+</li>
+<li>
+<p><strong>SI</strong> <code>nombreLivres == 0</code>:</p>
+<ul>
+<li>Afficher: <code>&quot;🏜️ Le royaume est vide... Ajoute des livres !&quot;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>SINON:</strong></p>
+<ul>
+<li>Boucle <code>for</code> de <code>i=0</code> à <code>i &lt; nombreLivres</code>:
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Créer variable: statut = livres[i].isEstEmprunte() ? &#34;🔴&#34; : &#34;🟢&#34;
+Afficher: &#34;[i+1]. [statut] [titre] - [auteur]&#34;</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Ligne vide</p>
+</li>
+</ol>
+<details>
+<summary>💡 Template boucle</summary>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nombreLivres</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Livre</span><span class="w"> </span><span class="n">livre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">livres</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">statut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">livre</span><span class="p">.</span><span class="na">isEstEmprunte</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&#34;🔴&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&#34;🟢&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;. &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">statut</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">                      </span><span class="n">livre</span><span class="p">.</span><span class="na">getTitre</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; - &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">livre</span><span class="p">.</span><span class="na">getAuteur</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</details>
+<hr>
+<h2 id="-mission-34--méthode-afficherdisponibles">🎯 Mission 3.4 : Méthode <code>afficherDisponibles()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void afficherDisponibles()</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Afficher &#34;💎 ═══ TRÉSORS DISPONIBLES ═══ 💎&#34;
+aucun = true
+
+Pour chaque livre de 0 à nombreLivres:
+    SI livre n&#39;est PAS emprunté:
+        Afficher &#34;  ✨ [titre]&#34;
+        aucun = false
+
+SI aucun est resté true:
+    Afficher &#34;  😱 Tous les trésors sont empruntés !&#34;
+
+Ligne vide</code></pre></div>
+<hr>
+<h2 id="-mission-35--méthode-chercherlivre">🎯 Mission 3.5 : Méthode <code>chercherLivre()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public Livre chercherLivre(String titre)</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Afficher &#34;🔍 Recherche de &#39;[titre]&#39;...&#34;
+
+Pour i de 0 à nombreLivres:
+    SI livres[i].getTitre().equalsIgnoreCase(titre):
+        Afficher &#34;✅ TROUVÉ ! Position : [i+1]&#34;
+        Retourner livres[i]
+
+Afficher &#34;❌ Trésor introuvable...&#34;
+Retourner null</code></pre></div>
+<hr>
+<h2 id="-mission-36--méthode-emprunterlivre">🎯 Mission 3.6 : Méthode <code>emprunterLivre()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void emprunterLivre(String titre)</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Afficher &#34;🎮 ═══ MISSION D&#39;EMPRUNT ═══&#34;
+livre = chercherLivre(titre)
+
+SI livre != null:
+    Appeler livre.emprunter()
+    
+    SI livre.isEstEmprunte() est true:
+        pointsGloire += 15
+        Afficher &#34;🎉 +15 points ! Total : [pointsGloire]&#34;
+    SINON:
+        pointsGloire -= 5
+        Afficher &#34;😢 -5 points...&#34;</code></pre></div>
+<hr>
+<h2 id="-mission-37--getter">🎯 Mission 3.7 : Getter<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public int getPointsGloire()</code>
+<strong>Retourne:</strong> <code>pointsGloire</code></p>
+<hr>
+<h2 id="-test-niveau-3">🧪 Test Niveau 3<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestNiveau3</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Crée une bibliothèque (choisis un nom épique!)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Bibliotheque</span><span class="w"> </span><span class="n">biblio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Bibliotheque</span><span class="p">(</span><span class="s">&#34;Codex Arcanum&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Ajoute 5 livres minimum</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche la carte</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Emprunte 3 livres</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche les disponibles</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche les points</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Points: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">biblio</span><span class="p">.</span><span class="na">getPointsGloire</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h2 id="-défis-bonus-1">🏆 Défis Bonus<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="défi-3a--100-points-de-gloire">Défi 3.A : 100 points de gloire<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Optimise pour atteindre 100 points !</p>
+<h3 id="défi-3b--royaume-complet">Défi 3.B : Royaume complet<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Remplis les 10 emplacements</p>
+<h3 id="défi-3c--combo-5">Défi 3.C : Combo 5<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>5 emprunts sans erreur d&rsquo;affilée</p>
+<hr>
+<h1 id="-niveau-4---le-grimoire-dynamique-arraylist">🔮 NIVEAU 4 - LE GRIMOIRE DYNAMIQUE (ARRAYLIST)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+<h3 id="-histoire-3">📜 Histoire<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><em>&ldquo;Un sorcier t&rsquo;offre le GRIMOIRE DYNAMIQUE - un tableau INFINI ! Plus de limite de capacité !&rdquo;</em></p>
+</div>
+<h2 id="-points-20-pts---temps-2-heures">💎 Points: 20 pts | ⏱️ Temps: 2 heures<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<hr>
+<h2 id="-mission-41--convertir-en-arraylist">🎯 Mission 4.1 : Convertir en ArrayList<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="modifications-dans-bibliothequejava">Modifications dans <code>Bibliotheque.java</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Étape 1:</strong> Ajoute en haut du fichier:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span></span></span></code></pre></div>
+<p><strong>Étape 2:</strong> Change les attributs:</p>
+<ul>
+<li>❌ Enlève: <code>private Livre[] livres;</code></li>
+<li>❌ Enlève: <code>private int nombreLivres;</code></li>
+<li>✅ Ajoute: <code>private ArrayList&lt;Livre&gt; livres;</code></li>
+</ul>
+<p><strong>Étape 3:</strong> Modifie le constructeur:</p>
+<ul>
+<li><strong>Paramètres:</strong> Seulement <code>String nom</code> (plus de capacité!)</li>
+<li><strong>Initialisation:</strong> <code>this.livres = new ArrayList&lt;Livre&gt;();</code></li>
+<li><strong>Message:</strong> Change &ldquo;Capacité: &hellip;&rdquo; pour &ldquo;✨ Capacité : ILLIMITÉE ! ✨&rdquo;</li>
+</ul>
+<hr>
+<h2 id="-mission-42--adapter-ajouterlivre">🎯 Mission 4.2 : Adapter <code>ajouterLivre()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Nouvelle logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>livres.add(livre)  // Plus besoin de vérifier la capacité!
+pointsGloire += 10
+
+Afficher &#34;✨ [titre] invoqué dans le grimoire !&#34;
+Afficher &#34;🏆 +10 points ! Total : [pointsGloire]&#34;
+
+SI livres.size() == 5:
+    Afficher &#34;🎉 ACHIEVEMENT : &#39;Collectionneur&#39; !&#34;
+SI livres.size() == 15:
+    Afficher &#34;🎊 MEGA ACHIEVEMENT : &#39;Bibliothèque Légendaire&#39; !&#34;
+    pointsGloire += 50</code></pre></div>
+<hr>
+<h2 id="-mission-43--adapter-affichercarte">🎯 Mission 4.3 : Adapter <code>afficherCarte()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Changements:</strong></p>
+<ul>
+<li>Remplace <code>nombreLivres</code> par <code>livres.size()</code></li>
+<li>Remplace <code>livres.length</code> par &ldquo;∞&rdquo;</li>
+<li>Boucle: <code>for (int i = 0; i &lt; livres.size(); i++)</code></li>
+<li>Accès: <code>Livre livre = livres.get(i);</code></li>
+</ul>
+<p><strong>Ou utilise for-each:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="w"> </span><span class="n">compteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Livre</span><span class="w"> </span><span class="n">livre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">livres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Afficher avec compteur++</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h2 id="-mission-44--adapter-afficherdisponibles">🎯 Mission 4.4 : Adapter <code>afficherDisponibles()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Changements:</strong></p>
+<ul>
+<li>Utilise <code>for (Livre livre : livres)</code> au lieu de boucle avec index</li>
+</ul>
+<hr>
+<h2 id="-mission-45--adapter-chercherlivre">🎯 Mission 4.5 : Adapter <code>chercherLivre()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Nouvelle version avec for-each:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Livre</span><span class="w"> </span><span class="n">livre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">livres</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">livre</span><span class="p">.</span><span class="na">getTitre</span><span class="p">().</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="n">titre</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;✅ TROUVÉ !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">livre</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;❌ Introuvable...&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span></span></span></code></pre></div>
+<hr>
+<h2 id="-mission-46--nouvelle-méthode-supprimerlivre">🎯 Mission 4.6 : NOUVELLE Méthode <code>supprimerLivre()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void supprimerLivre(String titre)</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>livre = chercherLivre(titre)
+
+SI livre != null:
+    livres.remove(livre)
+    Afficher &#34;💨 [titre] a été banni du grimoire !&#34;
+    Afficher &#34;📊 Livres restants : [livres.size()]&#34;</code></pre></div>
+<hr>
+<h2 id="-mission-47--nouvelle-méthode-rechercherparauteur">🎯 Mission 4.7 : NOUVELLE Méthode <code>rechercherParAuteur()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void rechercherParAuteur(String auteur)</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Afficher &#34;🎯 ═══ QUÊTE : Livres de [auteur] ═══&#34;
+trouve = false
+compte = 0
+
+Pour chaque livre dans livres:
+    SI livre.getAuteur().equalsIgnoreCase(auteur):
+        Afficher &#34;  ✨ [titre] ([année])&#34;
+        trouve = true
+        compte++
+
+SI trouve:
+    pointsGloire += (compte * 5)
+    Afficher &#34;🎉 Quête réussie ! [compte] livre(s) trouvé(s) !&#34;
+    Afficher &#34;🏆 +[compte*5] points !&#34;
+SINON:
+    Afficher &#34;😢 Quête échouée...&#34;</code></pre></div>
+<hr>
+<h2 id="-test-niveau-4">🧪 Test Niveau 4<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestNiveau4</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Crée bibliothèque SANS limite !</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Bibliotheque</span><span class="w"> </span><span class="n">grimoire</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Bibliotheque</span><span class="p">(</span><span class="s">&#34;Le Grimoire Infini&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Ajoute 7+ livres (teste l&#39;illimité!)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Recherche par auteur</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Supprime un livre</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche la carte finale</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h1 id="-niveau-5---le-dragon-de-lhéritage">🐉 NIVEAU 5 - LE DRAGON DE L&rsquo;HÉRITAGE<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+<h3 id="-histoire-4">📜 Histoire<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><em>&ldquo;La bibliothèque a des DVDs, Magazines ! Utilise l&rsquo;HÉRITAGE pour créer différents types de documents !&rdquo;</em></p>
+</div>
+<h2 id="-points-25-pts---temps-3-heures">💎 Points: 25 pts | ⏱️ Temps: 3 heures<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<hr>
+<h2 id="-mission-51--créer-la-classe-parent-document">🎯 Mission 5.1 : Créer la classe parent <code>Document</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Fichier:</strong> <code>Document.java</code></p>
+<h3 id="attributs-tous-private-1">Attributs (tous <strong>private</strong>):<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>String titre</code></li>
+<li><code>int annee</code></li>
+<li><code>boolean estEmprunte</code></li>
+</ul>
+<h3 id="constructeur-2">Constructeur:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Paramètres:</strong> <code>String titre, int annee</code>
+<strong>Actions:</strong> Initialiser les 3 attributs (estEmprunte à false)</p>
+<h3 id="méthodes-à-créer">Méthodes à créer:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h4 id="getters">Getters:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ul>
+<li><code>public String getTitre()</code></li>
+<li><code>public int getAnnee()</code></li>
+<li><code>public boolean isEstEmprunte()</code></li>
+</ul>
+<h4 id="emprunter"><code>emprunter()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>SI estEmprunte:
+    Afficher &#34;❌ &#39;[titre]&#39; déjà emprunté !&#34;
+SINON:
+    estEmprunte = true
+    Afficher &#34;✅ &#39;[titre]&#39; emprunté !&#34;</code></pre></div>
+<h4 id="retourner"><code>retourner()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>SI estEmprunte:
+    estEmprunte = false
+    Afficher &#34;✅ &#39;[titre]&#39; retourné !&#34;
+SINON:
+    Afficher &#34;⚠️ &#39;[titre]&#39; pas emprunté.&#34;</code></pre></div>
+<h4 id="afficher"><code>afficher()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Afficher &#34;Titre: [titre]&#34;
+Afficher &#34;Année: [annee]&#34;
+SI estEmprunte:
+    Afficher &#34;Statut: Emprunté&#34;
+SINON:
+    Afficher &#34;Statut: Disponible&#34;</code></pre></div>
+<hr>
+<h2 id="-mission-52--créer-livre-qui-hérite-de-document">🎯 Mission 5.2 : Créer <code>Livre</code> qui hérite de <code>Document</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Fichier:</strong> Modifier <code>Livre.java</code></p>
+<p><strong>Changement de déclaration:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Livre</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Document</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="nouveaux-attributs-privés-en-plus-de-ceux-hérités">Nouveaux attributs privés (en plus de ceux hérités):<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>String auteur</code></li>
+<li><code>int nombrePages</code></li>
+</ul>
+<h3 id="nouveau-constructeur">Nouveau constructeur:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="nf">Livre</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">auteur</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nombrePages</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">super</span><span class="p">(</span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">annee</span><span class="p">);</span><span class="w">  </span><span class="c1">// Appelle constructeur parent</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auteur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">nombrePages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombrePages</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="getters-spécifiques">Getters spécifiques:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>public String getAuteur()</code></li>
+<li><code>public int getNombrePages()</code></li>
+</ul>
+<h3 id="méthode-spécifique">Méthode spécifique:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isLong</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nombrePages</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">400</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="redéfinir-afficher">Redéfinir <code>afficher()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">afficher</span><span class="p">();</span><span class="w">  </span><span class="c1">// Appelle version parent</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Auteur: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">auteur</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Pages: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombrePages</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h2 id="-mission-53--créer-la-classe-magazine">🎯 Mission 5.3 : Créer la classe <code>Magazine</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Fichier:</strong> <code>Magazine.java</code></p>
+<p><strong>Déclaration:</strong> <code>public class Magazine extends Document</code></p>
+<h3 id="attributs-privés">Attributs privés:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>int numero</code></li>
+<li><code>String mois</code></li>
+</ul>
+<h3 id="constructeur-3">Constructeur:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Paramètres:</strong> <code>String titre, int annee, int numero, String mois</code>
+<strong>Action:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">super</span><span class="p">(</span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">annee</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">this</span><span class="p">.</span><span class="na">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">this</span><span class="p">.</span><span class="na">mois</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mois</span><span class="p">;</span></span></span></code></pre></div>
+<h3 id="getters-1">Getters:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>public int getNumero()</code></li>
+<li><code>public String getMois()</code></li>
+</ul>
+<h3 id="redéfinir-afficher-1">Redéfinir <code>afficher()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">afficher</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Numéro: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numero</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Mois: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mois</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="redéfinir-emprunter">Redéfinir <code>emprunter()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">emprunter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">emprunter</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEstEmprunte</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;📰 À retourner dans 7 jours !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h2 id="-mission-54--créer-la-classe-dvd">🎯 Mission 5.4 : Créer la classe <code>DVD</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Fichier:</strong> <code>DVD.java</code></p>
+<p><strong>Déclaration:</strong> <code>public class DVD extends Document</code></p>
+<h3 id="attributs-privés-1">Attributs privés:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>String realisateur</code></li>
+<li><code>int dureeMinutes</code></li>
+</ul>
+<h3 id="constructeur-4">Constructeur:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Paramètres:</strong> <code>String titre, int annee, String realisateur, int dureeMinutes</code></p>
+<h3 id="getters-2">Getters:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>public String getRealisateur()</code></li>
+<li><code>public int getDureeMinutes()</code></li>
+</ul>
+<h3 id="méthode-spéciale-getdureeformatee">Méthode spéciale <code>getDureeFormatee()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Signature:</strong> <code>public String getDureeFormatee()</code>
+<strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>heures = dureeMinutes / 60
+minutes = dureeMinutes % 60
+Retourner heures + &#34;h&#34; + minutes</code></pre></div>
+<h3 id="redéfinir-afficher-2">Redéfinir <code>afficher()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Appelle parent puis affiche réalisateur et durée formatée</p>
+<hr>
+<h2 id="-test-niveau-5">🧪 Test Niveau 5<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestNiveau5</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Crée 1 livre</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Livre</span><span class="w"> </span><span class="n">livre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Livre</span><span class="p">(</span><span class="s">&#34;Dune&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Herbert&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">1965</span><span class="p">,</span><span class="w"> </span><span class="n">688</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Crée 1 magazine</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Magazine</span><span class="w"> </span><span class="n">mag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Magazine</span><span class="p">(</span><span class="s">&#34;Wired&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">2024</span><span class="p">,</span><span class="w"> </span><span class="n">345</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Mars&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Crée 1 DVD</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">DVD</span><span class="w"> </span><span class="n">dvd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DVD</span><span class="p">(</span><span class="s">&#34;Matrix&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">1999</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Wachowski&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">136</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche les 3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Emprunte les 3 (observe les messages différents!)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Teste isLong() sur le livre</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Teste getDureeFormatee() sur le DVD</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h2 id="-défis-bonus-2">🏆 Défis Bonus<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="défi-5a--classe-bd">Défi 5.A : Classe <code>BD</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Crée <code>BD extends Livre</code> avec attribut <code>dessinateur</code></p>
+<h3 id="défi-5b--classe-cd">Défi 5.B : Classe <code>CD</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Crée <code>CD extends Document</code> avec <code>artiste</code> et <code>nombrePistes</code></p>
+<hr>
+<h1 id="-niveau-6---la-métamorphose-polymorphisme">🌈 NIVEAU 6 - LA MÉTAMORPHOSE (POLYMORPHISME)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+<h3 id="-histoire-5">📜 Histoire<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><em>&ldquo;Modifie Bibliotheque pour gérer TOUS les types de documents avec polymorphisme !&rdquo;</em></p>
+</div>
+<h2 id="-points-25-pts---temps-2-3-heures">💎 Points: 25 pts | ⏱️ Temps: 2-3 heures<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<hr>
+<h2 id="-mission-61--modifier-bibliotheque">🎯 Mission 6.1 : Modifier Bibliotheque<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Dans <code>Bibliotheque.java</code>:</strong></p>
+<p><strong>Changement d&rsquo;attribut:</strong></p>
+<ul>
+<li>❌ Enlève: <code>private ArrayList&lt;Livre&gt; livres;</code></li>
+<li>✅ Ajoute: <code>private ArrayList&lt;Document&gt; documents;</code></li>
+</ul>
+<p><strong>Dans le constructeur:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">this</span><span class="p">.</span><span class="na">documents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Document</span><span class="o">&gt;</span><span class="p">();</span></span></span></code></pre></div>
+<hr>
+<h2 id="-mission-62--renommer-et-adapter-ajouterdocument">🎯 Mission 6.2 : Renommer et adapter <code>ajouterDocument()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Anciennement <code>ajouterLivre()</code></strong></p>
+<p><strong>Nouvelle signature:</strong> <code>public void ajouterDocument(Document doc)</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>documents.add(doc)
+pointsGloire += 10
+
+Afficher &#34;➕ &#39;[doc.getTitre()]&#39; ajouté !&#34;
+Afficher &#34;🏆 +10 points ! Total : [pointsGloire]&#34;</code></pre></div>
+<hr>
+<h2 id="-mission-63--adapter-affichercatalogue">🎯 Mission 6.3 : Adapter <code>afficherCatalogue()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Anciennement <code>afficherCarte()</code></strong></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Afficher titre catalogue
+
+Pour i de 0 à documents.size():
+    doc = documents.get(i)
+    
+    Créer variable type:
+        SI doc instanceof Livre:
+            type = &#34;[LIVRE]&#34;
+        SINON SI doc instanceof Magazine:
+            type = &#34;[MAGAZINE]&#34;
+        SINON SI doc instanceof DVD:
+            type = &#34;[DVD]&#34;
+        SINON:
+            type = &#34;[DOCUMENT]&#34;
+    
+    Afficher &#34;[i+1]. [type] [titre]&#34;</code></pre></div>
+<details>
+<summary>💡 Aide instanceof</summary>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">doc</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Livre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// C&#39;est un livre</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">doc</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Magazine</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// C&#39;est un magazine</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</details>
+<hr>
+<h2 id="-mission-64--méthode-afficherlivres">🎯 Mission 6.4 : Méthode <code>afficherLivres()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void afficherLivres()</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Afficher &#34;📚 ═══ LIVRES ═══&#34;
+
+Pour chaque doc dans documents:
+    SI doc instanceof Livre:
+        Caster: Livre livre = (Livre) doc
+        Afficher &#34;- [titre] par [auteur]&#34;</code></pre></div>
+<details>
+<summary>💡 Aide casting</summary>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">doc</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Livre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Livre</span><span class="w"> </span><span class="n">livre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Livre</span><span class="p">)</span><span class="w"> </span><span class="n">doc</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Maintenant on peut utiliser livre.getAuteur()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</details>
+<hr>
+<h2 id="-mission-65--méthode-affichermagazines">🎯 Mission 6.5 : Méthode <code>afficherMagazines()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void afficherMagazines()</code></p>
+<p><strong>Logique similaire à <code>afficherLivres()</code> mais pour Magazine</strong></p>
+<hr>
+<h2 id="-mission-66--méthode-afficherstatistiques">🎯 Mission 6.6 : Méthode <code>afficherStatistiques()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Signature:</strong> <code>public void afficherStatistiques()</code></p>
+<p><strong>Logique:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>nbLivres = 0
+nbMagazines = 0
+nbDVDs = 0
+
+Pour chaque doc dans documents:
+    SI doc instanceof Livre: nbLivres++
+    SINON SI doc instanceof Magazine: nbMagazines++
+    SINON SI doc instanceof DVD: nbDVDs++
+
+Afficher les totaux</code></pre></div>
+<hr>
+<h2 id="-mission-67--adapter-emprunterdocument">🎯 Mission 6.7 : Adapter <code>emprunterDocument()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Changements:</strong></p>
+<ul>
+<li>Remplace <code>livres</code> par <code>documents</code></li>
+<li>Cherche dans <code>documents</code> au lieu de <code>livres</code></li>
+</ul>
+<hr>
+<h2 id="-test-niveau-6">🧪 Test Niveau 6<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestNiveau6</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Bibliotheque</span><span class="w"> </span><span class="n">biblio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Bibliotheque</span><span class="p">(</span><span class="s">&#34;Le Nexus Polymorphe&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Ajoute 2 livres, 2 magazines, 2 DVDs</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche le catalogue complet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche seulement les livres</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche seulement les magazines</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche les statistiques</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h1 id="-niveau-7---le-temple-abstrait">🏛️ NIVEAU 7 - LE TEMPLE ABSTRAIT<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+<h3 id="-histoire-6">📜 Histoire<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><em>&ldquo;Crée des règles STRICTES que tous les documents DOIVENT suivre avec classes abstraites et interfaces !&rdquo;</em></p>
+</div>
+<h2 id="-points-30-pts---temps-3-4-heures">💎 Points: 30 pts | ⏱️ Temps: 3-4 heures<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<hr>
+<h2 id="-mission-71--créer-documentabstrait">🎯 Mission 7.1 : Créer <code>DocumentAbstrait</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Fichier:</strong> <code>DocumentAbstrait.java</code></p>
+<p><strong>Déclaration:</strong> <code>public abstract class DocumentAbstrait</code></p>
+<h3 id="attributs-privés-2">Attributs privés:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>String titre</code></li>
+<li><code>int annee</code></li>
+<li><code>boolean estEmprunte</code></li>
+</ul>
+<h3 id="constructeur-normal">Constructeur (normal):<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Comme <code>Document</code> du niveau 5</p>
+<h3 id="méthodes-abstraites-à-déclarer">Méthodes ABSTRAITES à déclarer:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getDureeEmprunt</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getIcone</span><span class="p">();</span></span></span></code></pre></div>
+<details>
+<summary>💡 Syntaxe méthode abstraite</summary>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="nf">nomMethode</span><span class="p">(</span><span class="n">parametres</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">Pas</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">juste</span><span class="w"> </span><span class="n">un</span><span class="w"> </span><span class="p">;</span></span></span></code></pre></div>
+</details>
+<h3 id="méthodes-concrètes">Méthodes CONCRÈTES:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h4 id="emprunter-1"><code>emprunter()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Comme avant mais utilise <code>getDureeEmprunt()</code>:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Emprunté pour &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">getDureeEmprunt</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; jours !&#34;</span><span class="p">);</span></span></span></code></pre></div>
+<h4 id="retourner-1"><code>retourner()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Comme avant</p>
+<h4 id="getters-3">Getters:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Comme avant</p>
+<hr>
+<h2 id="-mission-72--créer-linterface-evaluable">🎯 Mission 7.2 : Créer l&rsquo;interface <code>Evaluable</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Fichier:</strong> <code>Evaluable.java</code></p>
+<p><strong>Déclaration:</strong> <code>public interface Evaluable</code></p>
+<p><strong>Méthodes à déclarer:</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">void</span><span class="w"> </span><span class="nf">attribuerNote</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">note</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="nf">getNote</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">void</span><span class="w"> </span><span class="nf">afficherEvaluation</span><span class="p">();</span></span></span></code></pre></div>
+<details>
+<summary>💡 Syntaxe interface</summary>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">NomInterface</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">methode1</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Type</span><span class="w"> </span><span class="nf">methode2</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Toutes les méthodes sont automatiquement public abstract</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</details>
+<hr>
+<h2 id="-mission-73--créer-livrecomplet">🎯 Mission 7.3 : Créer <code>LivreComplet</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Fichier:</strong> <code>LivreComplet.java</code></p>
+<p><strong>Déclaration:</strong> <code>public class LivreComplet extends DocumentAbstrait implements Evaluable</code></p>
+<h3 id="attributs-privés-3">Attributs privés:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>String auteur</code></li>
+<li><code>int nombrePages</code></li>
+<li><code>int note</code></li>
+</ul>
+<h3 id="constructeur-5">Constructeur:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="nf">LivreComplet</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">auteur</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nombrePages</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">super</span><span class="p">(</span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">annee</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auteur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">nombrePages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombrePages</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">note</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="implémenter-méthodes-abstraites">Implémenter méthodes abstraites:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h4 id="getdureeemprunt"><code>getDureeEmprunt()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getDureeEmprunt</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">21</span><span class="p">;</span><span class="w">  </span><span class="c1">// 3 semaines</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h4 id="geticone"><code>getIcone()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getIcone</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&#34;📚&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h4 id="afficher-1"><code>afficher()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;=== LIVRE ===&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Titre: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">getTitre</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Auteur: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">auteur</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// etc.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="implémenter-interface-evaluable">Implémenter interface Evaluable:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h4 id="attribuernoteint-note"><code>attribuerNote(int note)</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>SI note entre 0 et 5:
+    this.note = note
+    Afficher &#34;Note de [note]/5 attribuée&#34;
+SINON:
+    Afficher &#34;Note invalide !&#34;</code></pre></div>
+<h4 id="getnote"><code>getNote()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Retourne <code>note</code></p>
+<h4 id="afficherevaluation"><code>afficherEvaluation()</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Afficher &#34;Évaluation: &#34;
+Pour i de 0 à note:
+    Afficher &#34;★&#34;
+Pour i de note à 5:
+    Afficher &#34;☆&#34;
+Afficher &#34; ([note]/5)&#34;</code></pre></div>
+<hr>
+<h2 id="-mission-74--créer-magazinecomplet">🎯 Mission 7.4 : Créer <code>MagazineComplet</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Fichier:</strong> <code>MagazineComplet.java</code></p>
+<p><strong>Déclaration:</strong> <code>public class MagazineComplet extends DocumentAbstrait</code></p>
+<h3 id="attributs">Attributs:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>int numero</code></li>
+<li><code>String mois</code></li>
+</ul>
+<h3 id="implémenter">Implémenter:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>getDureeEmprunt()</code> → retourne 7</li>
+<li><code>getIcone()</code> → retourne &ldquo;📰&rdquo;</li>
+<li><code>afficher()</code> → affiche infos magazine</li>
+</ul>
+<hr>
+<h2 id="-mission-75--créer-dvdcomplet">🎯 Mission 7.5 : Créer <code>DVDComplet</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><strong>Fichier:</strong> <code>DVDComplet.java</code></p>
+<p><strong>Déclaration:</strong> <code>public class DVDComplet extends DocumentAbstrait implements Evaluable</code></p>
+<h3 id="attributs-1">Attributs:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>String realisateur</code></li>
+<li><code>int dureeMinutes</code></li>
+<li><code>int note</code></li>
+</ul>
+<h3 id="implémenter-1">Implémenter:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Toutes les méthodes abstraites</li>
+<li>Interface Evaluable</li>
+<li><code>getDureeEmprunt()</code> → retourne 14</li>
+</ul>
+<hr>
+<h2 id="-test-niveau-7">🧪 Test Niveau 7<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestNiveau7</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Essaie de créer DocumentAbstrait directement</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// DocumentAbstrait doc = new DocumentAbstrait(...); // ERREUR!</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Crée LivreComplet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">LivreComplet</span><span class="w"> </span><span class="n">livre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LivreComplet</span><span class="p">(</span><span class="s">&#34;Dune&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Herbert&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">1965</span><span class="p">,</span><span class="w"> </span><span class="n">688</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Emprunte (vois le message avec durée!)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Attribue note</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Affiche évaluation</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Crée MagazineComplet (pas Evaluable!)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Crée DVDComplet (Evaluable!)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h1 id="-niveau-8---le-boss-final-projet-complet">👑 NIVEAU 8 - LE BOSS FINAL (PROJET COMPLET)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+<h3 id="-histoire-7">📜 Histoire<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><em>&ldquo;C&rsquo;est l&rsquo;heure de l&rsquo;épreuve ultime ! Crée un système COMPLET de gestion avec TOUTES les fonctionnalités !&rdquo;</em></p>
+</div>
+<h2 id="-points-50-pts---temps-8-12-heures">💎 Points: 50 pts | ⏱️ Temps: 8-12 heures<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<hr>
+<h2 id="-fonctionnalités-à-implémenter">🎯 Fonctionnalités à implémenter<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="partie-a--classe-membre-10-pts">Partie A : Classe <code>Membre</code> (10 pts)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Fichier:</strong> <code>Membre.java</code></p>
+<p><strong>Attributs:</strong></p>
+<ul>
+<li><code>String nom, prenom</code></li>
+<li><code>String numeroMembre</code></li>
+<li><code>ArrayList&lt;DocumentAbstrait&gt; documentsEmpruntes</code></li>
+<li><code>double fraisAccumules</code></li>
+</ul>
+<p><strong>Méthodes à créer:</strong></p>
+<ul>
+<li><code>ajouterEmprunt(DocumentAbstrait doc)</code> - limite 5 emprunts</li>
+<li><code>retirerEmprunt(DocumentAbstrait doc)</code></li>
+<li><code>ajouterFrais(double montant)</code></li>
+<li><code>payerFrais(double montant)</code></li>
+<li><code>afficherEmprunts()</code></li>
+</ul>
+<hr>
+<h3 id="partie-b--menu-interactif-15-pts">Partie B : Menu Interactif (15 pts)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Fichier:</strong> <code>MenuPrincipal.java</code></p>
+<p>Crée un menu avec <code>Scanner</code> qui permet:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>═══ MENU PRINCIPAL ═══
+1. Ajouter un document
+2. Afficher catalogue
+3. Emprunter document
+4. Retourner document
+5. Inscrire membre
+6. Rechercher
+7. Statistiques
+0. Quitter</code></pre></div>
+<p><strong>Instructions détaillées:</strong></p>
+<ul>
+<li>Utilise <code>Scanner scanner = new Scanner(System.in);</code></li>
+<li>Boucle <code>while</code> qui continue jusqu&rsquo;à choix 0</li>
+<li><code>switch/case</code> pour chaque option</li>
+<li>Gestion d&rsquo;erreurs avec <code>try/catch</code></li>
+</ul>
+<hr>
+<h3 id="partie-c--système-de-recherche-10-pts">Partie C : Système de Recherche (10 pts)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Méthodes à ajouter dans Bibliotheque:</strong></p>
+<h4 id="rechercherparmotclestring-motcle"><code>rechercherParMotCle(String motCle)</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Cherche dans titre ET auteur (pour les livres)</p>
+<h4 id="afficherdocumentsparanneeint-anneedebut-int-anneefin"><code>afficherDocumentsParAnnee(int anneeDebut, int anneeFin)</code>:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Filtre par plage d&rsquo;années</p>
+<hr>
+<h3 id="partie-d--statistiques-avancées-10-pts">Partie D : Statistiques Avancées (10 pts)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Méthodes:</strong></p>
+<ul>
+<li><code>documentsLesPlusEmpruntes()</code> - top 5</li>
+<li><code>membresLesPlusActifs()</code> - top 3</li>
+<li><code>calculerRevenus()</code> - total des frais</li>
+</ul>
+<hr>
+<h3 id="partie-e--sauvegardechargement-5-pts---bonus">Partie E : Sauvegarde/Chargement (5 pts - BONUS)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Avec <code>PrintWriter</code> et <code>Scanner</code>:</p>
+<ul>
+<li>Sauvegarde les documents dans fichier texte</li>
+<li>Recharge au démarrage</li>
+</ul>
+<hr>
+<h2 id="-grille-dévaluation-finale">📝 Grille d&rsquo;Évaluation Finale<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="concepts-poo-40-pts">Concepts POO (40 pts):<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Classes bien conçues (5 pts)</li>
+<li><input disabled="" type="checkbox"> Encapsulation (5 pts)</li>
+<li><input disabled="" type="checkbox"> Héritage (5 pts)</li>
+<li><input disabled="" type="checkbox"> Polymorphisme (5 pts)</li>
+<li><input disabled="" type="checkbox"> Classes abstraites (5 pts)</li>
+<li><input disabled="" type="checkbox"> Interfaces (5 pts)</li>
+<li><input disabled="" type="checkbox"> ArrayList (5 pts)</li>
+<li><input disabled="" type="checkbox"> Organisation (5 pts)</li>
+</ul>
+<h3 id="fonctionnalités-35-pts">Fonctionnalités (35 pts):<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Gestion documents (10 pts)</li>
+<li><input disabled="" type="checkbox"> Gestion membres (10 pts)</li>
+<li><input disabled="" type="checkbox"> Menu interactif (10 pts)</li>
+<li><input disabled="" type="checkbox"> Recherche (5 pts)</li>
+</ul>
+<h3 id="qualité-25-pts">Qualité (25 pts):<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Code commenté (10 pts)</li>
+<li><input disabled="" type="checkbox"> Nommage (5 pts)</li>
+<li><input disabled="" type="checkbox"> Gestion erreurs (5 pts)</li>
+<li><input disabled="" type="checkbox"> Tests (5 pts)</li>
+</ul>
+<hr>
+<h2 id="-félicitations-">🎊 FÉLICITATIONS !<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Si tu es arrivé ici, tu es maintenant un <strong>MAÎTRE DE LA POO</strong> ! 🎉👑</p>
+<p>Tu maîtrises:
+✅ Classes et objets
+✅ Encapsulation
+✅ Tableaux et ArrayList
+✅ Héritage
+✅ Polymorphisme
+✅ Classes abstraites
+✅ Interfaces
+✅ Composition</p>
+<p><strong>Tu es prêt pour n&rsquo;importe quel projet Java ! 🚀</strong></p>
+<hr>
+<h2 id="-playlist-complète">🎵 Playlist Complète<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 20px; border-radius: 10px; margin: 20px 0; color: white;">
+<h3 id="-musiques-daventure">🎧 Musiques d&rsquo;Aventure<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>🎮 <strong>Aventure Principale</strong> - Pour coder</li>
+<li>⚔️ <strong>Combat Bugs</strong> - Pour débugger</li>
+<li>🏰 <strong>Exploration</strong> - Pour lire du code</li>
+<li>🎊 <strong>Victoire</strong> - Pour les tests réussis</li>
+<li>✨ <strong>Magie POO</strong> - Pour refactorer</li>
+<li>🚀 <strong>Boss Final</strong> - Pour le projet final</li>
+</ul>
+</div>
+<hr>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><a id="R-logo" 
+   style="display: flex; justify-content: center; align-items: center; text-decoration: none;" 
+   href="/420-210/index.html">
+
+    <img src="/420-210/images/logo.png" width="40" height="40" alt="logo" style="margin-right: 8px;">
+
+    <div style="display: flex; flex-direction: column; font-size: 130%; text-align: center;">
+        <span>Programmation orientée objet</span>
+    </div>
+</a>
+
+        <search><form action="/420-210/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/420-210/index.html"><a class="padding" href="/420-210/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/420-210/intro/index.html"><a class="padding" href="/420-210/intro/index.html">Introduction</a></li>
+            <li class="" data-nav-id="/420-210/variables/index.html"><a class="padding" href="/420-210/variables/index.html">Variables</a></li>
+            <li class="" data-nav-id="/420-210/operateurs/index.html"><a class="padding" href="/420-210/operateurs/index.html">Opérateurs</a></li>
+            <li class="" data-nav-id="/420-210/structures/index.html"><a class="padding" href="/420-210/structures/index.html">Structures de contrôle</a></li>
+            <li class="" data-nav-id="/420-210/methodes/index.html"><a class="padding" href="/420-210/methodes/index.html">Méthodes</a></li>
+            <li class="" data-nav-id="/420-210/tableaux/index.html"><a class="padding" href="/420-210/tableaux/index.html">Tableaux</a></li>
+            <li class="" data-nav-id="/420-210/exo_revisions/index.html"><a class="padding" href="/420-210/exo_revisions/index.html">Exercices de révision</a></li>
+            <li class="" data-nav-id="/420-210/poo/index.html"><a class="padding" href="/420-210/poo/index.html">Introduction à POO</a></li>
+            <li class="" data-nav-id="/420-210/poo_2/index.html"><a class="padding" href="/420-210/poo_2/index.html">Programmation orientée objet - 2</a></li>
+            <li class="" data-nav-id="/420-210/poo_3/index.html"><a class="padding" href="/420-210/poo_3/index.html">Programmation orientée objet - 3</a></li>
+            <li class="" data-nav-id="/420-210/exos_poo/index.html"><a class="padding" href="/420-210/exos_poo/index.html">Exercices - POO</a></li>
+            <li class="active " data-nav-id="/420-210/biblioGame3/index.html"><a class="padding" href="/420-210/biblioGame3/index.html">BiblioAventura3</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-learn" value="learn" selected>Learn</option>
+                    <option id="R-select-variant-relearn-auto" value="relearn-auto">Relearn Light/Dark</option>
+                    <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                    <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                    <option id="R-select-variant-neon" value="neon">Neon</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"></div>
+      </div>
+    </aside>
+    <script src="/420-210/js/perfect-scrollbar/perfect-scrollbar.min.js?1771005998" defer></script>
+    <script src="/420-210/js/theme.js?1771005998" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

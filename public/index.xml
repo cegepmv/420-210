@@ -2,87 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programmation orientée objet</title>
-    <link>http://localhost:51631/420-210/index.html</link>
+    <link>http://localhost:1313/420-210/index.html</link>
     <description>Plans de cours 📋 Samuel Fostiné : Plan de cours&#xA;Horaire et disponibilités des enseignants ✔️ Samuel Fostiné : Lien vers mon horaire et mes disponibilités&#xA;Samuel Fostiné Nom de l’évaluation Pondération Semaine de l’évaluation 10 quiz (Wooclap) (Les 8 meilleures quiz) 10 % Semaine 2 à 14 Examen 1 15% Semaine 5 Examen 2 20 % Semaine 11 Laboratoire 10 % Semaine 8 Projet remise final 15 % Semaine 14 Examen final 30 % Semaine 15</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <atom:link href="http://localhost:51631/420-210/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/420-210/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction</title>
-      <link>http://localhost:51631/420-210/intro/index.html</link>
+      <link>http://localhost:1313/420-210/intro/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51631/420-210/intro/index.html</guid>
+      <guid>http://localhost:1313/420-210/intro/index.html</guid>
       <description>1. Qu’est-ce que Java ? Java est à la fois un langage de programmation orienté objet et une plateforme informatique. Sa philosophie principale est le WORA (Write Once, Run Anywhere) : écrivez votre code une fois, et exécutez-le n’importe où sans modification.&#xA;Les trois piliers de Java : JDK, JRE et JVM Pour comprendre comment Java fonctionne, il faut distinguer ces trois composants essentiels :</description>
     </item>
     <item>
       <title>Variables</title>
-      <link>http://localhost:51631/420-210/variables/index.html</link>
+      <link>http://localhost:1313/420-210/variables/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51631/420-210/variables/index.html</guid>
+      <guid>http://localhost:1313/420-210/variables/index.html</guid>
       <description>🎯 Qu’est-ce qu’une variable? Une variable, c’est comme un casier dans votre vestiaire du cégep. Vous pouvez y mettre vos affaires, les changer, les oublier (oups), et même y mettre n’importe quoi (tant que ça rentre et que c’est du bon type).&#xA;L’identificateur (Le nom) : C’est l’étiquette sur le casier (ex: 304). C’est ce qui permet au programme de retrouver l’endroit exact en mémoire.</description>
     </item>
     <item>
       <title>Opérateurs</title>
-      <link>http://localhost:51631/420-210/operateurs/index.html</link>
+      <link>http://localhost:1313/420-210/operateurs/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51631/420-210/operateurs/index.html</guid>
+      <guid>http://localhost:1313/420-210/operateurs/index.html</guid>
       <description>Opérateurs Arithmétiques en Java Opérateur Nom Description Exemple Résultat + Addition Somme de deux valeurs int x = 10 + 5; 15 - Soustraction Différence entre deux valeurs int x = 20 - 8; 12 * Multiplication Produit de deux valeurs double x = 5.5 * 2; 11.0 / Division Quotient de la division int x = 10 / 3; 3 (Entier) % Modulo Reste de la division entière int x = 10 % 3; 1 Opérateurs d’incrémentation et de décrémentation Opérateur Nom Position Description Exemple Résultat (x) ++x Pré-incrémentation Avant Incrémente, puis retourne la valeur int y = ++x; Augmenté de 1 x++ Post-incrémentation Après Retourne la valeur, puis incrémente int y = x++; Augmenté de 1 --x Pré-décrémentation Avant Décrémente, puis retourne la valeur int y = --x; Diminué de 1 x-- Post-décrémentation Après Retourne la valeur, puis décrémente int y = x--; Diminué de 1 Pourquoi la position est-elle importante ? La différence réside dans la valeur retournée par l’expression au moment de l’exécution :</description>
     </item>
     <item>
       <title>Structures de contrôle</title>
-      <link>http://localhost:51631/420-210/structures/index.html</link>
+      <link>http://localhost:1313/420-210/structures/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51631/420-210/structures/index.html</guid>
+      <guid>http://localhost:1313/420-210/structures/index.html</guid>
       <description>Les structures de contrôle en Java Introduction Jusqu’à présent, vos programmes s’exécutaient ligne par ligne, de haut en bas, comme une recette suivie à la lettre.&#xA;Les structures de contrôle permettent de prendre des décisions et de répéter des actions.&#xA;👉 Grâce à elles, un programme devient intelligent, dynamique et utile dans la vraie vie.</description>
     </item>
     <item>
       <title>Méthodes</title>
-      <link>http://localhost:51631/420-210/methodes/index.html</link>
+      <link>http://localhost:1313/420-210/methodes/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51631/420-210/methodes/index.html</guid>
+      <guid>http://localhost:1313/420-210/methodes/index.html</guid>
       <description>🛠️ Les Méthodes en Java : Segmenter pour mieux régner En programmation, une méthode est un bloc de code nommé qui contient une séquence d’instructions. Au lieu d’écrire tout votre code dans le bloc principal (main), vous créez des unités de travail spécialisées que vous pouvez appeler au besoin.&#xA;L’analogie de la boîte : Imaginez une méthode comme une boîte fermée. Vous ne voyez pas forcément l’engrenage à l’intérieur, mais vous savez comment l’utiliser en appuyant sur un bouton ou en y insérant des données.</description>
     </item>
     <item>
       <title>Tableaux</title>
-      <link>http://localhost:51631/420-210/tableaux/index.html</link>
+      <link>http://localhost:1313/420-210/tableaux/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51631/420-210/tableaux/index.html</guid>
+      <guid>http://localhost:1313/420-210/tableaux/index.html</guid>
       <description>📦 Les tableaux 1D en Java Un tableau (array) permet de stocker plusieurs valeurs dans une même variable, toutes du même type (int, double, etc.).&#xA;Les tableaux à une dimension (1D) sont comme une liste ordonnée de valeurs, accessibles grâce à leur indice.&#xA;🏗️ Déclaration et création ✏️ Déclarer un tableau int[] notes; // déclaration 🛠️ Créer un tableau notes = new int[5]; // tableau de 5 entiers (tous à 0) Ou, préférablement, tout en une ligne :</description>
     </item>
     <item>
       <title>Exercices de révision</title>
-      <link>http://localhost:51631/420-210/exo_revisions/index.html</link>
+      <link>http://localhost:1313/420-210/exo_revisions/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51631/420-210/exo_revisions/index.html</guid>
+      <guid>http://localhost:1313/420-210/exo_revisions/index.html</guid>
       <description>Exercices de révision 🎮 Projet 1 : Système de Gestion de Notes Scolaires 📋 Contexte Vous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.</description>
     </item>
     <item>
       <title>Introduction à POO</title>
-      <link>http://localhost:51631/420-210/poo/index.html</link>
+      <link>http://localhost:1313/420-210/poo/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51631/420-210/poo/index.html</guid>
+      <guid>http://localhost:1313/420-210/poo/index.html</guid>
       <description>Avant de commencer : pourquoi la POO ? Jusqu’à présent, vous avez écrit des programmes avec des variables et des méthodes statiques. Ça marche très bien pour des programmes simples. Mais imaginez que vous deviez gérer une liste de 500 étudiants, chacun avec un nom, un numéro d’étudiant et une note.&#xA;Avec des variables séparées, ça ressemblerait à ça :</description>
     </item>
     <item>
       <title>Programmation orientée objet - 2</title>
-      <link>http://localhost:51631/420-210/poo_2/index.html</link>
+      <link>http://localhost:1313/420-210/poo_2/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51631/420-210/poo_2/index.html</guid>
+      <guid>http://localhost:1313/420-210/poo_2/index.html</guid>
       <description>Introduction à la POO — Partie 2 Introduction Dans la première partie du cours, vous avez appris les bases de la POO :&#xA;Créer des classes et des objets Utiliser des attributs et des méthodes Créer des constructeurs Manipuler des tableaux d’objets Maintenant, nous allons voir les 4 grands principes de la POO :</description>
     </item>
     <item>
       <title>Programmation orientée objet - 3</title>
-      <link>http://localhost:51631/420-210/poo_3/index.html</link>
+      <link>http://localhost:1313/420-210/poo_3/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51631/420-210/poo_3/index.html</guid>
+      <guid>http://localhost:1313/420-210/poo_3/index.html</guid>
       <description>Table des matières Niveaux d’accès (Modificateurs de visibilité) Packages et organisation du code Méthodes et variables statiques Classes imbriquées (Inner classes) Le mot-clé final Énumérations (enum) Gestion des exceptions Composition vs Héritage Principes SOLID Surcharge de méthodes (Overloading) Constructeurs multiples et chaînage La classe Object et ses méthodes Collections Java 1. Niveaux d’accès (Modificateurs de visibilité) Java propose 4 niveaux d’accès pour contrôler qui peut accéder à vos classes, attributs et méthodes.</description>
     </item>
     <item>
       <title>Exercices - POO</title>
-      <link>http://localhost:51631/420-210/exos_poo/index.html</link>
+      <link>http://localhost:1313/420-210/exos_poo/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51631/420-210/exos_poo/index.html</guid>
+      <guid>http://localhost:1313/420-210/exos_poo/index.html</guid>
       <description>Exercices de Programmation Orientée Objet - Complet Ce document contient des exercices détaillés couvrant toutes les notions de POO vues dans les cours, organisés par niveau de difficulté.&#xA;Table des matières Niveau Débutant (⭐) Classes et objets basiques Attributs et méthodes Constructeurs Getters et Setters Niveau Intermédiaire (⭐⭐) Encapsulation Héritage Surcharge de méthodes Static et Final Collections de base Niveau Avancé (⭐⭐⭐) Polymorphisme Classes abstraites Interfaces Exceptions Collections avancées Enum Niveau Expert (⭐⭐⭐⭐) Projets intégrateurs Principes SOLID Composition vs Héritage Exercices Niveau Débutant ⭐ Exercice 1.1 — Classe Livre Objectifs : Classes, attributs, constructeur basique</description>
+    </item>
+    <item>
+      <title>BiblioAventure</title>
+      <link>http://localhost:1313/420-210/biblioGame/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-210/biblioGame/index.html</guid>
+      <description>🎮 PROJET CODEX ARCANUM - L’AVENTURE COMPLÈTE DE LA POO ! 🌟 Bienvenue dans l’Aventure des Bibliothèques Légendaires ! 🌟 🎵 Musique d’Aventure Épique 🎵 🎵 Thème d&#39;aventure épique&#xD;🎧 Active le son pour une expérience immersive !</description>
     </item>
   </channel>
 </rss>

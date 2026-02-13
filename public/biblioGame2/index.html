@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html id="R-html" lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-210/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-210/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="🎮 PROJET CODEX ARCANUM - L’AVENTURE DE LA POO ! 🌟 Bienvenue dans l’Aventure des Bibliothèques Légendaires ! 🌟 🎵 Musique d’Aventure Épique 🎵 🎵 Thème d&#39;aventure épique🎧 Active le son pour une expérience immersive !">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="BiblioAventura2 :: Programmation orientée objet">
+    <meta name="twitter:description" content="🎮 PROJET CODEX ARCANUM - L’AVENTURE DE LA POO ! 🌟 Bienvenue dans l’Aventure des Bibliothèques Légendaires ! 🌟 🎵 Musique d’Aventure Épique 🎵 🎵 Thème d&#39;aventure épique🎧 Active le son pour une expérience immersive !">
+    <meta property="og:url" content="http://localhost:1313/420-210/biblioGame2/index.html">
+    <meta property="og:site_name" content="Programmation orientée objet">
+    <meta property="og:title" content="BiblioAventura2 :: Programmation orientée objet">
+    <meta property="og:description" content="🎮 PROJET CODEX ARCANUM - L’AVENTURE DE LA POO ! 🌟 Bienvenue dans l’Aventure des Bibliothèques Légendaires ! 🌟 🎵 Musique d’Aventure Épique 🎵 🎵 Thème d&#39;aventure épique🎧 Active le son pour une expérience immersive !">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Programmation orientée objet">
+    <meta itemprop="name" content="BiblioAventura2 :: Programmation orientée objet">
+    <meta itemprop="description" content="🎮 PROJET CODEX ARCANUM - L’AVENTURE DE LA POO ! 🌟 Bienvenue dans l’Aventure des Bibliothèques Légendaires ! 🌟 🎵 Musique d’Aventure Épique 🎵 🎵 Thème d&#39;aventure épique🎧 Active le son pour une expérience immersive !">
+    <meta itemprop="wordCount" content="2157">
+    <title>BiblioAventura2 :: Programmation orientée objet</title>
+    <link href="/420-210/images/favicon.png?1771005885" rel="icon" type="image/png">
+    <link href="/420-210/css/auto-complete/auto-complete.min.css?1771005885" rel="stylesheet">
+    <script src="/420-210/js/auto-complete/auto-complete.min.js?1771005885" defer></script>
+    <script src="/420-210/js/search-lunr.js?1771005885" defer></script>
+    <script src="/420-210/js/search.js?1771005885" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/420-210/searchindex.en.js?1771005885";
+    </script>
+    <script src="/420-210/js/lunr/lunr.min.js?1771005885" defer></script>
+    <script src="/420-210/js/lunr/lunr.stemmer.support.min.js?1771005885" defer></script>
+    <script src="/420-210/js/lunr/lunr.multi.min.js?1771005885" defer></script>
+    <script src="/420-210/js/lunr/lunr.fr.min.js?1771005885" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['fr'];
+    </script>
+    <link href="/420-210/fonts/fontawesome/css/all.min.css?1771005885" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-210/fonts/fontawesome/css/all.min.css?1771005885" rel="stylesheet"></noscript>
+    <link href="/420-210/css/perfect-scrollbar/perfect-scrollbar.min.css?1771005885" rel="stylesheet">
+    <link href="/420-210/css/theme.css?1771005885" rel="stylesheet">
+    <link href="/420-210/css/format-html.css?1771005885" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/biblioGame2\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-210';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'learn', 'relearn-auto', 'zen-light', 'zen-dark', 'neon' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script><style>
+:root {
+    --MENU-WIDTH-S: 14.375rem;
+    --MENU-WIDTH-M: 14.375rem;
+    --MENU-WIDTH-L: 16rem;
+}
+</style>
+  </head>
+  <body class="mobile-support html" data-origin="/420-210/biblioGame2/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#-bienvenue-dans-laventure-des-bibliothèques-légendaires--">🌟 Bienvenue dans l&rsquo;Aventure des Bibliothèques Légendaires ! 🌟</a>
+      <ul>
+        <li><a href="#-musique-daventure-épique-">🎵 Musique d&rsquo;Aventure Épique 🎵</a></li>
+      </ul>
+    </li>
+    <li><a href="#-les-bibliothèques-légendaires">🏛️ Les Bibliothèques Légendaires</a></li>
+    <li><a href="#-ton-tableau-de-bord">📊 Ton Tableau de Bord</a></li>
+    <li><a href="#-carte-de-laventure">🗺️ CARTE DE L&rsquo;AVENTURE</a>
+      <ul>
+        <li><a href="#-système-de-progression">🎯 Système de progression:</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-histoire-du-niveau">📜 Histoire du Niveau</a></li>
+        <li><a href="#-15-points-disponibles"><span class="points">💎 15 Points Disponibles</span></a></li>
+        <li><a href="#-code-du-premier-sort">💻 Code du Premier Sort</a></li>
+        <li><a href="#-test-de-mission">🎯 Test de Mission</a></li>
+        <li><a href="#-défis-bonus-5-pts-chacun">🏆 Défis Bonus (+5 pts chacun)</a></li>
+        <li><a href="#-récompenses-du-niveau-1">🎁 Récompenses du Niveau 1</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-histoire-du-niveau-1">📜 Histoire du Niveau</a></li>
+        <li><a href="#-15-points-disponibles-1"><span class="points">💎 15 Points Disponibles</span></a></li>
+        <li><a href="#-sort-de-protection">💻 Sort de Protection</a></li>
+        <li><a href="#-défis-bonus-du-niveau-2">🏆 Défis Bonus du Niveau 2</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-histoire-du-niveau-2">📜 Histoire du Niveau</a></li>
+        <li><a href="#-20-points-disponibles"><span class="points">💎 20 Points Disponibles</span></a></li>
+        <li><a href="#-construction-du-royaume">💻 Construction du Royaume</a></li>
+      </ul>
+    </li>
+    <li><a href="#-tableau-des-achievements">🎊 TABLEAU DES ACHIEVEMENTS</a></li>
+    <li><a href="#-bibliothèque-de-sons-daventure">🎵 Bibliothèque de Sons d&rsquo;Aventure</a>
+      <ul>
+        <li><a href="#-playlist-épique-pour-coder-">🎧 Playlist Épique pour Coder !</a></li>
+        <li><a href="#-sons-dévénements-">🎮 Sons d&rsquo;Événements :</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mini-jeu--clique-pour-gagner-des-points-">🎯 MINI-JEU : Clique pour gagner des points !</a></li>
+    <li><a href="#-message-final">🎊 MESSAGE FINAL</a>
+      <ul>
+        <li><a href="#-félicitations-jeune-héros--">🌟 Félicitations, Jeune Héros ! 🌟</a></li>
+        <li><a href="#-musique-de-victoire">🎵 Musique de Victoire</a></li>
+      </ul>
+    </li>
+    <li><a href="#-notes-pour-les-enseignants">📝 Notes pour les Enseignants</a>
+      <ul>
+        <li><a href="#comment-utiliser-ce-document-">Comment utiliser ce document :</a></li>
+        <li><a href="#sons-personnalisés-">Sons personnalisés :</a></li>
+        <li><a href="#personnalisation-">Personnalisation :</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-210/index.html"><span itemprop="name">Programmation orientée objet</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">BiblioAventura2</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/420-210/biblioGame/index.html" title="BiblioAventura (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/420-210/biblioGame3/index.html" title="BiblioAventura3 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable page" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="biblioaventura2">BiblioAventura2</h1>
+
+<h1 id="-projet-codex-arcanum---laventure-de-la-poo-">🎮 PROJET CODEX ARCANUM - L&rsquo;AVENTURE DE LA POO !<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<div align="center">
+<h2 id="-bienvenue-dans-laventure-des-bibliothèques-légendaires--">🌟 Bienvenue dans l&rsquo;Aventure des Bibliothèques Légendaires ! 🌟<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="-musique-daventure-épique-">🎵 Musique d&rsquo;Aventure Épique 🎵<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<audio controls autoplay loop volume="0.5">
+  <source src="/420-210/sons/son-action-mystery-1.mp3" type="audio/mpeg">
+  🎵 Thème d'aventure épique
+</audio>
+<p style="color: #666; font-style: italic; margin-top: 10px;">
+🎧 Active le son pour une expérience immersive !
+</p>
+</div>
+<hr>
+<h2 id="-les-bibliothèques-légendaires">🏛️ Les Bibliothèques Légendaires<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Choisis le nom de ta bibliothèque pour ton aventure ! Chacune a son propre style :</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 15px; border-radius: 10px; color: white;">
+  <h4>🔮 Codex Arcanum</h4>
+  <p style="font-size: 0.9em;">La bibliothèque des sortilèges de code</p>
+  <p style="font-size: 0.8em; opacity: 0.8;">Spécialité : Magie de la POO</p>
+</div>
+<div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 15px; border-radius: 10px; color: white;">
+  <h4>⚔️ Le Grimoire du Guerrier</h4>
+  <p style="font-size: 0.9em;">Bibliothèque des héros codeurs</p>
+  <p style="font-size: 0.8em; opacity: 0.8;">Spécialité : Combat contre les bugs</p>
+</div>
+<div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 15px; border-radius: 10px; color: white;">
+  <h4>🌊 L'Océan de Connaissance</h4>
+  <p style="font-size: 0.9em;">Bibliothèque des profondeurs du code</p>
+  <p style="font-size: 0.8em; opacity: 0.8;">Spécialité : Algorithmes fluides</p>
+</div>
+<div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 15px; border-radius: 10px; color: white;">
+  <h4>🔥 La Forge du Phoenix</h4>
+  <p style="font-size: 0.9em;">Bibliothèque des créateurs</p>
+  <p style="font-size: 0.8em; opacity: 0.8;">Spécialité : Refactoring légendaire</p>
+</div>
+<div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 15px; border-radius: 10px; color: #333;">
+  <h4>🌟 Le Nexus Stellaire</h4>
+  <p style="font-size: 0.9em;">Bibliothèque cosmique du code</p>
+  <p style="font-size: 0.8em; opacity: 0.8;">Spécialité : Architecture spatiale</p>
+</div>
+<div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 15px; border-radius: 10px; color: #333;">
+  <h4>🏰 Château de Byteland</h4>
+  <p style="font-size: 0.9em;">Bibliothèque royale des données</p>
+  <p style="font-size: 0.8em; opacity: 0.8;">Spécialité : Structures nobles</p>
+</div>
+</div>
+<div style="background: #f0f0f0; padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #667eea;">
+💡 <strong>Astuce Pro :</strong> Dans tes tests, remplace "BiblioTech" par un de ces noms épiques ! 
+<br>Exemple : <code>Bibliotheque codex = new Bibliotheque("Codex Arcanum", 10);</code>
+</div>
+<hr>
+<style>
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; }
+  50% { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+}
+
+.level-title {
+  animation: glow 2s infinite;
+  color: #00ff00;
+  font-size: 2em;
+  text-align: center;
+}
+
+.achievement {
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.code-box {
+  background: #1e1e1e;
+  border-left: 4px solid #00ff00;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+.mission-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.points {
+  display: inline-block;
+  background: #ff6b6b;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+</style>
+<script>
+// 🎮 Système de son pour les interactions
+function playSound(soundType) {
+  const sounds = {
+    success: 'https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3',
+    levelup: 'https://cdn.pixabay.com/download/audio/2022/03/10/audio_d1718ab41b.mp3',
+    achievement: 'https://cdn.pixabay.com/download/audio/2022/08/02/audio_884fe57c21.mp3'
+  };
+  
+  const audio = new Audio(sounds[soundType]);
+  audio.play().catch(e => console.log('Audio nécessite interaction utilisateur'));
+}
+
+// Compteur de points du joueur
+let playerPoints = 0;
+
+function addPoints(points) {
+  playerPoints += points;
+  document.getElementById('total-points').innerText = playerPoints;
+  playSound('success');
+}
+
+function levelUp() {
+  playSound('levelup');
+  alert('🎊 LEVEL UP ! Nouveau niveau débloqué !');
+}
+</script>
+<hr>
+<h2 id="-ton-tableau-de-bord">📊 Ton Tableau de Bord<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div style="background: #2c3e50; color: white; padding: 20px; border-radius: 10px; margin: 20px 0;">
+  <h3>🎮 Statistiques du Joueur</h3>
+  <p>🏆 Points Totaux : <span id="total-points" style="color: #ffd700; font-size: 1.5em; font-weight: bold;">0</span></p>
+  <p>⭐ Niveau : <span id="player-level">1</span> - Apprenti Codeur</p>
+  <p>🎯 Prochain objectif : 50 points</p>
+  <div style="background: #34495e; height: 20px; border-radius: 10px; overflow: hidden;">
+    <div id="progress-bar" style="background: linear-gradient(90deg, #00ff00, #00cc00); height: 100%; width: 0%; transition: width 0.5s;"></div>
+  </div>
+</div>
+<hr>
+<h2 id="-carte-de-laventure">🗺️ CARTE DE L&rsquo;AVENTURE<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>    🏁 NIVEAU 1          ⚔️ NIVEAU 2         🏰 NIVEAU 3
+   Premier Livre      Bouclier Magique    Royaume des Livres
+      [15 pts]            [15 pts]            [20 pts]
+   
+    🔮 NIVEAU 4          🐉 NIVEAU 5         🌈 NIVEAU 6
+  Grimoire Dynamique   Dragon Héritage    Métamorphose
+      [20 pts]            [25 pts]            [25 pts]
+   
+    🏆 NIVEAU 7          👑 NIVEAU 8
+  Temple Abstrait     Boss Final Pro
+      [30 pts]            [50 pts]</code></pre></div>
+<h3 id="-système-de-progression">🎯 Système de progression:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>⭐ <strong>Bronze</strong> (0-30 pts) : Apprenti Codeur</li>
+<li>⭐⭐ <strong>Argent</strong> (31-60 pts) : Codeur Compétent</li>
+<li>⭐⭐⭐ <strong>Or</strong> (61-90 pts) : Maître POO</li>
+<li>⭐⭐⭐⭐ <strong>Platine</strong> (91-120 pts) : Grand Architecte</li>
+<li>👑 <strong>Légende</strong> (121+ pts) : Légende Vivante !</li>
+</ul>
+<hr>
+<div class="level-title">
+<h1 id="-niveau-1---le-premier-livre-magique">🎮 NIVEAU 1 - LE PREMIER LIVRE MAGIQUE<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+</div>
+<div style="text-align: center; margin: 20px 0;">
+  <audio controls>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/24/audio_c6c24c4ae5.mp3" type="audio/mpeg">
+    🎵 Musique du Niveau 1
+  </audio>
+</div>
+<div class="mission-box">
+<h3 id="-histoire-du-niveau">📜 Histoire du Niveau<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><em>&ldquo;Bienvenue jeune apprenti ! La bibliothèque est vide&hellip; Ta première mission : créer ton premier livre magique qui pourra être emprunté par les citoyens !&rdquo;</em></p>
+<p><strong>Objectif :</strong> Créer la classe <code>Livre</code> avec des pouvoirs basiques d&rsquo;emprunt !</p>
+</div>
+<h3 id="-15-points-disponibles"><span class="points">💎 15 Points Disponibles</span><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Missions :</strong></p>
+<ul>
+<li>✅ Créer la classe Livre (5 pts)</li>
+<li>✅ Ajouter méthodes emprunter/retourner (5 pts)</li>
+<li>✅ Tester avec 3 livres différents (5 pts)</li>
+</ul>
+<hr>
+<h3 id="-code-du-premier-sort">💻 Code du Premier Sort<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="code-box">
+<p><strong>Livre.java</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Livre</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ⚔️ Attributs du livre magique</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">titre</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">auteur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">annee</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estEmprunte</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 🎨 Crée un nouveau livre magique
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Livre</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">auteur</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">annee</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">titre</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auteur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">annee</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">estEmprunte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;✨ NOUVEAU LIVRE CRÉÉ : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">titre</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 📖 Affiche la carte d&#39;identité du livre
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;\n╔════════════════════════════════╗&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;  📚 &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">titre</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;  ✍️  &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">auteur</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;  📅 &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">annee</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">estEmprunte</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;  🔴 EMPRUNTÉ&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;  🟢 DISPONIBLE&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;╚════════════════════════════════╝&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 🤝 Emprunte le livre
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">emprunter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">estEmprunte</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;❌ Oups ! &#39;&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;&#39; est déjà emprunté !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">estEmprunte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;✅ Super ! Tu as emprunté &#39;&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;&#39; !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🎉 +1 emprunt réussi !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 🔙 Retourne le livre
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">retourner</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">estEmprunte</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">estEmprunte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;✅ Merci ! &#39;&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;&#39; est de retour !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;⭐ +1 point de karma !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;⚠️ Hmm... &#39;&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;&#39; n&#39;était pas emprunté !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</div>
+<hr>
+<h3 id="-test-de-mission">🎯 Test de Mission<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="code-box">
+<p><strong>TestNiveau1.java</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestNiveau1</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;╔════════════════════════════════════════╗&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;║  🎮 NIVEAU 1 - LE PREMIER LIVRE      ║&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;╚════════════════════════════════════════╝\n&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 🎯 Mission : Créer 3 livres magiques</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Livre</span><span class="w"> </span><span class="n">livre1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Livre</span><span class="p">(</span><span class="s">&#34;Harry Potter&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;J.K. Rowling&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">1998</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Livre</span><span class="w"> </span><span class="n">livre2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Livre</span><span class="p">(</span><span class="s">&#34;Le Hobbit&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;J.R.R. Tolkien&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">1937</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Livre</span><span class="w"> </span><span class="n">livre3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Livre</span><span class="p">(</span><span class="s">&#34;Dune&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Frank Herbert&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">1965</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;\n🎯 Mission 1 accomplie ! 3 livres créés !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 📖 Afficher les livres</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">livre1</span><span class="p">.</span><span class="na">afficher</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">livre2</span><span class="p">.</span><span class="na">afficher</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">livre3</span><span class="p">.</span><span class="na">afficher</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 🎮 Tester les emprunts</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;\n═══ PHASE D&#39;EMPRUNT ═══&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">livre1</span><span class="p">.</span><span class="na">emprunter</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">livre1</span><span class="p">.</span><span class="na">emprunter</span><span class="p">();</span><span class="w"> </span><span class="c1">// Déjà emprunté !</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">livre2</span><span class="p">.</span><span class="na">emprunter</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 🔙 Retours</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;\n═══ PHASE DE RETOUR ═══&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">livre1</span><span class="p">.</span><span class="na">retourner</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">livre3</span><span class="p">.</span><span class="na">retourner</span><span class="p">();</span><span class="w"> </span><span class="c1">// Pas emprunté !</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;\n🏆 NIVEAU 1 TERMINÉ !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;⭐ +15 points d&#39;expérience !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🎁 Déblocage : NIVEAU 2 - LE BOUCLIER MAGIQUE&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</div>
+<hr>
+<div class="achievement">
+<h3 id="-défis-bonus-5-pts-chacun">🏆 Défis Bonus (+5 pts chacun)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<button onclick="addPoints(5); playSound('achievement');" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px;">
+  🌟 Défi 1 : Ajouter nombrePages
+</button>
+<button onclick="addPoints(5); playSound('achievement');" style="background: #2196F3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px;">
+  🎨 Défi 2 : Créer 5 livres
+</button>
+<button onclick="addPoints(5); playSound('achievement');" style="background: #FF9800; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px;">
+  🎯 Défi 3 : Combo de 3 emprunts
+</button>
+</div>
+<hr>
+<h3 id="-récompenses-du-niveau-1">🎁 Récompenses du Niveau 1<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 20px 0;">
+  <div style="text-align: center; padding: 20px; background: #f0f0f0; border-radius: 10px; margin: 10px;">
+    <div style="font-size: 3em;">📚</div>
+    <p><strong>Badge</strong></p>
+    <p>Premier Livre</p>
+  </div>
+  <div style="text-align: center; padding: 20px; background: #f0f0f0; border-radius: 10px; margin: 10px;">
+    <div style="font-size: 3em;">🎓</div>
+    <p><strong>Titre</strong></p>
+    <p>Apprenti Bibliothécaire</p>
+  </div>
+  <div style="text-align: center; padding: 20px; background: #f0f0f0; border-radius: 10px; margin: 10px;">
+    <div style="font-size: 3em;">🔓</div>
+    <p><strong>Déblocage</strong></p>
+    <p>Niveau 2</p>
+  </div>
+</div>
+<div style="text-align: center; margin: 30px 0;">
+  <button onclick="levelUp(); document.getElementById('player-level').innerText = '2';" 
+          style="background: linear-gradient(90deg, #00c6ff, #0072ff); 
+                 color: white; 
+                 border: none; 
+                 padding: 20px 40px; 
+                 font-size: 1.2em; 
+                 border-radius: 10px; 
+                 cursor: pointer;
+                 box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+    🚀 PASSER AU NIVEAU 2
+  </button>
+</div>
+<hr>
+<div class="level-title">
+<h1 id="-niveau-2---le-bouclier-magique">🛡️ NIVEAU 2 - LE BOUCLIER MAGIQUE<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+</div>
+<div style="text-align: center; margin: 20px 0;">
+  <audio controls>
+    <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_8df3d3c2c9.mp3" type="audio/mpeg">
+    🎵 Musique du Niveau 2
+  </audio>
+</div>
+<div class="mission-box">
+<h3 id="-histoire-du-niveau-1">📜 Histoire du Niveau<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><em>&ldquo;Oh non ! Des bugs 🐛 attaquent ta bibliothèque ! Ils modifient les livres n&rsquo;importe comment ! Tu dois créer un BOUCLIER MAGIQUE (encapsulation) pour protéger tes données !&rdquo;</em></p>
+<p><strong>Objectif :</strong> Ajouter des getters/setters avec validations pour protéger les livres !</p>
+</div>
+<h3 id="-15-points-disponibles-1"><span class="points">💎 15 Points Disponibles</span><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<hr>
+<h3 id="-sort-de-protection">💻 Sort de Protection<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="code-box">
+<p><strong>Livre.java (Version Protégée)</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Livre</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 🛡️ Attributs protégés par le bouclier magique</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">titre</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">auteur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">annee</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nombrePages</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estEmprunte</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">niveauPopularite</span><span class="p">;</span><span class="w"> </span><span class="c1">// 0-5 étoiles</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Livre</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">auteur</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nombrePages</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">titre</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auteur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">setAnnee</span><span class="p">(</span><span class="n">annee</span><span class="p">);</span><span class="w"> </span><span class="c1">// 🛡️ Protection activée !</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">setNombrePages</span><span class="p">(</span><span class="n">nombrePages</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">estEmprunte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">niveauPopularite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🛡️ Livre protégé créé : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">titre</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 🔍 GETTERS - Portes de lecture magiques</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getTitre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">titre</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getAuteur</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">auteur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getAnnee</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">annee</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNombrePages</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombrePages</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 🔧 SETTERS - Portes de modification protégées</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAnnee</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">annee</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">annee</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">1000</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">2024</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">annee</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;✅ Année validée : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">annee</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;⚠️ ALERTE ! Année invalide détectée !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🛡️ Bouclier activé ! Année réinitialisée à 2000&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">2000</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNombrePages</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nombrePages</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nombrePages</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">nombrePages</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">2000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">nombrePages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombrePages</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;✅ Pages validées : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombrePages</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;⚠️ ALERTE ! Nombre de pages bizarre !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🛡️ Bouclier activé ! Pages réinitialisées à 100&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">nombrePages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">100</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * ⭐ Augmente la popularité du livre
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ajouterEtoile</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">niveauPopularite</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">niveauPopularite</span><span class="o">++</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;⭐ Nouvelle étoile ! &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; a maintenant &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">                             </span><span class="n">niveauPopularite</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; étoile(s) !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🌟 Maximum atteint ! Ce livre est une LÉGENDE !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 📊 Calcule l&#39;âge du livre
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">calculerAge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">2024</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">annee</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">50</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;📜 Livre ANCIEN ! &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; ans !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ... autres méthodes ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</div>
+<hr>
+<div class="achievement">
+<h3 id="-défis-bonus-du-niveau-2">🏆 Défis Bonus du Niveau 2<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<button onclick="addPoints(5); playSound('achievement');" style="background: #9C27B0; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px;">
+  🌟 Ajouter isClassique()
+</button>
+<button onclick="addPoints(5); playSound('achievement');" style="background: #E91E63; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px;">
+  🎨 Système danger level
+</button>
+<button onclick="addPoints(5); playSound('achievement');" style="background: #FF5722; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px;">
+  🎯 Livre 5 étoiles
+</button>
+</div>
+<hr>
+<div class="level-title">
+<h1 id="-niveau-3---le-royaume-des-livres">🏰 NIVEAU 3 - LE ROYAUME DES LIVRES<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+</div>
+<div style="text-align: center; margin: 20px 0;">
+  <audio controls>
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+    🎵 Musique épique du Royaume
+  </audio>
+</div>
+<div class="mission-box">
+<h3 id="-histoire-du-niveau-2">📜 Histoire du Niveau<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><em>&ldquo;Félicitations héros ! Tu maîtrises la création de livres ! Mais&hellip; ils sont éparpillés partout ! Tu dois construire un ROYAUME (Bibliotheque) pour les organiser tous !&rdquo;</em></p>
+<p><strong>Objectif :</strong> Créer la classe <code>Bibliotheque</code> qui stocke des livres dans un tableau !</p>
+</div>
+<h3 id="-20-points-disponibles"><span class="points">💎 20 Points Disponibles</span><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<hr>
+<h3 id="-construction-du-royaume">💻 Construction du Royaume<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="code-box">
+<p><strong>Bibliotheque.java</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bibliotheque</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Livre</span><span class="o">[]</span><span class="w"> </span><span class="n">livres</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nombreLivres</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pointsGloire</span><span class="p">;</span><span class="w"> </span><span class="c1">// 🏆 Points du joueur !</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 🏰 Construit un nouveau royaume
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Bibliotheque</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">capacite</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">livres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Livre</span><span class="o">[</span><span class="n">capacite</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombreLivres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">pointsGloire</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;\n🏰════════════════════════════════════🏰&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;   LE ROYAUME DE &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; EST NÉ !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;   Capacité : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">capacite</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; livres&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🏰════════════════════════════════════🏰\n&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 📚 Ajoute un livre au royaume
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ajouterLivre</span><span class="p">(</span><span class="n">Livre</span><span class="w"> </span><span class="n">livre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nombreLivres</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">livres</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">livres</span><span class="o">[</span><span class="n">nombreLivres</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">livre</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">nombreLivres</span><span class="o">++</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">pointsGloire</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;✨ &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">livre</span><span class="p">.</span><span class="na">getTitre</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; a rejoint le royaume !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🏆 +10 points de gloire ! Total : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pointsGloire</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Messages spéciaux</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nombreLivres</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🎉 ACHIEVEMENT DÉBLOQUÉ : &#39;Collectionneur&#39; !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nombreLivres</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🎊 ACHIEVEMENT DÉBLOQUÉ : &#39;Grande Bibliothèque&#39; !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;💥 OH NON ! Le royaume est PLEIN !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🏗️ Conseil : Agrandis ton royaume !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 🗺️ Affiche la carte du royaume
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficherCarte</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;\n╔════════════════════════════════════════╗&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;║   🗺️  CARTE DU ROYAUME : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;╚════════════════════════════════════════╝&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;📊 Livres : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombreLivres</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;/&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">livres</span><span class="p">.</span><span class="na">length</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🏆 Gloire : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pointsGloire</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; points\n&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nombreLivres</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;🏜️ Le royaume est vide... Ajoute des livres !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nombreLivres</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">statut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">livres</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">isEstEmprunte</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&#34;🔴&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&#34;🟢&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;. &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">statut</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">                                 </span><span class="n">livres</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getTitre</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; - &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">                                 </span><span class="n">livres</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getAuteur</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ... autres méthodes ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</div>
+<hr>
+<h2 id="-tableau-des-achievements">🎊 TABLEAU DES ACHIEVEMENTS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0;">
+  <div style="background: linear-gradient(135deg, #ffd89b, #19547b); padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <div style="font-size: 3em;">📚</div>
+    <h4 style="color: white;">Premier Livre</h4>
+    <p style="color: white; font-size: 0.9em;">Créer ton premier livre</p>
+    <p style="color: #ffd700; font-weight: bold;">10 pts</p>
+  </div>
+  <div style="background: linear-gradient(135deg, #a8edea, #fed6e3); padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <div style="font-size: 3em;">🛡️</div>
+    <h4>Maître du Bouclier</h4>
+    <p style="font-size: 0.9em;">Valider 10 fois</p>
+    <p style="color: #ff6b6b; font-weight: bold;">15 pts</p>
+  </div>
+  <div style="background: linear-gradient(135deg, #ff9a9e, #fecfef); padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <div style="font-size: 3em;">🏰</div>
+    <h4>Bâtisseur</h4>
+    <p style="font-size: 0.9em;">Créer une bibliothèque</p>
+    <p style="color: #4ecdc4; font-weight: bold;">20 pts</p>
+  </div>
+  <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <div style="font-size: 3em;">🔮</div>
+    <h4 style="color: white;">Sorcier Infini</h4>
+    <p style="color: white; font-size: 0.9em;">Utiliser ArrayList</p>
+    <p style="color: #ffd700; font-weight: bold;">20 pts</p>
+  </div>
+  <div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <div style="font-size: 3em;">🐉</div>
+    <h4 style="color: white;">Dompteur de Dragon</h4>
+    <p style="color: white; font-size: 0.9em;">Maîtriser l'héritage</p>
+    <p style="color: #ffd700; font-weight: bold;">25 pts</p>
+  </div>
+  <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <div style="font-size: 3em;">👑</div>
+    <h4 style="color: white;">Grand Maître POO</h4>
+    <p style="color: white; font-size: 0.9em;">Projet final</p>
+    <p style="color: #ffd700; font-weight: bold;">50 pts</p>
+  </div>
+</div>
+<hr>
+<h2 id="-bibliothèque-de-sons-daventure">🎵 Bibliothèque de Sons d&rsquo;Aventure<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; margin: 20px 0; color: white;">
+<h3 id="-playlist-épique-pour-coder-">🎧 Playlist Épique pour Coder !<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 20px;">
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+  <h4>🎵 Musique d'Aventure Principale</h4>
+  <audio controls style="width: 100%;">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_d1718ab41b.mp3" type="audio/mpeg">
+  </audio>
+  <p style="font-size: 0.85em; margin-top: 5px;">🎮 Thème principal - Parfait pour commencer !</p>
+</div>
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+  <h4>⚔️ Combat Contre les Bugs</h4>
+  <audio controls style="width: 100%;">
+    <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_8df3d3c2c9.mp3" type="audio/mpeg">
+  </audio>
+  <p style="font-size: 0.85em; margin-top: 5px;">🛡️ Musique intense pour débugger !</p>
+</div>
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+  <h4>🏰 Exploration du Royaume</h4>
+  <audio controls style="width: 100%;">
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+  </audio>
+  <p style="font-size: 0.85em; margin-top: 5px;">🗺️ Musique calme pour explorer le code</p>
+</div>
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+  <h4>🎊 Victoire Épique</h4>
+  <audio controls style="width: 100%;">
+    <source src="https://cdn.pixabay.com/download/audio/2022/08/02/audio_884fe57c21.mp3" type="audio/mpeg">
+  </audio>
+  <p style="font-size: 0.85em; margin-top: 5px;">🏆 Quand tu termines un niveau !</p>
+</div>
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+  <h4>✨ Magie de la POO</h4>
+  <audio controls style="width: 100%;">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2c4d3f7a5e.mp3" type="audio/mpeg">
+  </audio>
+  <p style="font-size: 0.85em; margin-top: 5px;">🔮 Ambiance mystique pour coder</p>
+</div>
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+  <h4>🚀 Mode Boss Final</h4>
+  <audio controls style="width: 100%;">
+    <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3" type="audio/mpeg">
+  </audio>
+  <p style="font-size: 0.85em; margin-top: 5px;">👑 Pour le projet final ultime !</p>
+</div>
+</div>
+<h3 id="-sons-dévénements-">🎮 Sons d&rsquo;Événements :<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+  <button onclick="playSound('success')" style="background: #4CAF50; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+    ✅ Succès
+  </button>
+  <button onclick="playSound('levelup')" style="background: #2196F3; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+    🎊 Level Up
+  </button>
+  <button onclick="playSound('achievement')" style="background: #FF9800; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+    🏆 Achievement
+  </button>
+</div>
+<div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px; margin-top: 20px;">
+<p><strong>🎵 Astuce de Pro :</strong> Crée une playlist avec ces sons pendant que tu codes ! Chaque musique correspond à une phase :</p>
+<ul>
+<li>🎮 <strong>Aventure Principale</strong> : Écrire le code de base</li>
+<li>⚔️ <strong>Combat</strong> : Débugger et corriger les erreurs</li>
+<li>🏰 <strong>Exploration</strong> : Lire et comprendre du code</li>
+<li>🎊 <strong>Victoire</strong> : Tests qui passent !</li>
+<li>✨ <strong>Magie</strong> : Refactoring et optimisation</li>
+<li>🚀 <strong>Boss</strong> : Présentation ou examen final</li>
+</ul>
+</div>
+<p><strong>💡 Comment utiliser les sons dans ton code Java :</strong></p>
+<p>Tu peux simuler des sons dans ta console avec des beeps :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Beep simple de succès</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;\u0007&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Mélodie de victoire (3 beeps rapides)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;\u0007&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Thread</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="n">200</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Fanfare de level up (beeps montants)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">notes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">200</span><span class="p">,</span><span class="w"> </span><span class="n">150</span><span class="p">,</span><span class="w"> </span><span class="n">100</span><span class="p">};</span><span class="w"> </span><span class="c1">// Délais décroissants = ton montant</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">delay</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">notes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;\u0007&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Thread</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<p><strong>🎨 Bonus : Ajouter de la couleur dans la console !</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// ANSI color codes (fonctionne sur Mac/Linux/Windows 10+)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Couleurs</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">RESET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;\u001B[0m&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">VERT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;\u001B[32m&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">JAUNE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;\u001B[33m&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ROUGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;\u001B[31m&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">BLEU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;\u001B[34m&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">VIOLET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;\u001B[35m&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">CYAN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;\u001B[36m&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Utilisation</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Couleurs</span><span class="p">.</span><span class="na">VERT</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;✅ Succès !&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Couleurs</span><span class="p">.</span><span class="na">RESET</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Couleurs</span><span class="p">.</span><span class="na">JAUNE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;⚠️ Attention !&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Couleurs</span><span class="p">.</span><span class="na">RESET</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Couleurs</span><span class="p">.</span><span class="na">ROUGE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;❌ Erreur !&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Couleurs</span><span class="p">.</span><span class="na">RESET</span><span class="p">);</span></span></span></code></pre></div>
+</div>
+<hr>
+<h2 id="-mini-jeu--clique-pour-gagner-des-points-">🎯 MINI-JEU : Clique pour gagner des points !<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div style="text-align: center; margin: 30px 0; padding: 30px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 20px;">
+  <h3 style="color: white;">🎮 Zone d'Entraînement</h3>
+  <p style="color: white;">Clique sur les boutons pour t'entraîner !</p>
+  <div style="margin: 20px 0;">
+    <button onclick="addPoints(5); playSound('success');" 
+            style="background: #4CAF50; color: white; border: none; padding: 15px 30px; margin: 10px; border-radius: 10px; font-size: 1.1em; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+      ✅ Emprunt Réussi (+5 pts)
+    </button>
+<pre><code>&lt;button onclick=&quot;addPoints(10); playSound('achievement');&quot; 
+        style=&quot;background: #2196F3; color: white; border: none; padding: 15px 30px; margin: 10px; border-radius: 10px; font-size: 1.1em; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3);&quot;&gt;
+  🏆 Achievement (+10 pts)
+&lt;/button&gt;
+
+&lt;button onclick=&quot;addPoints(15); levelUp();&quot; 
+        style=&quot;background: #FF9800; color: white; border: none; padding: 15px 30px; margin: 10px; border-radius: 10px; font-size: 1.1em; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3);&quot;&gt;
+  🎊 Level Up ! (+15 pts)
+&lt;/button&gt;
+</code></pre>
+  </div>
+  <div style="margin-top: 20px;">
+    <audio controls>
+      <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2c4d3f7a5e.mp3" type="audio/mpeg">
+      🎵 Musique de jeu
+    </audio>
+  </div>
+</div>
+<hr>
+<h2 id="-message-final">🎊 MESSAGE FINAL<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div style="background: linear-gradient(135deg, #ffecd2, #fcb69f); padding: 30px; border-radius: 20px; text-align: center; margin: 30px 0; box-shadow: 0 8px 16px rgba(0,0,0,0.2);">
+<h3 id="-félicitations-jeune-héros--">🌟 Félicitations, Jeune Héros ! 🌟<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Tu as maintenant tous les outils pour devenir une <strong>LÉGENDE DE LA POO</strong> !</p>
+<p>Chaque niveau que tu complètes te rapproche de la maîtrise ultime.</p>
+<p><strong>N&rsquo;oublie pas :</strong></p>
+<ul>
+<li>🎯 Fais tous les défis bonus</li>
+<li>🏆 Collectionne tous les achievements</li>
+<li>💪 Aide tes camarades aventuriers</li>
+<li>🎨 Personnalise ton code</li>
+</ul>
+<h3 id="-musique-de-victoire">🎵 Musique de Victoire<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<audio controls>
+  <source src="https://cdn.pixabay.com/download/audio/2022/08/02/audio_884fe57c21.mp3" type="audio/mpeg">
+  🎵 Thème de victoire
+</audio>
+<p><strong>Que la POO soit avec toi ! ⚔️✨</strong></p>
+</div>
+<hr>
+<div style="text-align: center; margin: 50px 0;">
+  <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Celebration" style="max-width: 400px; border-radius: 20px;">
+</div>
+<hr>
+<h2 id="-notes-pour-les-enseignants">📝 Notes pour les Enseignants<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<details>
+<summary><strong>🎓 Guide d'utilisation du document interactif</strong></summary>
+<h3 id="comment-utiliser-ce-document-">Comment utiliser ce document :<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ol>
+<li><strong>Ouvrir dans VS Code</strong> avec l&rsquo;extension &ldquo;Markdown Preview Enhanced&rdquo;</li>
+<li><strong>Ouvrir dans le navigateur</strong> en exportant en HTML</li>
+<li><strong>GitHub Pages</strong> : Push sur GitHub et activer Pages</li>
+</ol>
+<h3 id="sons-personnalisés-">Sons personnalisés :<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Pour ajouter vos propres sons, remplacez les URLs dans les balises <code>&lt;audio&gt;</code> :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;VOTRE_FICHIER.mp3&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;audio/mpeg&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span></span></span></code></pre></div>
+<h3 id="personnalisation-">Personnalisation :<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Modifiez les couleurs dans les styles CSS</li>
+<li>Ajoutez vos propres achievements</li>
+<li>Créez de nouveaux mini-jeux</li>
+<li>Ajustez les points selon votre barème</li>
+</ul>
+</details>
+<hr>
+<p><em>Projet créé avec ❤️ pour les futurs Maîtres POO</em><br>
+<em>Version Interactive avec Audio - 2024</em><br>
+<em>🎮 Gamification Level : MAXIMUM 🎮</em></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><a id="R-logo" 
+   style="display: flex; justify-content: center; align-items: center; text-decoration: none;" 
+   href="/420-210/index.html">
+
+    <img src="/420-210/images/logo.png" width="40" height="40" alt="logo" style="margin-right: 8px;">
+
+    <div style="display: flex; flex-direction: column; font-size: 130%; text-align: center;">
+        <span>Programmation orientée objet</span>
+    </div>
+</a>
+
+        <search><form action="/420-210/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/420-210/index.html"><a class="padding" href="/420-210/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/420-210/intro/index.html"><a class="padding" href="/420-210/intro/index.html">Introduction</a></li>
+            <li class="" data-nav-id="/420-210/variables/index.html"><a class="padding" href="/420-210/variables/index.html">Variables</a></li>
+            <li class="" data-nav-id="/420-210/operateurs/index.html"><a class="padding" href="/420-210/operateurs/index.html">Opérateurs</a></li>
+            <li class="" data-nav-id="/420-210/structures/index.html"><a class="padding" href="/420-210/structures/index.html">Structures de contrôle</a></li>
+            <li class="" data-nav-id="/420-210/methodes/index.html"><a class="padding" href="/420-210/methodes/index.html">Méthodes</a></li>
+            <li class="" data-nav-id="/420-210/tableaux/index.html"><a class="padding" href="/420-210/tableaux/index.html">Tableaux</a></li>
+            <li class="" data-nav-id="/420-210/exo_revisions/index.html"><a class="padding" href="/420-210/exo_revisions/index.html">Exercices de révision</a></li>
+            <li class="" data-nav-id="/420-210/poo/index.html"><a class="padding" href="/420-210/poo/index.html">Introduction à POO</a></li>
+            <li class="" data-nav-id="/420-210/poo_2/index.html"><a class="padding" href="/420-210/poo_2/index.html">Programmation orientée objet - 2</a></li>
+            <li class="" data-nav-id="/420-210/poo_3/index.html"><a class="padding" href="/420-210/poo_3/index.html">Programmation orientée objet - 3</a></li>
+            <li class="" data-nav-id="/420-210/exos_poo/index.html"><a class="padding" href="/420-210/exos_poo/index.html">Exercices - POO</a></li>
+            <li class="" data-nav-id="/420-210/biblioGame/index.html"><a class="padding" href="/420-210/biblioGame/index.html">BiblioAventura</a></li>
+            <li class="active " data-nav-id="/420-210/biblioGame2/index.html"><a class="padding" href="/420-210/biblioGame2/index.html">BiblioAventura2</a></li>
+            <li class="" data-nav-id="/420-210/biblioGame3/index.html"><a class="padding" href="/420-210/biblioGame3/index.html">BiblioAventura3</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-learn" value="learn" selected>Learn</option>
+                    <option id="R-select-variant-relearn-auto" value="relearn-auto">Relearn Light/Dark</option>
+                    <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                    <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                    <option id="R-select-variant-neon" value="neon">Neon</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"></div>
+      </div>
+    </aside>
+    <script src="/420-210/js/perfect-scrollbar/perfect-scrollbar.min.js?1771005885" defer></script>
+    <script src="/420-210/js/theme.js?1771005885" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>
