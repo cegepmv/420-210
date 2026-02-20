@@ -54,7 +54,7 @@
       <link>http://localhost:1313/420-210/exo_revisions/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-210/exo_revisions/index.html</guid>
-      <description>Exercices de révision 🎮 Projet 1 : Système de Gestion de Notes Scolaires 📋 Contexte Vous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.</description>
+      <description>🎮 Projet 1 : Système de Gestion de Notes Scolaires 📋 Contexte Vous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.&#xA;🎯 Objectifs pédagogiques Manipulation de tableaux Calculs statistiques (moyenne, min, max) Structures conditionnelles pour la classification Boucles pour parcourir des données Méthodes avec paramètres et valeurs de retour 📝 Instructions Créez une classe GestionNotes avec les méthodes suivantes :</description>
     </item>
     <item>
       <title>Introduction à POO</title>
@@ -62,6 +62,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-210/poo/index.html</guid>
       <description>Avant de commencer : pourquoi la POO ? Jusqu’à présent, vous avez écrit des programmes avec des variables et des méthodes statiques. Ça marche très bien pour des programmes simples. Mais imaginez que vous deviez gérer une liste de 500 étudiants, chacun avec un nom, un numéro d’étudiant et une note.&#xA;Avec des variables séparées, ça ressemblerait à ça :</description>
+    </item>
+    <item>
+      <title>De tableau à arrayList</title>
+      <link>http://localhost:1313/420-210/arrayList/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-210/arrayList/index.html</guid>
+      <description>🎮 MISSION SPÉCIALE : L’ÉVOLUTION DES COLLECTIONS ! 🚀 Du tableau statique à l’arrayList dynamique 🚀 📊 Tableau de bord du cours 🎯 Progression de la Mission&#xD;⭐ Niveau Actuel : 1 - Apprenti des Collections</description>
     </item>
     <item>
       <title>Programmation orientée objet - 2</title>

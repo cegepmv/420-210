@@ -1,6 +1,6 @@
 +++
 title = "BiblioAventure"
-weight = 12
+weight = 13
 url = "/biblioGame/"
 
 +++

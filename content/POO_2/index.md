@@ -1,6 +1,6 @@
 +++
 title = "Programmation orientée objet - 2"
-weight = 8
+weight = 10
 url = "/poo_2/"
 
 +++

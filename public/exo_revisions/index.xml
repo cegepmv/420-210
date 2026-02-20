@@ -3,7 +3,7 @@
   <channel>
     <title>Exercices de révision :: Programmation orientée objet</title>
     <link>http://localhost:1313/420-210/exo_revisions/index.html</link>
-    <description>Exercices de révision 🎮 Projet 1 : Système de Gestion de Notes Scolaires 📋 Contexte Vous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.</description>
+    <description>🎮 Projet 1 : Système de Gestion de Notes Scolaires 📋 Contexte Vous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.&#xA;🎯 Objectifs pédagogiques Manipulation de tableaux Calculs statistiques (moyenne, min, max) Structures conditionnelles pour la classification Boucles pour parcourir des données Méthodes avec paramètres et valeurs de retour 📝 Instructions Créez une classe GestionNotes avec les méthodes suivantes :</description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
     <atom:link href="http://localhost:1313/420-210/exo_revisions/index.xml" rel="self" type="application/rss+xml" />

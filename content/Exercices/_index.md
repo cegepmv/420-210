@@ -5,8 +5,6 @@ url = "/exo_revisions/"
 
 +++
 
-# Exercices de révision
-
 ---
 
 ## 🎮 Projet 1 : Système de Gestion de Notes Scolaires

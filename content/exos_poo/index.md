@@ -1,6 +1,6 @@
 +++
 title = "Exercices - POO"
-weight = 10
+weight = 12
 url = "/exos_poo/"
 
 +++
