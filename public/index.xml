@@ -82,7 +82,7 @@
       <link>http://localhost:1313/420-210/poo_3/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-210/poo_3/index.html</guid>
-      <description>Table des matières Niveaux d’accès (Modificateurs de visibilité) Packages et organisation du code Méthodes et variables statiques Classes imbriquées (Inner classes) Le mot-clé final Énumérations (enum) Gestion des exceptions Composition vs Héritage Principes SOLID Surcharge de méthodes (Overloading) Constructeurs multiples et chaînage La classe Object et ses méthodes Collections Java 1. Niveaux d’accès (Modificateurs de visibilité) Java propose 4 niveaux d’accès pour contrôler qui peut accéder à vos classes, attributs et méthodes.</description>
+      <description>Table des matières Niveaux d’accès (Modificateurs de visibilité) Packages et organisation du code Méthodes et variables statiques Classes imbriquées (Inner classes) Le mot-clé final Énumérations (enum) Gestion des exceptions Composition vs Héritage Principes SOLID Collections Java 1. Niveaux d’accès (Modificateurs de visibilité) Java propose 4 niveaux d’accès pour contrôler qui peut accéder à vos classes, attributs et méthodes.</description>
     </item>
     <item>
       <title>Exercices - POO</title>

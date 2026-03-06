@@ -16,10 +16,7 @@ url = "/poo_3/"
 7. [Gestion des exceptions](#7-gestion-des-exceptions)
 8. [Composition vs Héritage](#8-composition-vs-héritage)
 9. [Principes SOLID](#9-principes-solid)
-10. [Surcharge de méthodes (Overloading)](#10-surcharge-de-méthodes-overloading)
-11. [Constructeurs multiples et chaînage](#11-constructeurs-multiples-et-chaînage)
-12. [La classe Object et ses méthodes](#12-la-classe-object-et-ses-méthodes)
-13. [Collections Java](#13-collections-java)
+10. [Collections Java](#10-collections-java)
 
 ---
 
@@ -1048,286 +1045,11 @@ UtilisateurService service = new UtilisateurService(db);
 
 ---
 
-## 10. Surcharge de méthodes (Overloading)
-
-La **surcharge** permet d'avoir plusieurs méthodes avec le **même nom** mais des **paramètres différents**.
-
-### 10.1 Surcharge simple
-
-```java
-public class Calculateur {
-    
-    // Additionner deux entiers
-    public int additionner(int a, int b) {
-        return a + b;
-    }
-    
-    // Additionner trois entiers
-    public int additionner(int a, int b, int c) {
-        return a + b + c;
-    }
-    
-    // Additionner deux doubles
-    public double additionner(double a, double b) {
-        return a + b;
-    }
-}
-
-// Utilisation
-Calculateur calc = new Calculateur();
-System.out.println(calc.additionner(2, 3));         // 5 (int, int)
-System.out.println(calc.additionner(2, 3, 4));      // 9 (int, int, int)
-System.out.println(calc.additionner(2.5, 3.7));     // 6.2 (double, double)
-```
-
-### 10.2 Surcharge de constructeurs
-
-```java
-public class Rectangle {
-    private double largeur;
-    private double hauteur;
-    
-    // Constructeur par défaut
-    public Rectangle() {
-        this.largeur = 1.0;
-        this.hauteur = 1.0;
-    }
-    
-    // Constructeur avec un paramètre (carré)
-    public Rectangle(double cote) {
-        this.largeur = cote;
-        this.hauteur = cote;
-    }
-    
-    // Constructeur complet
-    public Rectangle(double largeur, double hauteur) {
-        this.largeur = largeur;
-        this.hauteur = hauteur;
-    }
-}
-
-// Utilisation
-Rectangle r1 = new Rectangle();           // 1.0 x 1.0
-Rectangle r2 = new Rectangle(5.0);        // 5.0 x 5.0
-Rectangle r3 = new Rectangle(3.0, 7.0);   // 3.0 x 7.0
-```
-
-### 10.3 Règles de surcharge
-
-✅ **Différences acceptées** :
-- Nombre de paramètres différent
-- Types de paramètres différents
-- Ordre des paramètres différent
-
-❌ **PAS de surcharge avec** :
-- Seulement un type de retour différent
-- Seulement des noms de paramètres différents
-
-```java
-// ❌ ERREUR - même signature
-public int calculer(int a, int b) { return a + b; }
-public double calculer(int a, int b) { return a + b; }  // ERREUR !
-
-// ❌ ERREUR - noms de paramètres ne comptent pas
-public int calculer(int x, int y) { return x + y; }
-public int calculer(int a, int b) { return a + b; }  // ERREUR !
-
-// ✅ OK - ordre différent
-public void afficher(int x, String s) { }
-public void afficher(String s, int x) { }  // OK
-```
-
----
-
-## 11. Constructeurs multiples et chaînage
-
-### 11.1 Chaînage avec `this()`
-
-Un constructeur peut appeler un autre constructeur de la même classe avec `this()`.
-
-```java
-public class Personne {
-    private String nom;
-    private String prenom;
-    private int age;
-    
-    // Constructeur principal
-    public Personne(String nom, String prenom, int age) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.age = age;
-    }
-    
-    // Appelle le constructeur principal avec des valeurs par défaut
-    public Personne(String nom, String prenom) {
-        this(nom, prenom, 0);  // Appelle Personne(String, String, int)
-    }
-    
-    // Appelle le constructeur avec 2 paramètres
-    public Personne(String nom) {
-        this(nom, "");  // Appelle Personne(String, String)
-    }
-    
-    // Appelle le constructeur avec 1 paramètre
-    public Personne() {
-        this("Inconnu");  // Appelle Personne(String)
-    }
-}
-```
-
-**Important** : L'appel à `this()` doit être la **première instruction** du constructeur.
-
-### 11.2 Chaînage avec `super()`
-
-Rappel : `super()` appelle le constructeur de la classe parent.
-
-```java
-public class Vehicule {
-    private String marque;
-    
-    public Vehicule(String marque) {
-        this.marque = marque;
-    }
-}
-
-public class Voiture extends Vehicule {
-    private int nombrePortes;
-    
-    public Voiture(String marque, int nombrePortes) {
-        super(marque);  // Appelle le constructeur de Vehicule
-        this.nombrePortes = nombrePortes;
-    }
-    
-    // Surcharge avec valeur par défaut
-    public Voiture(String marque) {
-        this(marque, 4);  // Appelle l'autre constructeur de Voiture
-    }
-}
-```
-
----
-
-## 12. La classe Object et ses méthodes
-
-Toutes les classes Java héritent automatiquement de la classe `Object`.
-
-### 12.1 Hiérarchie implicite
-
-```java
-public class MaClasse {
-    // Équivalent à : public class MaClasse extends Object
-}
-```
-
-### 12.2 Méthodes importantes de Object
-
-#### `toString()`
-
-Retourne une représentation en String de l'objet.
-
-```java
-public class Personne {
-    private String nom;
-    private int age;
-    
-    public Personne(String nom, int age) {
-        this.nom = nom;
-        this.age = age;
-    }
-    
-    // Redéfinition de toString()
-    @Override
-    public String toString() {
-        return "Personne{nom='" + nom + "', age=" + age + "}";
-    }
-}
-
-// Utilisation
-Personne p = new Personne("Alice", 25);
-System.out.println(p);  // Appelle automatiquement toString()
-// Affiche: Personne{nom='Alice', age=25}
-```
-
-#### `equals()`
-
-Compare deux objets pour l'égalité.
-
-```java
-public class Point {
-    private int x;
-    private int y;
-    
-    public Point(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-    
-    @Override
-    public boolean equals(Object obj) {
-        // Vérifier si c'est le même objet
-        if (this == obj) return true;
-        
-        // Vérifier si obj est null ou d'un autre type
-        if (obj == null || getClass() != obj.getClass()) return false;
-        
-        // Comparer les attributs
-        Point autre = (Point) obj;
-        return x == autre.x && y == autre.y;
-    }
-}
-
-// Utilisation
-Point p1 = new Point(3, 5);
-Point p2 = new Point(3, 5);
-System.out.println(p1 == p2);       // false (références différentes)
-System.out.println(p1.equals(p2));  // true (valeurs égales)
-```
-
-#### `hashCode()`
-
-Retourne un code de hachage pour l'objet. **Important** : si vous redéfinissez `equals()`, vous devez aussi redéfinir `hashCode()`.
-
-```java
-public class Point {
-    private int x;
-    private int y;
-    
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Point autre = (Point) obj;
-        return x == autre.x && y == autre.y;
-    }
-    
-    @Override
-    public int hashCode() {
-        int result = 17;
-        result = 31 * result + x;
-        result = 31 * result + y;
-        return result;
-    }
-}
-```
-
-#### `getClass()`
-
-Retourne l'objet `Class` qui représente la classe de l'objet.
-
-```java
-Personne p = new Personne("Alice", 25);
-Class<?> classe = p.getClass();
-System.out.println(classe.getName());        // Personne
-System.out.println(classe.getSimpleName());  // Personne
-```
-
----
-
-## 13. Collections Java
+## 10. Collections Java
 
 Les **collections** sont des structures de données qui permettent de stocker et manipuler des groupes d'objets de manière efficace. Contrairement aux tableaux, elles sont **dynamiques** (taille variable) et offrent de nombreuses méthodes utiles.
 
-### 13.1 Hiérarchie des Collections
+### 10.1 Hiérarchie des Collections
 
 ```
 Collection (interface)
@@ -1351,7 +1073,7 @@ Map (interface) - Paires clé-valeur
 └── TreeMap - Ordre naturel des clés
 ```
 
-### 13.2 ArrayList - Liste dynamique
+### 10.2 ArrayList - Liste dynamique
 
 **ArrayList** est la collection la plus utilisée. C'est un tableau redimensionnable automatiquement.
 
@@ -1487,7 +1209,7 @@ for (Etudiant e : etudiants) {
 System.out.println("Meilleur: " + meilleur);
 ```
 
-### 13.3 LinkedList - Liste chaînée
+### 10.3 LinkedList - Liste chaînée
 
 **LinkedList** est optimisée pour les insertions/suppressions fréquentes.
 
@@ -1534,7 +1256,7 @@ public class ExempleLinkedList {
 
 **Règle générale** : Utilisez **ArrayList** par défaut, sauf si vous faites beaucoup d'insertions/suppressions au début ou au milieu.
 
-### 13.4 HashSet - Ensemble sans doublons
+### 10.4 HashSet - Ensemble sans doublons
 
 **HashSet** ne garde pas d'ordre et n'accepte **pas de doublons**.
 
@@ -1586,7 +1308,7 @@ System.out.println(sansDoublons);  // [1, 2, 3, 4]
 ArrayList<Integer> resultat = new ArrayList<>(sansDoublons);
 ```
 
-### 13.5 TreeSet - Ensemble trié
+### 10.5 TreeSet - Ensemble trié
 
 **TreeSet** garde les éléments **triés automatiquement**.
 
@@ -1652,7 +1374,7 @@ System.out.println(personnes);
 // [Charlie (20 ans), Alice (25 ans), Bob (30 ans)]
 ```
 
-### 13.6 HashMap - Dictionnaire clé-valeur
+### 10.6 HashMap - Dictionnaire clé-valeur
 
 **HashMap** stocke des paires **clé → valeur**. Les clés sont uniques.
 
@@ -1747,7 +1469,7 @@ for (String mot : mots) {
 }
 ```
 
-### 13.7 TreeMap - Map trié par clés
+### 10.7 TreeMap - Map trié par clés
 
 **TreeMap** maintient les clés **triées**.
 
@@ -1772,7 +1494,7 @@ public class ExempleTreeMap {
 }
 ```
 
-### 13.8 Comparaison des Collections
+### 10.8 Comparaison des Collections
 
 #### Lists
 
@@ -1797,7 +1519,7 @@ public class ExempleTreeMap {
 | **LinkedHashMap** | ✅ Insertion | ❌ Clés uniques | ⚡ Rapide |
 | **TreeMap** | ✅ Trié | ❌ Clés uniques | 🐌 Plus lent |
 
-### 13.9 Méthodes utiles communes
+### 10.9 Méthodes utiles communes
 
 #### Conversion entre collections
 
@@ -1884,7 +1606,7 @@ etudiants.sort(Comparator.comparingDouble(e -> e.moyenne));
 etudiants.sort(Comparator.comparingDouble(e -> -e.moyenne));
 ```
 
-### 13.10 Exercices pratiques
+### 10.10 Exercices pratiques
 
 #### Exercice 1 : Gestion de contacts
 
@@ -2027,7 +1749,7 @@ public class StatistiquesTexte {
 }
 ```
 
-### 13.11 Bonnes pratiques avec les Collections
+### 10.11 Bonnes pratiques avec les Collections
 
 #### 1. Utiliser l'interface dans les déclarations
 
@@ -2091,9 +1813,6 @@ map.put(null, 10);  // Une seule clé null autorisée
 | **Exceptions** | Gestion des erreurs avec try-catch-finally |
 | **Composition** | Alternative à l'héritage (HAS-A vs IS-A) |
 | **SOLID** | 5 principes de conception POO |
-| **Overloading** | Surcharge de méthodes et constructeurs |
-| **Chaînage** | Appeler d'autres constructeurs avec `this()` et `super()` |
-| **Object** | Méthodes `toString()`, `equals()`, `hashCode()` |
 | **Classes imbriquées** | Classes à l'intérieur d'autres classes |
 | **Collections** | ArrayList, LinkedList, HashSet, TreeSet, HashMap, TreeMap |
 

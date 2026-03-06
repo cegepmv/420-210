@@ -387,6 +387,242 @@ L'annotation `@Override` est optionnelle mais recommandée. Elle dit au compilat
 
 ---
 
+### 2.6. Surcharge de méthodes (Overloading)
+
+La **surcharge** permet d'avoir plusieurs méthodes avec le **même nom** mais des **paramètres différents**.
+
+#### 2.6.1 Surcharge simple
+
+```java
+public class Calculateur {
+    
+    // Additionner deux entiers
+    public int additionner(int a, int b) {
+        return a + b;
+    }
+    
+    // Additionner trois entiers
+    public int additionner(int a, int b, int c) {
+        return a + b + c;
+    }
+    
+    // Additionner deux doubles
+    public double additionner(double a, double b) {
+        return a + b;
+    }
+}
+
+// Utilisation
+Calculateur calc = new Calculateur();
+System.out.println(calc.additionner(2, 3));         // 5 (int, int)
+System.out.println(calc.additionner(2, 3, 4));      // 9 (int, int, int)
+System.out.println(calc.additionner(2.5, 3.7));     // 6.2 (double, double)
+```
+
+#### 2.6.2 Surcharge de constructeurs
+
+```java
+public class Rectangle {
+    private double largeur;
+    private double hauteur;
+    
+    // Constructeur par défaut
+    public Rectangle() {
+        this.largeur = 1.0;
+        this.hauteur = 1.0;
+    }
+    
+    // Constructeur avec un paramètre (carré)
+    public Rectangle(double cote) {
+        this.largeur = cote;
+        this.hauteur = cote;
+    }
+    
+    // Constructeur complet
+    public Rectangle(double largeur, double hauteur) {
+        this.largeur = largeur;
+        this.hauteur = hauteur;
+    }
+}
+
+// Utilisation
+Rectangle r1 = new Rectangle();           // 1.0 x 1.0
+Rectangle r2 = new Rectangle(5.0);        // 5.0 x 5.0
+Rectangle r3 = new Rectangle(3.0, 7.0);   // 3.0 x 7.0
+```
+
+#### 2.6.3 Règles de surcharge
+
+✅ **Différences acceptées** :
+- Nombre de paramètres différent
+- Types de paramètres différents
+- Ordre des paramètres différent
+
+❌ **PAS de surcharge avec** :
+- Seulement un type de retour différent
+- Seulement des noms de paramètres différents
+
+```java
+// ❌ ERREUR - même signature
+public int calculer(int a, int b) { return a + b; }
+public double calculer(int a, int b) { return a + b; }  // ERREUR !
+
+// ❌ ERREUR - noms de paramètres ne comptent pas
+public int calculer(int x, int y) { return x + y; }
+public int calculer(int a, int b) { return a + b; }  // ERREUR !
+
+// ✅ OK - ordre différent
+public void afficher(int x, String s) { }
+public void afficher(String s, int x) { }  // OK
+```
+
+---
+
+### 2.7 Constructeurs multiples et chaînage
+
+#### 2.7.1 Chaînage avec `this()`
+
+Un constructeur peut appeler un autre constructeur de la même classe avec `this()`.
+
+```java
+public class Personne {
+    private String nom;
+    private String prenom;
+    private int age;
+    
+    // Constructeur principal
+    public Personne(String nom, String prenom, int age) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.age = age;
+    }
+    
+    // Appelle le constructeur principal avec des valeurs par défaut
+    public Personne(String nom, String prenom) {
+        this(nom, prenom, 0);  // Appelle Personne(String, String, int)
+    }
+    
+    // Appelle le constructeur avec 2 paramètres
+    public Personne(String nom) {
+        this(nom, "");  // Appelle Personne(String, String)
+    }
+    
+    // Appelle le constructeur avec 1 paramètre
+    public Personne() {
+        this("Inconnu");  // Appelle Personne(String)
+    }
+}
+```
+
+**Important** : L'appel à `this()` doit être la **première instruction** du constructeur.
+
+#### 2.7.2 Chaînage avec `super()`
+
+Rappel : `super()` appelle le constructeur de la classe parent.
+
+```java
+public class Vehicule {
+    private String marque;
+    
+    public Vehicule(String marque) {
+        this.marque = marque;
+    }
+}
+
+public class Voiture extends Vehicule {
+    private int nombrePortes;
+    
+    public Voiture(String marque, int nombrePortes) {
+        super(marque);  // Appelle le constructeur de Vehicule
+        this.nombrePortes = nombrePortes;
+    }
+    
+    // Surcharge avec valeur par défaut
+    public Voiture(String marque) {
+        this(marque, 4);  // Appelle l'autre constructeur de Voiture
+    }
+}
+```
+
+---
+
+### 2.8. La classe Object et ses méthodes
+
+Toutes les classes Java héritent automatiquement de la classe `Object`.
+
+#### 2.8.1 Hiérarchie implicite
+
+```java
+public class MaClasse {
+    // Équivalent à : public class MaClasse extends Object
+}
+```
+
+#### 2.8.2 Méthodes importantes de Object
+##### `toString()`
+
+Retourne une représentation en String de l'objet.
+
+```java
+public class Personne {
+    private String nom;
+    private int age;
+    
+    public Personne(String nom, int age) {
+        this.nom = nom;
+        this.age = age;
+    }
+    
+    // Redéfinition de toString()
+    @Override
+    public String toString() {
+        return "Personne{nom='" + nom + "', age=" + age + "}";
+    }
+}
+
+// Utilisation
+Personne p = new Personne("Alice", 25);
+System.out.println(p);  // Appelle automatiquement toString()
+// Affiche: Personne{nom='Alice', age=25}
+```
+
+##### `equals()`
+
+Compare deux objets pour l'égalité.
+
+```java
+public class Point {
+    private int x;
+    private int y;
+    
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        // Vérifier si c'est le même objet
+        if (this == obj) return true;
+        
+        // Vérifier si obj est null ou d'un autre type
+        if (obj == null || getClass() != obj.getClass()) return false;
+        
+        // Comparer les attributs
+        Point autre = (Point) obj;
+        return x == autre.x && y == autre.y;
+    }
+}
+
+// Utilisation
+Point p1 = new Point(3, 5);
+Point p2 = new Point(3, 5);
+System.out.println(p1 == p2);       // false (références différentes)
+System.out.println(p1.equals(p2));  // true (valeurs égales)
+```
+
+---
+
 ## 3. Le polymorphisme : flexibilité maximale
 
 ### 3.1 Qu'est-ce que le polymorphisme ?
