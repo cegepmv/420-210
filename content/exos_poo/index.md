@@ -41,6 +41,182 @@ Ce document contient des exercices détaillés couvrant **toutes les notions de 
 
 ---
 
+# Exercice POO — Arène de Combat ⚔️
+
+## Contexte
+
+Tu dois modéliser un petit jeu de rôle en arène. Des héros de différentes classes s'affrontent. Chaque type de héros a ses propres capacités spéciales, mais ils partagent tous des caractéristiques de base.
+
+---
+
+## Classe `Heros` — la classe parente
+
+**Attributs :**
+- `nom` (String)
+- `pointsDeVie` (int)
+- `attaque` (int)
+- `defense` (int)
+
+**Deux constructeurs (surcharge) :**
+
+```java
+// Constructeur 1 — complet
+Heros(String nom, int pointsDeVie, int attaque, int defense)
+
+// Constructeur 2 — débutant (attaque = 10, defense = 5 par défaut)
+Heros(String nom, int pointsDeVie)
+```
+
+**Méthodes :**
+
+| Méthode | Description |
+|---|---|
+| `estVivant()` | Retourne `true` si `pointsDeVie > 0` |
+| `recevoirDegats(int degats)` | Soustrait `degats - defense` des PV (min. 0). Affiche les PV restants |
+| `sePresenter()` | Affiche nom, PV, attaque, défense |
+| `attaquer(Heros cible)` | Inflige `attaque` dégâts à la cible via `recevoirDegats()` |
+
+---
+
+## Classe `Guerrier` — hérite de `Heros`
+
+**Attribut supplémentaire :** `armure` (int)
+
+**Constructeur :**
+```java
+Guerrier(String nom, int pointsDeVie, int attaque, int defense, int armure)
+// Appelle super(), puis : this.defense += armure
+```
+
+**Redéfinit** `sePresenter()` → affiche aussi la valeur d'armure.
+
+**Méthode propre :**
+- `bouclier()` — double temporairement la défense. Affiche *"[nom] lève son bouclier ! Défense : [valeur]"*
+
+---
+
+## Classe `Mage` — hérite de `Heros`
+
+**Attribut supplémentaire :** `mana` (int)
+
+**Deux constructeurs (surcharge) :**
+```java
+// Constructeur 1 — complet
+Mage(String nom, int pointsDeVie, int attaque, int defense, int mana)
+
+// Constructeur 2 — stats par défaut (attaque = 20, defense = 3, mana = 100)
+Mage(String nom, int pointsDeVie)
+```
+
+**Redéfinit** `sePresenter()` → affiche aussi le mana.
+
+**Méthode propre :**
+- `lancerSort(Heros cible)` — coûte `30` mana, inflige `attaque * 2` dégâts. Si mana insuffisant : affiche *"Pas assez de mana !"*
+
+---
+
+## Classe `Archer` — hérite de `Heros`
+
+**Attribut supplémentaire :** `nombreFleches` (int)
+
+**Constructeur :**
+```java
+Archer(String nom, int pointsDeVie, int attaque, int defense, int nombreFleches)
+```
+
+**Redéfinit** `sePresenter()` → affiche aussi le nombre de flèches.
+
+**Redéfinit** `attaquer(Heros cible)` → tire une flèche (coûte 1), inflige `attaque + 5` dégâts. Si plus de flèches : attaque normale. Affiche les flèches restantes.
+
+**Méthode propre :**
+- `tirPrecis(Heros cible)` — coûte 3 flèches, ignore complètement la défense de la cible.
+
+---
+
+## Classe `Arene` — ne hérite **pas** de `Heros`
+
+Contient une `ArrayList<Heros>`.
+
+**Méthodes :**
+
+| Méthode | Description |
+|---|---|
+| `inscrire(Heros h)` | Ajoute un héros à la liste |
+| `presenterTousLesHeros()` | Appelle `sePresenter()` sur chacun *(polymorphisme)* |
+| `herosSurvivants()` | Retourne une `ArrayList<Heros>` des héros dont `estVivant()` est `true` |
+| `afficherSurvivants()` | Affiche le nom de chaque survivant |
+
+---
+
+## Classe `Main`
+
+```java
+// 1. Créer l'arène
+Arene arene = new Arene();
+
+// 2. Créer et inscrire les héros
+Guerrier thorin  = new Guerrier("Thorin",  120, 15, 8, 10);
+Mage     gandalf = new Mage    ("Gandalf",  80);           // constructeur court
+Archer   legolas = new Archer  ("Legolas",  90, 18, 6, 15);
+
+arene.inscrire(thorin);
+arene.inscrire(gandalf);
+arene.inscrire(legolas);
+
+// 3. Polymorphisme
+arene.presenterTousLesHeros();
+
+// 4. Simuler des combats
+thorin.attaquer(gandalf);
+legolas.tirPrecis(thorin);
+gandalf.lancerSort(legolas);
+
+// 5. Survivants
+arene.afficherSurvivants();
+
+// 6. instanceof — appel des méthodes spéciales
+for (Heros h : arene.herosSurvivants()) {
+    if (h instanceof Guerrier g) g.bouclier();
+    else if (h instanceof Mage m) m.lancerSort(thorin);
+    else if (h instanceof Archer a) a.tirPrecis(gandalf);
+}
+```
+
+---
+
+## Sortie console attendue (exemple)
+
+```
+=== Présentation des héros ===
+Guerrier Thorin  | PV: 120 | ATQ: 15 | DEF: 18 | Armure: 10
+Mage     Gandalf | PV: 80  | ATQ: 20 | DEF: 3  | Mana: 100
+Archer   Legolas | PV: 90  | ATQ: 18 | DEF: 6  | Flèches: 15
+
+=== Combats ===
+Thorin attaque Gandalf !
+  → Gandalf reçoit 12 dégâts ! PV restants : 68
+Legolas tire une flèche précise sur Thorin !
+  → Thorin reçoit 18 dégâts (défense ignorée) ! PV restants : 102
+Gandalf lance un sort sur Legolas !
+  → Legolas reçoit 40 dégâts ! PV restants : 50
+
+=== Survivants ===
+✅ Thorin (Guerrier)
+✅ Gandalf (Mage)
+✅ Legolas (Archer)
+```
+
+---
+
+## Questions de réflexion
+
+1. Pourquoi `Arene` ne doit-elle **pas** hériter de `Heros` ?
+2. Quelle version de `attaquer()` s'exécute quand un `Archer` est stocké dans une `ArrayList<Heros>` ? Pourquoi ?
+3. Quelle est la différence entre une référence de type `Heros` et une référence de type `Archer` pointant vers le même objet ?
+4. Que se passerait-il si on oubliait `@Override` sur `attaquer()` dans `Archer` et qu'on changeait la signature par erreur ?
+
+---
+
 ## Exercices Niveau Débutant ⭐
 
 ### Exercice 1.1 — Classe Livre
