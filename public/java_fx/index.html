@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html id="R-html" lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-210/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-210/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.2">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="Notes de cours — JavaFX avec SceneBuilder Table des matières Introduction à JavaFX et SceneBuilder Structure d’un projet JavaFX Mise en page — Layouts Les composants de base FXML et lien avec le contrôleur Les événements et handlers Exercices pratiques 1. Introduction à JavaFX et SceneBuilder Qu’est-ce que JavaFX ? JavaFX est une bibliothèque Java qui permet de créer des interfaces graphiques (GUI — Graphical User Interface). C’est ce qui permet de créer des fenêtres, des boutons, des champs de texte, etc.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Java FX :: Programmation orientée objet">
+    <meta name="twitter:description" content="Notes de cours — JavaFX avec SceneBuilder Table des matières Introduction à JavaFX et SceneBuilder Structure d’un projet JavaFX Mise en page — Layouts Les composants de base FXML et lien avec le contrôleur Les événements et handlers Exercices pratiques 1. Introduction à JavaFX et SceneBuilder Qu’est-ce que JavaFX ? JavaFX est une bibliothèque Java qui permet de créer des interfaces graphiques (GUI — Graphical User Interface). C’est ce qui permet de créer des fenêtres, des boutons, des champs de texte, etc.">
+    <meta property="og:url" content="http://localhost:1313/420-210/java_fx/index.html">
+    <meta property="og:site_name" content="Programmation orientée objet">
+    <meta property="og:title" content="Java FX :: Programmation orientée objet">
+    <meta property="og:description" content="Notes de cours — JavaFX avec SceneBuilder Table des matières Introduction à JavaFX et SceneBuilder Structure d’un projet JavaFX Mise en page — Layouts Les composants de base FXML et lien avec le contrôleur Les événements et handlers Exercices pratiques 1. Introduction à JavaFX et SceneBuilder Qu’est-ce que JavaFX ? JavaFX est une bibliothèque Java qui permet de créer des interfaces graphiques (GUI — Graphical User Interface). C’est ce qui permet de créer des fenêtres, des boutons, des champs de texte, etc.">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Programmation orientée objet">
+    <meta itemprop="name" content="Java FX :: Programmation orientée objet">
+    <meta itemprop="description" content="Notes de cours — JavaFX avec SceneBuilder Table des matières Introduction à JavaFX et SceneBuilder Structure d’un projet JavaFX Mise en page — Layouts Les composants de base FXML et lien avec le contrôleur Les événements et handlers Exercices pratiques 1. Introduction à JavaFX et SceneBuilder Qu’est-ce que JavaFX ? JavaFX est une bibliothèque Java qui permet de créer des interfaces graphiques (GUI — Graphical User Interface). C’est ce qui permet de créer des fenêtres, des boutons, des champs de texte, etc.">
+    <meta itemprop="wordCount" content="2197">
+    <title>Java FX :: Programmation orientée objet</title>
+    <link href="/420-210/images/favicon.png?1775670648" rel="icon" type="image/png">
+    <link href="/420-210/css/auto-complete/auto-complete.min.css?1775670648" rel="stylesheet">
+    <script src="/420-210/js/auto-complete/auto-complete.min.js?1775670648" defer></script>
+    <script src="/420-210/js/search-lunr.js?1775670648" defer></script>
+    <script src="/420-210/js/search.js?1775670648" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/420-210/searchindex.en.js?1775670648";
+    </script>
+    <script src="/420-210/js/lunr/lunr.min.js?1775670648" defer></script>
+    <script src="/420-210/js/lunr/lunr.stemmer.support.min.js?1775670648" defer></script>
+    <script src="/420-210/js/lunr/lunr.multi.min.js?1775670648" defer></script>
+    <script src="/420-210/js/lunr/lunr.fr.min.js?1775670648" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['fr'];
+    </script>
+    <link href="/420-210/fonts/fontawesome/css/all.min.css?1775670648" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-210/fonts/fontawesome/css/all.min.css?1775670648" rel="stylesheet"></noscript>
+    <link href="/420-210/css/perfect-scrollbar/perfect-scrollbar.min.css?1775670648" rel="stylesheet">
+    <link href="/420-210/css/theme.css?1775670648" rel="stylesheet">
+    <link href="/420-210/css/format-html.css?1775670648" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/java_fx\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-210';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'learn', 'relearn-auto', 'zen-light', 'zen-dark', 'neon' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script><style>
+:root {
+    --MENU-WIDTH-S: 14.375rem;
+    --MENU-WIDTH-M: 14.375rem;
+    --MENU-WIDTH-L: 16rem;
+}
+</style>
+  </head>
+  <body class="mobile-support html" data-origin="/420-210/java_fx/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#table-des-matières">Table des matières</a></li>
+    <li><a href="#1-introduction-à-javafx-et-scenebuilder">1. Introduction à JavaFX et SceneBuilder</a>
+      <ul>
+        <li><a href="#quest-ce-que-javafx-">Qu&rsquo;est-ce que JavaFX ?</a></li>
+        <li><a href="#quest-ce-que-scenebuilder-">Qu&rsquo;est-ce que SceneBuilder ?</a></li>
+        <li><a href="#les-concepts-clés">Les concepts clés</a></li>
+        <li><a href="#le-modèle-mvc-dans-javafx">Le modèle MVC dans JavaFX</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-structure-dun-projet-javafx">2. Structure d&rsquo;un projet JavaFX</a>
+      <ul>
+        <li><a href="#arborescence-typique">Arborescence typique</a></li>
+        <li><a href="#la-classe-principale--mainappjava">La classe principale — MainApp.java</a></li>
+        <li><a href="#le-fichier-fxml-minimal">Le fichier FXML minimal</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-mise-en-page--layouts">3. Mise en page — Layouts</a>
+      <ul>
+        <li><a href="#vbox--disposition-verticale">VBox — disposition verticale</a></li>
+        <li><a href="#hbox--disposition-horizontale">HBox — disposition horizontale</a></li>
+        <li><a href="#gridpane--disposition-en-grille">GridPane — disposition en grille</a></li>
+        <li><a href="#borderpane--disposition-en-zones">BorderPane — disposition en zones</a></li>
+        <li><a href="#tableau-récapitulatif-des-layouts">Tableau récapitulatif des layouts</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-les-composants-de-base">4. Les composants de base</a>
+      <ul>
+        <li><a href="#label--afficher-du-texte">Label — afficher du texte</a></li>
+        <li><a href="#button--bouton-cliquable">Button — bouton cliquable</a></li>
+        <li><a href="#textfield--champ-de-saisie-sur-une-ligne">TextField — champ de saisie sur une ligne</a></li>
+        <li><a href="#textarea--zone-de-texte-multiligne">TextArea — zone de texte multiligne</a></li>
+        <li><a href="#checkbox--case-à-cocher">CheckBox — case à cocher</a></li>
+        <li><a href="#radiobutton--bouton-radio-choix-exclusif">RadioButton — bouton radio (choix exclusif)</a></li>
+        <li><a href="#combobox--liste-déroulante">ComboBox — liste déroulante</a></li>
+        <li><a href="#passwordfield--champ-mot-de-passe">PasswordField — champ mot de passe</a></li>
+        <li><a href="#slider--curseur">Slider — curseur</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-fxml-et-lien-avec-le-contrôleur">5. FXML et lien avec le contrôleur</a>
+      <ul>
+        <li><a href="#comment-scenebuilder-et-le-contrôleur-sont-liés">Comment SceneBuilder et le contrôleur sont liés</a></li>
+        <li><a href="#créer-le-lien-dans-scenebuilder">Créer le lien dans SceneBuilder</a></li>
+        <li><a href="#exemple-complet--hello-viewfxml">Exemple complet — hello-view.fxml</a></li>
+        <li><a href="#exemple-complet--hellocontrollerjava">Exemple complet — HelloController.java</a></li>
+        <li><a href="#la-méthode-initialize">La méthode initialize()</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-les-événements-et-handlers">6. Les événements et handlers</a>
+      <ul>
+        <li><a href="#quest-ce-quun-événement-">Qu&rsquo;est-ce qu&rsquo;un événement ?</a></li>
+        <li><a href="#événement-sur-un-bouton--onaction">Événement sur un bouton — onAction</a></li>
+        <li><a href="#événement-sur-un-textfield--au-changement-de-texte">Événement sur un TextField — au changement de texte</a></li>
+        <li><a href="#événement-sur-une-checkbox">Événement sur une CheckBox</a></li>
+        <li><a href="#événement-sur-un-slider">Événement sur un Slider</a></li>
+        <li><a href="#événement-clavier--onkeypressed">Événement clavier — onKeyPressed</a></li>
+        <li><a href="#afficher-une-alerte--alert">Afficher une alerte — Alert</a></li>
+        <li><a href="#validation-des-champs">Validation des champs</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-exercices-pratiques">7. Exercices pratiques</a>
+      <ul>
+        <li><a href="#exercice-1--calculateur-de-rabais">Exercice 1 — Calculateur de rabais</a></li>
+        <li><a href="#exercice-2--formulaire-dajout-de-produit">Exercice 2 — Formulaire d&rsquo;ajout de produit</a></li>
+        <li><a href="#exercice-3--mini-commande-de-repas-projet-intégré">Exercice 3 — Mini commande de repas (projet intégré)</a></li>
+        <li><a href="#conseils-généraux">Conseils généraux</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/420-210/index.html"><span itemprop="name">Programmation orientée objet</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Java FX</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/420-210/biblioGame/index.html" title="BiblioAventure (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle"><span><i class="fa-fw fas fa-chevron-right"></i></span></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable page" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="java-fx">Java FX</h1>
+
+<h1 id="notes-de-cours--javafx-avec-scenebuilder">Notes de cours — JavaFX avec SceneBuilder<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<hr>
+<h2 id="table-des-matières">Table des matières<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ol>
+<li><a href="/420-210/java_fx/index.html#1-introduction-à-javafx-et-scenebuilder">Introduction à JavaFX et SceneBuilder</a></li>
+<li><a href="/420-210/java_fx/index.html#2-structure-dun-projet-javafx">Structure d&rsquo;un projet JavaFX</a></li>
+<li><a href="/420-210/java_fx/index.html#3-mise-en-page--layouts">Mise en page — Layouts</a></li>
+<li><a href="/420-210/java_fx/index.html#4-les-composants-de-base">Les composants de base</a></li>
+<li><a href="/420-210/java_fx/index.html#5-fxml-et-lien-avec-le-contrôleur">FXML et lien avec le contrôleur</a></li>
+<li><a href="/420-210/java_fx/index.html#6-les-événements-et-handlers">Les événements et handlers</a></li>
+<li><a href="/420-210/java_fx/index.html#7-exercices-pratiques">Exercices pratiques</a></li>
+</ol>
+<hr>
+<h2 id="1-introduction-à-javafx-et-scenebuilder">1. Introduction à JavaFX et SceneBuilder<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="quest-ce-que-javafx-">Qu&rsquo;est-ce que JavaFX ?<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>JavaFX est une bibliothèque Java qui permet de créer des <strong>interfaces graphiques</strong> (GUI — Graphical User Interface). C&rsquo;est ce qui permet de créer des fenêtres, des boutons, des champs de texte, etc.</p>
+<p>Avant JavaFX, il y avait Swing. JavaFX est plus moderne et plus facile à utiliser.</p>
+<h3 id="quest-ce-que-scenebuilder-">Qu&rsquo;est-ce que SceneBuilder ?<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>SceneBuilder est un outil visuel qui permet de <strong>concevoir l&rsquo;interface graphique par glisser-déposer</strong>, sans écrire de code. Il génère automatiquement un fichier <strong>FXML</strong> qui décrit l&rsquo;interface.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>SceneBuilder  →  génère un fichier  →  HelloView.fxml</code></pre></div>
+<h3 id="les-concepts-clés">Les concepts clés<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Concept</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Stage</strong></td>
+          <td>La fenêtre principale de l&rsquo;application</td>
+      </tr>
+      <tr>
+          <td><strong>Scene</strong></td>
+          <td>Le contenu affiché dans la fenêtre</td>
+      </tr>
+      <tr>
+          <td><strong>Node</strong></td>
+          <td>Tout élément visuel (bouton, label, image&hellip;)</td>
+      </tr>
+      <tr>
+          <td><strong>FXML</strong></td>
+          <td>Fichier XML qui décrit l&rsquo;interface graphique</td>
+      </tr>
+      <tr>
+          <td><strong>Controller</strong></td>
+          <td>Classe Java qui gère les événements de l&rsquo;interface</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="le-modèle-mvc-dans-javafx">Le modèle MVC dans JavaFX<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>JavaFX suit le patron de conception <strong>MVC (Modèle - Vue - Contrôleur)</strong> :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Vue (fichier .fxml)  ←→  Contrôleur (fichier .java)  ←→  Modèle (classes Java)</code></pre></div>
+<ul>
+<li>La <strong>Vue</strong> définit l&rsquo;apparence (ce qu&rsquo;on voit)</li>
+<li>Le <strong>Contrôleur</strong> gère les actions (ce qui se passe quand on clique)</li>
+<li>Le <strong>Modèle</strong> contient les données (la logique métier)</li>
+</ul>
+<h3 id="installation">Installation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ol>
+<li>Télécharger <strong>SceneBuilder</strong> : <a href="https://gluonhq.com/products/scene-builder/" rel="external">https://gluonhq.com/products/scene-builder/</a></li>
+<li>Dans <strong>IntelliJ IDEA</strong> : <code>File → Settings → Languages &amp; Frameworks → JavaFX → Path to SceneBuilder</code></li>
+<li>Créer un nouveau projet JavaFX dans IntelliJ</li>
+</ol>
+<hr>
+<h2 id="2-structure-dun-projet-javafx">2. Structure d&rsquo;un projet JavaFX<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="arborescence-typique">Arborescence typique<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>MonProjet/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/exemple/
+│       │       ├── MainApp.java          ← Point d&#39;entrée
+│       │       └── HelloController.java  ← Contrôleur
+│       └── resources/
+│           └── com/exemple/
+│               └── hello-view.fxml       ← Vue (SceneBuilder)
+└── pom.xml (ou build.gradle)</code></pre></div>
+<h3 id="la-classe-principale--mainappjava">La classe principale — MainApp.java<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>C&rsquo;est le point d&rsquo;entrée de toute application JavaFX. Elle doit étendre <code>Application</code> et implémenter la méthode <code>start()</code>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.application.Application</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.fxml.FXMLLoader</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.Scene</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.stage.Stage</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainApp</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Application</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">Stage</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Charger le fichier FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">FXMLLoader</span><span class="w"> </span><span class="n">fxmlLoader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FXMLLoader</span><span class="p">(</span><span class="n">MainApp</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getResource</span><span class="p">(</span><span class="s">&#34;hello-view.fxml&#34;</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Créer la scène avec une taille de 400x300</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Scene</span><span class="w"> </span><span class="n">scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">fxmlLoader</span><span class="p">.</span><span class="na">load</span><span class="p">(),</span><span class="w"> </span><span class="n">400</span><span class="p">,</span><span class="w"> </span><span class="n">300</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Configurer la fenêtre</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&#34;Mon Application&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="n">scene</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">launch</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="le-fichier-fxml-minimal">Le fichier FXML minimal<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Un fichier FXML généré par SceneBuilder ressemble à ceci :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;?import javafx.scene.control.Button?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;?import javafx.scene.control.Label?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;?import javafx.scene.layout.VBox?&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;VBox</span> <span class="na">alignment=</span><span class="s">&#34;CENTER&#34;</span> <span class="na">spacing=</span><span class="s">&#34;20&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">xmlns:fx=</span><span class="s">&#34;http://javafx.com/fxml&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">fx:controller=</span><span class="s">&#34;com.exemple.HelloController&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Label</span> <span class="na">fx:id=</span><span class="s">&#34;messageLabel&#34;</span> <span class="na">text=</span><span class="s">&#34;Bonjour !&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">&#34;Cliquer ici&#34;</span> <span class="na">onAction=</span><span class="s">&#34;#handleBouton&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/VBox&gt;</span></span></span></code></pre></div>
+<p>Points importants :</p>
+<ul>
+<li><code>fx:controller</code> → indique quelle classe Java gère cette vue</li>
+<li><code>fx:id</code> → donne un nom au composant pour y accéder depuis le contrôleur</li>
+<li><code>onAction=&quot;#handleBouton&quot;</code> → appelle la méthode <code>handleBouton()</code> dans le contrôleur</li>
+</ul>
+<hr>
+<h2 id="3-mise-en-page--layouts">3. Mise en page — Layouts<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Les <strong>layouts</strong> sont des conteneurs qui organisent les composants dans la fenêtre.</p>
+<h3 id="vbox--disposition-verticale">VBox — disposition verticale<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Organise les composants <strong>les uns en dessous des autres</strong>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;VBox</span> <span class="na">spacing=</span><span class="s">&#34;10&#34;</span> <span class="na">padding=</span><span class="s">&#34;20&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Premier&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Deuxième&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">&#34;Troisième&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/VBox&gt;</span></span></span></code></pre></div>
+<p>En Java :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">VBox</span><span class="w"> </span><span class="n">vbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VBox</span><span class="p">(</span><span class="n">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10 = espacement entre les éléments</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">vbox</span><span class="p">.</span><span class="na">setPadding</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Insets</span><span class="p">(</span><span class="n">20</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">vbox</span><span class="p">.</span><span class="na">getChildren</span><span class="p">().</span><span class="na">addAll</span><span class="p">(</span><span class="n">label1</span><span class="p">,</span><span class="w"> </span><span class="n">label2</span><span class="p">,</span><span class="w"> </span><span class="n">bouton</span><span class="p">);</span></span></span></code></pre></div>
+<h3 id="hbox--disposition-horizontale">HBox — disposition horizontale<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Organise les composants <strong>côte à côte</strong>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;HBox</span> <span class="na">spacing=</span><span class="s">&#34;10&#34;</span> <span class="na">alignment=</span><span class="s">&#34;CENTER&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">&#34;Oui&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">&#34;Non&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">&#34;Annuler&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/HBox&gt;</span></span></span></code></pre></div>
+<p>En Java :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">HBox</span><span class="w"> </span><span class="n">hbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HBox</span><span class="p">(</span><span class="n">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hbox</span><span class="p">.</span><span class="na">setAlignment</span><span class="p">(</span><span class="n">Pos</span><span class="p">.</span><span class="na">CENTER</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">hbox</span><span class="p">.</span><span class="na">getChildren</span><span class="p">().</span><span class="na">addAll</span><span class="p">(</span><span class="n">boutonOui</span><span class="p">,</span><span class="w"> </span><span class="n">boutonNon</span><span class="p">,</span><span class="w"> </span><span class="n">boutonAnnuler</span><span class="p">);</span></span></span></code></pre></div>
+<h3 id="gridpane--disposition-en-grille">GridPane — disposition en grille<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Organise les composants dans un <strong>tableau de lignes et colonnes</strong>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;GridPane</span> <span class="na">hgap=</span><span class="s">&#34;10&#34;</span> <span class="na">vgap=</span><span class="s">&#34;10&#34;</span> <span class="na">padding=</span><span class="s">&#34;20&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Nom :&#34;</span>        <span class="na">GridPane.columnIndex=</span><span class="s">&#34;0&#34;</span> <span class="na">GridPane.rowIndex=</span><span class="s">&#34;0&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;TextField</span>                 <span class="na">GridPane.columnIndex=</span><span class="s">&#34;1&#34;</span> <span class="na">GridPane.rowIndex=</span><span class="s">&#34;0&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Prénom :&#34;</span>     <span class="na">GridPane.columnIndex=</span><span class="s">&#34;0&#34;</span> <span class="na">GridPane.rowIndex=</span><span class="s">&#34;1&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;TextField</span>                 <span class="na">GridPane.columnIndex=</span><span class="s">&#34;1&#34;</span> <span class="na">GridPane.rowIndex=</span><span class="s">&#34;1&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">&#34;Confirmer&#34;</span>   <span class="na">GridPane.columnIndex=</span><span class="s">&#34;1&#34;</span> <span class="na">GridPane.rowIndex=</span><span class="s">&#34;2&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/GridPane&gt;</span></span></span></code></pre></div>
+<p>En Java :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">GridPane</span><span class="w"> </span><span class="n">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GridPane</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">grid</span><span class="p">.</span><span class="na">setHgap</span><span class="p">(</span><span class="n">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">grid</span><span class="p">.</span><span class="na">setVgap</span><span class="p">(</span><span class="n">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">grid</span><span class="p">.</span><span class="na">setPadding</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Insets</span><span class="p">(</span><span class="n">20</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">grid</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Label</span><span class="p">(</span><span class="s">&#34;Nom :&#34;</span><span class="p">),</span><span class="w">  </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// colonne 0, ligne 0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">grid</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">champNom</span><span class="p">,</span><span class="w">            </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// colonne 1, ligne 0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">grid</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Label</span><span class="p">(</span><span class="s">&#34;Prénom :&#34;</span><span class="p">),</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">grid</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">champPrenom</span><span class="p">,</span><span class="w">         </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">grid</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">boutonConfirmer</span><span class="p">,</span><span class="w">     </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">);</span></span></span></code></pre></div>
+<h3 id="borderpane--disposition-en-zones">BorderPane — disposition en zones<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Divise la fenêtre en <strong>5 zones</strong> : Top, Bottom, Left, Right, Center.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;BorderPane&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;top&gt;</span>    <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Titre&#34;</span>       <span class="nt">/&gt;</span> <span class="nt">&lt;/top&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;left&gt;</span>   <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Menu&#34;</span>        <span class="nt">/&gt;</span> <span class="nt">&lt;/left&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;center&gt;</span> <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Contenu&#34;</span>     <span class="nt">/&gt;</span> <span class="nt">&lt;/center&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;right&gt;</span>  <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Infos&#34;</span>       <span class="nt">/&gt;</span> <span class="nt">&lt;/right&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;bottom&gt;</span> <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Statut&#34;</span>      <span class="nt">/&gt;</span> <span class="nt">&lt;/bottom&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/BorderPane&gt;</span></span></span></code></pre></div>
+<p>En Java :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">BorderPane</span><span class="w"> </span><span class="n">borderPane</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BorderPane</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">borderPane</span><span class="p">.</span><span class="na">setTop</span><span class="p">(</span><span class="n">labelTitre</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">borderPane</span><span class="p">.</span><span class="na">setLeft</span><span class="p">(</span><span class="n">labelMenu</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">borderPane</span><span class="p">.</span><span class="na">setCenter</span><span class="p">(</span><span class="n">labelContenu</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">borderPane</span><span class="p">.</span><span class="na">setRight</span><span class="p">(</span><span class="n">labelInfos</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">borderPane</span><span class="p">.</span><span class="na">setBottom</span><span class="p">(</span><span class="n">labelStatut</span><span class="p">);</span></span></span></code></pre></div>
+<h3 id="tableau-récapitulatif-des-layouts">Tableau récapitulatif des layouts<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Layout</th>
+          <th>Utilisation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>VBox</strong></td>
+          <td>Formulaires, listes verticales</td>
+      </tr>
+      <tr>
+          <td><strong>HBox</strong></td>
+          <td>Barres de boutons, menus horizontaux</td>
+      </tr>
+      <tr>
+          <td><strong>GridPane</strong></td>
+          <td>Formulaires avec étiquettes et champs alignés</td>
+      </tr>
+      <tr>
+          <td><strong>BorderPane</strong></td>
+          <td>Structure principale d&rsquo;une fenêtre</td>
+      </tr>
+      <tr>
+          <td><strong>StackPane</strong></td>
+          <td>Superposer des éléments</td>
+      </tr>
+      <tr>
+          <td><strong>FlowPane</strong></td>
+          <td>Éléments qui s&rsquo;adaptent à la taille de la fenêtre</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="4-les-composants-de-base">4. Les composants de base<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="label--afficher-du-texte">Label — afficher du texte<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Sert à afficher du texte non modifiable par l&rsquo;utilisateur.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;Label</span> <span class="na">fx:id=</span><span class="s">&#34;monLabel&#34;</span> <span class="na">text=</span><span class="s">&#34;Bonjour !&#34;</span> <span class="nt">/&gt;</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="n">monLabel</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Modifier le texte</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">monLabel</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&#34;Nouveau texte&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Obtenir le texte</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">texte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">monLabel</span><span class="p">.</span><span class="na">getText</span><span class="p">();</span></span></span></code></pre></div>
+<h3 id="button--bouton-cliquable">Button — bouton cliquable<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;Button</span> <span class="na">fx:id=</span><span class="s">&#34;monBouton&#34;</span> <span class="na">text=</span><span class="s">&#34;Cliquer&#34;</span> <span class="na">onAction=</span><span class="s">&#34;#handleClic&#34;</span><span class="nt">/&gt;</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="n">monBouton</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Désactiver le bouton</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">monBouton</span><span class="p">.</span><span class="na">setDisable</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Modifier le texte</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">monBouton</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&#34;Cliqué !&#34;</span><span class="p">);</span></span></span></code></pre></div>
+<h3 id="textfield--champ-de-saisie-sur-une-ligne">TextField — champ de saisie sur une ligne<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;TextField</span> <span class="na">fx:id=</span><span class="s">&#34;champNom&#34;</span> <span class="na">promptText=</span><span class="s">&#34;Entrez votre nom&#34;</span><span class="nt">/&gt;</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">TextField</span><span class="w"> </span><span class="n">champNom</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Lire ce que l&#39;utilisateur a écrit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">champNom</span><span class="p">.</span><span class="na">getText</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Effacer le contenu</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">champNom</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Pré-remplir le champ</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">champNom</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&#34;Valeur par défaut&#34;</span><span class="p">);</span></span></span></code></pre></div>
+<h3 id="textarea--zone-de-texte-multiligne">TextArea — zone de texte multiligne<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;TextArea</span> <span class="na">fx:id=</span><span class="s">&#34;zoneTexte&#34;</span> <span class="na">promptText=</span><span class="s">&#34;Écrivez ici...&#34;</span> <span class="na">wrapText=</span><span class="s">&#34;true&#34;</span><span class="nt">/&gt;</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">TextArea</span><span class="w"> </span><span class="n">zoneTexte</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">contenu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zoneTexte</span><span class="p">.</span><span class="na">getText</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">zoneTexte</span><span class="p">.</span><span class="na">appendText</span><span class="p">(</span><span class="s">&#34;\nNouvelle ligne ajoutée&#34;</span><span class="p">);</span></span></span></code></pre></div>
+<h3 id="checkbox--case-à-cocher">CheckBox — case à cocher<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;CheckBox</span> <span class="na">fx:id=</span><span class="s">&#34;maCase&#34;</span> <span class="na">text=</span><span class="s">&#34;J&#39;accepte les conditions&#34;</span><span class="nt">/&gt;</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">CheckBox</span><span class="w"> </span><span class="n">maCase</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Vérifier si elle est cochée</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">boolean</span><span class="w"> </span><span class="n">estCochee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maCase</span><span class="p">.</span><span class="na">isSelected</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Cocher/décocher par programme</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">maCase</span><span class="p">.</span><span class="na">setSelected</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span></span></span></code></pre></div>
+<h3 id="radiobutton--bouton-radio-choix-exclusif">RadioButton — bouton radio (choix exclusif)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Les RadioButtons doivent appartenir au même <code>ToggleGroup</code> pour être exclusifs.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;ToggleGroup</span> <span class="na">fx:id=</span><span class="s">&#34;groupeTaille&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;RadioButton</span> <span class="na">text=</span><span class="s">&#34;Small&#34;</span>  <span class="na">toggleGroup=</span><span class="s">&#34;$groupeTaille&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;RadioButton</span> <span class="na">text=</span><span class="s">&#34;Medium&#34;</span> <span class="na">toggleGroup=</span><span class="s">&#34;$groupeTaille&#34;</span> <span class="na">selected=</span><span class="s">&#34;true&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;RadioButton</span> <span class="na">text=</span><span class="s">&#34;Large&#34;</span>  <span class="na">toggleGroup=</span><span class="s">&#34;$groupeTaille&#34;</span><span class="nt">/&gt;</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">ToggleGroup</span><span class="w"> </span><span class="n">groupeTaille</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Obtenir le bouton sélectionné</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">RadioButton</span><span class="w"> </span><span class="n">selectionne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">RadioButton</span><span class="p">)</span><span class="w"> </span><span class="n">groupeTaille</span><span class="p">.</span><span class="na">getSelectedToggle</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">selectionne</span><span class="p">.</span><span class="na">getText</span><span class="p">();</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="s">&#34;Small&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Medium&#34;</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="s">&#34;Large&#34;</span></span></span></code></pre></div>
+<h3 id="combobox--liste-déroulante">ComboBox — liste déroulante<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;ComboBox</span> <span class="na">fx:id=</span><span class="s">&#34;maListe&#34;</span> <span class="na">promptText=</span><span class="s">&#34;Choisir...&#34;</span><span class="nt">/&gt;</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">ComboBox</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">maListe</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Ajouter des options</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">maListe</span><span class="p">.</span><span class="na">getItems</span><span class="p">().</span><span class="na">addAll</span><span class="p">(</span><span class="s">&#34;Option 1&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Option 2&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Option 3&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Obtenir la valeur sélectionnée</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">choix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maListe</span><span class="p">.</span><span class="na">getValue</span><span class="p">();</span></span></span></code></pre></div>
+<h3 id="passwordfield--champ-mot-de-passe">PasswordField — champ mot de passe<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;PasswordField</span> <span class="na">fx:id=</span><span class="s">&#34;champMotDePasse&#34;</span> <span class="na">promptText=</span><span class="s">&#34;Mot de passe&#34;</span><span class="nt">/&gt;</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">PasswordField</span><span class="w"> </span><span class="n">champMotDePasse</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">motDePasse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">champMotDePasse</span><span class="p">.</span><span class="na">getText</span><span class="p">();</span></span></span></code></pre></div>
+<h3 id="slider--curseur">Slider — curseur<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;Slider</span> <span class="na">fx:id=</span><span class="s">&#34;monCurseur&#34;</span> <span class="na">min=</span><span class="s">&#34;0&#34;</span> <span class="na">max=</span><span class="s">&#34;100&#34;</span> <span class="na">value=</span><span class="s">&#34;50&#34;</span><span class="nt">/&gt;</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">Slider</span><span class="w"> </span><span class="n">monCurseur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">double</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">monCurseur</span><span class="p">.</span><span class="na">getValue</span><span class="p">();</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">entre</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="n">et</span><span class="w"> </span><span class="n">100</span></span></span></code></pre></div>
+<hr>
+<h2 id="5-fxml-et-lien-avec-le-contrôleur">5. FXML et lien avec le contrôleur<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="comment-scenebuilder-et-le-contrôleur-sont-liés">Comment SceneBuilder et le contrôleur sont liés<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>hello-view.fxml          HelloController.java
+─────────────────        ────────────────────────────
+fx:controller=&#34;...&#34;  →   public class HelloController
+fx:id=&#34;monLabel&#34;     →   @FXML private Label monLabel
+onAction=&#34;#handleClic&#34; → @FXML private void handleClic()</code></pre></div>
+<h3 id="créer-le-lien-dans-scenebuilder">Créer le lien dans SceneBuilder<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ol>
+<li>Ouvrir le fichier <code>.fxml</code> avec SceneBuilder</li>
+<li>Dans le panneau <strong>Controller</strong> (en bas à gauche), entrer le nom complet de la classe contrôleur : <code>com.exemple.HelloController</code></li>
+<li>Sélectionner un composant, aller dans <strong>Code</strong> (panneau de droite)</li>
+<li>Dans <strong>fx:id</strong>, donner un nom au composant</li>
+<li>Dans <strong>On Action</strong>, entrer le nom de la méthode à appeler (sans le <code>#</code>)</li>
+</ol>
+<h3 id="exemple-complet--hello-viewfxml">Exemple complet — hello-view.fxml<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;?import javafx.scene.control.*?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;?import javafx.scene.layout.*?&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;VBox</span> <span class="na">spacing=</span><span class="s">&#34;15&#34;</span> <span class="na">padding=</span><span class="s">&#34;20&#34;</span> <span class="na">alignment=</span><span class="s">&#34;CENTER&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">xmlns:fx=</span><span class="s">&#34;http://javafx.com/fxml&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">fx:controller=</span><span class="s">&#34;com.exemple.HelloController&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Calculateur de prix&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;HBox</span> <span class="na">spacing=</span><span class="s">&#34;10&#34;</span> <span class="na">alignment=</span><span class="s">&#34;CENTER&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Nom du produit :&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;TextField</span> <span class="na">fx:id=</span><span class="s">&#34;champNom&#34;</span> <span class="na">promptText=</span><span class="s">&#34;ex: Pizza&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/HBox&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;HBox</span> <span class="na">spacing=</span><span class="s">&#34;10&#34;</span> <span class="na">alignment=</span><span class="s">&#34;CENTER&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">&#34;Prix :&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;TextField</span> <span class="na">fx:id=</span><span class="s">&#34;champPrix&#34;</span> <span class="na">promptText=</span><span class="s">&#34;ex: 12.99&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/HBox&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">&#34;Calculer avec 10% de rabais&#34;</span> <span class="na">onAction=</span><span class="s">&#34;#handleCalculer&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;Label</span> <span class="na">fx:id=</span><span class="s">&#34;labelResultat&#34;</span> <span class="na">text=</span><span class="s">&#34;&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/VBox&gt;</span></span></span></code></pre></div>
+<h3 id="exemple-complet--hellocontrollerjava">Exemple complet — HelloController.java<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.fxml.FXML</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.control.Label</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.control.TextField</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloController</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Lier les composants du FXML avec @FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">TextField</span><span class="w"> </span><span class="n">champNom</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">TextField</span><span class="w"> </span><span class="n">champPrix</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="n">labelResultat</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Méthode appelée quand on clique sur le bouton</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handleCalculer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">champNom</span><span class="p">.</span><span class="na">getText</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">prixTexte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">champPrix</span><span class="p">.</span><span class="na">getText</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">prixTexte</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">labelResultat</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&#34;Veuillez remplir tous les champs.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">prixTexte</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">prixAvecRabais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">0</span><span class="p">.</span><span class="na">90</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">labelResultat</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; avec rabais : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&#34;%.2f&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">prixAvecRabais</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;$&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="la-méthode-initialize">La méthode initialize()<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Si tu as besoin d&rsquo;initialiser des composants <strong>au chargement de la vue</strong> (ex: remplir une ComboBox), utilise la méthode <code>initialize()</code> :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initialize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Cette méthode est appelée automatiquement après le chargement du FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">maComboBox</span><span class="p">.</span><span class="na">getItems</span><span class="p">().</span><span class="na">addAll</span><span class="p">(</span><span class="s">&#34;Pizza&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Boisson&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Dessert&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">maComboBox</span><span class="p">.</span><span class="na">setValue</span><span class="p">(</span><span class="s">&#34;Pizza&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// sélection par défaut</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">labelResultat</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// vider le label au démarrage</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h2 id="6-les-événements-et-handlers">6. Les événements et handlers<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="quest-ce-quun-événement-">Qu&rsquo;est-ce qu&rsquo;un événement ?<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Un <strong>événement</strong> est une action déclenchée par l&rsquo;utilisateur : clic de souris, frappe au clavier, déplacement de curseur, etc. Un <strong>handler</strong> (gestionnaire) est la méthode Java qui réagit à cet événement.</p>
+<h3 id="événement-sur-un-bouton--onaction">Événement sur un bouton — onAction<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>C&rsquo;est l&rsquo;événement le plus courant.</p>
+<p>Dans le FXML :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">&#34;Valider&#34;</span> <span class="na">onAction=</span><span class="s">&#34;#handleValider&#34;</span><span class="nt">/&gt;</span></span></span></code></pre></div>
+<p>Dans le contrôleur :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handleValider</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Bouton cliqué !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="événement-sur-un-textfield--au-changement-de-texte">Événement sur un TextField — au changement de texte<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">TextField</span><span class="w"> </span><span class="n">champRecherche</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initialize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Déclenché à chaque fois que le texte change</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">champRecherche</span><span class="p">.</span><span class="na">textProperty</span><span class="p">().</span><span class="na">addListener</span><span class="p">((</span><span class="n">observable</span><span class="p">,</span><span class="w"> </span><span class="n">ancienneValeur</span><span class="p">,</span><span class="w"> </span><span class="n">nouvelleValeur</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Nouveau texte : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nouvelleValeur</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="événement-sur-une-checkbox">Événement sur une CheckBox<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;CheckBox</span> <span class="na">fx:id=</span><span class="s">&#34;maCase&#34;</span> <span class="na">text=</span><span class="s">&#34;Activer&#34;</span> <span class="na">onAction=</span><span class="s">&#34;#handleCase&#34;</span><span class="nt">/&gt;</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handleCase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">maCase</span><span class="p">.</span><span class="na">isSelected</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Case cochée !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Case décochée !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="événement-sur-un-slider">Événement sur un Slider<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">Slider</span><span class="w"> </span><span class="n">monCurseur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="n">labelValeur</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initialize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">monCurseur</span><span class="p">.</span><span class="na">valueProperty</span><span class="p">().</span><span class="na">addListener</span><span class="p">((</span><span class="n">observable</span><span class="p">,</span><span class="w"> </span><span class="n">ancienne</span><span class="p">,</span><span class="w"> </span><span class="n">nouvelle</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">labelValeur</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&#34;Valeur : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">monCurseur</span><span class="p">.</span><span class="na">getValue</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="événement-clavier--onkeypressed">Événement clavier — onKeyPressed<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;TextField</span> <span class="na">fx:id=</span><span class="s">&#34;champTexte&#34;</span> <span class="na">onKeyPressed=</span><span class="s">&#34;#handleTouche&#34;</span><span class="nt">/&gt;</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.input.KeyEvent</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handleTouche</span><span class="p">(</span><span class="n">KeyEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Touche appuyée : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="na">getCode</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Réagir à la touche Entrée</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="na">getCode</span><span class="p">().</span><span class="na">toString</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">&#34;ENTER&#34;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Entrée pressée !&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="afficher-une-alerte--alert">Afficher une alerte — Alert<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Les alertes permettent d&rsquo;afficher des messages à l&rsquo;utilisateur.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.control.Alert</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Alerte d&#39;information</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Alert</span><span class="w"> </span><span class="n">alerte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alert</span><span class="p">(</span><span class="n">Alert</span><span class="p">.</span><span class="na">AlertType</span><span class="p">.</span><span class="na">INFORMATION</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">alerte</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&#34;Information&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">alerte</span><span class="p">.</span><span class="na">setHeaderText</span><span class="p">(</span><span class="s">&#34;Opération réussie&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">alerte</span><span class="p">.</span><span class="na">setContentText</span><span class="p">(</span><span class="s">&#34;Le produit a été ajouté à la commande.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">alerte</span><span class="p">.</span><span class="na">showAndWait</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Alerte d&#39;erreur</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Alert</span><span class="w"> </span><span class="n">erreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alert</span><span class="p">(</span><span class="n">Alert</span><span class="p">.</span><span class="na">AlertType</span><span class="p">.</span><span class="na">ERROR</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">erreur</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&#34;Erreur&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">erreur</span><span class="p">.</span><span class="na">setHeaderText</span><span class="p">(</span><span class="s">&#34;Champ invalide&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">erreur</span><span class="p">.</span><span class="na">setContentText</span><span class="p">(</span><span class="s">&#34;Veuillez entrer un prix valide.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">erreur</span><span class="p">.</span><span class="na">showAndWait</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Alerte de confirmation</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Alert</span><span class="w"> </span><span class="n">confirmation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alert</span><span class="p">(</span><span class="n">Alert</span><span class="p">.</span><span class="na">AlertType</span><span class="p">.</span><span class="na">CONFIRMATION</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">confirmation</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&#34;Confirmation&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">confirmation</span><span class="p">.</span><span class="na">setHeaderText</span><span class="p">(</span><span class="s">&#34;Supprimer le produit ?&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">confirmation</span><span class="p">.</span><span class="na">setContentText</span><span class="p">(</span><span class="s">&#34;Cette action est irréversible.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">ButtonType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">confirmation</span><span class="p">.</span><span class="na">showAndWait</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resultat</span><span class="p">.</span><span class="na">isPresent</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">resultat</span><span class="p">.</span><span class="na">get</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ButtonType</span><span class="p">.</span><span class="na">OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;L&#39;utilisateur a confirmé.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="validation-des-champs">Validation des champs<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Bonne pratique : toujours valider les champs avant de les utiliser.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@FXML</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handleAjouter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">champNom</span><span class="p">.</span><span class="na">getText</span><span class="p">().</span><span class="na">trim</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">prixTexte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">champPrix</span><span class="p">.</span><span class="na">getText</span><span class="p">().</span><span class="na">trim</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Vérifier que les champs ne sont pas vides</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">afficherErreur</span><span class="p">(</span><span class="s">&#34;Le nom ne peut pas être vide.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Vérifier que le prix est un nombre valide</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">prix</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">prix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">prixTexte</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">afficherErreur</span><span class="p">(</span><span class="s">&#34;Le prix doit être un nombre valide.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Vérifier que le prix est positif</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">prix</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">afficherErreur</span><span class="p">(</span><span class="s">&#34;Le prix doit être supérieur à 0.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Si tout est valide, continuer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">labelResultat</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&#34;Produit ajouté : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; à &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;$&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficherErreur</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Alert</span><span class="w"> </span><span class="n">erreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alert</span><span class="p">(</span><span class="n">Alert</span><span class="p">.</span><span class="na">AlertType</span><span class="p">.</span><span class="na">ERROR</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">erreur</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&#34;Erreur de saisie&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">erreur</span><span class="p">.</span><span class="na">setHeaderText</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">erreur</span><span class="p">.</span><span class="na">setContentText</span><span class="p">(</span><span class="n">message</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">erreur</span><span class="p">.</span><span class="na">showAndWait</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<hr>
+<h2 id="7-exercices-pratiques">7. Exercices pratiques<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<hr>
+<h3 id="exercice-1--calculateur-de-rabais">Exercice 1 — Calculateur de rabais<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Objectif</strong> : Créer une interface qui calcule le prix d&rsquo;un produit après rabais.</p>
+<p><strong>Interface à créer dans SceneBuilder :</strong></p>
+<ul>
+<li>Un <code>TextField</code> pour le nom du produit</li>
+<li>Un <code>TextField</code> pour le prix original</li>
+<li>Un <code>Slider</code> de 0 à 50 qui représente le pourcentage de rabais</li>
+<li>Un <code>Label</code> qui affiche le pourcentage du slider en temps réel (ex: <code>Rabais : 20%</code>)</li>
+<li>Un <code>Button</code> &ldquo;Calculer&rdquo;</li>
+<li>Un <code>Label</code> pour afficher le résultat</li>
+</ul>
+<p><strong>Comportement attendu :</strong></p>
+<ul>
+<li>Quand l&rsquo;utilisateur bouge le slider, le label du pourcentage se met à jour immédiatement</li>
+<li>Quand l&rsquo;utilisateur clique sur &ldquo;Calculer&rdquo;, le label résultat affiche : <code>Pizza : 10.39$ (rabais de 20%)</code></li>
+<li>Si un champ est vide ou invalide, une alerte d&rsquo;erreur s&rsquo;affiche</li>
+</ul>
+<hr>
+<h3 id="exercice-2--formulaire-dajout-de-produit">Exercice 2 — Formulaire d&rsquo;ajout de produit<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Objectif</strong> : Créer un formulaire qui permet d&rsquo;ajouter un produit à une liste.</p>
+<p><strong>Interface à créer dans SceneBuilder :</strong></p>
+<ul>
+<li>Un <code>TextField</code> pour le nom</li>
+<li>Un <code>TextField</code> pour le prix</li>
+<li>Une <code>ComboBox</code> avec les catégories : <code>Pizza</code>, <code>Boisson</code>, <code>Dessert</code></li>
+<li>Un <code>Button</code> &ldquo;Ajouter&rdquo;</li>
+<li>Un <code>TextArea</code> (non modifiable) qui affiche la liste des produits ajoutés</li>
+<li>Un <code>Label</code> qui affiche le total</li>
+</ul>
+<p><strong>Comportement attendu :</strong></p>
+<ul>
+<li>Quand on clique sur &ldquo;Ajouter&rdquo;, le produit s&rsquo;ajoute à la <code>TextArea</code> et le total se met à jour</li>
+<li>Les champs <code>TextField</code> se vident après l&rsquo;ajout</li>
+<li>Si un champ est vide, une alerte s&rsquo;affiche</li>
+</ul>
+<hr>
+<h3 id="exercice-3--mini-commande-de-repas-projet-intégré">Exercice 3 — Mini commande de repas (projet intégré)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>Objectif</strong> : Créer une interface graphique pour le projet de commande de repas.</p>
+<p><strong>Interface suggérée :</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>┌─────────────────────────────────────────────┐
+│  COMMANDE DE REPAS          [Nouvelle cmd]  │
+├──────────────────────┬──────────────────────┤
+│  Ajouter un produit  │  Commande en cours   │
+│                      │                      │
+│  Nom : [________]    │  • Pizza Medium 12$  │
+│  Prix : [_______]    │  • Coca-Cola    3$   │
+│                      │  • Tiramisu     7$   │
+│  Type :              │                      │
+│  ○ Pizza             │  ──────────────────  │
+│  ○ Boisson           │  Total : 22.00$      │
+│  ○ Dessert           │                      │
+│                      │  Rabais : [__]%      │
+│  [   Ajouter   ]     │  [Appliquer rabais]  │
+└──────────────────────┴──────────────────────┘</code></pre></div>
+<p><strong>Comportement attendu :</strong></p>
+<ul>
+<li>Sélectionner le type de produit avec les <code>RadioButton</code></li>
+<li>Selon le type sélectionné, des champs supplémentaires apparaissent (ex: taille pour Pizza, volume pour Boisson)</li>
+<li>Le bouton &ldquo;Ajouter&rdquo; ajoute le produit à la liste et met à jour le total</li>
+<li>Le bouton &ldquo;Appliquer rabais&rdquo; recalcule le total avec le rabais entré</li>
+<li>Le bouton &ldquo;Nouvelle commande&rdquo; vide la liste</li>
+</ul>
+<hr>
+<h3 id="conseils-généraux">Conseils généraux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Toujours utiliser <code>fx:id</code> pour les composants auxquels tu dois accéder depuis le contrôleur</li>
+<li>Ne jamais oublier <code>@FXML</code> devant les attributs et méthodes liés au FXML</li>
+<li>Toujours valider les champs avant de les utiliser</li>
+<li>Utiliser <code>initialize()</code> pour configurer les composants au démarrage</li>
+<li>En cas d&rsquo;erreur <code>NullPointerException</code>, vérifier que le <code>fx:id</code> dans le FXML correspond exactement au nom de l&rsquo;attribut dans le contrôleur</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><a id="R-logo" 
+   style="display: flex; justify-content: center; align-items: center; text-decoration: none;" 
+   href="/420-210/index.html">
+
+    <img src="/420-210/images/logo.png" width="40" height="40" alt="logo" style="margin-right: 8px;">
+
+    <div style="display: flex; flex-direction: column; font-size: 130%; text-align: center;">
+        <span>Programmation orientée objet</span>
+    </div>
+</a>
+
+        <search><form action="/420-210/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/420-210/index.html"><a class="padding" href="/420-210/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/420-210/intro/index.html"><a class="padding" href="/420-210/intro/index.html">Introduction</a></li>
+            <li class="" data-nav-id="/420-210/variables/index.html"><a class="padding" href="/420-210/variables/index.html">Variables</a></li>
+            <li class="" data-nav-id="/420-210/operateurs/index.html"><a class="padding" href="/420-210/operateurs/index.html">Opérateurs</a></li>
+            <li class="" data-nav-id="/420-210/structures/index.html"><a class="padding" href="/420-210/structures/index.html">Structures de contrôle</a></li>
+            <li class="" data-nav-id="/420-210/methodes/index.html"><a class="padding" href="/420-210/methodes/index.html">Méthodes</a></li>
+            <li class="" data-nav-id="/420-210/tableaux/index.html"><a class="padding" href="/420-210/tableaux/index.html">Tableaux</a></li>
+            <li class="" data-nav-id="/420-210/exo_revisions/index.html"><a class="padding" href="/420-210/exo_revisions/index.html">Exercices de révision</a></li>
+            <li class="" data-nav-id="/420-210/poo/index.html"><a class="padding" href="/420-210/poo/index.html">Introduction à POO</a></li>
+            <li class="" data-nav-id="/420-210/arrayList/index.html"><a class="padding" href="/420-210/arrayList/index.html">De tableau à arrayList</a></li>
+            <li class="" data-nav-id="/420-210/poo_2/index.html"><a class="padding" href="/420-210/poo_2/index.html">Programmation orientée objet - 2</a></li>
+            <li class="" data-nav-id="/420-210/poo_3/index.html"><a class="padding" href="/420-210/poo_3/index.html">Programmation orientée objet - 3</a></li>
+            <li class="" data-nav-id="/420-210/exos_poo/index.html"><a class="padding" href="/420-210/exos_poo/index.html">Exercices - POO</a></li>
+            <li class="" data-nav-id="/420-210/biblioGame/index.html"><a class="padding" href="/420-210/biblioGame/index.html">BiblioAventure</a></li>
+            <li class="active " data-nav-id="/420-210/java_fx/index.html"><a class="padding" href="/420-210/java_fx/index.html">Java FX</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-learn" value="learn" selected>Learn</option>
+                    <option id="R-select-variant-relearn-auto" value="relearn-auto">Relearn Light/Dark</option>
+                    <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                    <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                    <option id="R-select-variant-neon" value="neon">Neon</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"></div>
+      </div>
+    </aside>
+    <script src="/420-210/js/perfect-scrollbar/perfect-scrollbar.min.js?1775670648" defer></script>
+    <script src="/420-210/js/theme.js?1775670648" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

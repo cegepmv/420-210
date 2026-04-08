@@ -89,7 +89,7 @@
       <link>http://localhost:1313/420-210/exos_poo/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-210/exos_poo/index.html</guid>
-      <description>Exercices de Programmation Orientée Objet - Complet Ce document contient des exercices détaillés couvrant toutes les notions de POO vues dans les cours, organisés par niveau de difficulté.&#xA;Table des matières Niveau Débutant (⭐) Classes et objets basiques Attributs et méthodes Constructeurs Getters et Setters Niveau Intermédiaire (⭐⭐) Encapsulation Héritage Surcharge de méthodes Static et Final Collections de base Niveau Avancé (⭐⭐⭐) Polymorphisme Classes abstraites Interfaces Exceptions Collections avancées Enum Niveau Expert (⭐⭐⭐⭐) Projets intégrateurs Principes SOLID Composition vs Héritage Exercices Niveau Débutant ⭐ Exercice 1.1 — Classe Livre Objectifs : Classes, attributs, constructeur basique</description>
+      <description>Exercices de Programmation Orientée Objet - Complet Ce document contient des exercices détaillés couvrant toutes les notions de POO vues dans les cours, organisés par niveau de difficulté.&#xA;Table des matières Niveau Débutant (⭐) Classes et objets basiques Attributs et méthodes Constructeurs Getters et Setters Niveau Intermédiaire (⭐⭐) Encapsulation Héritage Surcharge de méthodes Static et Final Collections de base Niveau Avancé (⭐⭐⭐) Polymorphisme Classes abstraites Interfaces Exceptions Collections avancées Enum Niveau Expert (⭐⭐⭐⭐) Projets intégrateurs Principes SOLID Composition vs Héritage Exercice POO — Arène de Combat ⚔️ Contexte Tu dois modéliser un petit jeu de rôle en arène. Des héros de différentes classes s’affrontent. Chaque type de héros a ses propres capacités spéciales, mais ils partagent tous des caractéristiques de base.</description>
     </item>
     <item>
       <title>BiblioAventure</title>
@@ -97,6 +97,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-210/biblioGame/index.html</guid>
       <description>🎮 PROJET CODEX ARCANUM - L’AVENTURE COMPLÈTE DE LA POO ! 🌟 Bienvenue dans l’Aventure des Bibliothèques Légendaires ! 🌟 🎵 Musique d’Aventure Épique 🎵 🎵 Thème d&#39;aventure épique&#xD;🎧 Active le son pour une expérience immersive !</description>
+    </item>
+    <item>
+      <title>Java FX</title>
+      <link>http://localhost:1313/420-210/java_fx/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-210/java_fx/index.html</guid>
+      <description>Notes de cours — JavaFX avec SceneBuilder Table des matières Introduction à JavaFX et SceneBuilder Structure d’un projet JavaFX Mise en page — Layouts Les composants de base FXML et lien avec le contrôleur Les événements et handlers Exercices pratiques 1. Introduction à JavaFX et SceneBuilder Qu’est-ce que JavaFX ? JavaFX est une bibliothèque Java qui permet de créer des interfaces graphiques (GUI — Graphical User Interface). C’est ce qui permet de créer des fenêtres, des boutons, des champs de texte, etc.</description>
     </item>
   </channel>
 </rss>
