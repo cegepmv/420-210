@@ -2,7 +2,7 @@
 title = "Java FX"
 weight = 14
 +++
-# Notes de cours — JavaFX avec SceneBuilder
+# JavaFX avec SceneBuilder
 
 ---
 

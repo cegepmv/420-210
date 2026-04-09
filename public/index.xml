@@ -103,7 +103,14 @@
       <link>http://localhost:1313/420-210/java_fx/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-210/java_fx/index.html</guid>
-      <description>Notes de cours — JavaFX avec SceneBuilder Table des matières Introduction à JavaFX et SceneBuilder Structure d’un projet JavaFX Mise en page — Layouts Les composants de base FXML et lien avec le contrôleur Les événements et handlers Exercices pratiques 1. Introduction à JavaFX et SceneBuilder Qu’est-ce que JavaFX ? JavaFX est une bibliothèque Java qui permet de créer des interfaces graphiques (GUI — Graphical User Interface). C’est ce qui permet de créer des fenêtres, des boutons, des champs de texte, etc.</description>
+      <description>JavaFX avec SceneBuilder Table des matières Introduction à JavaFX et SceneBuilder Structure d’un projet JavaFX Mise en page — Layouts Les composants de base FXML et lien avec le contrôleur Les événements et handlers Exercices pratiques 1. Introduction à JavaFX et SceneBuilder Qu’est-ce que JavaFX ? JavaFX est une bibliothèque Java qui permet de créer des interfaces graphiques (GUI — Graphical User Interface). C’est ce qui permet de créer des fenêtres, des boutons, des champs de texte, etc.</description>
+    </item>
+    <item>
+      <title>Fichiers</title>
+      <link>http://localhost:1313/420-210/fichiers/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-210/fichiers/index.html</guid>
+      <description>Lecture et écriture de fichiers en Java Table des matières Lecture et écriture de fichiers texte Lecture et écriture de fichiers binaires La classe File et Files Gestion des exceptions JSON avec Gson JSON avec Jackson Mini-projets 1. Lecture et écriture de fichiers texte Pourquoi sauvegarder dans un fichier ? Quand un programme Java s’exécute, toutes les données qu’il crée (objets, listes, variables) sont stockées dans la mémoire vive (RAM). Dès que le programme se termine, ces données disparaissent.</description>
     </item>
   </channel>
 </rss>
