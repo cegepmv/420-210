@@ -557,135 +557,227 @@ int position = JourSemaine.MERCREDI.ordinal();  // 2
 
 ## 7. Gestion des exceptions
 
-Les exceptions permettent de gérer les erreurs de manière élégante.
+La gestion des exceptions en Java permet de gérer les erreurs et les situations imprévues qui se produisent pendant l'exécution d'un programme. Les exceptions peuvent être causées par des erreurs de programmation, des conditions inattendues ou des problèmes rencontrés lors de l'exécution du programme. Java fournit un mécanisme robuste pour gérer ces exceptions.
 
-### 7.1 Try-Catch basique
+Voici comment fonctionne la gestion des exceptions en Java :
+
+### 1. **Les Exceptions (try-catch-finally)**
+
+L'une des méthodes les plus courantes pour gérer les erreurs en Java est l'utilisation de blocs `try`, `catch` et `finally`.
+
+- **try** : Le bloc dans lequel le code susceptible de générer une exception est écrit.
+- **catch** : Le bloc qui permet de capturer l'exception générée et de la gérer.
+- **finally** : Un bloc qui sera toujours exécuté, qu'une exception soit levée ou non, généralement pour libérer les ressources.
+
+Exemple :
 
 ```java
-public class GestionErreurs {
-    public static void main(String[] args) {
-        try {
-            int[] tableau = {1, 2, 3};
-            System.out.println(tableau[10]);  // Index invalide
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Erreur : index hors limites");
-            e.printStackTrace();
-        }
-        
-        System.out.println("Le programme continue...");
+try {
+    int result = 10 / 0;  // Division par zéro qui va lever une exception ArithmeticException
+} catch (ArithmeticException e) {
+    System.out.println("Erreur: " + e.getMessage());
+} finally {
+    System.out.println("Bloc finally exécuté.");
+}
+```
+
+### 2. **Les exceptions vérifiées (Checked Exceptions)**
+
+Les exceptions vérifiées sont celles que le compilateur oblige à gérer. Elles doivent soit être capturées avec un `try-catch`, soit être déclarées dans la signature de la méthode à l'aide du mot-clé `throws`.
+
+Exemple avec une exception vérifiée :
+
+```java
+public void readFile(String filename) throws IOException {
+    FileReader file = new FileReader(filename);  // Peut lancer IOException
+}
+```
+
+Dans ce cas, l'appelant de la méthode `readFile` doit gérer ou déclarer l'exception `IOException`.
+
+### 3. **Les exceptions non vérifiées (Unchecked Exceptions)**
+
+Les exceptions non vérifiées (ou runtime exceptions) sont celles qui ne sont pas vérifiées par le compilateur. Ce sont des exceptions qui peuvent survenir pendant l'exécution du programme, mais le compilateur ne vous oblige pas à les capturer ou à les déclarer.
+
+Exemple d'une exception non vérifiée :
+
+```java
+public void divide(int a, int b) {
+    int result = a / b;  // Diviser par zéro lèvera ArithmeticException
+}
+```
+
+### 4. **Les exceptions personnalisées (Custom Exceptions)**
+
+Il est possible de créer ses propres exceptions en Java. Pour ce faire, il faut étendre la classe `Exception` ou `RuntimeException` en fonction de si vous voulez créer une exception vérifiée ou non vérifiée.
+
+Exemple :
+
+```java
+class NegativeValueException extends Exception {
+    public NegativeValueException(String message) {
+        super(message);
+    }
+}
+
+public void checkValue(int value) throws NegativeValueException {
+    if (value < 0) {
+        throw new NegativeValueException("La valeur ne peut pas être négative.");
     }
 }
 ```
 
-### 7.2 Blocs multiples catch
+### 5. **Le mot-clé `throw`**
+
+Le mot-clé `throw` permet de lancer une exception explicitement dans le code.
+
+Exemple :
 
 ```java
-public void lireFichier(String chemin) {
+public void checkNumber(int number) {
+    if (number < 0) {
+        throw new IllegalArgumentException("Le nombre ne peut pas être négatif.");
+    }
+}
+```
+
+### 6. **Le mot-clé `throws`**
+
+
+${\textbf{\textsf{\color{red}Le point 6 reste dans les notes de cours, mais ne sera pas à l'examen}}}$
+
+Le mot-clé `throws` est utilisé pour déclarer qu'une méthode peut lancer certaines exceptions. Cela permet de propager une exception à un niveau supérieur, à condition que l'exception soit vérifiée.
+
+Exemple :
+
+```java
+public void readFile() throws IOException {
+    FileReader file = new FileReader("nonexistentfile.txt");
+}
+```
+
+
+## Liste des exceptions à savoir utiliser
+
+---
+
+### **1. Exceptions vérifiées (Checked Exceptions)**
+
+- **`IOException`** : Exception liée aux erreurs d'entrée/sortie (lecture/écriture de fichiers, réseau, etc.).
+    - Exemple : Erreur de lecture/écriture d'un fichier, réseau, etc.
+    - **Utilisation** : Lors de la manipulation de fichiers ou de flux de données.
+
+    ```java
     try {
-        FileReader fichier = new FileReader(chemin);
-        BufferedReader lecteur = new BufferedReader(fichier);
-        String ligne = lecteur.readLine();
-        int nombre = Integer.parseInt(ligne);
-        
-    } catch (FileNotFoundException e) {
-        System.out.println("Fichier introuvable");
-    } catch (IOException e) {
-        System.out.println("Erreur de lecture");
-    } catch (NumberFormatException e) {
-        System.out.println("Format de nombre invalide");
-    }
-}
-```
-
-### 7.3 Finally
-
-Le bloc `finally` s'exécute **toujours**, qu'il y ait une exception ou non.
-
-```java
-public void traiterFichier(String chemin) {
-    FileReader fichier = null;
-    try {
-        fichier = new FileReader(chemin);
-        // Traitement...
-    } catch (IOException e) {
-        System.out.println("Erreur : " + e.getMessage());
-    } finally {
-        // S'exécute TOUJOURS
-        if (fichier != null) {
-            try {
-                fichier.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-}
-```
-
-### 7.4 Try-with-resources (Java 7+)
-
-Ferme automatiquement les ressources.
-
-```java
-public void lireFichier(String chemin) {
-    try (FileReader fichier = new FileReader(chemin);
-         BufferedReader lecteur = new BufferedReader(fichier)) {
-        
-        String ligne = lecteur.readLine();
-        System.out.println(ligne);
-        
+        BufferedReader reader = new BufferedReader(new FileReader("file.txt"));
     } catch (IOException e) {
         e.printStackTrace();
     }
-    // fichier et lecteur sont automatiquement fermés
-}
-```
+    ```
 
-### 7.5 Lancer des exceptions
+- **`FileNotFoundException`** : Exception lorsqu'un fichier spécifié n'est pas trouvé.
+    - Exemple : Lorsque vous tentez de lire un fichier qui n'existe pas.
+    - **Utilisation** : Lors de la gestion de fichiers.
 
-```java
-public class CompteBancaire {
-    private double solde;
-    
-    public void retirer(double montant) throws Exception {
-        if (montant > solde) {
-            throw new Exception("Fonds insuffisants");
+    ```java
+    try {
+        FileInputStream file = new FileInputStream("file.txt");
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+    }
+    ```
+---
+
+### **2. Exceptions non vérifiées (Unchecked Exceptions)**
+
+Ces exceptions n'ont pas besoin d'être capturées ou déclarées dans la signature de la méthode. Elles sont souvent utilisées pour des erreurs logiques ou des erreurs inattendues durant l'exécution.
+
+- **`NullPointerException`** : Se produit lorsqu'une référence `null` est utilisée pour appeler une méthode ou accéder à une propriété.
+    - Exemple : Appeler une méthode sur un objet qui est `null`.
+    - **Utilisation** : Éviter de référencer des objets qui peuvent être `null`.
+
+    ```java
+    String str = null;
+    int length = str.length();  // Lancerait une NullPointerException
+    ```
+
+- **`ArrayIndexOutOfBoundsException`** : Se produit lorsqu'on tente d'accéder à un indice invalide dans un tableau.
+    - Exemple : Accéder à un élément en dehors des limites d'un tableau.
+    - **Utilisation** : Vérifiez toujours les indices avant d'accéder à un tableau.
+
+    ```java
+    int[] arr = new int[5];
+    System.out.println(arr[10]);  // Lancerait une ArrayIndexOutOfBoundsException
+    ```
+
+- **`ArithmeticException`** : Se produit lors d'une opération arithmétique illégale, comme une division par zéro.
+    - Exemple : Diviser par zéro.
+    - **Utilisation** : Toujours vérifier les diviseurs avant d'effectuer une division.
+
+    ```java
+    int result = 10 / 0;  // Lancerait une ArithmeticException
+    ```
+
+- **`IllegalArgumentException`** : Se produit lorsqu'un argument passé à une méthode est illégal ou inapproprié.
+    - Exemple : Passer un argument invalide à une méthode.
+    - **Utilisation** : Vérifiez toujours les valeurs d'entrée avant de les utiliser dans une méthode.
+
+    ```java
+    void setAge(int age) {
+        if (age < 0) {
+            throw new IllegalArgumentException("Age ne peut pas être négatif");
         }
-        solde -= montant;
     }
-}
+    ```
 
-// Utilisation
+
+- **`IndexOutOfBoundsException`** : Se produit lorsqu'on tente d'accéder à un index en dehors des limites dans une collection (ex. `ArrayList`, `String`, etc.).
+    - Exemple : Accéder à un index qui est en dehors des limites d'une liste.
+    - **Utilisation** : Toujours vérifier la taille avant d'accéder à un index.
+
+    ```java
+    List<String> list = new ArrayList<>();
+    list.add("Item");
+    System.out.println(list.get(2));  // Lancerait une IndexOutOfBoundsException
+    ```
+
+---
+
+## Exceptions
+
+Sinon vous pouvez utiliser **Exceptions**, mais vous perdrez des points, car :
+
+Il est préférable de ne pas utiliser Exception directement, mais plutôt ses sous-classes spécifiques, car cela permet une gestion plus précise des erreurs. En capturant des exceptions spécifiques, tu peux traiter des situations particulières de manière plus appropriée, améliorer la lisibilité du code, et mieux comprendre les erreurs. Utiliser des exceptions générales comme Exception rend le code moins clair et moins robuste, car cela masque la nature des erreurs spécifiques.
+
+Exemple :
+
+```java
+Scanner scan = new Scanner(System.in);
 try {
-    compte.retirer(1000.0);
-} catch (Exception e) {
-    System.out.println(e.getMessage());
+    int n = scan.nextInt();
+    int result = 10 / n;  // Division par zéro qui va lever une exception ArithmeticException
+
+} catch (Exceptions e) {
+    System.out.println("Erreur: " + e);
+}finally {
+    System.out.println("Bloc finally exécuté.");
 }
 ```
 
-### 7.6 Créer des exceptions personnalisées
-
 ```java
-public class SoldeInsuffisantException extends Exception {
-    private double soldeActuel;
-    private double montantDemande;
-    
-    public SoldeInsuffisantException(double soldeActuel, double montantDemande) {
-        super("Solde insuffisant : " + soldeActuel + " < " + montantDemande);
-        this.soldeActuel = soldeActuel;
-        this.montantDemande = montantDemande;
-    }
-    
-    public double getSoldeActuel() { return soldeActuel; }
-    public double getMontantDemande() { return montantDemande; }
-}
+Scanner scan = new Scanner(System.in);
+try {
+    int n = scan.nextInt();
+    int result = 10 / n;  // Division par zéro qui va lever une exception ArithmeticException
 
-// Utilisation
-public void retirer(double montant) throws SoldeInsuffisantException {
-    if (montant > solde) {
-        throw new SoldeInsuffisantException(solde, montant);
-    }
-    solde -= montant;
+} catch (ArithmeticException e) {
+    System.out.println("0 n'est pas une entrée valide");
+} 
+catch(InputMismatchException e){
+    System.out.println("Il faut entrer un entier");
+
+}finally {
+    System.out.println("Bloc finally exécuté.");
 }
 ```
 

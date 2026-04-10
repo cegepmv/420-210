@@ -112,5 +112,12 @@
       <guid>http://localhost:1313/420-210/fichiers/index.html</guid>
       <description>Lecture et écriture de fichiers en Java Table des matières Lecture et écriture de fichiers texte Lecture et écriture de fichiers binaires La classe File et Files Gestion des exceptions JSON avec Gson JSON avec Jackson Mini-projets 1. Lecture et écriture de fichiers texte Pourquoi sauvegarder dans un fichier ? Quand un programme Java s’exécute, toutes les données qu’il crée (objets, listes, variables) sont stockées dans la mémoire vive (RAM). Dès que le programme se termine, ces données disparaissent.</description>
     </item>
+    <item>
+      <title>Fichiers</title>
+      <link>http://localhost:1313/420-210/dates/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-210/dates/index.html</guid>
+      <description>Les Dates en Java - Notes de cours Introduction En Java, il existe plusieurs façons de manipuler les dates et les heures. Depuis Java 8 (2014), le package java.time est la méthode moderne et recommandée pour travailler avec les dates.&#xA;Ce package offre des classes :</description>
+    </item>
   </channel>
 </rss>

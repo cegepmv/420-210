@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fichiers :: Programmation orientée objet</title>
+    <link>http://localhost:1313/420-210/dates-copy/index.html</link>
+    <description>Les Dates en Java - Notes de cours Introduction En Java, il existe plusieurs façons de manipuler les dates et les heures. Depuis Java 8 (2014), le package java.time est la méthode moderne et recommandée pour travailler avec les dates.&#xA;Ce package offre des classes :</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <atom:link href="http://localhost:1313/420-210/dates-copy/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

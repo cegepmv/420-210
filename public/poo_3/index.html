@@ -19,29 +19,29 @@
     <meta property="article:section" content="Programmation orientée objet">
     <meta itemprop="name" content="Programmation orientée objet - 3 :: Programmation orientée objet">
     <meta itemprop="description" content="Table des matières Niveaux d’accès (Modificateurs de visibilité) Packages et organisation du code Méthodes et variables statiques Classes imbriquées (Inner classes) Le mot-clé final Énumérations (enum) Gestion des exceptions Composition vs Héritage Principes SOLID Collections Java 1. Niveaux d’accès (Modificateurs de visibilité) Java propose 4 niveaux d’accès pour contrôler qui peut accéder à vos classes, attributs et méthodes.">
-    <meta itemprop="wordCount" content="5110">
+    <meta itemprop="wordCount" content="5836">
     <title>Programmation orientée objet - 3 :: Programmation orientée objet</title>
-    <link href="/420-210/images/favicon.png?1775703703" rel="icon" type="image/png">
-    <link href="/420-210/css/auto-complete/auto-complete.min.css?1775703703" rel="stylesheet">
-    <script src="/420-210/js/auto-complete/auto-complete.min.js?1775703703" defer></script>
-    <script src="/420-210/js/search-lunr.js?1775703703" defer></script>
-    <script src="/420-210/js/search.js?1775703703" defer></script>
+    <link href="/420-210/images/favicon.png?1775811188" rel="icon" type="image/png">
+    <link href="/420-210/css/auto-complete/auto-complete.min.css?1775811188" rel="stylesheet">
+    <script src="/420-210/js/auto-complete/auto-complete.min.js?1775811188" defer></script>
+    <script src="/420-210/js/search-lunr.js?1775811188" defer></script>
+    <script src="/420-210/js/search.js?1775811188" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/420-210/searchindex.en.js?1775703703";
+      window.relearn.index_js_url="/420-210/searchindex.en.js?1775811188";
     </script>
-    <script src="/420-210/js/lunr/lunr.min.js?1775703703" defer></script>
-    <script src="/420-210/js/lunr/lunr.stemmer.support.min.js?1775703703" defer></script>
-    <script src="/420-210/js/lunr/lunr.multi.min.js?1775703703" defer></script>
-    <script src="/420-210/js/lunr/lunr.fr.min.js?1775703703" defer></script>
+    <script src="/420-210/js/lunr/lunr.min.js?1775811188" defer></script>
+    <script src="/420-210/js/lunr/lunr.stemmer.support.min.js?1775811188" defer></script>
+    <script src="/420-210/js/lunr/lunr.multi.min.js?1775811188" defer></script>
+    <script src="/420-210/js/lunr/lunr.fr.min.js?1775811188" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['fr'];
     </script>
-    <link href="/420-210/fonts/fontawesome/css/all.min.css?1775703703" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-210/fonts/fontawesome/css/all.min.css?1775703703" rel="stylesheet"></noscript>
-    <link href="/420-210/css/perfect-scrollbar/perfect-scrollbar.min.css?1775703703" rel="stylesheet">
-    <link href="/420-210/css/theme.css?1775703703" rel="stylesheet">
-    <link href="/420-210/css/format-html.css?1775703703" rel="stylesheet" id="R-format-style">
+    <link href="/420-210/fonts/fontawesome/css/all.min.css?1775811188" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-210/fonts/fontawesome/css/all.min.css?1775811188" rel="stylesheet"></noscript>
+    <link href="/420-210/css/perfect-scrollbar/perfect-scrollbar.min.css?1775811188" rel="stylesheet">
+    <link href="/420-210/css/theme.css?1775811188" rel="stylesheet">
+    <link href="/420-210/css/format-html.css?1775811188" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -162,14 +162,21 @@
     </li>
     <li><a href="#7-gestion-des-exceptions">7. Gestion des exceptions</a>
       <ul>
-        <li><a href="#71-try-catch-basique">7.1 Try-Catch basique</a></li>
-        <li><a href="#72-blocs-multiples-catch">7.2 Blocs multiples catch</a></li>
-        <li><a href="#73-finally">7.3 Finally</a></li>
-        <li><a href="#74-try-with-resources-java-7">7.4 Try-with-resources (Java 7+)</a></li>
-        <li><a href="#75-lancer-des-exceptions">7.5 Lancer des exceptions</a></li>
-        <li><a href="#76-créer-des-exceptions-personnalisées">7.6 Créer des exceptions personnalisées</a></li>
+        <li><a href="#1-les-exceptions-try-catch-finally">1. <strong>Les Exceptions (try-catch-finally)</strong></a></li>
+        <li><a href="#2-les-exceptions-vérifiées-checked-exceptions">2. <strong>Les exceptions vérifiées (Checked Exceptions)</strong></a></li>
+        <li><a href="#3-les-exceptions-non-vérifiées-unchecked-exceptions">3. <strong>Les exceptions non vérifiées (Unchecked Exceptions)</strong></a></li>
+        <li><a href="#4-les-exceptions-personnalisées-custom-exceptions">4. <strong>Les exceptions personnalisées (Custom Exceptions)</strong></a></li>
+        <li><a href="#5-le-mot-clé">5. <strong>Le mot-clé <code>throw</code></strong></a></li>
+        <li><a href="#6-le-mot-clé">6. <strong>Le mot-clé <code>throws</code></strong></a></li>
       </ul>
     </li>
+    <li><a href="#liste-des-exceptions-à-savoir-utiliser">Liste des exceptions à savoir utiliser</a>
+      <ul>
+        <li><a href="#1-exceptions-vérifiées-checked-exceptions"><strong>1. Exceptions vérifiées (Checked Exceptions)</strong></a></li>
+        <li><a href="#2-exceptions-non-vérifiées-unchecked-exceptions"><strong>2. Exceptions non vérifiées (Unchecked Exceptions)</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exceptions">Exceptions</a></li>
     <li><a href="#8-composition-vs-héritage">8. Composition vs Héritage</a>
       <ul>
         <li><a href="#81-le-problème-avec-lhéritage">8.1 Le problème avec l&rsquo;héritage</a></li>
@@ -705,110 +712,175 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JourSemaine</span><span class="p">.</span><span class="na">MERCREDI</span><span class="p">.</span><span class="na">ordinal</span><span class="p">();</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">2</span></span></span></code></pre></div>
 <hr>
 <h2 id="7-gestion-des-exceptions">7. Gestion des exceptions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>Les exceptions permettent de gérer les erreurs de manière élégante.</p>
-<h3 id="71-try-catch-basique">7.1 Try-Catch basique<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GestionErreurs</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">tableau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">};</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tableau</span><span class="o">[</span><span class="n">10</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="c1">// Index invalide</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArrayIndexOutOfBoundsException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Erreur : index hors limites&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Le programme continue...&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+<p>La gestion des exceptions en Java permet de gérer les erreurs et les situations imprévues qui se produisent pendant l&rsquo;exécution d&rsquo;un programme. Les exceptions peuvent être causées par des erreurs de programmation, des conditions inattendues ou des problèmes rencontrés lors de l&rsquo;exécution du programme. Java fournit un mécanisme robuste pour gérer ces exceptions.</p>
+<p>Voici comment fonctionne la gestion des exceptions en Java :</p>
+<h3 id="1-les-exceptions-try-catch-finally">1. <strong>Les Exceptions (try-catch-finally)</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>L&rsquo;une des méthodes les plus courantes pour gérer les erreurs en Java est l&rsquo;utilisation de blocs <code>try</code>, <code>catch</code> et <code>finally</code>.</p>
+<ul>
+<li><strong>try</strong> : Le bloc dans lequel le code susceptible de générer une exception est écrit.</li>
+<li><strong>catch</strong> : Le bloc qui permet de capturer l&rsquo;exception générée et de la gérer.</li>
+<li><strong>finally</strong> : Un bloc qui sera toujours exécuté, qu&rsquo;une exception soit levée ou non, généralement pour libérer les ressources.</li>
+</ul>
+<p>Exemple :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Division par zéro qui va lever une exception ArithmeticException</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Erreur: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Bloc finally exécuté.&#34;</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
-<h3 id="72-blocs-multiples-catch">7.2 Blocs multiples catch<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">lireFichier</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">chemin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">FileReader</span><span class="w"> </span><span class="n">fichier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">chemin</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">lecteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">fichier</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">ligne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lecteur</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">ligne</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Fichier introuvable&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Erreur de lecture&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Format de nombre invalide&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+<h3 id="2-les-exceptions-vérifiées-checked-exceptions">2. <strong>Les exceptions vérifiées (Checked Exceptions)</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Les exceptions vérifiées sont celles que le compilateur oblige à gérer. Elles doivent soit être capturées avec un <code>try-catch</code>, soit être déclarées dans la signature de la méthode à l&rsquo;aide du mot-clé <code>throws</code>.</p>
+<p>Exemple avec une exception vérifiée :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">readFile</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">FileReader</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w">  </span><span class="c1">// Peut lancer IOException</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
-<h3 id="73-finally">7.3 Finally<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p>Le bloc <code>finally</code> s&rsquo;exécute <strong>toujours</strong>, qu&rsquo;il y ait une exception ou non.</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">traiterFichier</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">chemin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">FileReader</span><span class="w"> </span><span class="n">fichier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">fichier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">chemin</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Traitement...</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Erreur : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// S&#39;exécute TOUJOURS</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fichier</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">fichier</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+<p>Dans ce cas, l&rsquo;appelant de la méthode <code>readFile</code> doit gérer ou déclarer l&rsquo;exception <code>IOException</code>.</p>
+<h3 id="3-les-exceptions-non-vérifiées-unchecked-exceptions">3. <strong>Les exceptions non vérifiées (Unchecked Exceptions)</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Les exceptions non vérifiées (ou runtime exceptions) sont celles qui ne sont pas vérifiées par le compilateur. Ce sont des exceptions qui peuvent survenir pendant l&rsquo;exécution du programme, mais le compilateur ne vous oblige pas à les capturer ou à les déclarer.</p>
+<p>Exemple d&rsquo;une exception non vérifiée :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c1">// Diviser par zéro lèvera ArithmeticException</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
-<h3 id="74-try-with-resources-java-7">7.4 Try-with-resources (Java 7+)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p>Ferme automatiquement les ressources.</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">lireFichier</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">chemin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">FileReader</span><span class="w"> </span><span class="n">fichier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="n">chemin</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">         </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">lecteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">fichier</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">ligne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lecteur</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ligne</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// fichier et lecteur sont automatiquement fermés</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
-<h3 id="75-lancer-des-exceptions">7.5 Lancer des exceptions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CompteBancaire</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">solde</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">retirer</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">montant</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">montant</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">solde</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Exception</span><span class="p">(</span><span class="s">&#34;Fonds insuffisants&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">solde</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">montant</span><span class="p">;</span><span class="w">
+<h3 id="4-les-exceptions-personnalisées-custom-exceptions">4. <strong>Les exceptions personnalisées (Custom Exceptions)</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Il est possible de créer ses propres exceptions en Java. Pour ce faire, il faut étendre la classe <code>Exception</code> ou <code>RuntimeException</code> en fonction de si vous voulez créer une exception vérifiée ou non vérifiée.</p>
+<p>Exemple :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">NegativeValueException</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">NegativeValueException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">message</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Utilisation</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">checkValue</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">NegativeValueException</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NegativeValueException</span><span class="p">(</span><span class="s">&#34;La valeur ne peut pas être négative.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="5-le-mot-clé">5. <strong>Le mot-clé <code>throw</code></strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Le mot-clé <code>throw</code> permet de lancer une exception explicitement dans le code.</p>
+<p>Exemple :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">checkNumber</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&#34;Le nombre ne peut pas être négatif.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h3 id="6-le-mot-clé">6. <strong>Le mot-clé <code>throws</code></strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>${\textbf{\textsf{\color{red}Le point 6 reste dans les notes de cours, mais ne sera pas à l&rsquo;examen}}}$</p>
+<p>Le mot-clé <code>throws</code> est utilisé pour déclarer qu&rsquo;une méthode peut lancer certaines exceptions. Cela permet de propager une exception à un niveau supérieur, à condition que l&rsquo;exception soit vérifiée.</p>
+<p>Exemple :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">readFile</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">FileReader</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">&#34;nonexistentfile.txt&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<h2 id="liste-des-exceptions-à-savoir-utiliser">Liste des exceptions à savoir utiliser<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<hr>
+<h3 id="1-exceptions-vérifiées-checked-exceptions"><strong>1. Exceptions vérifiées (Checked Exceptions)</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>
+<p><strong><code>IOException</code></strong> : Exception liée aux erreurs d&rsquo;entrée/sortie (lecture/écriture de fichiers, réseau, etc.).</p>
+<ul>
+<li>Exemple : Erreur de lecture/écriture d&rsquo;un fichier, réseau, etc.</li>
+<li><strong>Utilisation</strong> : Lors de la manipulation de fichiers ou de flux de données.</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">&#34;file.txt&#34;</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</li>
+<li>
+<p><strong><code>FileNotFoundException</code></strong> : Exception lorsqu&rsquo;un fichier spécifié n&rsquo;est pas trouvé.</p>
+<ul>
+<li>Exemple : Lorsque vous tentez de lire un fichier qui n&rsquo;existe pas.</li>
+<li><strong>Utilisation</strong> : Lors de la gestion de fichiers.</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">&#34;file.txt&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</li>
+</ul>
+<hr>
+<h3 id="2-exceptions-non-vérifiées-unchecked-exceptions"><strong>2. Exceptions non vérifiées (Unchecked Exceptions)</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Ces exceptions n&rsquo;ont pas besoin d&rsquo;être capturées ou déclarées dans la signature de la méthode. Elles sont souvent utilisées pour des erreurs logiques ou des erreurs inattendues durant l&rsquo;exécution.</p>
+<ul>
+<li>
+<p><strong><code>NullPointerException</code></strong> : Se produit lorsqu&rsquo;une référence <code>null</code> est utilisée pour appeler une méthode ou accéder à une propriété.</p>
+<ul>
+<li>Exemple : Appeler une méthode sur un objet qui est <code>null</code>.</li>
+<li><strong>Utilisation</strong> : Éviter de référencer des objets qui peuvent être <code>null</code>.</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">Lancerait</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">NullPointerException</span></span></span></code></pre></div>
+</li>
+<li>
+<p><strong><code>ArrayIndexOutOfBoundsException</code></strong> : Se produit lorsqu&rsquo;on tente d&rsquo;accéder à un indice invalide dans un tableau.</p>
+<ul>
+<li>Exemple : Accéder à un élément en dehors des limites d&rsquo;un tableau.</li>
+<li><strong>Utilisation</strong> : Vérifiez toujours les indices avant d&rsquo;accéder à un tableau.</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">5</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">10</span><span class="o">]</span><span class="p">);</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">Lancerait</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">ArrayIndexOutOfBoundsException</span></span></span></code></pre></div>
+</li>
+<li>
+<p><strong><code>ArithmeticException</code></strong> : Se produit lors d&rsquo;une opération arithmétique illégale, comme une division par zéro.</p>
+<ul>
+<li>Exemple : Diviser par zéro.</li>
+<li><strong>Utilisation</strong> : Toujours vérifier les diviseurs avant d&rsquo;effectuer une division.</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">Lancerait</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">ArithmeticException</span></span></span></code></pre></div>
+</li>
+<li>
+<p><strong><code>IllegalArgumentException</code></strong> : Se produit lorsqu&rsquo;un argument passé à une méthode est illégal ou inapproprié.</p>
+<ul>
+<li>Exemple : Passer un argument invalide à une méthode.</li>
+<li><strong>Utilisation</strong> : Vérifiez toujours les valeurs d&rsquo;entrée avant de les utiliser dans une méthode.</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">void</span><span class="w"> </span><span class="nf">setAge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&#34;Age ne peut pas être négatif&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+</li>
+<li>
+<p><strong><code>IndexOutOfBoundsException</code></strong> : Se produit lorsqu&rsquo;on tente d&rsquo;accéder à un index en dehors des limites dans une collection (ex. <code>ArrayList</code>, <code>String</code>, etc.).</p>
+<ul>
+<li>Exemple : Accéder à un index qui est en dehors des limites d&rsquo;une liste.</li>
+<li><strong>Utilisation</strong> : Toujours vérifier la taille avant d&rsquo;accéder à un index.</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&#34;Item&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">2</span><span class="p">));</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">Lancerait</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">IndexOutOfBoundsException</span></span></span></code></pre></div>
+</li>
+</ul>
+<hr>
+<h2 id="exceptions">Exceptions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Sinon vous pouvez utiliser <strong>Exceptions</strong>, mais vous perdrez des points, car :</p>
+<p>Il est préférable de ne pas utiliser Exception directement, mais plutôt ses sous-classes spécifiques, car cela permet une gestion plus précise des erreurs. En capturant des exceptions spécifiques, tu peux traiter des situations particulières de manière plus appropriée, améliorer la lisibilité du code, et mieux comprendre les erreurs. Utiliser des exceptions générales comme Exception rend le code moins clair et moins robuste, car cela masque la nature des erreurs spécifiques.</p>
+<p>Exemple :</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Scanner</span><span class="w"> </span><span class="n">scan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">compte</span><span class="p">.</span><span class="na">retirer</span><span class="p">(</span><span class="n">1000</span><span class="p">.</span><span class="na">0</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
-<h3 id="76-créer-des-exceptions-personnalisées">7.6 Créer des exceptions personnalisées<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SoldeInsuffisantException</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">soldeActuel</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">montantDemande</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">SoldeInsuffisantException</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">soldeActuel</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">montantDemande</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="s">&#34;Solde insuffisant : &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">soldeActuel</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; &lt; &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">montantDemande</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">soldeActuel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">soldeActuel</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">montantDemande</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">montantDemande</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSoldeActuel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">soldeActuel</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getMontantDemande</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">montantDemande</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scan</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">  </span><span class="c1">// Division par zéro qui va lever une exception ArithmeticException</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Utilisation</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">retirer</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">montant</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">SoldeInsuffisantException</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">montant</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">solde</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SoldeInsuffisantException</span><span class="p">(</span><span class="n">solde</span><span class="p">,</span><span class="w"> </span><span class="n">montant</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">solde</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">montant</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exceptions</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Erreur: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Bloc finally exécuté.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Scanner</span><span class="w"> </span><span class="n">scan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scan</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">  </span><span class="c1">// Division par zéro qui va lever une exception ArithmeticException</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;0 n&#39;est pas une entrée valide&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">catch</span><span class="p">(</span><span class="n">InputMismatchException</span><span class="w"> </span><span class="n">e</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Il faut entrer un entier&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Bloc finally exécuté.&#34;</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
 <hr>
 <h2 id="8-composition-vs-héritage">8. Composition vs Héritage<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
@@ -1952,6 +2024,7 @@ Map (interface) - Paires clé-valeur
             <li class="" data-nav-id="/420-210/biblioGame/index.html"><a class="padding" href="/420-210/biblioGame/index.html">BiblioAventure</a></li>
             <li class="" data-nav-id="/420-210/java_fx/index.html"><a class="padding" href="/420-210/java_fx/index.html">Java FX</a></li>
             <li class="" data-nav-id="/420-210/fichiers/index.html"><a class="padding" href="/420-210/fichiers/index.html">Fichiers</a></li>
+            <li class="" data-nav-id="/420-210/dates/index.html"><a class="padding" href="/420-210/dates/index.html">Date</a></li>
           </ul>
         </div>
         <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
@@ -1987,8 +2060,8 @@ Map (interface) - Paires clé-valeur
 <div id="R-footer" class="default-animation"></div>
       </div>
     </aside>
-    <script src="/420-210/js/perfect-scrollbar/perfect-scrollbar.min.js?1775703703" defer></script>
-    <script src="/420-210/js/theme.js?1775703703" defer></script>
+    <script src="/420-210/js/perfect-scrollbar/perfect-scrollbar.min.js?1775811188" defer></script>
+    <script src="/420-210/js/theme.js?1775811188" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
